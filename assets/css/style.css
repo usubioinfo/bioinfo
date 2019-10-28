@@ -1463,7 +1463,17 @@ a.link-with-icon i.fa {
     margin-top: 3px; }
 
 /* selected publication */
+.tools-container {
+  background-color: #EDF2F6;
+  padding-bottom: 15px;
+  background-color: #EDF2F6;
+  border-radius: 10px;
+  word-wrap: break-word;
+  text-align: center;
+}
+
 .sabbi-section, .section-brand_quickfact {
+  
   margin-top: 25px;
   margin-bottom: 40px; }
 
@@ -1560,19 +1570,19 @@ a.link-with-icon i.fa {
 
 /* style profile */
 .profile-card {
-  width: 262.5px;
+  width: 210px;
   padding-bottom: 20px;
   background-color: #EDF2F6;
-  border-radius: 4px;
+  border-radius: 10px;
   margin-bottom: 15px;
   word-wrap: break-word; }
   .profile-card .profile-card-meta {
-    margin-right: 25px;
-    margin-left: 25px;
-    margin-top: 25px; }
+    margin-right: 12px;
+    margin-left: 12px;
+    margin-top: 12px; }
   .profile-card > figure figcaption {
-    margin-left: 25px;
-    margin-right: 25px; }
+    margin-left: 12px;
+    margin-right: 12px; }
   .profile-card .img-responsive {
     width: 100%; }
   .profile-card .entry-title {
@@ -2030,9 +2040,29 @@ a.link-with-icon i.fa {
     text-align: center; } }
 
 /* stage_events_post */
+* {
+  box-sizing: border-box;
+}
+
+.zoom {
+  transition: transform .2s;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+}
+
+.title-card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+  transition: 0.3s;
+}
+
 .stage_events_post {
   margin-top: 45px; }
   .events_post-sagment .sagment-title {
+    text-align: center;
     font-size: 16px;
     font-size: 1.14286rem; }
   .sabbi-events-item {

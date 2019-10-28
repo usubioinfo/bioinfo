@@ -30,7 +30,8 @@
     </script>
 
     <style>
-    .show-text-predhpi:hover .overlay {
+       
+    /* .show-text-predhpi:hover .overlay {
         opacity: 1;
     }
 
@@ -57,8 +58,8 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
-}
-    </style>
+} */
+    </style> 
 </head>
 <body class="auth-theme-rashmore page-events">
     <!--[if lt IE 8]>
@@ -94,15 +95,16 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown"  data-hover="dropdown" href="#" title="Publications" data-animations="zoomIn">Publications <span class="caret"></span></a>
                         <ul class=" dropdown-menu" role="menu">
+                                <li>
+                                        <a href="lab_journal.html" title="Journal Articles">Journal Articles</a>
+                                    </li>
+                                    <li>
+                                        <a href="lab_conf-talk.html" title="Conferences and Talks">Conferences and Talks</a>
+                                    </li>    
                             <li>
                                 <a href="lab_book.html" title="Books">Books</a>
                             </li>
-                            <li>
-                                <a href="lab_journal.html" title="Journal Articles">Journal Articles</a>
-                            </li>
-                            <li>
-                                <a href="lab_conf-talk.html" title="Conferences and Talks">Conferences and Talks</a>
-                            </li>
+                            
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -143,7 +145,7 @@
                                 </li>
                             </ul>
                     </li>
-                    <li class="dropdown active">
+                    <!-- <li class="dropdown active">
                         <a class="dropdown-toggle" data-toggle="dropdown"  data-hover="dropdown" href="#" title="Events" data-animations="zoomIn">Events <span class="caret"></span></a>
                         <ul class=" dropdown-menu" role="menu">
                             <li class="active">
@@ -156,7 +158,7 @@
                     </li>
                     <li>
                         <a href="future_member.html" title="Future Member">Future Member</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         <!-- </div> -->
@@ -178,16 +180,16 @@
     </div><!-- /.auth-breadcrumb-wrap -->
     <section class="sabbi-section stage_events_post">
         <div class="container">
-            <div class="events_post-sagment">
-                <h4 class="sagment-title">Host-Pathogen Interaction Prediction Tools</h4>
-                <div class="row">
-                    <div class="col-sm-6 show-text-predhpi">
+            <div class="events_post-sagment title-card" >
+                <h4 class="sagment-title" style="padding: 20px;">Host-Pathogen Interaction Prediction Tools</h4>
+                <div class="row" style="padding: 20px;">
+                    <div class="col-sm-6 col-md-3 show-text-predhpi zoom">
                             <a href="http://bioinfo.usu.edu/PredHPI/" target="_blank" class="sabbi-events-link">
-                        <article class="sabbi-events-item">
+                        <article class="sabbi-events-item tools-container " style="width: 230px;">
                             
-                                <figure>
-                                    <img class="sabbi-events-img img-responsive" style="width: 570px;; height: 350px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/predhpi.jpg" alt="thompson">
-                                    <figcaption>
+                                <figure >
+                                         <img class="sabbi-events-img img-responsive " style="width: 230px;; height: 275px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/predhpi.jpg" alt="thompson">
+                                    <figcaption class="mask flex-center">
                                         <h2 class="sabbi-events-title font-md__x">PredHPI</h2>
                                     </figcaption>
                                 </figure>
@@ -196,22 +198,23 @@
                                 <div class="events-date"><i class="ion-calendar"></i><span class="text">21st January 2017</span></div>
                             </div> -->
                         </article><!-- /.sabbi-events-item -->
-                        <div class="overlay">
-                                <div class="text"> <strong>Web server for the prediction of Host-Pathogen interaction using 
+                        <!-- <div class="view overlay zoom"> -->
+                                <!-- <div class="mask flex-center ">  -->
+                                    <!-- <strong>Web server for the prediction of Host-Pathogen interaction using 
                                     sequence-based methods. PredHPI incorporates the functionally to 
                                     visualize the resulting interaction networks plus the integration of 
                                     several databases with enriched information about the proteins involved in it.
-                                </strong>
-                                </div>
-                              </div>
+                                </strong> -->
+                                <!-- </div> -->
+                              <!-- </div> -->
                             </a>
                 </div>
-                <div class="col-sm-6 show-text-predhpi">
+                <div class="col-sm-6 col-md-3 show-text-predhpi zoom">
                         <a href="http://bioinfo.usu.edu/GreeningDB/" target="_blank" class="sabbi-events-link">
-                        <article class="sabbi-events-item">
+                        <article class="sabbi-events-item tools-container" style="width: 230px;">
                             <!-- <a href="events_single.html" class="sabbi-events-link"> -->
                                 <figure>
-                                    <img class="sabbi-events-img img-responsive" style="width: 570px;; height: 350px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/greeningdb-1.jpg" alt="thompson">
+                                    <img class="sabbi-events-img img-responsive" style="width: 230px;; height: 275px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/greeningdb-1.jpg" alt="thompson">
                                     <figcaption>
                                         <h2 class="sabbi-events-title font-md__x">GreeningDB</h2>
                                     </figcaption>
@@ -222,21 +225,21 @@
                                 <div class="events-date"><i class="ion-calendar"></i><span class="text">22nd January 2017</span></div>
                             </div> -->
                         </article><!-- /.sabbi-events-item -->
-                        <div class="overlay">
+                        <!-- <div class="overlay">
                                 <div class="text"> <strong>A host pathogen interactions database for citrus greening disease, 
                                     which provides a BLAST Service with several proteomes related to the disease. 
                                     Also includes the old prototypes of PredHPI tools.
                                 </strong>
                                 </div>
-                              </div>
+                              </div> -->
                               </a>
                     </div>
-                    <div class="col-sm-6 show-text-predhpi">
+                    <div class="col-sm-6 col-md-3 show-text-predhpi zoom">
                             <a href="http://bioinfo.usu.edu/AP-iNET" target="_blank" class="sabbi-events-link">
-                            <article class="sabbi-events-item">
+                            <article class="sabbi-events-item tools-container" style="width: 230px;">
                                 <!-- <a href="events_single.html" class="sabbi-events-link"> -->
                                     <figure>
-                                        <img class="sabbi-events-img img-responsive" style="width: 570px;; height: 350px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/apinet.jpg" alt="thompson">
+                                        <img class="sabbi-events-img img-responsive" style="width: 230px;; height: 275px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/apinet.jpg" alt="thompson">
                                         <figcaption>
                                             <h2 class="sabbi-events-title font-md__x">Ap-iNET</h2>
                                         </figcaption>
@@ -247,28 +250,28 @@
                                     <div class="events-date"><i class="ion-calendar"></i><span class="text">22nd January 2017</span></div>
                                 </div> -->
                             </article><!-- /.sabbi-events-item -->
-                            <div class="overlay">
+                            <!-- <div class="overlay">
                                     <div class="text"> <strong>AP-iNET is a computational prediction system for host-pathogen 
                                         protein-protein interactions in the Arabidopsis-Pseudomonas model system. 
                                         This webtool allows users to input host and pathogen protein sequences to predict 
                                         whether they are interacting within a host-pathogen network.
                                     </strong>
                                     </div>
-                            </div>
+                            </div> -->
                             </a>
                         </div>
                 </div>
                 
             </div><!-- /.events_post-sagment -->
-            <div class="events_post-sagment">
-                <h4 class="sagment-title">Cellular Localization Prediction tools</h4>
-                <div class="row">
-                    <div class="col-sm-6 show-text-predhpi">
+            <div class="events_post-sagment title-card">
+                <h4 class="sagment-title" style="padding: 20px;">Cellular Localization Prediction tools</h4>
+                <div class="row" style="padding: 20px;">
+                    <div class="col-sm-6 col-md-3 show-text-predhpi zoom" >
                         <a href="http://bioinfo.usu.edu/Plant-mSubP" target="_blank" class="sabbi-events-link">
-                        <article class="sabbi-events-item">
+                        <article class="sabbi-events-item tools-container" style="width: 230px;">
                             <!-- <a href="events_single.html" class="sabbi-events-link"> -->
                                 <figure>
-                                    <img class="sabbi-events-img img-responsive" style="width: 570px;; height: 350px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/plantmsubp.jpg" alt="thompson">
+                                    <img class="sabbi-events-img img-responsive" style="width: 230px;; height: 275px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/plantmsubp.jpg" alt="thompson">
                                     <figcaption>
                                         <h2 class="sabbi-events-title font-md__x">Plant-mSubP</h2>
                                     </figcaption>
@@ -279,20 +282,20 @@
                                 <div class="events-date"><i class="ion-calendar"></i><span class="text">21st January 2017</span></div>
                             </div> -->
                         </article><!-- /.sabbi-events-item -->
-                        <div class="overlay">
+                        <!-- <div class="overlay">
                                 <div class="text"> <strong>Identification of and 3 significant multilocation proteins(cytoplasm-nucleus, 
                                     mitochondrion-plastid and cytoplasm-golgi apparatus).
                                 </strong>
                                 </div>
-                        </div>
+                        </div> -->
                     </a>
                     </div>
-                <div class="col-sm-6 show-text-predhpi">
+                <div class="col-sm-6 col-md-3 show-text-predhpi zoom">
                         <a href="http://bioinfo.usu.edu/AtSubP" target="_blank" class="sabbi-events-link">
-                            <article class="sabbi-events-item">
+                            <article class="sabbi-events-item tools-container" style="width: 230px;">
                                 <!-- <a href="events_single.html" class="sabbi-events-link"> -->
                                     <figure>
-                                        <img class="sabbi-events-img img-responsive" style="width: 570px;; height: 350px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/atSubP-1.jpg" alt="thompson">
+                                        <img class="sabbi-events-img img-responsive" style="width: 230px;; height: 275px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/atSubP-1.jpg" alt="thompson">
                                         <figcaption>
                                             <h2 class="sabbi-events-title font-md__x">AtSubP</h2>
                                         </figcaption>
@@ -303,22 +306,22 @@
                                     <div class="events-date"><i class="ion-calendar"></i><span class="text">21st January 2017</span></div>
                                 </div> -->
                             </article><!-- /.sabbi-events-item -->
-                            <div class="overlay">
+                            <!-- <div class="overlay">
                                     <div class="text"> <strong>A highly accurate Arabidopsis thaliana Subcellular 
                                         Localization predictor. It also hosts the whole Arabidopsis-proteome predictions 
                                         and the comparision with Swiss-Prot / TAIR annotations along with the training/testing 
                                         datasets.
                                     </strong>
                                     </div>
-                            </div>
+                            </div> -->
                         </a>
                 </div>
-                <div class="col-sm-6 show-text-predhpi">
+                <div class="col-sm-6 col-md-3 show-text-predhpi zoom">
                         <a href="http://crdd.osdd.net/raghava/rslpred/" target="_blank" class="sabbi-events-link">
-                                <article class="sabbi-events-item">
+                                <article class="sabbi-events-item tools-container" style="width: 230px;">
                                     <!-- <a href="events_single.html" class="sabbi-events-link"> -->
                                         <figure>
-                                            <img class="sabbi-events-img img-responsive" style="width: 570px;; height: 350px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/rsl-pred.jpg" alt="thompson">
+                                            <img class="sabbi-events-img img-responsive" style="width: 230px;; height: 275px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/rsl-pred.jpg" alt="thompson">
                                             <figcaption>
                                                 <h2 class="sabbi-events-title font-md__x">RSLpredP</h2>
                                             </figcaption>
@@ -329,22 +332,22 @@
                                         <div class="events-date"><i class="ion-calendar"></i><span class="text">21st January 2017</span></div>
                                     </div> -->
                                 </article><!-- /.sabbi-events-item -->
-                                <div class="overlay">
+                                <!-- <div class="overlay">
                                         <div class="text"> <strong>The finished rice (Oryza sativa L.) genome sequence now demands 
                                             for a fully automated system towards reliable and accurate prediction of subcellular 
                                             localization of rice proteins. RSLpred is developed with this aim for genome-scale 
                                             subcellular prediction of encoded rice proteins.
                                         </strong>
                                         </div>
-                                </div>
+                                </div> -->
                             </a>
                 </div>
-                <div class="col-sm-6 show-text-predhpi">
+                <div class="col-sm-6 col-md-3 show-text-predhpi zoom">
                         <a href="http://bioinfo.usu.edu/PLpred" target="_blank" class="sabbi-events-link">
-                                    <article class="sabbi-events-item">
+                                    <article class="sabbi-events-item tools-container" style="width: 230px;">
                                         <!-- <a href="events_single.html" class="sabbi-events-link"> -->
                                             <figure>
-                                                <img class="sabbi-events-img img-responsive" style="width: 570px;; height: 350px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/PLpred.jpg" alt="thompson">
+                                                <img class="sabbi-events-img img-responsive" style="width: 230px;; height: 275px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/PLpred.jpg" alt="thompson">
                                                 <figcaption>
                                                     <h2 class="sabbi-events-title font-md__x">PLpred</h2>
                                                 </figcaption>
@@ -355,27 +358,27 @@
                                             <div class="events-date"><i class="ion-calendar"></i><span class="text">21st January 2017</span></div>
                                         </div> -->
                                     </article><!-- /.sabbi-events-item -->
-                                    <div class="overlay">
+                                    <!-- <div class="overlay">
                                             <div class="text"> <strong>This online tool firstly identifies a query protein to be 
                                                 a plastid or non-plastid one and then, classifies the identified plastid proteins 
                                                 further into four categories viz. Chloroplast, Chromoplast, Amyloplast or Etioplast 
                                                 proteins.
                                             </strong>
                                             </div>
-                                    </div>
+                                    </div> -->
                             </a>
                 </div>
                 </div>
             </div><!-- /.events_post-sagment -->
-            <div class="events_post-sagment">
-                    <h4 class="sagment-title">Machine Learning Based Tools</h4>
-                    <div class="row">
-                        <div class="col-sm-6 show-text-predhpi">
+            <div class="events_post-sagment title-card">
+                    <h4 class="sagment-title" style="padding: 20px;">Machine Learning Based Tools</h4>
+                    <div class="row" style="padding: 20px;">
+                        <div class="col-sm-6 col-md-3 show-text-predhpi zoom">
                                 <a href="http://bioinfo.usu.edu/lacsubpred" target="_blank" class="sabbi-events-link">
-                            <article class="sabbi-events-item">
+                            <article class="sabbi-events-item tools-container" style="width: 230px;">
                                 <!-- <a href="events_single.html" class="sabbi-events-link"> -->
                                     <figure>
-                                        <img class="sabbi-events-img img-responsive" style="width: 570px;; height: 350px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/lacsubpred.jpg" alt="thompson">
+                                        <img class="sabbi-events-img img-responsive" style="width: 230px;; height: 275px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/lacsubpred.jpg" alt="thompson">
                                         <figcaption>
                                             <h2 class="sabbi-events-title font-md__x">LacSubPred</h2>
                                         </figcaption>
@@ -386,19 +389,19 @@
                                     <div class="events-date"><i class="ion-calendar"></i><span class="text">21st January 2017</span></div>
                                 </div> -->
                             </article><!-- /.sabbi-events-item -->
-                            <div class="overlay">
+                            <!-- <div class="overlay">
                                     <div class="text"> <strong>A machine learning based classification system for laccases 
                                         derived for physichochemical properties.
                                     </strong>
                                     </div>
-                            </div>
+                            </div> -->
                             </a>
                         </div>
-                    <div class="col-sm-6 show-text-predhpi">
+                    <div class="col-sm-6 col-md-3 show-text-predhpi zoom">
                             <a href="http://bioinfo.usu.edu/ligpred" target="_blank" class="sabbi-events-link">
-                                <article class="sabbi-events-item">
+                                <article class="sabbi-events-item tools-container" style="width: 230px;">
                                         <figure>
-                                            <img class="sabbi-events-img img-responsive" style="width: 570px;; height: 350px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/ligpred.jpg" alt="thompson">
+                                            <img class="sabbi-events-img img-responsive" style="width: 230px;; height: 275px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/ligpred.jpg" alt="thompson">
                                             <figcaption>
                                                 <h2 class="sabbi-events-title font-md__x">Ligpred</h2>
                                             </figcaption>
@@ -409,7 +412,7 @@
                                         <div class="events-date"><i class="ion-calendar"></i><span class="text">21st January 2017</span></div>
                                     </div> -->
                                 </article><!-- /.sabbi-events-item -->
-                                <div class="overlay">
+                                <!-- <div class="overlay">
                                         <div class="text"> <strong>It is used to discover novel 
                                             lignin related proteins not discoverable through more general means. 
                                             We created high quality training sets from known lignin 
@@ -418,15 +421,15 @@
                                             to generally classify proteins.
                                         </strong>
                                         </div>
-                                </div>
+                                </div> -->
                             </a>
                     </div>
-                    <div class="col-sm-6 show-text-predhpi">
+                    <div class="col-sm-6 col-md-3 show-text-predhpi zoom">
                             <a href="http://crdd.osdd.net/raghava/rbpred/" target="_blank" class="sabbi-events-link">
-                                    <article class="sabbi-events-item">
+                                    <article class="sabbi-events-item tools-container" style="width: 230px;">
                                         <!-- <a href="events_single.html" class="sabbi-events-link"> -->
                                             <figure>
-                                                <img class="sabbi-events-img img-responsive" style="width: 570px;; height: 350px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/rbpred.jpg" alt="thompson">
+                                                <img class="sabbi-events-img img-responsive" style="width: 230px;; height: 275px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/rbpred.jpg" alt="thompson">
                                                 <figcaption>
                                                     <h2 class="sabbi-events-title font-md__x">RB-Pred</h2>
                                                 </figcaption>
@@ -437,18 +440,18 @@
                                             <div class="events-date"><i class="ion-calendar"></i><span class="text">21st January 2017</span></div>
                                         </div> -->
                                     </article><!-- /.sabbi-events-item -->
-                                    <div class="overlay">
+                                    <!-- <div class="overlay">
                                             <div class="text"> <strong>A first of its kind worldwide, this Support 
                                                 Vector Machine (SVM) based server forecasts rice leaf blast severity 
                                                 based on the weather parameters for general use to plant pathologists 
                                                 and farming community.
                                             </strong>
                                             </div>
-                                    </div>
+                                    </div> -->
                             </a>
                     </div>
                     </div>
-                </div><!-- /.events_post-sagment -->
+            </div><!-- /.events_post-sagment -->
             <!-- <nav aria-label="Page navigation" class="pagination_wraper">
                 <ul class="pagination">
                     <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
