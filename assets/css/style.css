@@ -1464,10 +1464,10 @@ a.link-with-icon i.fa {
 
 /* selected publication */
 .tools-container {
-  background-color: #EDF2F6;
+  background-color: #615951;
   padding-bottom: 15px;
-  background-color: #EDF2F6;
-  border-radius: 10px;
+  /* background-color: #EDF2F6; */
+  /* border-radius: 10px; */
   word-wrap: break-word;
   text-align: center;
 }
@@ -2069,7 +2069,7 @@ a.link-with-icon i.fa {
     margin-bottom: 35px;
     margin-top: 5px; }
     .sabbi-events-item .sabbi-events-title {
-      color: #000000;
+      color: white;
       font-size: 24px;
       font-size: 1.71429rem;
       font-weight: 700; }

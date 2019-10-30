@@ -31,34 +31,44 @@
 
     <style>
        
-    /* .show-text-predhpi:hover .overlay {
-        opacity: 1;
-    }
+.container {
+  position: relative;
+}
 
-    .overlay {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        transition: .5s ease;
-        background-color: black;
-    }
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
 
-    .text {
-  color: white;
-  font-size: 20px;
+.middle {
+  transition: .5s ease;
+  opacity: 0;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   text-align: center;
-} */
+}
+
+.container:hover .image {
+  opacity: 0.2;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 12px;
+  padding: 16px 32px;
+}
     </style> 
 </head>
 <body class="auth-theme-rashmore page-events">
@@ -185,28 +195,23 @@
                 <div class="row" style="padding: 20px;">
                     <div class="col-sm-6 col-md-3 show-text-predhpi zoom">
                             <a href="http://bioinfo.usu.edu/PredHPI/" target="_blank" class="sabbi-events-link">
-                        <article class="sabbi-events-item tools-container " style="width: 230px;">
-                            
+                                
+                        <article class="sabbi-events-item tools-container container" style="width: 230px; height: 290px;">
                                 <figure >
-                                         <img class="sabbi-events-img img-responsive " style="width: 230px;; height: 275px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/predhpi.jpg" alt="thompson">
+                                         <img class="sabbi-events-img img-responsive image" style=" padding: 5%" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/predhpi.jpg" alt="thompson">
                                     <figcaption class="mask flex-center">
                                         <h2 class="sabbi-events-title font-md__x">PredHPI</h2>
                                     </figcaption>
                                 </figure>
+                                <div class="middle">
+                                        <div class="text">Details</div>
+                                      </div>
                             <!-- <div class="events-item-meta">
                                 <div class="events-loc"><i class="ion-location"></i><span class="text">5005 Heavenly Village Way #2b, Lake Tahoe</span></div>
                                 <div class="events-date"><i class="ion-calendar"></i><span class="text">21st January 2017</span></div>
                             </div> -->
                         </article><!-- /.sabbi-events-item -->
-                        <!-- <div class="view overlay zoom"> -->
-                                <!-- <div class="mask flex-center ">  -->
-                                    <!-- <strong>Web server for the prediction of Host-Pathogen interaction using 
-                                    sequence-based methods. PredHPI incorporates the functionally to 
-                                    visualize the resulting interaction networks plus the integration of 
-                                    several databases with enriched information about the proteins involved in it.
-                                </strong> -->
-                                <!-- </div> -->
-                              <!-- </div> -->
+                                
                             </a>
                 </div>
                 <div class="col-sm-6 col-md-3 show-text-predhpi zoom">
