@@ -747,6 +747,7 @@ body .mb_100 {
 }
 
 .navbar-nav {
+  padding-right: 10%;
   margin: 20px;
   font-family: "Montserrat", sans-serif;
   font-size: 12px; }
@@ -757,6 +758,7 @@ body .mb_100 {
 
 .navbar-brand {
   margin: 25px;
+  margin-left: 10%;
   max-width: 350px;
   display: flex;
   align-items: center;
@@ -773,11 +775,13 @@ body .mb_100 {
     background-color: rgb(10, 1, 1); }
 
 .navbar-white {
+
   background: none;
   border: none;
   box-shadow: none }
 
 .navbar-kawsa .nav-btn-wrap {
+  padding-right: 10%;
   max-height: 36px;
   margin-top: 21px; }
   .navbar-kawsa .nav-btn-wrap:after {
@@ -1465,9 +1469,9 @@ a.link-with-icon i.fa {
 /* selected publication */
 .tools-container {
   background-color: #615951;
-  padding-bottom: 15px;
+  /* padding-bottom: 1px; */
   /* background-color: #EDF2F6; */
-  /* border-radius: 10px; */
+  border-radius: 5px;
   word-wrap: break-word;
   text-align: center;
 }

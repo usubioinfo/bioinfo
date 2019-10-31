@@ -31,7 +31,7 @@
 
     <style>
        
-.container {
+.article-container {
   position: relative;
 }
 
@@ -55,12 +55,15 @@
   text-align: center;
 }
 
-.container:hover .image {
-  opacity: 0.2;
+.article-container:hover .image {
+  opacity: 0.8;
 }
 
-.container:hover .middle {
+.article-container:hover .middle {
   opacity: 1;
+}
+.article-container:hover {
+    background-color: black;
 }
 
 .text {
@@ -68,6 +71,62 @@
   color: white;
   font-size: 12px;
   padding: 16px 32px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.wrapper{
+  text-align:center;
+  margin: 10px auto;
+}
+
+.tabs{
+  margin-top:0px;
+  font-size:15px;
+  padding:0px;
+  list-style:none;
+  background:#fff;
+  box-shadow:0px 5px 20px rgba(0,0,0,0.1);
+  display:inline-block;
+  border-radius:50px;
+  position:relative;
+}
+
+.tabs a{
+  text-decoration:none;
+  color: #777;
+  text-transform:uppercase;
+  padding:10px 20px;
+  display:inline-block;
+  position:relative;
+  z-index:1;
+  transition-duration:0.6s;
+}
+
+.tabs a.active{
+  color:#fff;
+}
+
+.tabs a i{
+  margin-right:5px;
+}
+
+.tabs .selector{
+  height:100%;
+  display:inline-block;
+  position:absolute;
+  left:0px;
+  top:0px;
+  z-index:1;
+  border-radius:50px;
+  transition-duration:0.6s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  background: #05abe0;
+  background: -moz-linear-gradient(45deg, #05abe0 0%, #8200f4 100%);
+  background: -webkit-linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
+  background: linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05abe0', endColorstr='#8200f4',GradientType=1 );
 }
     </style> 
 </head>
@@ -188,40 +247,60 @@
             </ol>
         </div>
     </div><!-- /.auth-breadcrumb-wrap -->
+
+    <div class="wrapper">
+            <nav class="tabs">
+              <div class="selector"></div>
+              <a href="#tabcontent" class="active tablinks" onclick="openTools(event, 'All')"><i class="fab fa-superpowers"></i>All</a>
+              <a href="#tabcontent" class="tablinks" onclick="openTools(event, 'HPI')"><i class="fas fa-hand-rock"></i>HPI</a>
+              <a href="#tabcontent" class="tablinks" onclick="openTools(event, 'CLP')"><i class="fas fa-hand-rock"></i>Subcellular</a>
+              <a href="#"><i class="fas fa-bolt"></i>Databases</a>
+              <a href="#"><i class="fas fa-burn"></i>Bioenergy</a>
+              <a href="#"><i class="fas fa-burn"></i>Miscellaneous</a>
+            </nav>
+          </div>
+
     <section class="sabbi-section stage_events_post">
         <div class="container">
-            <div class="events_post-sagment title-card" >
+            <div class="events_post-sagment tabcontent title-card" id="HPI" >
                 <h4 class="sagment-title" style="padding: 20px;">Host-Pathogen Interaction Prediction Tools</h4>
                 <div class="row" style="padding: 20px;">
-                    <div class="col-sm-6 col-md-3 show-text-predhpi zoom">
+                    
+                    <div class="col-sm-3  show-text-predhpi zoom">
                             <a href="http://bioinfo.usu.edu/PredHPI/" target="_blank" class="sabbi-events-link">
+                              
+                        <!-- <figcaption class="mask flex-center"> -->
+                        <article class="sabbi-events-item tools-container container article-container" style="width: 200px; height: 220px;">
                                 
-                        <article class="sabbi-events-item tools-container container" style="width: 230px; height: 250px;">
                                 <figure >
-                                         <img class="sabbi-events-img img-responsive image" style=" padding: 5%" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/predhpi.jpg" alt="thompson">
-                                    <figcaption class="mask flex-center">
+                                        
+                                         <img class="sabbi-events-img img-responsive image" style=" height: 150px; padding-block-start: 20px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/predhpi.jpg" alt="thompson">
                                         <h2 class="sabbi-events-title font-md__x">PredHPI</h2>
-                                    </figcaption>
+                                        <div class="middle">
+                                                <div class="text">Details</div>
+                                        </div>
                                 </figure>
-                                <div class="middle">
-                                        <div class="text">Details</div>
-                                      </div>
+                
+                               
                             <!-- <div class="events-item-meta">
                                 <div class="events-loc"><i class="ion-location"></i><span class="text">5005 Heavenly Village Way #2b, Lake Tahoe</span></div>
                                 <div class="events-date"><i class="ion-calendar"></i><span class="text">21st January 2017</span></div>
                             </div> -->
                         </article><!-- /.sabbi-events-item -->
-                                
+                    <!-- </figcaption> -->
                             </a>
                 </div>
-                <div class="col-sm-6 col-md-3 show-text-predhpi zoom">
+                <div class="col-sm-3  show-text-predhpi zoom">
                         <a href="http://bioinfo.usu.edu/GreeningDB/" target="_blank" class="sabbi-events-link">
-                        <article class="sabbi-events-item tools-container" style="width: 230px;">
+                        <article class="sabbi-events-item tools-container container article-container" style="width: 200px; height: 220px;">
                             <!-- <a href="events_single.html" class="sabbi-events-link"> -->
                                 <figure>
-                                    <img class="sabbi-events-img img-responsive" style="width: 230px;; height: 275px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/greeningdb-1.jpg" alt="thompson">
+                                    <img class="sabbi-events-img img-responsive" style=" height: 150px; padding-block-start: 20px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/greeningdb-1.jpg" alt="thompson">
                                     <figcaption>
                                         <h2 class="sabbi-events-title font-md__x">GreeningDB</h2>
+                                        <div class="middle">
+                                                <div class="text">Details</div>
+                                        </div>
                                     </figcaption>
                                 </figure>
                             <!-- </a> -->
@@ -239,14 +318,17 @@
                               </div> -->
                               </a>
                     </div>
-                    <div class="col-sm-6 col-md-3 show-text-predhpi zoom">
+                    <div class="col-sm-3 show-text-predhpi zoom">
                             <a href="http://bioinfo.usu.edu/AP-iNET" target="_blank" class="sabbi-events-link">
-                            <article class="sabbi-events-item tools-container" style="width: 230px;">
+                            <article class="sabbi-events-item tools-container container article-container" style="width: 200px; height: 220px;">
                                 <!-- <a href="events_single.html" class="sabbi-events-link"> -->
                                     <figure>
-                                        <img class="sabbi-events-img img-responsive" style="width: 230px;; height: 275px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/apinet.jpg" alt="thompson">
+                                        <img class="sabbi-events-img img-responsive" style=" height: 150px; padding-block-start: 20px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/apinet.jpg" alt="thompson">
                                         <figcaption>
                                             <h2 class="sabbi-events-title font-md__x">Ap-iNET</h2>
+                                            <div class="middle">
+                                                    <div class="text">Details</div>
+                                            </div>
                                         </figcaption>
                                     </figure>
                                 <!-- </a> -->
@@ -268,17 +350,20 @@
                 </div>
                 
             </div><!-- /.events_post-sagment -->
-            <div class="events_post-sagment title-card">
+            <div class="events_post-sagment tabcontent title-card" id="CLP">
                 <h4 class="sagment-title" style="padding: 20px;">Cellular Localization Prediction tools</h4>
                 <div class="row" style="padding: 20px;">
                     <div class="col-sm-6 col-md-3 show-text-predhpi zoom" >
                         <a href="http://bioinfo.usu.edu/Plant-mSubP" target="_blank" class="sabbi-events-link">
-                        <article class="sabbi-events-item tools-container" style="width: 230px;">
+                        <article class="sabbi-events-item tools-container container article-container" style="width: 200px; height: 220px;">
                             <!-- <a href="events_single.html" class="sabbi-events-link"> -->
                                 <figure>
-                                    <img class="sabbi-events-img img-responsive" style="width: 230px;; height: 275px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/plantmsubp.jpg" alt="thompson">
+                                    <img class="sabbi-events-img img-responsive" style=" height: 150px; padding-block-start: 20px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/plantmsubp.jpg" alt="thompson">
                                     <figcaption>
                                         <h2 class="sabbi-events-title font-md__x">Plant-mSubP</h2>
+                                        <div class="middle">
+                                                <div class="text">Details</div>
+                                        </div>
                                     </figcaption>
                                 </figure>
                             <!-- </a> -->
@@ -297,12 +382,15 @@
                     </div>
                 <div class="col-sm-6 col-md-3 show-text-predhpi zoom">
                         <a href="http://bioinfo.usu.edu/AtSubP" target="_blank" class="sabbi-events-link">
-                            <article class="sabbi-events-item tools-container" style="width: 230px;">
+                            <article class="sabbi-events-item tools-container container article-container" style="width: 200px; height: 220px;">
                                 <!-- <a href="events_single.html" class="sabbi-events-link"> -->
                                     <figure>
-                                        <img class="sabbi-events-img img-responsive" style="width: 230px;; height: 275px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/atSubP-1.jpg" alt="thompson">
+                                        <img class="sabbi-events-img img-responsive"  style=" height: 150px; padding-block-start: 20px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/atSubP-1.jpg" alt="thompson">
                                         <figcaption>
                                             <h2 class="sabbi-events-title font-md__x">AtSubP</h2>
+                                            <div class="middle">
+                                                    <div class="text">Details</div>
+                                            </div>
                                         </figcaption>
                                     </figure>
                                 <!-- </a> -->
@@ -323,12 +411,15 @@
                 </div>
                 <div class="col-sm-6 col-md-3 show-text-predhpi zoom">
                         <a href="http://crdd.osdd.net/raghava/rslpred/" target="_blank" class="sabbi-events-link">
-                                <article class="sabbi-events-item tools-container" style="width: 230px;">
+                                <article class="sabbi-events-item tools-container container article-container" style="width: 200px; height: 220px;">
                                     <!-- <a href="events_single.html" class="sabbi-events-link"> -->
                                         <figure>
-                                            <img class="sabbi-events-img img-responsive" style="width: 230px;; height: 275px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/rsl-pred.jpg" alt="thompson">
+                                            <img class="sabbi-events-img img-responsive" style=" height: 150px; padding-block-start: 20px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/rsl-pred.jpg" alt="thompson">
                                             <figcaption>
                                                 <h2 class="sabbi-events-title font-md__x">RSLpredP</h2>
+                                                <div class="middle">
+                                                        <div class="text">Details</div>
+                                                </div>
                                             </figcaption>
                                         </figure>
                                     <!-- </a> -->
@@ -349,12 +440,15 @@
                 </div>
                 <div class="col-sm-6 col-md-3 show-text-predhpi zoom">
                         <a href="http://bioinfo.usu.edu/PLpred" target="_blank" class="sabbi-events-link">
-                                    <article class="sabbi-events-item tools-container" style="width: 230px;">
+                                    <article class="sabbi-events-item tools-container container article-container" style="width: 200px; height: 220px;">
                                         <!-- <a href="events_single.html" class="sabbi-events-link"> -->
                                             <figure>
-                                                <img class="sabbi-events-img img-responsive" style="width: 230px;; height: 275px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/PLpred.jpg" alt="thompson">
+                                                <img class="sabbi-events-img img-responsive" style=" height: 150px; padding-block-start: 20px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/PLpred.jpg" alt="thompson">
                                                 <figcaption>
                                                     <h2 class="sabbi-events-title font-md__x">PLpred</h2>
+                                                    <div class="middle">
+                                                            <div class="text">Details</div>
+                                                    </div>
                                                 </figcaption>
                                             </figure>
                                         <!-- </a> -->
@@ -375,17 +469,20 @@
                 </div>
                 </div>
             </div><!-- /.events_post-sagment -->
-            <div class="events_post-sagment title-card">
+            <div class="events_post-sagment tabcontent title-card">
                     <h4 class="sagment-title" style="padding: 20px;">Machine Learning Based Tools</h4>
                     <div class="row" style="padding: 20px;">
                         <div class="col-sm-6 col-md-3 show-text-predhpi zoom">
                                 <a href="http://bioinfo.usu.edu/lacsubpred" target="_blank" class="sabbi-events-link">
-                            <article class="sabbi-events-item tools-container" style="width: 230px;">
+                            <article class="sabbi-events-item tools-container container article-container" style="width: 200px; height: 220px;">
                                 <!-- <a href="events_single.html" class="sabbi-events-link"> -->
                                     <figure>
-                                        <img class="sabbi-events-img img-responsive" style="width: 230px;; height: 275px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/lacsubpred.jpg" alt="thompson">
+                                        <img class="sabbi-events-img img-responsive" style=" height: 150px; padding-block-start: 20px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/lacsubpred.jpg" alt="thompson">
                                         <figcaption>
                                             <h2 class="sabbi-events-title font-md__x">LacSubPred</h2>
+                                            <div class="middle">
+                                                    <div class="text">Details</div>
+                                            </div>
                                         </figcaption>
                                     </figure>
                                 <!-- </a> -->
@@ -404,11 +501,14 @@
                         </div>
                     <div class="col-sm-6 col-md-3 show-text-predhpi zoom">
                             <a href="http://bioinfo.usu.edu/ligpred" target="_blank" class="sabbi-events-link">
-                                <article class="sabbi-events-item tools-container" style="width: 230px;">
+                                <article class="sabbi-events-item tools-container container article-container" style="width: 200px; height: 220px;">
                                         <figure>
-                                            <img class="sabbi-events-img img-responsive" style="width: 230px;; height: 275px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/ligpred.jpg" alt="thompson">
+                                            <img class="sabbi-events-img img-responsive" style=" height: 150px; padding-block-start: 20px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/ligpred.jpg" alt="thompson">
                                             <figcaption>
                                                 <h2 class="sabbi-events-title font-md__x">Ligpred</h2>
+                                                <div class="middle">
+                                                        <div class="text">Details</div>
+                                                </div>
                                             </figcaption>
                                         </figure>
                                 
@@ -431,12 +531,15 @@
                     </div>
                     <div class="col-sm-6 col-md-3 show-text-predhpi zoom">
                             <a href="http://crdd.osdd.net/raghava/rbpred/" target="_blank" class="sabbi-events-link">
-                                    <article class="sabbi-events-item tools-container" style="width: 230px;">
+                                    <article class="sabbi-events-item tools-container container article-container" style="width: 200px; height: 220px;">
                                         <!-- <a href="events_single.html" class="sabbi-events-link"> -->
                                             <figure>
-                                                <img class="sabbi-events-img img-responsive" style="width: 230px;; height: 275px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/rbpred.jpg" alt="thompson">
+                                                <img class="sabbi-events-img img-responsive"style=" height: 150px; padding-block-start: 20px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/rbpred.jpg" alt="thompson">
                                                 <figcaption>
                                                     <h2 class="sabbi-events-title font-md__x">RB-Pred</h2>
+                                                    <div class="middle">
+                                                            <div class="text">Details</div>
+                                                    </div>
                                                 </figcaption>
                                             </figure>
                                         <!-- </a> -->
@@ -623,6 +726,54 @@
           });
 
      });
+
+     var tabs = $('.tabs');
+var selector = $('.tabs').find('a').length;
+//var selector = $(".tabs").find(".selector");
+var activeItem = tabs.find('.active');
+var activeWidth = activeItem.innerWidth();
+$(".selector").css({
+  "left": activeItem.position.left + "px", 
+  "width": activeWidth + "px"
+});
+
+$(".tabs").on("click","a",function(e){
+  e.preventDefault();
+  $('.tabs a').removeClass("active");
+  $(this).addClass('active');
+  var activeWidth = $(this).innerWidth();
+  var itemPos = $(this).position();
+  $(".selector").css({
+    "left":itemPos.left + "px", 
+    "width": activeWidth + "px"
+  });
+});
+
+//open tools
+function openTools(evt, yearName) {
+
+var i, tabcontent, tablinks;
+
+tabcontent = document.getElementsByClassName("tabcontent");
+
+for (i = 0; i < tabcontent.length; i++) {
+  tabcontent[i].style.display = "none";
+}
+
+tablinks = document.getElementsByClassName("tablinks");
+
+for (i = 0; i < tablinks.length; i++) {
+  tablinks[i].className = tablinks[i].className.replace(" active", "");
+}
+
+document.getElementById(yearName).style.display = "block";
+
+evt.currentTarget.className += " active";
+
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
     </script>
 </body>
 </html>
