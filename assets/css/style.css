@@ -2063,6 +2063,14 @@ a.link-with-icon i.fa {
   transition: 0.3s;
 }
 
+.team-classification{
+  padding: 5px; 
+  border-radius: 20px; 
+  text-align: center; 
+  font-size: 30px; 
+  font-weight: bold;
+}
+
 .stage_events_post {
   margin-top: 45px; }
   .events_post-sagment .sagment-title {

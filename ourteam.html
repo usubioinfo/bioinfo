@@ -39,10 +39,56 @@
 }
 
 .modal, .modal-backdrop {
-    position: absolute !important;
+    /* position: absolute !important; */
+    position: fixed;
+    padding-top: 300px;
+}
+.modal-shadow{
+    	-webkit-box-shadow: 0 5px 15px rgba(0,0,0,0);
+            -moz-box-shadow: 0 5px 15px rgba(0,0,0,0);
+            /* -0-box-shadow: 0 5px 15px rgba(0,0,0,0); */
+    	box-shadow: 0 5px 15px rgba(0,0,0,0);
+    }
+
+    .article-container {
+  position: relative;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.article-container:hover .img-responsive {
+  opacity: 0.4;
+}
+
+.article-container:hover .middle {
+  opacity: 1;
 }
 
 
+.text {
+  background-color: #0f2439;
+  color: white;
+  font-size: 12px;
+  padding: 16px 32px;
+}
     </style>
 </head>
 <body class="auth-theme-rashmore page-team">
@@ -226,20 +272,29 @@
                     </div>
                 </div>
             </section><!-- /.bio__holder -->
-            <button id="modalbtn">Open Modal</button>
+            
             <div class="our_team-profile-card__holder blue">
                    <!-- Modal -->
              <div id="myModal" class="modal fade " role="dialog">
                     <div class="modal-dialog">
               
                       <!-- Modal content-->
-                      <div class="modal-content">
+                      <div class="modal-content modal-shadow">
                         <div class="modal-header">
                           <button type="button" class="close" data-dismiss="modal">&times;</button>
-                          <h4 class="modal-title">Modal Header</h4>
+                          <h4 class="modal-title">Cristian Orduz</h4>
+                          <div class="fig-title-des modalsubtitle">MS Student | PSC</div>
                         </div>
                         <div class="modal-body">
-                          <p>Some text in the modal.</p>
+                                <div class="row">
+                                        <div class="col-md-3 col-sm-3">
+                                            <figure>
+                                                    <img class="img-responsive" style="width: 110px; height:110px" src="http://bioinfo.usu.edu/wp-content/uploads/2019/05/cristian2.jpg" alt="sabbi-profile-pic">
+                                            </figure>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3">
+                                        </div>
+                                </div>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -248,14 +303,22 @@
               
                     </div>
                   </div>
-                <div class="row">
+                  <div class="title-card team-classification">
+                    Staff
+                </div>
+                <div class="row" style="padding-top: 20px;">
                     <div class="col-sm-8 col-md-3 zoom ">
-                        <div class="profile-card profile-card-meta_classic" >
+                        <div class="profile-card profile-card-meta_classic article-container" >
                             <figure>
-                                <img class="img-responsive" src="http://bioinfo.usu.edu/wp-content/uploads/2019/05/cristian2.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
+                                <img class="img-responsive" src="http://bioinfo.usu.edu/wp-content/uploads/2019/04/roussie_lab_400x600.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
                                 <figcaption>
-                                    <h3 class="fig-title">Cristian Orduz </h3>
-                                    <div class="fig-title-des"><i>MS Student | PSC</i></div>
+                                    <h3 class="fig-title">Rousselene B. Larson</h3>
+                                    <div class="middle">
+                                        <button id="modalbtn" style=" background: transparent; border: none !important;">
+                                          <div class="text">About</div>
+                                        </button>
+                                    </div>
+                                    <div class="fig-title-des"><i>Bioinformatic Scientist</i></div>
                                     <!-- <div class="fig-meta">
                                         <p class="fig-cal"><strong>Call:</strong> <span>+61(07)373 53921</span></p>
                                         <p class="fig-mail"><strong>Email:</strong> <span>nam-trung.nguyenEmailgriffith.edu.au</span></p>
@@ -273,36 +336,52 @@
                             </div> -->
                         </div><!-- /.profile-card  .profile-card-meta_classic -->
                     </div>
-                    <div class="col-sm-8 col-md-3 flip-card zoom">
-                        <div class="profile-card profile-card-meta_classic">
-                            <figure>
-                                <img class="img-responsive" src="http://bioinfo.usu.edu/wp-content/uploads/2019/02/matthew-e1549938935496.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
-                                <figcaption>
-                                    <h3 class="fig-title">Matthew Lister</h3>
-                                    <div class="fig-title-des">HPC administrator | CS</div>
-                                    <!-- <div class="fig-meta">
-                                        <p class="fig-cal"><strong>Call:</strong> <span>+61(07)373 53921</span></p>
-                                        <p class="fig-mail"><strong>Email:</strong> <span>nam-trung.nguyenEmailgriffith.edu.au</span></p>
-                                    </div> -->
-                                </figcaption>
-                            </figure>
-                            <!-- <div class="profile-card-meta">
-                                <ul class="pfofile-social list-unstyled list-inline">
-                                    <li><a href="#"> <img src="assets/img/profile/social/gs.png" alt="sabbi-social" class="img-responsive"></a></li>
-                                    <li><a href="#"> <img src="assets/img/profile/social/id.png" alt="sabbi-social" class="img-responsive"></a></li>
-                                    <li><a href="#"> <img src="assets/img/profile/social/fb.png" alt="sabbi-social" class="img-responsive"></a></li>
-                                    <li><a href="#"> <img src="assets/img/profile/social/tw.png" alt="sabbi-social" class="img-responsive"></a></li>
-                                </ul>
-                            </div> -->
-                        </div><!-- /.profile-card  .profile-card-meta_classic -->
-                    </div>
-                    <div class="col-sm-8 col-md-3 zoom">
-                            <div class="profile-card profile-card-meta_classic">
+                </div>
+                <div class="title-card team-classification">
+                        Graduate
+                </div>
+                <div class="row" style="padding-top: 20px;">
+                        <div class="col-sm-8 col-md-3 zoom ">
+                            <div class="profile-card profile-card-meta_classic article-container" >
                                 <figure>
-                                    <img class="img-responsive" src="http://bioinfo.usu.edu/wp-content/uploads/2019/02/naveen-e1549936842295.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
+                                    <img class="img-responsive" src="http://bioinfo.usu.edu/wp-content/uploads/2019/05/cristian2.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
                                     <figcaption>
-                                        <h3 class="fig-title">Naveen Duhan</h3>
-                                        <div class="fig-title-des">PHD Student | PSC</div>
+                                        <h3 class="fig-title">Cristian Orduz </h3>
+                                        <div class="middle">
+                                            <button id="modalbtn" style=" background: transparent; border: none !important;">
+                                              <div class="text">About</div>
+                                            </button>
+                                        </div>
+                                        <div class="fig-title-des"><i>MS Student | PSC</i></div>
+                                        <!-- <div class="fig-meta">
+                                            <p class="fig-cal"><strong>Call:</strong> <span>+61(07)373 53921</span></p>
+                                            <p class="fig-mail"><strong>Email:</strong> <span>nam-trung.nguyenEmailgriffith.edu.au</span></p>
+                                        </div> -->
+                                    </figcaption>
+                                    
+                                </figure>
+                                <!-- <div class="profile-card-meta">
+                                    <ul class="pfofile-social list-unstyled list-inline">
+                                        <li><a href="#"> <img src="assets/img/profile/social/gs.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                        <li><a href="#"> <img src="assets/img/profile/social/id.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                        <li><a href="#"> <img src="assets/img/profile/social/fb.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                        <li><a href="#"> <img src="assets/img/profile/social/tw.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                    </ul>
+                                </div> -->
+                            </div><!-- /.profile-card  .profile-card-meta_classic -->
+                        </div>
+                        <div class="col-sm-8 col-md-3 flip-card zoom">
+                            <div class="profile-card profile-card-meta_classic article-container">
+                                <figure>
+                                    <img class="img-responsive" src="http://bioinfo.usu.edu/wp-content/uploads/2019/02/matthew-e1549938935496.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
+                                    <figcaption>
+                                        <h3 class="fig-title">Matthew Lister</h3>
+                                        <div class="middle">
+                                                <button id="modalbtn" style=" background: transparent; border: none !important;">
+                                                  <div class="text">About</div>
+                                                </button>
+                                            </div>
+                                        <div class="fig-title-des">HPC administrator | CS</div>
                                         <!-- <div class="fig-meta">
                                             <p class="fig-cal"><strong>Call:</strong> <span>+61(07)373 53921</span></p>
                                             <p class="fig-mail"><strong>Email:</strong> <span>nam-trung.nguyenEmailgriffith.edu.au</span></p>
@@ -318,14 +397,19 @@
                                     </ul>
                                 </div> -->
                             </div><!-- /.profile-card  .profile-card-meta_classic -->
-                        </div>    
+                        </div>
                         <div class="col-sm-8 col-md-3 zoom">
-                                <div class="profile-card profile-card-meta_classic">
+                                <div class="profile-card profile-card-meta_classic article-container">
                                     <figure>
-                                        <img class="img-responsive" src="assets/img/profile/suyash.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
+                                        <img class="img-responsive" src="http://bioinfo.usu.edu/wp-content/uploads/2019/02/naveen-e1549936842295.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
                                         <figcaption>
-                                            <h3 class="fig-title">Suyash Mhetre</h3>
-                                            <div class="fig-title-des">MS Student | MIS</div>
+                                            <h3 class="fig-title">Naveen Duhan</h3>
+                                            <div class="middle">
+                                                    <button id="modalbtn" style=" background: transparent; border: none !important;">
+                                                      <div class="text">About</div>
+                                                    </button>
+                                                </div>
+                                            <div class="fig-title-des">PHD Student | PSC</div>
                                             <!-- <div class="fig-meta">
                                                 <p class="fig-cal"><strong>Call:</strong> <span>+61(07)373 53921</span></p>
                                                 <p class="fig-mail"><strong>Email:</strong> <span>nam-trung.nguyenEmailgriffith.edu.au</span></p>
@@ -341,14 +425,19 @@
                                         </ul>
                                     </div> -->
                                 </div><!-- /.profile-card  .profile-card-meta_classic -->
-                            </div> 
+                            </div>    
                             <div class="col-sm-8 col-md-3 zoom">
-                                    <div class="profile-card profile-card-meta_classic">
+                                    <div class="profile-card profile-card-meta_classic article-container">
                                         <figure>
-                                            <img class="img-responsive" src="assets/img/profile/Kaige Zhang.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
+                                            <img class="img-responsive" src="assets/img/profile/suyash.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
                                             <figcaption>
-                                                <h3 class="fig-title">Kaige Zhang</h3>
-                                                <div class="fig-title-des">Ph.D. Research Assistant | CS</div>
+                                                <h3 class="fig-title">Suyash Mhetre</h3>
+                                                <div class="middle">
+                                                        <button id="modalbtn" style=" background: transparent; border: none !important;">
+                                                          <div class="text">About</div>
+                                                        </button>
+                                                    </div>
+                                                <div class="fig-title-des">MS Student | MIS</div>
                                                 <!-- <div class="fig-meta">
                                                     <p class="fig-cal"><strong>Call:</strong> <span>+61(07)373 53921</span></p>
                                                     <p class="fig-mail"><strong>Email:</strong> <span>nam-trung.nguyenEmailgriffith.edu.au</span></p>
@@ -365,23 +454,183 @@
                                         </div> -->
                                     </div><!-- /.profile-card  .profile-card-meta_classic -->
                                 </div> 
+                                <div class="col-sm-8 col-md-3 zoom">
+                                        <div class="profile-card profile-card-meta_classic article-container">
+                                            <figure>
+                                                <img class="img-responsive" src="assets/img/profile/Kaige Zhang.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
+                                                <figcaption>
+                                                    <h3 class="fig-title">Kaige Zhang</h3>
+                                                    <div class="middle">
+                                                            <button id="modalbtn" style=" background: transparent; border: none !important;">
+                                                              <div class="text">About</div>
+                                                            </button>
+                                                        </div>
+                                                    <div class="fig-title-des">Ph.D. Research Assistant | CS</div>
+                                                    <!-- <div class="fig-meta">
+                                                        <p class="fig-cal"><strong>Call:</strong> <span>+61(07)373 53921</span></p>
+                                                        <p class="fig-mail"><strong>Email:</strong> <span>nam-trung.nguyenEmailgriffith.edu.au</span></p>
+                                                    </div> -->
+                                                </figcaption>
+                                            </figure>
+                                            <!-- <div class="profile-card-meta">
+                                                <ul class="pfofile-social list-unstyled list-inline">
+                                                    <li><a href="#"> <img src="assets/img/profile/social/gs.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                                    <li><a href="#"> <img src="assets/img/profile/social/id.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                                    <li><a href="#"> <img src="assets/img/profile/social/fb.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                                    <li><a href="#"> <img src="assets/img/profile/social/tw.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                                </ul>
+                                            </div> -->
+                                        </div><!-- /.profile-card  .profile-card-meta_classic -->
+                                    </div> 
+                </div>
+                <div class="title-card team-classification">
+                    Undergraduate
+                </div>
+                <div class="row" style="padding-top: 20px;">
+                        <div class="col-sm-8 col-md-3 zoom ">
+                            <div class="profile-card profile-card-meta_classic article-container" >
+                                <figure>
+                                    <img class="img-responsive" src="http://bioinfo.usu.edu/wp-content/uploads/2019/05/cristian2.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
+                                    <figcaption>
+                                        <h3 class="fig-title">Cristian Orduz </h3>
+                                        <div class="middle">
+                                            <button id="modalbtn" style=" background: transparent; border: none !important;">
+                                              <div class="text">About</div>
+                                            </button>
+                                        </div>
+                                        <div class="fig-title-des"><i>MS Student | PSC</i></div>
+                                        <!-- <div class="fig-meta">
+                                            <p class="fig-cal"><strong>Call:</strong> <span>+61(07)373 53921</span></p>
+                                            <p class="fig-mail"><strong>Email:</strong> <span>nam-trung.nguyenEmailgriffith.edu.au</span></p>
+                                        </div> -->
+                                    </figcaption>
+                                    
+                                </figure>
+                                <!-- <div class="profile-card-meta">
+                                    <ul class="pfofile-social list-unstyled list-inline">
+                                        <li><a href="#"> <img src="assets/img/profile/social/gs.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                        <li><a href="#"> <img src="assets/img/profile/social/id.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                        <li><a href="#"> <img src="assets/img/profile/social/fb.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                        <li><a href="#"> <img src="assets/img/profile/social/tw.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                    </ul>
+                                </div> -->
+                            </div><!-- /.profile-card  .profile-card-meta_classic -->
+                        </div>
+                        <div class="col-sm-8 col-md-3 flip-card zoom">
+                            <div class="profile-card profile-card-meta_classic article-container">
+                                <figure>
+                                    <img class="img-responsive" src="http://bioinfo.usu.edu/wp-content/uploads/2019/02/matthew-e1549938935496.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
+                                    <figcaption>
+                                        <h3 class="fig-title">Matthew Lister</h3>
+                                        <div class="middle">
+                                                <button id="modalbtn" style=" background: transparent; border: none !important;">
+                                                  <div class="text">About</div>
+                                                </button>
+                                            </div>
+                                        <div class="fig-title-des">HPC administrator | CS</div>
+                                        <!-- <div class="fig-meta">
+                                            <p class="fig-cal"><strong>Call:</strong> <span>+61(07)373 53921</span></p>
+                                            <p class="fig-mail"><strong>Email:</strong> <span>nam-trung.nguyenEmailgriffith.edu.au</span></p>
+                                        </div> -->
+                                    </figcaption>
+                                </figure>
+                                <!-- <div class="profile-card-meta">
+                                    <ul class="pfofile-social list-unstyled list-inline">
+                                        <li><a href="#"> <img src="assets/img/profile/social/gs.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                        <li><a href="#"> <img src="assets/img/profile/social/id.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                        <li><a href="#"> <img src="assets/img/profile/social/fb.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                        <li><a href="#"> <img src="assets/img/profile/social/tw.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                    </ul>
+                                </div> -->
+                            </div><!-- /.profile-card  .profile-card-meta_classic -->
+                        </div>
+                        <div class="col-sm-8 col-md-3 zoom">
+                                <div class="profile-card profile-card-meta_classic article-container">
+                                    <figure>
+                                        <img class="img-responsive" src="http://bioinfo.usu.edu/wp-content/uploads/2019/02/naveen-e1549936842295.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
+                                        <figcaption>
+                                            <h3 class="fig-title">Naveen Duhan</h3>
+                                            <div class="middle">
+                                                    <button id="modalbtn" style=" background: transparent; border: none !important;">
+                                                      <div class="text">About</div>
+                                                    </button>
+                                                </div>
+                                            <div class="fig-title-des">PHD Student | PSC</div>
+                                            <!-- <div class="fig-meta">
+                                                <p class="fig-cal"><strong>Call:</strong> <span>+61(07)373 53921</span></p>
+                                                <p class="fig-mail"><strong>Email:</strong> <span>nam-trung.nguyenEmailgriffith.edu.au</span></p>
+                                            </div> -->
+                                        </figcaption>
+                                    </figure>
+                                    <!-- <div class="profile-card-meta">
+                                        <ul class="pfofile-social list-unstyled list-inline">
+                                            <li><a href="#"> <img src="assets/img/profile/social/gs.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                            <li><a href="#"> <img src="assets/img/profile/social/id.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                            <li><a href="#"> <img src="assets/img/profile/social/fb.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                            <li><a href="#"> <img src="assets/img/profile/social/tw.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                        </ul>
+                                    </div> -->
+                                </div><!-- /.profile-card  .profile-card-meta_classic -->
+                            </div>    
+                            <div class="col-sm-8 col-md-3 zoom">
+                                    <div class="profile-card profile-card-meta_classic article-container">
+                                        <figure>
+                                            <img class="img-responsive" src="assets/img/profile/suyash.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
+                                            <figcaption>
+                                                <h3 class="fig-title">Suyash Mhetre</h3>
+                                                <div class="middle">
+                                                        <button id="modalbtn" style=" background: transparent; border: none !important;">
+                                                          <div class="text">About</div>
+                                                        </button>
+                                                    </div>
+                                                <div class="fig-title-des">MS Student | MIS</div>
+                                                <!-- <div class="fig-meta">
+                                                    <p class="fig-cal"><strong>Call:</strong> <span>+61(07)373 53921</span></p>
+                                                    <p class="fig-mail"><strong>Email:</strong> <span>nam-trung.nguyenEmailgriffith.edu.au</span></p>
+                                                </div> -->
+                                            </figcaption>
+                                        </figure>
+                                        <!-- <div class="profile-card-meta">
+                                            <ul class="pfofile-social list-unstyled list-inline">
+                                                <li><a href="#"> <img src="assets/img/profile/social/gs.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                                <li><a href="#"> <img src="assets/img/profile/social/id.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                                <li><a href="#"> <img src="assets/img/profile/social/fb.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                                <li><a href="#"> <img src="assets/img/profile/social/tw.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                            </ul>
+                                        </div> -->
+                                    </div><!-- /.profile-card  .profile-card-meta_classic -->
+                                </div> 
+                                <div class="col-sm-8 col-md-3 zoom">
+                                        <div class="profile-card profile-card-meta_classic article-container">
+                                            <figure>
+                                                <img class="img-responsive" src="assets/img/profile/Kaige Zhang.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
+                                                <figcaption>
+                                                    <h3 class="fig-title">Kaige Zhang</h3>
+                                                    <div class="middle">
+                                                            <button id="modalbtn" style=" background: transparent; border: none !important;">
+                                                              <div class="text">About</div>
+                                                            </button>
+                                                        </div>
+                                                    <div class="fig-title-des">Ph.D. Research Assistant | CS</div>
+                                                    <!-- <div class="fig-meta">
+                                                        <p class="fig-cal"><strong>Call:</strong> <span>+61(07)373 53921</span></p>
+                                                        <p class="fig-mail"><strong>Email:</strong> <span>nam-trung.nguyenEmailgriffith.edu.au</span></p>
+                                                    </div> -->
+                                                </figcaption>
+                                            </figure>
+                                            <!-- <div class="profile-card-meta">
+                                                <ul class="pfofile-social list-unstyled list-inline">
+                                                    <li><a href="#"> <img src="assets/img/profile/social/gs.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                                    <li><a href="#"> <img src="assets/img/profile/social/id.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                                    <li><a href="#"> <img src="assets/img/profile/social/fb.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                                    <li><a href="#"> <img src="assets/img/profile/social/tw.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                                </ul>
+                                            </div> -->
+                                        </div><!-- /.profile-card  .profile-card-meta_classic -->
+                                    </div> 
                 </div>
             </div>
         </div>
-        <!-- <section class="sabbi-section stage-halfbol stage-full_width">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-sm-9">
-                        <aside class="stage-halfbol_content">
-                            <h2 class="stage-title font-md lil-line">Rushmore is one of England’s</h2>
-                            <p class="stage-halfbol_text">Lorem ipsum dolor sit amet, con adipiscing elit. Etiam convallis elit id impedie. Quisq commodo ornare tortor Quiue bibendu. magna vitae ex interdum cursus.</p>
-                            <a href="future_member.html#join_reaserch_ln" class="btn btn-action btn-gules">Join Research</a>
-                        </aside>
-                    </div>
-                </div>
-            </div> -->
-        <!-- </section -->
-        <!-- /.stage-halfbol -->
     </main>
 
     
