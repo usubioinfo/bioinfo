@@ -251,12 +251,12 @@
     <div class="wrapper">
             <nav class="tabs">
               <div class="selector"></div>
-              <a href="#tabcontent" class="active tablinks" onclick="openTools(event, 'All')"><i class="fab fa-superpowers"></i>All</a>
+              <a href="#tabcontent" class="active tablinks" onclick="openAllTools(event, 'HPI,CLP')"><i class="fab fa-superpowers"></i>All</a>
               <a href="#tabcontent" class="tablinks" onclick="openTools(event, 'HPI')"><i class="fas fa-hand-rock"></i>HPI</a>
               <a href="#tabcontent" class="tablinks" onclick="openTools(event, 'CLP')"><i class="fas fa-hand-rock"></i>Subcellular</a>
-              <a href="#"><i class="fas fa-bolt"></i>Databases</a>
-              <a href="#"><i class="fas fa-burn"></i>Bioenergy</a>
-              <a href="#"><i class="fas fa-burn"></i>Miscellaneous</a>
+              <a href="#tabcontent" class="tablinks" onclick="openTools(event, 'DB')"><i class="fas fa-bolt"></i>Databases</a>
+              <a href="#tabcontent" class="tablinks" onclick="openTools(event, 'Bio')"><i class="fas fa-burn"></i>Bioenergy</a>
+              <a href="#tabcontent" class="tablinks" onclick="openTools(event, 'Misc')"><i class="fas fa-burn"></i>Miscellaneous</a>
             </nav>
           </div>
 
@@ -290,34 +290,6 @@
                     <!-- </figcaption> -->
                             </a>
                 </div>
-                <div class="col-sm-3  show-text-predhpi zoom">
-                        <a href="http://bioinfo.usu.edu/GreeningDB/" target="_blank" class="sabbi-events-link">
-                        <article class="sabbi-events-item tools-container container article-container" style="width: 200px; height: 220px;">
-                            <!-- <a href="events_single.html" class="sabbi-events-link"> -->
-                                <figure>
-                                    <img class="sabbi-events-img img-responsive" style=" height: 150px; padding-block-start: 20px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/greeningdb-1.jpg" alt="thompson">
-                                    <figcaption>
-                                        <h2 class="sabbi-events-title font-md__x">GreeningDB</h2>
-                                        <div class="middle">
-                                                <div class="text">Details</div>
-                                        </div>
-                                    </figcaption>
-                                </figure>
-                            <!-- </a> -->
-                            <!-- <div class="events-item-meta">
-                                <div class="events-loc"><i class="ion-location"></i><span class="text">5005 Heavenly Village Way #2b, Lake Tahoe</span></div>
-                                <div class="events-date"><i class="ion-calendar"></i><span class="text">22nd January 2017</span></div>
-                            </div> -->
-                        </article><!-- /.sabbi-events-item -->
-                        <!-- <div class="overlay">
-                                <div class="text"> <strong>A host pathogen interactions database for citrus greening disease, 
-                                    which provides a BLAST Service with several proteomes related to the disease. 
-                                    Also includes the old prototypes of PredHPI tools.
-                                </strong>
-                                </div>
-                              </div> -->
-                              </a>
-                    </div>
                     <div class="col-sm-3 show-text-predhpi zoom">
                             <a href="http://bioinfo.usu.edu/AP-iNET" target="_blank" class="sabbi-events-link">
                             <article class="sabbi-events-item tools-container container article-container" style="width: 200px; height: 220px;">
@@ -469,8 +441,42 @@
                 </div>
                 </div>
             </div><!-- /.events_post-sagment -->
-            <div class="events_post-sagment tabcontent title-card">
-                    <h4 class="sagment-title" style="padding: 20px;">Machine Learning Based Tools</h4>
+            <div class="events_post-sagment tabcontent title-card" id="DB" >
+                <h4 class="sagment-title" style="padding: 20px;">Databases</h4>
+                <div class="row" style="padding: 20px;">
+                <div class="col-sm-3  show-text-predhpi zoom">
+                        <a href="http://bioinfo.usu.edu/GreeningDB/" target="_blank" class="sabbi-events-link">
+                        <article class="sabbi-events-item tools-container container article-container" style="width: 200px; height: 220px;">
+                            <!-- <a href="events_single.html" class="sabbi-events-link"> -->
+                                <figure>
+                                    <img class="sabbi-events-img img-responsive" style=" height: 150px; padding-block-start: 20px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/greeningdb-1.jpg" alt="thompson">
+                                    <figcaption>
+                                        <h2 class="sabbi-events-title font-md__x">GreeningDB</h2>
+                                        <div class="middle">
+                                                <div class="text">Details</div>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            <!-- </a> -->
+                            <!-- <div class="events-item-meta">
+                                <div class="events-loc"><i class="ion-location"></i><span class="text">5005 Heavenly Village Way #2b, Lake Tahoe</span></div>
+                                <div class="events-date"><i class="ion-calendar"></i><span class="text">22nd January 2017</span></div>
+                            </div> -->
+                        </article><!-- /.sabbi-events-item -->
+                        <!-- <div class="overlay">
+                                <div class="text"> <strong>A host pathogen interactions database for citrus greening disease, 
+                                    which provides a BLAST Service with several proteomes related to the disease. 
+                                    Also includes the old prototypes of PredHPI tools.
+                                </strong>
+                                </div>
+                              </div> -->
+                              </a>
+                    </div>
+                </div>
+                
+            </div><!-- /.events_post-sagment -->
+            <div class="events_post-sagment tabcontent title-card" id="Bio">
+                    <h4 class="sagment-title" style="padding: 20px;">Bio-Energy</h4>
                     <div class="row" style="padding: 20px;">
                         <div class="col-sm-6 col-md-3 show-text-predhpi zoom">
                                 <a href="http://bioinfo.usu.edu/lacsubpred" target="_blank" class="sabbi-events-link">
@@ -529,37 +535,42 @@
                                 </div> -->
                             </a>
                     </div>
-                    <div class="col-sm-6 col-md-3 show-text-predhpi zoom">
-                            <a href="http://crdd.osdd.net/raghava/rbpred/" target="_blank" class="sabbi-events-link">
-                                    <article class="sabbi-events-item tools-container container article-container" style="width: 200px; height: 220px;">
-                                        <!-- <a href="events_single.html" class="sabbi-events-link"> -->
-                                            <figure>
-                                                <img class="sabbi-events-img img-responsive"style=" height: 150px; padding-block-start: 20px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/rbpred.jpg" alt="thompson">
-                                                <figcaption>
-                                                    <h2 class="sabbi-events-title font-md__x">RB-Pred</h2>
-                                                    <div class="middle">
-                                                            <div class="text">Details</div>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        <!-- </a> -->
-                                        <!-- <div class="events-item-meta">
-                                            <div class="events-loc"><i class="ion-location"></i><span class="text">5005 Heavenly Village Way #2b, Lake Tahoe</span></div>
-                                            <div class="events-date"><i class="ion-calendar"></i><span class="text">21st January 2017</span></div>
-                                        </div> -->
-                                    </article><!-- /.sabbi-events-item -->
-                                    <!-- <div class="overlay">
-                                            <div class="text"> <strong>A first of its kind worldwide, this Support 
-                                                Vector Machine (SVM) based server forecasts rice leaf blast severity 
-                                                based on the weather parameters for general use to plant pathologists 
-                                                and farming community.
-                                            </strong>
-                                            </div>
-                                    </div> -->
-                            </a>
-                    </div>
                     </div>
             </div><!-- /.events_post-sagment -->
+            <div class="events_post-sagment tabcontent title-card" id="Misc">
+                <h4 class="sagment-title" style="padding: 20px;">Miscellaneous</h4>
+                <div class="row" style="padding: 20px;">
+                <div class="col-sm-6 col-md-3 show-text-predhpi zoom">
+                        <a href="http://crdd.osdd.net/raghava/rbpred/" target="_blank" class="sabbi-events-link">
+                                <article class="sabbi-events-item tools-container container article-container" style="width: 200px; height: 220px;">
+                                    <!-- <a href="events_single.html" class="sabbi-events-link"> -->
+                                        <figure>
+                                            <img class="sabbi-events-img img-responsive"style=" height: 150px; padding-block-start: 20px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/rbpred.jpg" alt="thompson">
+                                            <figcaption>
+                                                <h2 class="sabbi-events-title font-md__x">RB-Pred</h2>
+                                                <div class="middle">
+                                                        <div class="text">Details</div>
+                                                </div>
+                                            </figcaption>
+                                        </figure>
+                                    <!-- </a> -->
+                                    <!-- <div class="events-item-meta">
+                                        <div class="events-loc"><i class="ion-location"></i><span class="text">5005 Heavenly Village Way #2b, Lake Tahoe</span></div>
+                                        <div class="events-date"><i class="ion-calendar"></i><span class="text">21st January 2017</span></div>
+                                    </div> -->
+                                </article><!-- /.sabbi-events-item -->
+                                <!-- <div class="overlay">
+                                        <div class="text"> <strong>A first of its kind worldwide, this Support 
+                                            Vector Machine (SVM) based server forecasts rice leaf blast severity 
+                                            based on the weather parameters for general use to plant pathologists 
+                                            and farming community.
+                                        </strong>
+                                        </div>
+                                </div> -->
+                        </a>
+                </div>
+                </div>
+        </div><!-- /.events_post-sagment -->
             <!-- <nav aria-label="Page navigation" class="pagination_wraper">
                 <ul class="pagination">
                     <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
@@ -771,7 +782,16 @@ document.getElementById(yearName).style.display = "block";
 evt.currentTarget.className += " active";
 
 }
+function openAllTools(evt, yearName) {
 
+var i, tabcontent, tablinks;
+
+tabcontent = document.getElementsByClassName("tabcontent");
+
+for (i = 0; i < tabcontent.length; i++) {
+  tabcontent[i].style.display = "block";
+}
+}
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
     </script>

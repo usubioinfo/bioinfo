@@ -26,6 +26,24 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <script src="assets/js/vendor/modernizr-2.8.3.min.js">
     </script>
+    <style>
+    .after_modal_appended
+{  
+  position:relative;
+}
+
+.block 
+{
+  width:100%;
+  height:200px;
+}
+
+.modal, .modal-backdrop {
+    position: absolute !important;
+}
+
+
+    </style>
 </head>
 <body class="auth-theme-rashmore page-team">
     <!--[if lt IE 8]>
@@ -153,7 +171,7 @@
                         <div class="profile-card profile-card-meta_classic">
                             <a href="professor.html">
                             <figure>
-                                <img class="img-responsive" style="width: 210px; height:210px" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/kaundal-rakesh2.jpg" alt="sabbi-profile-pic">
+                                <img class="img-responsive" style="width: 210px; height:260px" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/kaundal-rakesh2.jpg" alt="sabbi-profile-pic">
                                 <figcaption>
                                     <h3 class="fig-title">Contact Information</h3>
                                     <div class="fig-meta">
@@ -208,7 +226,28 @@
                     </div>
                 </div>
             </section><!-- /.bio__holder -->
-            <div class="our_team-profile-card__holder">
+            <button id="modalbtn">Open Modal</button>
+            <div class="our_team-profile-card__holder blue">
+                   <!-- Modal -->
+             <div id="myModal" class="modal fade " role="dialog">
+                    <div class="modal-dialog">
+              
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>Some text in the modal.</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+              
+                    </div>
+                  </div>
                 <div class="row">
                     <div class="col-sm-8 col-md-3 zoom ">
                         <div class="profile-card profile-card-meta_classic" >
@@ -484,7 +523,15 @@
 
 
         $(document).ready(function(){
-          
+            $("body").on("click","#modalbtn",function(){
+           
+           $("#myModal").modal("show");
+           
+           $(".blue").addClass("after_modal_appended");
+           $('.modal-backdrop').appendTo('.blue');          
+           $('body').removeClass("modal-open")
+               $('body').css("padding-right","");     
+     });
           $(window).scroll(function(){
 
             if($(window).scrollTop()>100){
@@ -496,6 +543,7 @@
           });
 
      });
+
     </script>
 </body>
 </html>
