@@ -297,7 +297,7 @@
                                 <div class="row">
                                         <div class="col-md-3 col-sm-3">
                                             <figure>
-                                                    <img class="img-responsive" style="width: 110px; height:110px" src="http://bioinfo.usu.edu/wp-content/uploads/2019/05/cristian2.jpg" alt="sabbi-profile-pic">
+                                                    <img class="img-responsive detailsCard" style="width: 110px; height:110px" src="http://bioinfo.usu.edu/wp-content/uploads/2019/05/cristian2.jpg" alt="sabbi-profile-pic">
                                             </figure>
                                         </div>
                                         <div class="col-md-3 col-sm-3">
@@ -315,14 +315,14 @@
                     Staff
                 </div>
                 <div class="row" style="padding-top: 20px;">
-                    <div class="col-sm-8 col-md-3 zoom ">
-                        <div class="profile-card profile-card-meta_classic article-container" >
-                            <figure>
-                                <img class="img-responsive" src="http://bioinfo.usu.edu/wp-content/uploads/2019/04/roussie_lab_400x600.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
+                    <div class="col-sm-8 col-md-3 zoom">
+                        <div class="profile-card profile-card-meta_classic article-container">
+                            <figure  id="Larson">
+                                <img class="img-responsive LarsonProfile" src="http://bioinfo.usu.edu/wp-content/uploads/2019/04/roussie_lab_400x600.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
                                 <figcaption>
                                     <h3 class="fig-title">Rousselene B. Larson</h3>
                                     <div class="middle">
-                                        <button id="modalbtn" style=" background: transparent; border: none !important;">
+                                        <button id="modalbtn" onclick="openAboutModal(event,'Larson')" style=" background: transparent; border: none !important;">
                                           <div class="text">About</div>
                                         </button>
                                     </div>
@@ -348,11 +348,11 @@
                     <div class="col-sm-8 col-md-3 zoom">
                             <div class="profile-card profile-card-meta_classic article-container">
                                 <figure>
-                                    <img class="img-responsive" src="assets/img/profile/Kaige Zhang.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
+                                    <img class="img-responsive" id="Kaige" src="assets/img/profile/Kaige Zhang.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
                                     <figcaption>
                                         <h3 class="fig-title">Kaige Zhang</h3>
                                         <div class="middle">
-                                                <button id="modalbtn" style=" background: transparent; border: none !important;">
+                                                <button id="modalbtn" onclick="openAboutModal(event,'Kaige')" style=" background: transparent; border: none !important;">
                                                   <div class="text">About</div>
                                                 </button>
                                             </div>
@@ -381,11 +381,11 @@
                         <div class="col-sm-8 col-md-3 zoom ">
                             <div class="profile-card profile-card-meta_classic article-container" >
                                 <figure>
-                                    <img class="img-responsive" src="http://bioinfo.usu.edu/wp-content/uploads/2019/05/cristian2.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
+                                    <img class="img-responsive" id="Cristian" src="http://bioinfo.usu.edu/wp-content/uploads/2019/05/cristian2.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
                                     <figcaption>
                                         <h3 class="fig-title">Cristian Orduz </h3>
                                         <div class="middle">
-                                            <button id="modalbtn" style=" background: transparent; border: none !important;">
+                                            <button id="modalbtn" onclick="openAboutModal(event,'Cristian')" style=" background: transparent; border: none !important;">
                                               <div class="text">About</div>
                                             </button>
                                         </div>
@@ -407,42 +407,14 @@
                                 </div> -->
                             </div><!-- /.profile-card  .profile-card-meta_classic -->
                         </div>
-                        <div class="col-sm-8 col-md-3 flip-card zoom">
-                            <div class="profile-card profile-card-meta_classic article-container">
-                                <figure>
-                                    <img class="img-responsive" src="http://bioinfo.usu.edu/wp-content/uploads/2019/02/matthew-e1549938935496.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
-                                    <figcaption>
-                                        <h3 class="fig-title">Matthew Lister</h3>
-                                        <div class="middle">
-                                                <button id="modalbtn" style=" background: transparent; border: none !important;">
-                                                  <div class="text">About</div>
-                                                </button>
-                                            </div>
-                                        <div class="fig-title-des">HPC administrator | CS</div>
-                                        <!-- <div class="fig-meta">
-                                            <p class="fig-cal"><strong>Call:</strong> <span>+61(07)373 53921</span></p>
-                                            <p class="fig-mail"><strong>Email:</strong> <span>nam-trung.nguyenEmailgriffith.edu.au</span></p>
-                                        </div> -->
-                                    </figcaption>
-                                </figure>
-                                <!-- <div class="profile-card-meta">
-                                    <ul class="pfofile-social list-unstyled list-inline">
-                                        <li><a href="#"> <img src="assets/img/profile/social/gs.png" alt="sabbi-social" class="img-responsive"></a></li>
-                                        <li><a href="#"> <img src="assets/img/profile/social/id.png" alt="sabbi-social" class="img-responsive"></a></li>
-                                        <li><a href="#"> <img src="assets/img/profile/social/fb.png" alt="sabbi-social" class="img-responsive"></a></li>
-                                        <li><a href="#"> <img src="assets/img/profile/social/tw.png" alt="sabbi-social" class="img-responsive"></a></li>
-                                    </ul>
-                                </div> -->
-                            </div><!-- /.profile-card  .profile-card-meta_classic -->
-                        </div>
                         <div class="col-sm-8 col-md-3 zoom">
                                 <div class="profile-card profile-card-meta_classic article-container">
                                     <figure>
-                                        <img class="img-responsive" src="http://bioinfo.usu.edu/wp-content/uploads/2019/02/naveen-e1549936842295.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
+                                        <img class="img-responsive" id="Naveen" src="http://bioinfo.usu.edu/wp-content/uploads/2019/02/naveen-e1549936842295.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
                                         <figcaption>
                                             <h3 class="fig-title">Naveen Duhan</h3>
                                             <div class="middle">
-                                                    <button id="modalbtn" style=" background: transparent; border: none !important;">
+                                                    <button id="modalbtn" onclick="openAboutModal(event,'Naveen')" style=" background: transparent; border: none !important;">
                                                       <div class="text">About</div>
                                                     </button>
                                                 </div>
@@ -466,11 +438,11 @@
                             <div class="col-sm-8 col-md-3 zoom">
                                     <div class="profile-card profile-card-meta_classic article-container">
                                         <figure>
-                                            <img class="img-responsive" src="assets/img/profile/suyash.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
+                                            <img class="img-responsive" id="Suyash" src="assets/img/profile/suyash.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
                                             <figcaption>
                                                 <h3 class="fig-title">Suyash Mhetre</h3>
                                                 <div class="middle">
-                                                        <button id="modalbtn" style=" background: transparent; border: none !important;">
+                                                        <button id="modalbtn" onclick="openAboutModal(event,'Suyash')" style=" background: transparent; border: none !important;">
                                                           <div class="text">About</div>
                                                         </button>
                                                     </div>
@@ -491,6 +463,34 @@
                                         </div> -->
                                     </div><!-- /.profile-card  .profile-card-meta_classic -->
                                 </div> 
+                                <div class="col-sm-8 col-md-3 zoom">
+                                        <div class="profile-card profile-card-meta_classic article-container">
+                                            <figure>
+                                                <img class="img-responsive" id="Nikhil" src="assets/img/profile/profile1.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
+                                                <figcaption>
+                                                    <h3 class="fig-title">Nikhil Sai</h3>
+                                                    <div class="middle">
+                                                            <button id="modalbtn" onclick="openAboutModal(event,'Nikhil')" style=" background: transparent; border: none !important;">
+                                                              <div class="text">About</div>
+                                                            </button>
+                                                        </div>
+                                                    <div class="fig-title-des">MS Student | CS</div>
+                                                    <!-- <div class="fig-meta">
+                                                        <p class="fig-cal"><strong>Call:</strong> <span>+61(07)373 53921</span></p>
+                                                        <p class="fig-mail"><strong>Email:</strong> <span>nam-trung.nguyenEmailgriffith.edu.au</span></p>
+                                                    </div> -->
+                                                </figcaption>
+                                            </figure>
+                                            <!-- <div class="profile-card-meta">
+                                                <ul class="pfofile-social list-unstyled list-inline">
+                                                    <li><a href="#"> <img src="assets/img/profile/social/gs.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                                    <li><a href="#"> <img src="assets/img/profile/social/id.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                                    <li><a href="#"> <img src="assets/img/profile/social/fb.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                                    <li><a href="#"> <img src="assets/img/profile/social/tw.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                                </ul>
+                                            </div> -->
+                                        </div><!-- /.profile-card  .profile-card-meta_classic -->
+                                    </div> 
                                 
                 </div>
                 <div class="title-card team-classification">
@@ -498,33 +498,33 @@
                 </div>
                 <div class="row" style="padding-top: 20px;">
                         <div class="col-sm-8 col-md-3 flip-card zoom">
-                            <div class="profile-card profile-card-meta_classic article-container">
-                                <figure>
-                                    <img class="img-responsive" src="http://bioinfo.usu.edu/wp-content/uploads/2019/02/matthew-e1549938935496.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
-                                    <figcaption>
-                                        <h3 class="fig-title">Matthew Lister</h3>
-                                        <div class="middle">
-                                                <button id="modalbtn" style=" background: transparent; border: none !important;">
-                                                  <div class="text">About</div>
-                                                </button>
-                                            </div>
-                                        <div class="fig-title-des">HPC administrator | CS</div>
-                                        <!-- <div class="fig-meta">
-                                            <p class="fig-cal"><strong>Call:</strong> <span>+61(07)373 53921</span></p>
-                                            <p class="fig-mail"><strong>Email:</strong> <span>nam-trung.nguyenEmailgriffith.edu.au</span></p>
-                                        </div> -->
-                                    </figcaption>
-                                </figure>
-                                <!-- <div class="profile-card-meta">
-                                    <ul class="pfofile-social list-unstyled list-inline">
-                                        <li><a href="#"> <img src="assets/img/profile/social/gs.png" alt="sabbi-social" class="img-responsive"></a></li>
-                                        <li><a href="#"> <img src="assets/img/profile/social/id.png" alt="sabbi-social" class="img-responsive"></a></li>
-                                        <li><a href="#"> <img src="assets/img/profile/social/fb.png" alt="sabbi-social" class="img-responsive"></a></li>
-                                        <li><a href="#"> <img src="assets/img/profile/social/tw.png" alt="sabbi-social" class="img-responsive"></a></li>
-                                    </ul>
-                                </div> -->
-                            </div><!-- /.profile-card  .profile-card-meta_classic -->
-                        </div> 
+                                <div class="profile-card profile-card-meta_classic article-container">
+                                    <figure>
+                                        <img class="img-responsive" id="Matthew" src="http://bioinfo.usu.edu/wp-content/uploads/2019/02/matthew-e1549938935496.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
+                                        <figcaption>
+                                            <h3 class="fig-title">Matthew Lister</h3>
+                                            <div class="middle">
+                                                    <button id="modalbtn" onclick="openAboutModal(event,'Matthew')" style=" background: transparent; border: none !important;">
+                                                      <div class="text">About</div>
+                                                    </button>
+                                                </div>
+                                            <div class="fig-title-des">HPC administrator | CS</div>
+                                            <!-- <div class="fig-meta">
+                                                <p class="fig-cal"><strong>Call:</strong> <span>+61(07)373 53921</span></p>
+                                                <p class="fig-mail"><strong>Email:</strong> <span>nam-trung.nguyenEmailgriffith.edu.au</span></p>
+                                            </div> -->
+                                        </figcaption>
+                                    </figure>
+                                    <!-- <div class="profile-card-meta">
+                                        <ul class="pfofile-social list-unstyled list-inline">
+                                            <li><a href="#"> <img src="assets/img/profile/social/gs.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                            <li><a href="#"> <img src="assets/img/profile/social/id.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                            <li><a href="#"> <img src="assets/img/profile/social/fb.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                            <li><a href="#"> <img src="assets/img/profile/social/tw.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                        </ul>
+                                    </div> -->
+                                </div><!-- /.profile-card  .profile-card-meta_classic -->
+                            </div> 
                 </div>
             </div>
         </div>
@@ -690,6 +690,16 @@
 
      });
 
+function openAboutModal(evt, personName) {
+
+var profile = document.getElementById(personName).innerHTML
+console.log(document.getElementById(personName).childNodes);
+var cardImage = document.getElementsByClassName("detailsCard")
+cardImage[0].src = document.getElementById(personName).src
+var name = document.getElementsByClassName("fig-title")
+// console.log(name[0].getElementsByTagName('h3'));
+
+}
     </script>
 </body>
 </html>
