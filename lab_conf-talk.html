@@ -27,6 +27,43 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <script src="assets/js/vendor/modernizr-2.8.3.min.js">
     </script>
+    <style>
+    .dropbtn {
+  background-color:rgb(15, 36, 57);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 15px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: rgb(15, 36, 57);}
+    </style>
 </head>
 <body class="auth-theme-rashmore page-conf_talk">
     <!--[if lt IE 8]>
@@ -154,11 +191,53 @@
                                     <div class="btn_pdf_wrap"><a href="#" class="btn btn-gules tt_up">Download All PDF</a></div>
                                 </div> -->
                             </div>
-                        <nav class="journal-papers-nav">
+                        <nav class="journal-papers-nav journal-papers-nav-list list-inline">
                             <!-- <div class="nav-meta">
                                 <p><strong>Disclaimer:</strong> The papers below are intended for private viewing by the page owner or those who otherwise have legitimate access to them. No part of it may in any form or by any electronic, mechanical, photocopying, recording, or any other means be reproduced, stored in a retrieval system or be broadcast or transmitted without the prior permission of the respective publishers. If your organization has a valid subscription of the journals, click on the DOI link for the legitimate copy of the papers.</p>
                             </div> -->
-                            <ul class="journal-papers-nav-list list-inline">
+                            <div class="dropdown">
+                                    <button class="dropbtn">2019-2017</button>
+                                    <div class="dropdown-content">
+                                        <a class="tablinks" onclick="openJournal(event, '2017')" href="#tabcontent" class="link-prev_def active">2017</a>
+                                        <a class="tablinks" onclick="openJournal(event, '2018')" href="#tabcontent" class="link-prev_def active">2018</a>
+                                        <a class="tablinks" onclick="openJournal(event, '2019')" href="#tabcontent" class="link-prev_def active">2019</a>
+                                    </div>
+                            </div>
+                            <div class="dropdown">
+                                    <button class="dropbtn">2016-2014</button>
+                                    <div class="dropdown-content">
+                                        <a class="tablinks" onclick="openJournal(event, '2014')" href="#tabcontent" class="link-prev_def active">2014</a>
+                                        <a class="tablinks" onclick="openJournal(event, '2015')" href="#tabcontent" class="link-prev_def active">2015</a>
+                                        <a class="tablinks" onclick="openJournal(event, '2016')" href="#tabcontent" class="link-prev_def active">2016</a>
+                                    </div>
+                            </div>
+                            <div class="dropdown">
+                                    <button class="dropbtn">2013-2011</button>
+                                    <div class="dropdown-content">
+                                        <a class="tablinks" onclick="openJournal(event, '2012')" href="#tabcontent" class="link-prev_def active">2012</a>
+                                        <a class="tablinks" onclick="openJournal(event, '2013')" href="#tabcontent" class="link-prev_def active">2013</a>
+                                    </div>
+                            </div>
+                            <div class="dropdown">
+                                    <button class="dropbtn">2010-2008</button>
+                                    <div class="dropdown-content">
+                                        <a class="tablinks" onclick="openJournal(event, '2008')" href="#tabcontent" class="link-prev_def active">2008</a>
+                                        <a class="tablinks" onclick="openJournal(event, '2009')" href="#tabcontent" class="link-prev_def active">2009</a>
+                                        <a class="tablinks" onclick="openJournal(event, '2010')" href="#tabcontent" class="link-prev_def active">2010</a>
+                                    </div>
+                            </div>  
+                            <div class="dropdown">
+                                    <button class="dropbtn">2002-2004</button>
+                                    <div class="dropdown-content">
+                                        <a class="tablinks" onclick="openJournal(event, '2002')" href="#tabcontent" class="link-prev_def active">2002</a>
+                                        <a class="tablinks" onclick="openJournal(event, '2004')" href="#tabcontent" class="link-prev_def active">2004</a>
+                                    </div>
+                            </div>
+                           
+                            
+                            
+                            
+                            <!-- <ul class="journal-papers-nav-list list-inline">
                                    <li><button class="tablinks" onclick="openJournal(event, '2019')" style=" background: transparent; border: none !important;">
                                         <a href="#tabcontent" class="link-prev_def active">2019</a>
                                        </button>
@@ -211,7 +290,7 @@
                                         <a href="#tabcontent" class="link-prev_def">2002</a>
                                        </button>
                                    </li>
-                            </ul>
+                            </ul> -->
                         </nav><!--  /.journal-papers-nav -->
                 </div>
             
