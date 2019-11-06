@@ -1018,6 +1018,18 @@ body .mb_100 {
   background-size: cover;
   background-repeat: no-repeat; }
 
+  .sabbi-page-header-classic3 {
+    background-image: url(../img/large-data.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    height: 550px;
+    text-align: center; }
+    .sabbi-page-header-classic3 .page-header-content.conternt-center {
+      position: relative;
+      top: 55%;
+      transform: translateY(-50%); }
+
   .sabbi-page-header-classic2 {
     background-image: url(../img/slider/mygraph.svg);
     background-position-x: center; 
@@ -1033,7 +1045,7 @@ body .mb_100 {
       transform: translateY(-50%); }
 
   .sabbi-page-header-classic1 {
-    background-image: url(http://bioinfo.usu.edu/wp-content/uploads/2019/04/tractor-3000x600.jpg);
+    background-image: url(../img/Cybersecurity.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     color: #fff;
