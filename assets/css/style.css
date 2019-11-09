@@ -768,8 +768,8 @@ body .mb_100 {
   box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.3); }
 
 .navbar-kawsa .nav-btn-wrap {
-  max-height: 36px;
-  margin-top: 21px; }
+  max-height: 30px;
+  margin-top: 5px; }
   .navbar-kawsa .nav-btn-wrap:after {
     content: '';
     display: table;
@@ -781,7 +781,7 @@ body .mb_100 {
 
 .navbar-nav-hov_underline .navbar-nav li.active a {
   background: transparent;
-  border-bottom: 4px solid #D30015; }
+  border-bottom: 1px solid #D30015; }
 
 @media (max-width: 767px) {
   .navbar-nav-hov_underline .navbar-nav li.active a {
@@ -1131,7 +1131,7 @@ body .mb_100 {
     background-size: cover;
     background-repeat: no-repeat;
     color: #fff;
-    height: 450px;
+    height: 350px;
     text-align: center; }
     .sabbi-page-header-classic1 .page-header-content.conternt-center {
       position: relative;
@@ -1791,7 +1791,7 @@ a.link-with-icon i.fa {
     padding: 15px 45px;
     overflow: hidden; }
     .auth-deff_timeline > li .timeline-meta .staff-title {
-      background-color: rgba(78, 127, 177, 0.4);
+      /* background-color: rgba(78, 127, 177, 0.4); */
       color: #000;
       font-weight: 100;
       font-size: 16px;
@@ -2147,9 +2147,9 @@ a.link-with-icon i.fa {
 }
 
 .zoom:hover {
-  -ms-transform: scale(1.1); /* IE 9 */
-  -webkit-transform: scale(1.1); /* Safari 3-8 */
-  transform: scale(1.1); 
+  -ms-transform: scale(1.05); /* IE 9 */
+  -webkit-transform: scale(1.05); /* Safari 3-8 */
+  transform: scale(1.05); 
 }
 
 .title-card {
