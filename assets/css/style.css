@@ -768,8 +768,8 @@ body .mb_100 {
   box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.3); }
 
 .navbar-kawsa .nav-btn-wrap {
-  max-height: 30px;
-  margin-top: 5px; }
+  max-height: 40px;
+  margin-top: 21px; }
   .navbar-kawsa .nav-btn-wrap:after {
     content: '';
     display: table;
@@ -781,7 +781,7 @@ body .mb_100 {
 
 .navbar-nav-hov_underline .navbar-nav li.active a {
   background: transparent;
-  border-bottom: 1px solid #D30015; }
+  border-bottom: 4px solid #D30015; }
 
 @media (max-width: 767px) {
   .navbar-nav-hov_underline .navbar-nav li.active a {
