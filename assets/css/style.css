@@ -1669,7 +1669,7 @@ a.link-with-icon i.fa {
 /* style profile */
 .profile-card {
   width: 210px;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   background-color: #EDF2F6;
   border-radius: 10px;
   margin-bottom: 15px;
