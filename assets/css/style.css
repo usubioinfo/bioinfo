@@ -997,6 +997,46 @@ body .mb_100 {
       font-size: 22px;
       font-size: 1.57143rem; } }
 
+      .sabbi-page-header {
+        min-height: 230px;
+        background-color: rgba(163, 22, 117, 0.12);
+        position: relative; }
+        .sabbi-page-header.page-header-lg {
+          min-height: 265px; }
+        .sabbi-page-header .header-title-block {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          text-align: center;
+          /* &:before {
+                  content: '';
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  left: 0;
+                  top: 0;
+                  z-index: -1;
+                  background: #d30015;
+                  opacity: .7;
+                  background-blend-mode: multiply;
+                  border-top-left-radius: 8px;
+                  border-top-right-radius: 8px;
+              } */ }
+        .sabbi-page-header .page-title {
+          color: #fff;
+          display: inline-block;
+          background-color: rgba(211, 0, 21, 0.7);
+          margin-bottom: 0;
+          padding: 10px 25px;
+          font-size: 28px;
+          font-size: 2rem;
+          text-transform: uppercase;
+          border-top-left-radius: 4px;
+          border-top-right-radius: 4px; }
+        @media (max-width: 767px) {
+          .sabbi-page-header .page-title {
+            font-size: 22px;
+            font-size: 1.57143rem; } }
 .seq.seq-active .seq-content {
   background: transparent;
   border-top-left-radius: 8px;
@@ -1096,7 +1136,9 @@ body .mb_100 {
   background-repeat: no-repeat; }
 
 .page-futuremember .sabbi-page-header {
-  background-image: url(../img/header/future_member.jpg);
+  height: 450px;
+  background-image: url(../img/slide7.png);
+  background-color: #000;
   background-size: cover;
   background-repeat: no-repeat; }
 
@@ -1939,9 +1981,9 @@ a.link-with-icon i.fa {
 
 /* stage-future_member */
 .stage-future_member {
-  margin-top: 55px; }
+  margin-top: 35px; }
   .stage-future_member .future_member-text {
-    margin-bottom: 45px; }
+    margin-bottom: 25px; }
   .stage-future_member .stage-vrb-title {
     font-size: 28px;
     font-size: 2rem; }
