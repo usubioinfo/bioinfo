@@ -85,7 +85,7 @@ jQuery(document).ready(function($) {
 	      // nationalMode: false,
 	      // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
 	      // placeholderNumberType: "MOBILE",
-	      preferredCountries: ['bd', 'jp'],
+	      preferredCountries: ['us'],
 	      // separateDialCode: true,
 	      utilsScript: "assets/tools/intlTelInput/js/utils.js"
 	    });

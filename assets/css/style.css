@@ -442,9 +442,9 @@ body .mb_100 {
 /* button */
 .btn-primary {
   margin-right: 20px;
-  background-color: #0f2439;
+  background-color: #D30015;
   background-image: none;
-  border-color: #0f2439; }
+  border-color: #D30015; }
   .btn-primary.active {
     background: transparent;
     border-color: #0f2439;
@@ -544,7 +544,7 @@ body .mb_100 {
     text-align: right; } }
 
 .page_piky-title .page-title {
-  font-size: 28.01px;
+  font-size: 18.01px;
   font-size: 2.00071rem; }
 
 @media (max-width: 767px) {
@@ -742,6 +742,7 @@ body .mb_100 {
  Navigation
 -------------------------------- */
 .navbar-nav {
+  padding-right: 20px;
   font-family: "Montserrat", sans-serif;
   font-size: 12px; }
 
@@ -769,7 +770,7 @@ body .mb_100 {
 
 .navbar-kawsa .nav-btn-wrap {
   max-height: 40px;
-  margin-top: 21px; }
+  margin-top: 12px; }
   .navbar-kawsa .nav-btn-wrap:after {
     content: '';
     display: table;
@@ -986,9 +987,9 @@ body .mb_100 {
     display: inline-block;
     background-color: rgba(211, 0, 21, 0.7);
     margin-bottom: 0;
-    padding: 10px 25px;
-    font-size: 28px;
-    font-size: 2rem;
+    padding: 5px 5px;
+    font-size: 18px;
+    /* font-size: 2rem; */
     text-transform: uppercase;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px; }
@@ -1027,9 +1028,9 @@ body .mb_100 {
           display: inline-block;
           background-color: rgba(211, 0, 21, 0.7);
           margin-bottom: 0;
-          padding: 10px 25px;
-          font-size: 28px;
-          font-size: 2rem;
+          padding: 5px 5px;
+          font-size: 18px;
+          /* font-size: 2rem; */
           text-transform: uppercase;
           border-top-left-radius: 4px;
           border-top-right-radius: 4px; }
@@ -1136,10 +1137,12 @@ body .mb_100 {
   background-repeat: no-repeat; }
 
 .page-futuremember .sabbi-page-header {
-  height: 450px;
-  background-image: url(../img/slide7.png);
+  height: 265px;
+  background-image: url(../img/contact_slide3.JPG);
   background-color: #000;
-  background-size: cover;
+  background-size:cover;
+  background-position-y: -650px;
+  background-size: 100% 400%;
   background-repeat: no-repeat; }
 
   .sabbi-page-header-classic3 {

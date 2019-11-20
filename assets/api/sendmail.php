@@ -5,9 +5,9 @@ $email = trim($_POST['email']);
 $message = trim($_POST['message']);
 $contact_num = trim($_POST['contact_num']);
 // $subject= trim($_POST['subject']);
-$subject = 'Message From Rashmore';
+$subject = 'Message From Bioinformatics';
 
-$to = "ontor004@gmail.com"; // Change with your email address
+$to = "mhetresuyash7@gmail.com"; // Change with your email address
 //echo "{$to}";
 if( isset($email) ) {
 

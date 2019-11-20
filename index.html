@@ -25,6 +25,7 @@
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    
     <style>
 @keyframes animatedBackground {
   from {
@@ -34,18 +35,41 @@
     background-position: 100% 0;
   }
 }
+
+/*sliding animation*/
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+div#sequence { overflow: hidden; }
+div#sliding_animation ul li{ width: 20%; float: left; }
+div#sliding_animation ul { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 10s slidy infinite; 
+}
+
     </style>
 </head>
 <body class="auth-theme-rashmore">
-    <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
     <header class="sabbi-site-head">
         <nav class="navbar navbar-white navbar-kawsa navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
                     <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> 
-                    <a class="navbar-brand" href="index.html"><img alt="" class="img-responsive" src="assets/img/final_logo.png"></a>
+                    <a class="navbar-brand" href="index.html"><img alt="" style="width: fit-content; height: 75px;" class="img-responsive" src="assets/img/bioinfo_lab.png"></a>
                 </div>
                 <div class="navbar-collapse collapse sabbi-navbar-collapse  navbar-nav-hov_underline" id="navbar">
                         <div class="nav-btn-wrap"><a href="#" class="btn btn-primary pull-right">Join Research</a></div>
@@ -57,7 +81,7 @@
                                 <a href="lab_research.html" title="Research">Research</a>
                             </li>
                             <li class="dropdown">
-                                    <a href="poeple.html" class="dropdown-toggle"   data-hover="dropdown" title="People" data-animations="zoomIn">People<span class="caret"></span></a>
+                                    <a href="people.html" class="dropdown-toggle"   data-hover="dropdown" title="People" data-animations="zoomIn">People<span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
                                         <a href="professor.html" title="Dr Rushmore">Dr. Rakesh Kaundal</a>
@@ -76,9 +100,9 @@
                                     <li>
                                         <a href="lab_conf-talk.html" title="Conferences and Talks">Conferences and Talks</a>
                                     </li>
-                                    <li>
+                                    <!-- <li>
                                         <a href="lab_book.html" title="Books">Books</a>
-                                    </li>
+                                    </li> -->
                                     
                                 </ul>
                             </li>
@@ -133,7 +157,7 @@
                             </li>-->
                             <li>
                                     <a href="future_member.html" title="Future Member">Contact</a>
-                                </li>
+                            </li>
                             <!-- <li>
                                 <a href="contact.html" title="Contact">Contact</a>
                             </li> -->
@@ -141,12 +165,13 @@
                     </div>
             </div>
         </nav><!-- /.navbar -->
-        <div class="sabbi-site-header-meta">
+        <div class="sabbi-site-header-meta" >
             <div class="site-hmsl-content text-center mt_60">
                 <div class="seq seq--kawsa" id="sequence">
-                        <div class="seq-screen">
-                                <ul class="seq-canvas">
-                                    <li class="seq-step1" id="step1" style="background:url(assets/img/fig1.png); background-color: black; background-position-y: 0px 0px; background-repeat: repeat-x; animation: animatedBackground 20s linear infinite alternate; background-size:contain">
+                        <div class="seq-screen" >
+                                <ul class="seq-canvas" >
+                                        <!-- animation: animatedBackground 20s linear infinite alternate; -->
+                                    <li class="seq-step1" id="step1" style="background:url(assets/img/fig1.png); background-color: black;  background-size:cover">
                                         <div class="bg-blend"></div>
                                         <div class="seq-content" >
         
@@ -157,10 +182,10 @@
                                             <a href="#" class="btn-link btn-more">READ MORE</a>
                                         </div>
                                     </li>
-                                    <li class="seq-step1" id="step2" style="background:url(assets/img/slide3.png); background-position-y: 0px 0px; background-repeat: repeat-x; animation: animatedBackground 20s linear infinite alternate; background-size:contain;  background-color: black">
+                                    <li class="seq-step1" id="step2" style="background:url(assets/img/slide3.png);  background-size:cover; background-color: black">
                                         
                                         <div class="bg-blend"></div>
-                                        <div class="seq-content" >
+                                        <div class="seq-content">
         
                                             <h2 class="seq-title font-2 tt_up" data-seq="">Polymeric microvalves</h2>
                                             <div class="seq-meta" data-seq="">
@@ -169,7 +194,7 @@
                                             <a href="#" class="btn-link btn-more">READ MORE</a>
                                         </div>
                                     </li>
-                                    <li class="seq-step1" id="step2" style="background:url(assets/img/slide5.png); background-position-y: 0px 0px; background-repeat: repeat-x; animation: animatedBackground 20s linear infinite alternate; background-size:contain;  background-color: black">
+                                    <li class="seq-step1" id="step2" style="background:url(assets/img/slide5.png);  background-size:cover;  background-color: black">
                                         
                                         <div class="bg-blend"></div>
                                         <div class="seq-content" >
@@ -195,38 +220,39 @@
     <section class="sabbbi-section home-info mt_35">
         <div class="container">
             <div class="row home-info-block-first">
+                    <div class="col-md-3 col-sm-6">
+                            <article class="sabbi-thumlinepost-card solitude-bg__x">
+                                <figure class="sabbi-thumlinepost-card-figure">
+                                    <img src="assets/img/sabbi-post/card-2.png" alt="" class="img-responsive img-thumpost">
+                                </figure>
+                                <div class="sabbi-thumlinepost-card-meta">
+                                    <h2 class="meta-title ht-5" style="text-align: left;">Artificial Intelligence: OMICS bigdata to novel biological discoveries</h2>
+                                    <p class="meta-text">Computational modeling through <i>pattern recognition</i>, develop novel algorithms and...</p>
+                                    <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                                </div>
+                            </article>
+                        </div>
                 <div class="col-md-3 col-sm-6">
                     <article class="sabbi-thumlinepost-card solitude-bg__x">
                         <figure class="sabbi-thumlinepost-card-figure">
                             <img src="assets/img/sabbi-post/card-1.png" alt="" class="img-responsive img-thumpost">
                         </figure>
                         <div class="sabbi-thumlinepost-card-meta">
-                            <h2 class="meta-title ht-5">Immunology: T-cell tweaks to target tumours</h2>
-                            <p class="meta-text">Lorem ipsum dolor sit amet, con adipiscing elit. Etiam convallis elit id impedie. Quisq commodo</p>
+                            <h2 class="meta-title ht-5" style="text-align: left;">Host-pathogen interactions: Understanding mechanisms of infectious diseases</h2>
+                            <p class="meta-text">Explore cross-kingdom threats and identify novel therapeutic candidates...</p>
                             <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
                     </article>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <article class="sabbi-thumlinepost-card solitude-bg__x">
-                        <figure class="sabbi-thumlinepost-card-figure">
-                            <img src="assets/img/sabbi-post/card-2.png" alt="" class="img-responsive img-thumpost">
-                        </figure>
-                        <div class="sabbi-thumlinepost-card-meta">
-                            <h2 class="meta-title ht-5">Molecular biology: RNA editing packs a two punch</h2>
-                            <p class="meta-text">Lorem ipsum dolor sit amet, con adipiscing elit. Etiam convallis elit id impedie. Quisq commodo</p>
-                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
-                        </div>
-                    </article>
-                </div>
+                
                 <div class="col-md-3 col-sm-6">
                     <article class="sabbi-thumlinepost-card solitude-bg__x">
                         <figure class="sabbi-thumlinepost-card-figure">
                             <img src="assets/img/sabbi-post/card-3.png" alt="" class="img-responsive img-thumpost">
                         </figure>
                         <div class="sabbi-thumlinepost-card-meta">
-                            <h2 class="meta-title ht-5">Cardiovascular disease: Commonality with cancer</h2>
-                            <p class="meta-text">Lorem ipsum dolor sit amet, con adipiscing elit. Etiam convallis elit id impedie. Quisq commodo</p>
+                            <h2 class="meta-title ht-5" style="text-align: left;">Protein function prediction: Annotation of novel proteomes</h2>
+                            <p class="meta-text" >Identify novel protein features, train in an AI framework, implement as web servers...  </p>
                             <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
                     </article>
@@ -234,16 +260,39 @@
                 <div class="col-md-3 col-sm-6">
                     <article class="sabbi-thumlinepost-card solitude-bg__x">
                         <figure class="sabbi-thumlinepost-card-figure">
-                            <img src="assets/img/sabbi-post/card-4.png" alt="" class="img-responsive img-thumpost">
+                            <img src="assets/img/sabbi-post/card-1.jpg" alt="" class="img-responsive img-thumpost">
                         </figure>
                         <div class="sabbi-thumlinepost-card-meta">
-                            <h2 class="meta-title ht-5">Immunology: T-cell tweaks to target tumours</h2>
-                            <p class="meta-text">Lorem ipsum dolor sit amet, con adipiscing elit. Etiam convallis elit id impedie. Quisq commodo</p>
+                            <h2 class="meta-title ht-5">Metagenomics: Bioinformatics solutions for crop improvement</h2>
+                            <p class="meta-text">Investigate diversity of enzymes in soil metagenomes and develop advanced tools...</p>
                             <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
                     </article>
                 </div>
-                
+                <div class="col-md-3 col-sm-6">
+                        <article class="sabbi-thumlinepost-card solitude-bg__x">
+                            <figure class="sabbi-thumlinepost-card-figure">
+                                <img src="assets/img/sabbi-post/p_agr.jpg" alt="" class="img-responsive img-thumpost">
+                            </figure>
+                            <div class="sabbi-thumlinepost-card-meta">
+                                <h2 class="meta-title ht-5">Precision Agriculture: Robotics for integrated weed management (IWM)</h2>
+                                <p class="meta-text">Incorporate sensing technology for precise IWM, minimize damage to crop, environment...</p>
+                                <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                            </div>
+                        </article>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                        <article class="sabbi-thumlinepost-card solitude-bg__x">
+                            <figure class="sabbi-thumlinepost-card-figure">
+                                <img src="assets/img/sabbi-post/p_agr.jpg" alt="" class="img-responsive img-thumpost">
+                            </figure>
+                            <div class="sabbi-thumlinepost-card-meta">
+                                <h2 class="meta-title ht-5">OMICS data: Deciphering</h2>
+                                <p class="meta-text"></p>
+                                <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                            </div>
+                        </article>
+                </div>
             </div>
             <div class="row mt_30">
                 <div class="col-sm-4">
