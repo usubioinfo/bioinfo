@@ -61,6 +61,43 @@ div#sliding_animation ul {
   animation: 10s slidy infinite; 
 }
 
+.MultiCarousel {
+	float: left;
+	overflow: hidden;
+	/* padding: 15px; */
+	width: 100%;
+	position: relative;
+}
+
+.MultiCarousel .MultiCarousel-inner {
+	transition: 1s ease all;
+	float: left;
+}
+
+.MultiCarousel .MultiCarousel-inner .item {
+	float: left;
+}
+
+.MultiCarousel .leftLst,
+.MultiCarousel .rightLst {
+	position: absolute;
+	border-radius: 50%;
+	top: calc(50%);
+}
+
+.MultiCarousel .leftLst {
+	left: 0;
+}
+
+.MultiCarousel .rightLst {
+	right: 0;
+}
+
+.MultiCarousel .leftLst.over,
+.MultiCarousel .rightLst.over {
+	pointer-events: none;
+	background: #ccc;
+}
     </style>
 </head>
 <body class="auth-theme-rashmore">
@@ -78,7 +115,7 @@ div#sliding_animation ul {
                                 <a href="index.html" title="Home">Home</a>
                             </li>
                             <li>
-                                <a href="lab_research.html" title="Research">Research</a>
+                                <a href="slider.ht" title="Research">Research</a>
                             </li>
                             <li class="dropdown">
                                     <a href="people.html" class="dropdown-toggle"   data-hover="dropdown" title="People" data-animations="zoomIn">People<span class="caret"></span></a>
@@ -220,82 +257,126 @@ div#sliding_animation ul {
     <section class="sabbbi-section home-info mt_35">
         <div class="container">
             <div class="row home-info-block-first">
-                    <div class="col-md-3 col-sm-6">
-                            <article class="sabbi-thumlinepost-card solitude-bg__x">
-                                <figure class="sabbi-thumlinepost-card-figure">
-                                    <img src="assets/img/sabbi-post/card-2.png" alt="" class="img-responsive img-thumpost">
-                                </figure>
-                                <div class="sabbi-thumlinepost-card-meta">
-                                    <h2 class="meta-title ht-5" style="text-align: left;">Artificial Intelligence: OMICS bigdata to novel biological discoveries</h2>
-                                    <p class="meta-text">Computational modeling through <i>pattern recognition</i>, develop novel algorithms and...</p>
-                                    <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
-                                </div>
-                            </article>
-                        </div>
-                <div class="col-md-3 col-sm-6">
-                    <article class="sabbi-thumlinepost-card solitude-bg__x">
-                        <figure class="sabbi-thumlinepost-card-figure">
-                            <img src="assets/img/sabbi-post/card-1.png" alt="" class="img-responsive img-thumpost">
-                        </figure>
-                        <div class="sabbi-thumlinepost-card-meta">
-                            <h2 class="meta-title ht-5" style="text-align: left;">Host-pathogen interactions: Understanding mechanisms of infectious diseases</h2>
-                            <p class="meta-text">Explore cross-kingdom threats and identify novel therapeutic candidates...</p>
-                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
-                        </div>
-                    </article>
-                </div>
-                
-                <div class="col-md-3 col-sm-6">
-                    <article class="sabbi-thumlinepost-card solitude-bg__x">
-                        <figure class="sabbi-thumlinepost-card-figure">
-                            <img src="assets/img/sabbi-post/card-3.png" alt="" class="img-responsive img-thumpost">
-                        </figure>
-                        <div class="sabbi-thumlinepost-card-meta">
-                            <h2 class="meta-title ht-5" style="text-align: left;">Protein function prediction: Annotation of novel proteomes</h2>
-                            <p class="meta-text" >Identify novel protein features, train in an AI framework, implement as web servers...  </p>
-                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <article class="sabbi-thumlinepost-card solitude-bg__x">
-                        <figure class="sabbi-thumlinepost-card-figure">
-                            <img src="assets/img/sabbi-post/card-1.jpg" alt="" class="img-responsive img-thumpost">
-                        </figure>
-                        <div class="sabbi-thumlinepost-card-meta">
-                            <h2 class="meta-title ht-5">Metagenomics: Bioinformatics solutions for crop improvement</h2>
-                            <p class="meta-text">Investigate diversity of enzymes in soil metagenomes and develop advanced tools...</p>
-                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                        <article class="sabbi-thumlinepost-card solitude-bg__x">
-                            <figure class="sabbi-thumlinepost-card-figure">
-                                <img src="assets/img/sabbi-post/p_agr.jpg" alt="" class="img-responsive img-thumpost">
-                            </figure>
-                            <div class="sabbi-thumlinepost-card-meta">
-                                <h2 class="meta-title ht-5">Precision Agriculture: Robotics for integrated weed management (IWM)</h2>
-                                <p class="meta-text">Incorporate sensing technology for precise IWM, minimize damage to crop, environment...</p>
-                                <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                    <div class="MultiCarousel" data-items="1,2,3,4" data-slide="1" id="MultiCarousel"  data-interval="100">
+                            <div class="MultiCarousel-inner">
+                                   <div class="col-md-3 col-sm-6 item">
+                                        <div class="pad15">
+                                               <article class="sabbi-thumlinepost-card solitude-bg__x">
+                                                   <figure class="sabbi-thumlinepost-card-figure">
+                                                       <img src="assets/img/sabbi-post/card-2.png" alt="" class="img-responsive img-thumpost">
+                                                   </figure>
+                                                   <div class="sabbi-thumlinepost-card-meta">
+                                                       <h2 class="meta-title ht-5" style="text-align: left;">Artificial Intelligence: OMICS bigdata to novel biological discoveries</h2>
+                                                       <p class="meta-text">Computational modeling through <i>pattern recognition</i>, develop novel algorithms and...</p>
+                                                       <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                                                   </div>
+                                               </article>
+                                           </div>
+                                   </div>
+                                   <div class="col-md-3 col-sm-6 item">
+                                           <div class="pad15">
+                                       <article class="sabbi-thumlinepost-card solitude-bg__x">
+                                           <figure class="sabbi-thumlinepost-card-figure">
+                                               <img src="assets/img/sabbi-post/hpi.png" alt="" class="img-responsive img-thumpost">
+                                           </figure>
+                                           <div class="sabbi-thumlinepost-card-meta">
+                                               <h2 class="meta-title ht-5" style="text-align: left;">Host-pathogen interactions: Understanding mechanisms of infectious diseases</h2>
+                                               <p class="meta-text">Explore cross-kingdom threats and identify novel therapeutic candidates...</p>
+                                               <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                                           </div>
+                                       </article>
+                                           </div>
+                                   </div>
+                                   <div class="col-md-3 col-sm-6 item">
+                                           <div class="pad15">
+                                       <article class="sabbi-thumlinepost-card solitude-bg__x">
+                                           <figure class="sabbi-thumlinepost-card-figure">
+                                               <img src="assets/img/sabbi-post/protien_pred.png" alt="" class="img-responsive img-thumpost">
+                                           </figure>
+                                           <div class="sabbi-thumlinepost-card-meta">
+                                               <h2 class="meta-title ht-5" style="text-align: left;">Protein function prediction: Annotation of novel proteomes</h2>
+                                               <p class="meta-text" >Identify novel protein features, train in an AI framework, implement as web servers...  </p>
+                                               <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                                           </div>
+                                       </article>
+                                           </div>
+                                   </div>
+                                   <div class="col-md-3 col-sm-6 item">
+                                           <div class="pad15">
+                                       <article class="sabbi-thumlinepost-card solitude-bg__x">
+                                           <figure class="sabbi-thumlinepost-card-figure">
+                                               <img src="assets/img/sabbi-post/card-1.jpg" alt="" class="img-responsive img-thumpost">
+                                           </figure>
+                                           <div class="sabbi-thumlinepost-card-meta">
+                                               <h2 class="meta-title ht-5">Metagenomics: Bioinformatics solutions for crop improvement</h2>
+                                               <p class="meta-text">Investigate diversity of enzymes in soil metagenomes and develop advanced tools...</p>
+                                               <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                                           </div>
+                                       </article>
+                                           </div>
+                                   </div>
+                                   <div class="col-md-3 col-sm-6 item">
+                                           <div class="pad15">
+                                           <article class="sabbi-thumlinepost-card solitude-bg__x">
+                                               <figure class="sabbi-thumlinepost-card-figure">
+                                                   <img src="assets/img/sabbi-post/p_agr.jpg" alt="" class="img-responsive img-thumpost">
+                                               </figure>
+                                               <div class="sabbi-thumlinepost-card-meta">
+                                                   <h2 class="meta-title ht-5">Precision Agriculture: Robotics for integrated weed management (IWM)</h2>
+                                                   <p class="meta-text">Incorporate sensing technology for precise IWM, minimize damage to crop, environment...</p>
+                                                   <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                                               </div>
+                                           </article>
+                                           </div>
+                                   </div>
+                                   <div class="col-md-3 col-sm-6 item">
+                                           <div class="pad15">
+                                           <article class="sabbi-thumlinepost-card solitude-bg__x">
+                                               <figure class="sabbi-thumlinepost-card-figure">
+                                                   <img src="assets/img/sabbi-post/p_agr.jpg" alt="" class="img-responsive img-thumpost">
+                                               </figure>
+                                               <div class="sabbi-thumlinepost-card-meta">
+                                                   <h2 class="meta-title ht-5">OMICS data: Deciphering</h2>
+                                                   <p class="meta-text"></p>
+                                                   <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                                               </div>
+                                           </article>
+                                           </div>
+                                   </div>
                             </div>
-                        </article>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                        <article class="sabbi-thumlinepost-card solitude-bg__x">
-                            <figure class="sabbi-thumlinepost-card-figure">
-                                <img src="assets/img/sabbi-post/p_agr.jpg" alt="" class="img-responsive img-thumpost">
-                            </figure>
-                            <div class="sabbi-thumlinepost-card-meta">
-                                <h2 class="meta-title ht-5">OMICS data: Deciphering</h2>
-                                <p class="meta-text"></p>
-                                <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
-                            </div>
-                        </article>
-                </div>
+                            <button class="btn btn-primary leftLst"><</button>
+                            <button class="btn btn-primary rightLst">></button>
+                        </div>
+               
             </div>
             <div class="row mt_30">
-                <div class="col-sm-4">
+                    <div class="col-sm-4">
+                            <article class="news-card sabbi-thumlinepost-card solitude-bg__x">
+                                <h2 class="stage-title">Latest News</h2>
+                                <ul class="list-unstyled lst_news_list" tabindex="0">
+                                    <li class="lst_news_item">
+                                        <h3 class="title mg_0"><a href="events_single.html">Haematopoietic stem cell transplantation for autoimmune diseases</a></h3>
+                                        <div>
+                                            <span class="date">Dec 15, 2016</span>
+                                        </div>
+                                    </li>
+                                    <li class="lst_news_item">
+                                        <h3 class="title mg_0"><a href="events_single.html">Antithrombotic therapy for patients with STEMI undergoing primary PCI</a></h3>
+                                        <div>
+                                            <span class="date">Oct 19, 2016</span>
+                                        </div>
+                                    </li>
+                                    <li class="lst_news_item">
+                                        <h3 class="title mg_0"><a href="events_single.html">Cardiovascular disease: Commonality with cancer</a></h3>
+                                        <div>
+                                            <span class="date">Oct 12, 2016</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <a href="events.html" class="btn btn-unsolemn btn-action read-more">VIEW ALL</a>
+                            </article>
+                        </div>
+                <!-- <div class="col-sm-4">
                     <article class="sabbi-thumlinepost-card solitude-bg__x">
                         <h2 class="entry-title ht-4">About Research Group</h2>
                         <div class="sabbi-thumlinepost-card-meta">
@@ -303,7 +384,7 @@ div#sliding_animation ul {
                             <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
                     </article>
-                </div>
+                </div> -->
                 <div class="col-sm-4">
                     <article class="sabbi-thumlinepost-card card-video solitude-bg__x">
                         <figure class="sabbi-thumlinepost-card-figure">
@@ -690,6 +771,113 @@ div#sliding_animation ul {
         e.src='//www.google-analytics.com/analytics.js';
         r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
         ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+
+        $(document).ready(function () {
+    var itemsMainDiv = ('.MultiCarousel');
+    var itemsDiv = ('.MultiCarousel-inner');
+    var itemWidth = "";
+
+    $('.leftLst, .rightLst').click(function () {
+        var condition = $(this).hasClass("leftLst");
+        if (condition)
+            click(0, this);
+        else
+            click(1, this)
+    });
+
+    ResCarouselSize();
+
+
+
+
+    $(window).resize(function () {
+        ResCarouselSize();
+    });
+
+    //this function define the size of the items
+    function ResCarouselSize() {
+        var incno = 0;
+        var dataItems = ("data-items");
+        var itemClass = ('.item');
+        var id = 0;
+        var btnParentSb = '';
+        var itemsSplit = '';
+        var sampwidth = $(itemsMainDiv).width();
+        var bodyWidth = $('body').width();
+        $(itemsDiv).each(function () {
+            id = id + 1;
+            var itemNumbers = $(this).find(itemClass).length;
+            btnParentSb = $(this).parent().attr(dataItems);
+            itemsSplit = btnParentSb.split(',');
+            $(this).parent().attr("id", "MultiCarousel" + id);
+
+
+            if (bodyWidth >= 1200) {
+                incno = itemsSplit[3];
+                itemWidth = sampwidth / incno;
+            }
+            else if (bodyWidth >= 992) {
+                incno = itemsSplit[2];
+                itemWidth = sampwidth / incno;
+            }
+            else if (bodyWidth >= 768) {
+                incno = itemsSplit[1];
+                itemWidth = sampwidth / incno;
+            }
+            else {
+                incno = itemsSplit[0];
+                itemWidth = sampwidth / incno;
+            }
+            $(this).css({ 'transform': 'translateX(0px)', 'width': itemWidth * itemNumbers });
+            $(this).find(itemClass).each(function () {
+                $(this).outerWidth(itemWidth);
+            });
+
+            $(".leftLst").addClass("over");
+            $(".rightLst").removeClass("over");
+
+        });
+    }
+
+
+    //this function used to move the items
+    function ResCarousel(e, el, s) {
+        var leftBtn = ('.leftLst');
+        var rightBtn = ('.rightLst');
+        var translateXval = '';
+        var divStyle = $(el + ' ' + itemsDiv).css('transform');
+        var values = divStyle.match(/-?[\d\.]+/g);
+        var xds = Math.abs(values[4]);
+        if (e == 0) {
+            translateXval = parseInt(xds) - parseInt(itemWidth * s);
+            $(el + ' ' + rightBtn).removeClass("over");
+
+            if (translateXval <= itemWidth / 2) {
+                translateXval = 0;
+                $(el + ' ' + leftBtn).addClass("over");
+            }
+        }
+        else if (e == 1) {
+            var itemsCondition = $(el).find(itemsDiv).width() - $(el).width();
+            translateXval = parseInt(xds) + parseInt(itemWidth * s);
+            $(el + ' ' + leftBtn).removeClass("over");
+
+            if (translateXval >= itemsCondition - itemWidth / 2) {
+                translateXval = itemsCondition;
+                $(el + ' ' + rightBtn).addClass("over");
+            }
+        }
+        $(el + ' ' + itemsDiv).css('transform', 'translateX(' + -translateXval + 'px)');
+    }
+
+    //It is used to get some elements from btn
+    function click(ell, ee) {
+        var Parent = "#" + $(ee).parent().attr("id");
+        var slide = $(Parent).attr("data-slide");
+        ResCarousel(ell, Parent, slide);
+    }
+
+});
     </script>
 </body>
 </html>
