@@ -19,7 +19,7 @@
     <link href="assets/tools/sequence/css/sequence-theme.basic.css" rel="stylesheet" media="all">
     <link href="assets/tools/dropdownhover/css/animate.min.css" rel="stylesheet">
     <link href="assets/tools/dropdownhover/css/bootstrap-dropdownhover.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- site spec -->
     <link href="assets/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
@@ -98,6 +98,36 @@
   font-weight: bold;
   background-image: linear-gradient(to right,#0f2439,white,#0f2439);
 }
+
+.vl {
+  border-left: 1px solid #0f2439;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 85px;
+  /* position: absolute; */
+}
+
+.bottom-right {
+  /* position: absolute; */
+  bottom: 8px;
+  right: 16px;
+}
+
+.logo_text1 {
+    color: #0f2439;
+    /* background-image: url(https://media.giphy.com/media/Lr2xYGw6IMVofbjRSu/giphy.gif); */
+	font-weight: 700;
+    letter-spacing: 12px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+}
+
+.bio { 
+    text-decoration:none;
+    color: #666666;    
+}
+
     </style>
 </head>
 <body class="auth-theme-rashmore page-team">
@@ -109,7 +139,15 @@
         <div class="container">
             <div class="navbar-header">
                 <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> 
-                <a class="navbar-brand" href="index.html"><img alt="" class="img-responsive" src="assets/img/kaabil_logo.png"></a>
+                <a style="text-decoration:none" class="navbar-brand" href="index.html"><img alt="" class="img-responsive" src="assets/img/red_logo.png">
+                </a>
+                <div class="logo_text1" style="line-height: 0.5; margin-left: 85px; padding-top: 28px; font-size: 24px;  width: 310px;  ">KAABiL</div>     
+
+                <div class="vl ">  
+                <div class="logo_text" style="line-height: 1; padding-top: 4px; color:#044f9f ; font-size: 12px; font-weight: normal; width: 310px;  font-style: normal; "><b style="color: #9d164f;">K</b>aundal <b style="color: #9d164f;">A</b>rtificial 
+                    intelligence <br> & 
+                    <b style="color: #9d164f;">A</b>dvanced <b style="color: #9d164f;">Bi</b>oinformatics <b style="color: #9d164f;">L</b>ab</div>
+                </div>
             </div>
             <div class="navbar-collapse collapse sabbi-navbar-collapse  navbar-nav-hov_underline" id="navbar">
                 <div class="nav-btn-wrap"><a href="#" class="btn btn-primary pull-right">Join Research</a></div>
@@ -229,20 +267,22 @@
                         <div class="profile-card profile-card-meta_classic">
                             <a href="professor.html">
                             <figure>
-                                <img class="img-responsive" style="width: 210px; height:260px" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/kaundal-rakesh2.jpg" alt="sabbi-profile-pic">
+                                <img class="img-responsive" style="width: 210px; height:210px" src="assets/img/profile/RK_2.jpg" alt="sabbi-profile-pic">
                                 <figcaption>
                                     <h3 class="fig-title">Contact Information</h3>
                                     <div class="fig-meta">
                                         <p class="fig-cal"><strong>Call:</strong> <span>+1 (435)-797-4117</span></p>
-                                        <p class="fig-mail"><strong>Email:</strong> <span>rkaundal@usu.edu</span></p>
+                                        <p class="fig-mail"><strong>E-mail:</strong> <span>rkaundal@usu.edu</span></p>
                                     </div>
                                 </figcaption>
                             </a>
                             </figure>
                             <div class="profile-card-meta">
                                 <ul class="pfofile-social list-unstyled list-inline">
-                                    <li><a target="_blank" href="https://orcid.org/0000-0001-8683-1240"> <img src="assets/img/profile/social/gs.png" alt="sabbi-social" class="img-responsive"></a></li>
-                                    <li><a target="_blank" href="https://scholar.google.com/citations?user=Vu1-tr8AAAAJ&hl=en&oi=ao"> <img src="assets/img/profile/social/id.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                    <li><a target="_blank" href="https://scholar.google.com/citations?user=Vu1-tr8AAAAJ&hl=en&oi=ao"> <img src="assets/img/profile/social/gs.png" style="height: 25px; width: 25px;" alt="sabbi-social" class="img-responsive"></a></li>
+                                    <li><a target="_blank" href="https://orcid.org/0000-0001-8683-1240"> <img src="assets/img/profile/social/id.png" style="height: 25px; width: 25px;" alt="sabbi-social" class="img-responsive"></a></li>
+                                    <li><a target="_blank" href="https://www.researchgate.net/profile/Rakesh_Kaundal"> <img src="assets/img/profile/social/research_gate.jpeg" style="height: 25px; width: 25px;" alt="sabbi-social" class="img-responsive"></a></li>
+                                    <li><a target="_blank" href="https://www.linkedin.com/in/r-kaundal"> <img src="assets/img/profile/social/linkedIN.jpg" style="height: 25px; width: 25px; background: white;" alt="sabbi-social" class="img-responsive"></a></li>
                                     <!-- <li><a href="#"> <img src="assets/img/profile/social/fb.png" alt="sabbi-social" class="img-responsive"></a></li>
                                     <li><a href="#"> <img src="assets/img/profile/social/tw.png" alt="sabbi-social" class="img-responsive"></a></li> -->
                                 </ul>
@@ -252,33 +292,31 @@
                     <div class="col-md-8 col-sm-7">
                             <article class="profile-glimps">
                                     <h2 class="entry-title title-foc-md">Dr. Rakesh Kaundal</h2>
-                                    <p class="text-foc-md">Director, Bioinformatics Facility</p>
-                                    <p class="text-foc-md">Center for Integrated BioSystems</p>
-                                    <p class="text-foc-md">College of Agriculture and Applied Sciences</p>
-                                    <p class="text-foc-md">Utah State University,Logan Campus,USA</p>
+                                    <p class="text-foc-md" style="line-height: 1.1;">Assistant Professor, Bioinformatics</p>
+                                    <p class="text-foc-md" style="line-height: 1.1;"><a class="bio" target="_blank" href="https://psc.usu.edu/">Department of Plants, Soils, and Climate <i style="color: #D30015; font-size: 12px;" class="fa fa-external-link"></i></a></p>
+                                    <p></p>
+                                    <p class="text-foc-md" style="line-height: 1;">Director, Bioinformatics Facility</p>
+                                    <p class="text-foc-md" style="line-height: 1;"><a class="bio" target="_blank" href="https://biosystems.usu.edu/">Center for Integrated BioSystems <i style="color: #D30015; font-size: 12px;" class="fa fa-external-link"></i></a></p>
+                                    <p class="text-foc-md" style="line-height: 1;">College of Agriculture and Applied Sciences</p>
+                                    <p></p>
+                                    <p class="text-foc-md" style="line-height: 1;">Adjunct Assistant Professor</p>
+                                    <p class="text-foc-md" style="line-height: 1;"><a class="bio" target="_blank" href="https://cs.usu.edu/">Department of Computer Science <i style="color: #D30015; font-size: 12px;" class="fa fa-external-link"></i></a></p>
+                                    <p class="text-foc-md" style="line-height: 1;">College of Science</p><br>
                                     <div class="stage-content-biog">
                                         <h3 class="stage-title">Biography</h3>
-                                        <p class="stage-text">
+                                        <p class="stage-text" style="text-align: justify;">
                                             <strong><em>Bioinformatics and Computational Biology:</em></strong> <br>
                                             Highly successful track record of integrating biology and bigdata
                                                 analytics with over 14 years’ experience in bioinformatics, computational biology, and scientific programming.
                                                 In-depth knowledge of bioinformatics data analysis tools and databases, information management, and
                                                 integration to support diverse activities essential for organismal improvement and genomics-enabled studies.<br>
-                                            <strong><em>Research:</em></strong> <br>
+                                            <strong><em>Research Interests:</em></strong> <br>
                                             Next-generation sequencing data (analysis, alignment, assembly, annotation); Computational
                                                 modeling of -omics bigdata; Systems biology, develop algorithms to study intra- and inter-species interaction
                                                 networks (e.g. host-pathogen interactions), predict Gene Regulatory Networks; Metagenomics (e.g. rhizosphere
                                                 microbiome interacting with the host); Computational genomics. Develop workflows to facilitate data mining;
                                                 Develop and maintain scientific software / tools.<br>
-                                            <strong><em>Computational skills:</em></strong> <br>
-                                            Unix/Linux shell scripting; Machine learning techniques (Support Vector Machines,
-                                                Artificial Neural Networks); Statistical & mathematical modeling of biological data; Bayesian statistics;
-                                                Develop algorithms combining similarity-search, Hidden Markov Models (HMMs) and Artificial Intelligence;
-                                                Implementation as web-based software / databases / visualization tools using R, PERL, HTML, PHP and CGI-
-                                                PERL. Hands-on experience in a range of bioinformatics tools/packages (BLAST, FASTA, InterProScan, Psi-
-                                                Blast, BlastClust, CD-hit, HMM-Pfam, Gene Ontology etc.); Sequence analysis (homology search, pathway
-                                                analysis, subcellular localization, PSSM, motif, domain search); Phylogenetics (MEGA, PHYLIP, ClustalW);
-                                                Databases (NCBI, UniProt, KEGG, STRING, Pathguide, IntAct).</p>
+                                            </p>
                                     </div><!-- /.stage-content-biog -->
                                 </article>
                     </div>
@@ -320,21 +358,15 @@
                                         </div>
                                         <div >
                                             <p id="AboutLarson" class="teamcontent" style="display: none;">
-                                                    ornare lectus sit amet est 
-                                                    placerat in egestas erat imperdiet sed 
-                                                    euismod nisi porta lorem mollis aliquam ut 
-                                                    porttitor leo a diam sollicitudin tempor id eu 
-                                                    nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper 
-                                                    sit amet risus nullam eget felis eget nunc lobortis mattis 
-                                                    aliquam faucibus purus in massa
+                                                    
                                             </p>
                                             <p id="AboutZhang" class="teamcontent" style="display: none;">
-                                                    Cristian is a plant science MS student from Colombia. 
-                                                    After completing his BS (Computer Science: Universidad del Valle; Cali, Colombia), 
-                                                    he worked as a Research Assistant at CIAT(CGIAR) and the Colombian Sugarcane Research 
-                                                    Center before joining the Kaundal Bioinformatics Laboratory. After his graduation, 
-                                                    he plans to go back to Colombia to join his family, then pursue a Ph.D. degree to become 
-                                                    a Professor.
+                                                Kaige Zhang is a research associate at The Center for Integrated BioSystems. 
+                                                He received his Ph.D. degree in computer science with Utah State University in 2019, 
+                                                the B.S. degree in electronic engineering from Harbin Institute of Technology, China, in 2011, 
+                                                and M.S. degree in signal and information processing from Harbin Engineering University, China, 
+                                                in 2014. His research interests include computer vision, ML, and their applications
+                                                 in intelligent transportation systems and smart agricultural systems. 
                                             </p>
                                             <p id="AboutCristian" class="teamcontent" style="display: none;">
                                                     Cristian is a plant science MS student from Colombia. 
@@ -345,52 +377,40 @@
                                                     a Professor.
                                             </p>
                                             <p id="AboutDuhan" class="teamcontent" style="display: none;">
-                                                    Cristian is a plant science MS student from Colombia. 
-                                                    After completing his BS (Computer Science: Universidad del Valle; Cali, Colombia), 
-                                                    he worked as a Research Assistant at CIAT(CGIAR) and the Colombian Sugarcane Research 
-                                                    Center before joining the Kaundal Bioinformatics Laboratory. After his graduation, 
-                                                    he plans to go back to Colombia to join his family, then pursue a Ph.D. degree to become 
-                                                    a Professor.
+                                                    
                                             </p>
                                             <p id="AboutSuyash" class="teamcontent" style="display: none;">
-                                                    Cristian is a plant science MS student from Colombia. 
-                                                    After completing his BS (Computer Science: Universidad del Valle; Cali, Colombia), 
-                                                    he worked as a Research Assistant at CIAT(CGIAR) and the Colombian Sugarcane Research 
-                                                    Center before joining the Kaundal Bioinformatics Laboratory. After his graduation, 
-                                                    he plans to go back to Colombia to join his family, then pursue a Ph.D. degree to become 
-                                                    a Professor.
+                                                    
                                             </p>
                                             <p id="AboutNikhil" class="teamcontent" style="display: none;">
-                                                    Cristian is a plant science MS student from Colombia. 
-                                                    After completing his BS (Computer Science: Universidad del Valle; Cali, Colombia), 
-                                                    he worked as a Research Assistant at CIAT(CGIAR) and the Colombian Sugarcane Research 
-                                                    Center before joining the Kaundal Bioinformatics Laboratory. After his graduation, 
-                                                    he plans to go back to Colombia to join his family, then pursue a Ph.D. degree to become 
-                                                    a Professor.
+                                                    Nikhil is a computer science graduate student at USU. His bachelor's degree is in 
+                                                    Information technology from Osmania University, India. His research focus is in Bioinformatics. 
+                                                    While, he is currently working on Deep learning developing prediction models for subcellular localization 
+                                                    in Human and Arabidopsis genome and creating SSR prediction database. He is also actively studying Algorithms 
+                                                    and event driven programming.
+
                                             </p>
                                             <p id="AboutMatthew" class="teamcontent" style="display: none;">
-                                                    Cristian is a plant science MS student from Colombia. 
-                                                    After completing his BS (Computer Science: Universidad del Valle; Cali, Colombia), 
-                                                    he worked as a Research Assistant at CIAT(CGIAR) and the Colombian Sugarcane Research 
-                                                    Center before joining the Kaundal Bioinformatics Laboratory. After his graduation, 
-                                                    he plans to go back to Colombia to join his family, then pursue a Ph.D. degree to become 
-                                                    a Professor.
+                                                    Matthew is the systems administrator to the high performance cluster for the bioinformatics group.
+                                                    A passionate Linux enthusiast, his work includes bioinformatics programming and teaching Linux to new users. 
+                                                    Matthew is starting an MS in computer science this spring and hopes to add an MS statistics to his 
+                                                    plan of study.
                                             </p>
                                         
                                         </div>
                                 </div>
                         </div>
                         <div class="modal-footer">
-                                <p id="LarsonEmail" class="teamemail" style="display: none; text-align: left;" >xyz@gmail.com</p>
-                                <p id="ZhangEmail" class="teamemail" style="display: none; text-align: left;" >kg.zhang@aggiemail.usu.edu</p>
-                                <p id="OrduzEmail" class="teamemail" style="display: none; text-align: left;" >cdloaiza@aggiemail.usu.edu</p>
-                                <p id="DuhanEmail" class="teamemail" style="display: none; text-align: left;" >naveen.duhan@usu.edu</p>
-                                <p id="MhetreEmail" class="teamemail" style="display: none; text-align: left;" >suyash.mhetre@aggiemail.usu.edu</p>
-                                <p id="NikhilEmail" class="teamemail" style="display: none; text-align: left;" >nikhil.sai.kurivella@aggiemail.usu.edu</p>
-                                <p id="ListerEmail" class="teamemail" style="display: none; text-align: left;" >matthew.lister@aggiemail.usu.edu</p>
-                                <p id="UdarikaEmail" class="teamemail" style="display: none; text-align: left;" >6@gmail.com</p>
-                                <p id="RaulEmail" class="teamemail" style="display: none; text-align: left;" >7@gmail.com</p>
-                                <p id="CalebEmail" class="teamemail" style="display: none; text-align: left;" >8@gmail.com</p>
+                                <p id="LarsonEmail" class="teamemail" style="display: none; text-align: left;" >E-mail: rousselene.larson@usu.edu</p>
+                                <p id="ZhangEmail" class="teamemail" style="display: none; text-align: left;" >E-mail: kg.zhang@aggiemail.usu.edu</p>
+                                <p id="OrduzEmail" class="teamemail" style="display: none; text-align: left;" >E-mail: cdloaiza@aggiemail.usu.edu</p>
+                                <p id="DuhanEmail" class="teamemail" style="display: none; text-align: left;" >E-mail: naveen.duhan@usu.edu</p>
+                                <p id="MhetreEmail" class="teamemail" style="display: none; text-align: left;" >E-mail: suyash.mhetre@aggiemail.usu.edu</p>
+                                <p id="NikhilEmail" class="teamemail" style="display: none; text-align: left;" >E-mail: nikhil.sai.kurivella@aggiemail.usu.edu</p>
+                                <p id="ListerEmail" class="teamemail" style="display: none; text-align: left;" >E-mail: matthew.lister@aggiemail.usu.edu</p>
+                                <p id="UdarikaEmail" class="teamemail" style="display: none; text-align: left;" >E-mail: </p>
+                                <p id="RaulEmail" class="teamemail" style="display: none; text-align: left;" >E-mail: </p>
+                                <p id="CalebEmail" class="teamemail" style="display: none; text-align: left;" >E-mail: </p>
                            <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
                          </div>
                       </div>
@@ -398,7 +418,7 @@
                     </div>
                   </div>
                   <div class="title-card team-classification">
-                    Staff
+                    Informatics Staff
                 </div>
                 <div class="row" style="padding-top: 20px;">
                     <div class="col-sm-8 col-md-3 zoom">
@@ -412,7 +432,7 @@
                                                     <div class="text">About</div>
                                         </button>
                                     </div>
-                                    <div class="fig-title-des"><i>Bioinformatic Scientist</i></div>
+                                    <div class="fig-title-des"><i>Bioinformatics Scientist</i></div>
                                     <!-- <div class="fig-meta">
                                         <p class="fig-cal"><strong>Call:</strong> <span>+61(07)373 53921</span></p>
                                         <p class="fig-mail"><strong>Email:</strong> <span>nam-trung.nguyenEmailgriffith.edu.au</span></p>
@@ -436,13 +456,13 @@
                                 <figure>
                                     <img class="img-responsive" id="Kaige" src="assets/img/profile/Kaige Zhang.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
                                     <figcaption>
-                                        <h3 class="fig-title">Kaige Zhang</h3>
+                                        <h3 class="fig-title">Kaige Zhang, <i style="font-weight: normal;">Ph.D.</i></h3>
                                         <div class="middle">
                                                 <button id="modalbtn" onclick="openAboutModal(event,'Kaige','AboutZhang','titleZhang','subtitleZhang','ZhangEmail')" style=" background: transparent; border: none !important;">
                                                         <div class="text">About</div>
                                                 </button>
                                             </div>
-                                        <div class="fig-title-des">Ph.D. Research Assistant | CS</div>
+                                        <div class="fig-title-des">Research Assistant | CS</div>
                                         <!-- <div class="fig-meta">
                                             <p class="fig-cal"><strong>Call:</strong> <span>+61(07)373 53921</span></p>
                                             <p class="fig-mail"><strong>Email:</strong> <span>nam-trung.nguyenEmailgriffith.edu.au</span></p>
@@ -461,7 +481,7 @@
                         </div> 
                 </div>
                 <div class="title-card team-classification">
-                        Graduate
+                        Graduate Students
                 </div>
                 <div class="row" style="padding-top: 20px;">
                         <div class="col-sm-8 col-md-3 zoom ">
@@ -496,7 +516,7 @@
                         <div class="col-sm-8 col-md-3 zoom">
                                 <div class="profile-card profile-card-meta_classic article-container">
                                     <figure>
-                                        <img class="img-responsive" id="Naveen" src="http://bioinfo.usu.edu/wp-content/uploads/2019/02/naveen-e1549936842295.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
+                                        <img class="img-responsive" id="Naveen" src="assets/img/profile/1.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
                                         <figcaption>
                                             <h3 class="fig-title">Naveen Duhan</h3>
                                             <div class="middle">
@@ -504,7 +524,7 @@
                                                             <div class="text">About</div>
                                                     </button>
                                                 </div>
-                                            <div class="fig-title-des">PHD Student | PSC</div>
+                                            <div class="fig-title-des">Ph.D. Student | PSC</div>
                                             <!-- <div class="fig-meta">
                                                 <p class="fig-cal"><strong>Call:</strong> <span>+61(07)373 53921</span></p>
                                                 <p class="fig-mail"><strong>Email:</strong> <span>nam-trung.nguyenEmailgriffith.edu.au</span></p>
@@ -580,7 +600,7 @@
                                 
                 </div>
                 <div class="title-card team-classification">
-                    Undergraduate
+                    Undergraduate Students
                 </div>
                 <div class="row" style="padding-top: 20px;">
                         <div class="col-sm-8 col-md-3 flip-card zoom">

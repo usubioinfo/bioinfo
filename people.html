@@ -98,6 +98,30 @@
   font-weight: bold;
   background-image: linear-gradient(to right,#0f2439,white,#0f2439);
 }
+
+.vl {
+  border-left: 1px solid #0f2439;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 85px;
+  /* position: absolute; */
+}
+
+.bottom-right {
+  /* position: absolute; */
+  bottom: 8px;
+  right: 16px;
+}
+
+.logo_text1 {
+    color: #0f2439;
+    /* background-image: url(https://media.giphy.com/media/Lr2xYGw6IMVofbjRSu/giphy.gif); */
+	font-weight: 700;
+    letter-spacing: 12px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+}
     </style>
 </head>
 <body class="auth-theme-rashmore page-team">
@@ -109,7 +133,15 @@
         <div class="container">
             <div class="navbar-header">
                 <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> 
-                <a class="navbar-brand" href="index.html"><img alt="" class="img-responsive" src="assets/img/kaabil_logo.png"></a>
+                <a style="text-decoration:none" class="navbar-brand" href="index.html"><img alt="" class="img-responsive" src="assets/img/red_logo.png">
+                </a>
+                <div class="logo_text1" style="line-height: 0.5; margin-left: 85px; padding-top: 28px; font-size: 24px;  width: 310px;  ">KAABiL</div>     
+
+                <div class="vl ">  
+                <div class="logo_text" style="line-height: 1; padding-top: 4px; color:#044f9f ; font-size: 12px; font-weight: normal; width: 310px;  font-style: normal; "><b style="color: #9d164f;">K</b>aundal <b style="color: #9d164f;">A</b>rtificial 
+                    intelligence <br> & 
+                    <b style="color: #9d164f;">A</b>dvanced <b style="color: #9d164f;">Bi</b>oinformatics <b style="color: #9d164f;">L</b>ab</div>
+                </div>
             </div>
             <div class="navbar-collapse collapse sabbi-navbar-collapse  navbar-nav-hov_underline" id="navbar">
                 <div class="nav-btn-wrap"><a href="#" class="btn btn-primary pull-right">Join Research</a></div>
@@ -241,8 +273,8 @@
                             </figure>
                             <div class="profile-card-meta">
                                 <ul class="pfofile-social list-unstyled list-inline">
-                                    <li><a target="_blank" href="https://orcid.org/0000-0001-8683-1240"> <img src="assets/img/profile/social/gs.png" alt="sabbi-social" class="img-responsive"></a></li>
-                                    <li><a target="_blank" href="https://scholar.google.com/citations?user=Vu1-tr8AAAAJ&hl=en&oi=ao"> <img src="assets/img/profile/social/id.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                    <li><a target="_blank" href="https://scholar.google.com/citations?user=Vu1-tr8AAAAJ&hl=en&oi=ao"> <img src="assets/img/profile/social/gs.png" alt="sabbi-social" class="img-responsive"></a></li>
+                                    <li><a target="_blank" href="https://orcid.org/0000-0001-8683-1240"> <img src="assets/img/profile/social/id.png" alt="sabbi-social" class="img-responsive"></a></li>
                                     <!-- <li><a href="#"> <img src="assets/img/profile/social/fb.png" alt="sabbi-social" class="img-responsive"></a></li>
                                     <li><a href="#"> <img src="assets/img/profile/social/tw.png" alt="sabbi-social" class="img-responsive"></a></li> -->
                                 </ul>
@@ -325,21 +357,15 @@
                                         </div>
                                         <div >
                                             <p id="AboutLarson" class="teamcontent" style="display: none;">
-                                                    ornare lectus sit amet est 
-                                                    placerat in egestas erat imperdiet sed 
-                                                    euismod nisi porta lorem mollis aliquam ut 
-                                                    porttitor leo a diam sollicitudin tempor id eu 
-                                                    nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper 
-                                                    sit amet risus nullam eget felis eget nunc lobortis mattis 
-                                                    aliquam faucibus purus in massa
+                                                    
                                             </p>
                                             <p id="AboutZhang" class="teamcontent" style="display: none;">
-                                                    Cristian is a plant science MS student from Colombia. 
-                                                    After completing his BS (Computer Science: Universidad del Valle; Cali, Colombia), 
-                                                    he worked as a Research Assistant at CIAT(CGIAR) and the Colombian Sugarcane Research 
-                                                    Center before joining the Kaundal Bioinformatics Laboratory. After his graduation, 
-                                                    he plans to go back to Colombia to join his family, then pursue a Ph.D. degree to become 
-                                                    a Professor.
+                                                Kaige Zhang is a research associate at The Center for Integrated BioSystems. 
+                                                He received his Ph.D. degree in computer science with Utah State University in 2019, 
+                                                the B.S. degree in electronic engineering from Harbin Institute of Technology, China, in 2011, 
+                                                and M.S. degree in signal and information processing from Harbin Engineering University, China, 
+                                                in 2014. His research interests include computer vision, ML, and their applications
+                                                 in intelligent transportation systems and smart agricultural systems. 
                                             </p>
                                             <p id="AboutCristian" class="teamcontent" style="display: none;">
                                                     Cristian is a plant science MS student from Colombia. 
@@ -350,60 +376,48 @@
                                                     a Professor.
                                             </p>
                                             <p id="AboutDuhan" class="teamcontent" style="display: none;">
-                                                    Cristian is a plant science MS student from Colombia. 
-                                                    After completing his BS (Computer Science: Universidad del Valle; Cali, Colombia), 
-                                                    he worked as a Research Assistant at CIAT(CGIAR) and the Colombian Sugarcane Research 
-                                                    Center before joining the Kaundal Bioinformatics Laboratory. After his graduation, 
-                                                    he plans to go back to Colombia to join his family, then pursue a Ph.D. degree to become 
-                                                    a Professor.
+                                                    
                                             </p>
                                             <p id="AboutSuyash" class="teamcontent" style="display: none;">
-                                                    Cristian is a plant science MS student from Colombia. 
-                                                    After completing his BS (Computer Science: Universidad del Valle; Cali, Colombia), 
-                                                    he worked as a Research Assistant at CIAT(CGIAR) and the Colombian Sugarcane Research 
-                                                    Center before joining the Kaundal Bioinformatics Laboratory. After his graduation, 
-                                                    he plans to go back to Colombia to join his family, then pursue a Ph.D. degree to become 
-                                                    a Professor.
+                                                    
                                             </p>
                                             <p id="AboutNikhil" class="teamcontent" style="display: none;">
-                                                    Cristian is a plant science MS student from Colombia. 
-                                                    After completing his BS (Computer Science: Universidad del Valle; Cali, Colombia), 
-                                                    he worked as a Research Assistant at CIAT(CGIAR) and the Colombian Sugarcane Research 
-                                                    Center before joining the Kaundal Bioinformatics Laboratory. After his graduation, 
-                                                    he plans to go back to Colombia to join his family, then pursue a Ph.D. degree to become 
-                                                    a Professor.
+                                                    Nikhil is a computer science graduate student at USU. His bachelor's degree is in 
+                                                    Information technology from Osmania University, India. His research focus is in Bioinformatics. 
+                                                    While, he is currently working on Deep learning developing prediction models for subcellular localization 
+                                                    in Human and Arabidopsis genome and creating SSR prediction database. He is also actively studying Algorithms 
+                                                    and event driven programming.
+
                                             </p>
                                             <p id="AboutMatthew" class="teamcontent" style="display: none;">
-                                                    Cristian is a plant science MS student from Colombia. 
-                                                    After completing his BS (Computer Science: Universidad del Valle; Cali, Colombia), 
-                                                    he worked as a Research Assistant at CIAT(CGIAR) and the Colombian Sugarcane Research 
-                                                    Center before joining the Kaundal Bioinformatics Laboratory. After his graduation, 
-                                                    he plans to go back to Colombia to join his family, then pursue a Ph.D. degree to become 
-                                                    a Professor.
+                                                    Matthew is the systems administrator to the high performance cluster for the bioinformatics group.
+                                                    A passionate Linux enthusiast, his work includes bioinformatics programming and teaching Linux to new users. 
+                                                    Matthew is starting an MS in computer science this spring and hopes to add an MS statistics to his 
+                                                    plan of study.
                                             </p>
                                             <p id="AboutUdarika" class="teamcontent" style="display: none;">
-                                                    
+                                               
                                             </p>
                                             <p id="AboutRaul" class="teamcontent" style="display: none;">
-                                                    
+                                                
                                             </p>
                                             <p id="AboutCaleb" class="teamcontent" style="display: none;">
-                                                    
+                                                
                                             </p>
                                         </div>
                                 </div>
                         </div>
                         <div class="modal-footer">
-                               <p id="LarsonEmail" class="teamemail" style="display: none; text-align: left;" >xyz@gmail.com</p>
+                               <p id="LarsonEmail" class="teamemail" style="display: none; text-align: left;" >rousselene.larson@usu.edu</p>
                                <p id="ZhangEmail" class="teamemail" style="display: none; text-align: left;" >kg.zhang@aggiemail.usu.edu</p>
                                <p id="OrduzEmail" class="teamemail" style="display: none; text-align: left;" >cdloaiza@aggiemail.usu.edu</p>
                                <p id="DuhanEmail" class="teamemail" style="display: none; text-align: left;" >naveen.duhan@usu.edu</p>
                                <p id="MhetreEmail" class="teamemail" style="display: none; text-align: left;" >suyash.mhetre@aggiemail.usu.edu</p>
                                <p id="NikhilEmail" class="teamemail" style="display: none; text-align: left;" >nikhil.sai.kurivella@aggiemail.usu.edu</p>
                                <p id="ListerEmail" class="teamemail" style="display: none; text-align: left;" >matthew.lister@aggiemail.usu.edu</p>
-                               <p id="UdarikaEmail" class="teamemail" style="display: none; text-align: left;" >6@gmail.com</p>
-                               <p id="RaulEmail" class="teamemail" style="display: none; text-align: left;" >7@gmail.com</p>
-                               <p id="CalebEmail" class="teamemail" style="display: none; text-align: left;" >8@gmail.com</p>
+                               <p id="UdarikaEmail" class="teamemail" style="display: none; text-align: left;" ></p>
+                               <p id="RaulEmail" class="teamemail" style="display: none; text-align: left;" ></p>
+                               <p id="CalebEmail" class="teamemail" style="display: none; text-align: left;" ></p>
                           <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
                         </div>
                       </div>
@@ -509,7 +523,7 @@
                         <div class="col-sm-8 col-md-3 zoom">
                                 <div class="profile-card profile-card-meta_classic article-container">
                                     <figure>
-                                        <img class="img-responsive" id="Naveen" src="http://bioinfo.usu.edu/wp-content/uploads/2019/02/naveen-e1549936842295.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
+                                        <img class="img-responsive" id="Naveen" src="assets/img/profile/1.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
                                         <figcaption>
                                             <h3 class="fig-title">Naveen Duhan</h3>
                                             <div class="middle">
@@ -632,7 +646,7 @@
                 <div class="col-sm-8 col-md-3 zoom">
                         <div class="profile-card profile-card-meta_classic article-container">
                             <figure>
-                                <img class="img-responsive" id="Udarika" src="assets/img/profile/profile1.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
+                                <img class="img-responsive" id="Udarika" src="assets/img/profile/UDARIKA-EDIRIWEERA.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
                                 <figcaption>
                                     <h3 class="fig-title">Udarika Ediriweera</h3>
                                     <div class="middle">
@@ -660,7 +674,7 @@
                 <div class="col-sm-8 col-md-3 zoom">
                         <div class="profile-card profile-card-meta_classic article-container">
                             <figure>
-                                <img class="img-responsive" id="Raul" src="assets/img/profile/profile1.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
+                                <img class="img-responsive" id="Raul" src="assets/img/profile/profile_pic.jpeg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
                                 <figcaption>
                                     <h3 class="fig-title">Raul Ramirez</h3>
                                     <div class="middle">
@@ -688,7 +702,7 @@
                 <div class="col-sm-8 col-md-3 zoom">
                         <div class="profile-card profile-card-meta_classic article-container">
                             <figure>
-                                <img class="img-responsive" id="Caleb" src="assets/img/profile/profile1.jpg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
+                                <img class="img-responsive" id="Caleb" src="assets/img/profile/profile_pic.jpeg" style="width: 210px; height: 210px" alt="sabbi-profile-pic">
                                 <figcaption>
                                     <h3 class="fig-title">Caleb Smith</h3>
                                     <div class="middle">
