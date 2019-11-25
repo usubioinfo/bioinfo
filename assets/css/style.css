@@ -1138,11 +1138,9 @@ body .mb_100 {
 
 .page-futuremember .sabbi-page-header {
   height: 265px;
-  background-image: url(../img/contact_slide3.JPG);
+  background-image: url(../img/old_main_contact.jpg);
   background-color: #000;
   background-size:cover;
-  background-position-y: -650px;
-  background-size: 100% 400%;
   background-repeat: no-repeat; }
 
   .sabbi-page-header-classic3 {
@@ -1172,7 +1170,8 @@ body .mb_100 {
       transform: translateY(-50%); }
 
   .sabbi-page-header-classic1 {
-    background-image: url(../img/Cybersecurity.jpeg);
+    background-image: url(../img/medicine.jpg);
+    background-position-y: -200px;
     background-size: cover;
     background-repeat: no-repeat;
     color: #fff;
@@ -2402,4 +2401,8 @@ a.link-with-icon i.fa {
 }
 .species-slider .owl-dot.active{
   background-color: #EC5538;
+}
+
+.footer_text:hover a{
+  color: #D30015;
 }
