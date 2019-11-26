@@ -1132,7 +1132,7 @@ body .mb_100 {
   background-repeat: no-repeat; }
 
 .page-events .sabbi-page-header {
-  background-image: url(../img/header/events_hd.jpg);
+  background-image: url(../img/events_slide.jpg);
   background-size: cover;
   background-repeat: no-repeat; }
 
@@ -1170,7 +1170,7 @@ body .mb_100 {
       transform: translateY(-50%); }
 
   .sabbi-page-header-classic1 {
-    background-image: url(../img/medicine.jpg);
+    background-image: url(../img/dna.jpg);
     background-position-y: -200px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -2205,15 +2205,14 @@ a.link-with-icon i.fa {
   margin-top: 45px; }
   .events_post-sagment .sagment-title {
     text-align: center;
-    font-size: 16px;
-    font-size: 1.14286rem; }
+    font-size: 22px;
+     }
   .sabbi-events-item {
     margin-bottom: 35px;
     margin-top: 5px; }
     .sabbi-events-item .sabbi-events-title {
       color: white;
-      font-size: 24px;
-      font-size: 1.71429rem;
+      font-size: 20px;
       font-weight: 700; }
     @media (max-width: 767px) {
       .sabbi-events-item .sabbi-events-title {
@@ -2406,3 +2405,4 @@ a.link-with-icon i.fa {
 .footer_text:hover a{
   color: #D30015;
 }
+
