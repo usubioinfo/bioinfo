@@ -66,6 +66,23 @@
         .event_text:hover .sabbi-events-title {
             color: #D30015;
         }
+
+        /* [1] The container */
+.img-hover-zoom {
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover img {
+  transform: scale(1.1);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
     </style>
 </head>
 
@@ -223,7 +240,7 @@
                     <div class="col-sm-6">
                         <article class="sabbi-events-item">
                             <a href="events_single.html" class="sabbi-events-link">
-                                <figure>
+                                <figure class="img-hover-zoom">
                                     <img class="sabbi-events-img img-responsive lab_event"
                                         src="assets/img/events/PSCshowcase_2019/d791cf15-ac89-4759-97d8-239827926698.JPG"
                                         alt="thompson">
@@ -244,7 +261,7 @@
                     <div class="col-sm-6">
                         <article class="sabbi-events-item">
                             <a href="events_single.html" class="sabbi-events-link">
-                                <figure>
+                                <figure class="img-hover-zoom">
                                     <img class="sabbi-events-img img-responsive lab_event"
                                         src="assets/img/events/USU_winter/IMG_1201.JPG" alt="thompson">
                                     <figcaption>
@@ -269,7 +286,7 @@
                     <div class="col-sm-6">
                         <article class="sabbi-events-item">
                             <a href="events_single.html" class="sabbi-events-link">
-                                <figure>
+                                <figure class="img-hover-zoom">
                                     <img class="sabbi-events-img img-responsive lab_event"
                                         style="transform: rotate(180deg);"
                                         src="assets/img/events/Rocky_2018/IMG_1335.JPG" alt="thompson">
@@ -290,7 +307,7 @@
                     <div class="col-sm-6">
                         <article class="sabbi-events-item">
                             <a href="events_single.html" class="sabbi-events-link">
-                                <figure>
+                                <figure class="img-hover-zoom">
                                     <img class="sabbi-events-img img-responsive lab_event"
                                         src="assets/img/events/NCHU-2018/IMG_5118.JPG" alt="thompson">
                                     <figcaption>
@@ -315,7 +332,7 @@
                     <div class="col-sm-6">
                         <article class="sabbi-events-item">
                             <a href="events_single.html" class="sabbi-events-link">
-                                <figure>
+                                <figure class="img-hover-zoom">
                                     <img class="sabbi-events-img img-responsive lab_event"
                                         src="assets/img/events/OSU-President's Cup Dec2013//11310703416_5d39f89a49.png"
                                         alt="thompson">
