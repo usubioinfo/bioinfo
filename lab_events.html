@@ -239,7 +239,7 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <article class="sabbi-events-item">
-                            <a href="events_single.html" class="sabbi-events-link">
+                            <a href="events_single.html" id="psc" onclick="getLinkValue(psc)" class="sabbi-events-link">
                                 <figure class="img-hover-zoom">
                                     <img class="sabbi-events-img img-responsive lab_event"
                                         src="assets/img/events/PSCshowcase_2019/d791cf15-ac89-4759-97d8-239827926698.JPG"
@@ -260,7 +260,7 @@
                     </div>
                     <div class="col-sm-6">
                         <article class="sabbi-events-item">
-                            <a href="events_single.html" class="sabbi-events-link">
+                            <a href="events_single.html" id="winter" onclick="getLinkValue(winter)" class="sabbi-events-link">
                                 <figure class="img-hover-zoom">
                                     <img class="sabbi-events-img img-responsive lab_event"
                                         src="assets/img/events/USU_winter/IMG_1201.JPG" alt="thompson">
@@ -280,7 +280,7 @@
                     </div>
                 </div>
             </div><!-- /.events_post-sagment -->
-            <div class="events_post-sagment tabcontent" id="18">
+            <div class="events_post-sagment tabcontent" style="display: none" id="18">
                 <h4 class="sagment-title">2018</h4>
                 <div class="row">
                     <div class="col-sm-6">
@@ -326,7 +326,7 @@
                     </div>
                 </div>
             </div><!-- /.events_post-sagment -->
-            <div class="events_post-sagment tabcontent" style="display: none" id="16-17">
+            <div class="events_post-sagment tabcontent" style="display: none" id="13">
                 <h4 class="sagment-title">2013</h4>
                 <div class="row">
                     <div class="col-sm-6">
@@ -356,8 +356,9 @@
             <nav aria-label="Page navigation" class="pagination_wraper">
                 <ul class="pagination">
                     <!-- <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li> -->
-                    <li><a class="tablinks" onclick="openEvent(event, '19'), openEvent(event, '18')" href="#tabcontent">1</a></li>
-                    <li><a class="tablinks" onclick="openEvent(event, '16-17')" href="#tabcontent">2</a></li>
+                    <li><a class="tablinks" onclick="openEvent(event, '19')" href="#tabcontent">1</a></li>
+                    <li><a class="tablinks" onclick="openEvent(event, '18')" href="#tabcontent">2</a></li>
+                    <li><a class="tablinks" onclick="openEvent(event, '13')" href="#tabcontent">3</a></li>
                     <!-- <li><a class="active" href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li> -->
                 </ul>
             </nav><!-- /.pagination_wraper -->
