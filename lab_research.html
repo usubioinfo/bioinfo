@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="">
 <!--<![endif]-->
+
 <head>
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -13,9 +14,10 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="apple-touch-icon.png" rel="apple-touch-icon">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Open+Sans:300,400,400i,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Open+Sans:300,400,400i,600,700"
+        rel="stylesheet">
     <link href="assets/fonts/ionicons/css/ionicons.css" rel="stylesheet" type="text/css" />
-     
+
     <!-- Tools -->
     <link href="assets/tools/sequence/css/sequence-theme.basic.css" rel="stylesheet" media="all">
     <link href="assets/tools/dropdownhover/css/animate.min.css" rel="stylesheet">
@@ -28,162 +30,219 @@
     <link rel="icon" href="assets/img/red_logo.png">
     <!-- Styles -->
 
-    
+
     <style>
-    .vl {
-  border-left: 1px solid #0f2439;
-  height: 30px;
-  margin-top: 10px;
-  margin-left: 85px;
-  /* position: absolute; */
-}
+        .vl {
+            border-left: 1px solid #0f2439;
+            height: 30px;
+            margin-top: 10px;
+            margin-left: 85px;
+            /* position: absolute; */
+        }
 
-.bottom-right {
-  /* position: absolute; */
-  bottom: 8px;
-  right: 16px;
-}
+        .bottom-right {
+            /* position: absolute; */
+            bottom: 8px;
+            right: 16px;
+        }
 
-.logo_text1 {
-    color: #0f2439;
-    /* background-image: url(https://media.giphy.com/media/Lr2xYGw6IMVofbjRSu/giphy.gif); */
-	font-weight: 700;
-    letter-spacing: 12px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    /* color: white;
+        .logo_text1 {
+            color: #0f2439;
+            /* background-image: url(https://media.giphy.com/media/Lr2xYGw6IMVofbjRSu/giphy.gif); */
+            font-weight: 700;
+            letter-spacing: 12px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            /* color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
-}
+        }
 
-.middle {
-  background-position-x: center;
-  align-content: center;
-  
-}
+        .middle {
+            background-position-x: center;
+            align-content: center;
 
-hr {
-  margin: auto;
-  width: 40%;
-}
-</style>
+        }
+
+        hr {
+            margin: auto;
+            width: 40%;
+        }
+
+        .MultiCarousel {
+            float: left;
+            overflow: hidden;
+            /* padding: 15px; */
+            width: 100%;
+            position: relative;
+        }
+
+        .MultiCarousel .MultiCarousel-inner {
+            transition: 1s ease all;
+            float: left;
+        }
+
+        .MultiCarousel .MultiCarousel-inner .item {
+            float: left;
+        }
+
+        .MultiCarousel .leftLst,
+        .MultiCarousel .rightLst {
+            position: absolute;
+            border-radius: 50%;
+            top: calc(50%);
+        }
+
+        .MultiCarousel .leftLst {
+            left: 0;
+        }
+
+        .MultiCarousel .rightLst {
+            right: 0;
+        }
+
+        .MultiCarousel .leftLst.over,
+        .MultiCarousel .rightLst.over {
+            pointer-events: none;
+            background: #ccc;
+        }
+    </style>
 </head>
+
 <body class="auth-theme-rashmore page-labresearch">
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
-    <nav class="navbar navbar-white navbar-kawsa navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> 
-                    <a style="text-decoration:none" class="navbar-brand" href="index.html"><img alt="" class="img-responsive" src="assets/img/lab_logo.png">
-                    </a>
-                    <div class="logo_text1" style="line-height: 0.5; margin-left: 85px; padding-top: 28px; font-size: 24px;  width: 310px;  ">KAABiL</div>     
 
-                    <div class="vl ">  
-                    <div class="logo_text" style="line-height: 1; padding-top: 4px; color:#044f9f ; font-size: 12px; font-weight: normal; width: 310px;  font-style: normal; "><b style="color: #9d164f;">K</b>aundal <b style="color: #9d164f;">A</b>rtificial 
-                        intelligence <br> & 
-                        <b style="color: #9d164f;">A</b>dvanced <b style="color: #9d164f;">Bi</b>oinformatics <b style="color: #9d164f;">L</b>ab</div>
-                    </div>
-                </div>
-                <div class="navbar-collapse collapse sabbi-navbar-collapse  navbar-nav-hov_underline" id="navbar">
-                    <div class="nav-btn-wrap"><a href="#" class="btn btn-primary pull-right">Join Research</a></div>
-                    <ul class="nav navbar-nav navbar-right" id="menu-main-nav">
-                            <li>
-                                <a href="index.html" title="Home">Home</a>
-                            </li>
-                            <li class="active">
-                                <a href="lab_research.html" title="Research">Research</a>
-                            </li>
-                            <li class="dropdown">
-                                    <a href="people.html" class="dropdown-toggle"   data-hover="dropdown" title="People" data-animations="zoomIn">People<span class="caret"></span></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="professor.html" title="Dr Rushmore">Dr. Rakesh Kaundal</a>
-                                    </li>
-                                    <li class="">
-                                        <a href="ourteam.html" title="Our Team">Our Team</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown"  data-hover="dropdown" href="#" title="Publications" data-animations="zoomIn">Publications <span class="caret"></span></a>
-                                <ul class=" dropdown-menu" role="menu">
-                                        <li>
-                                                <a href="lab_journal.html" title="Journal Articles">Journal Articles</a>
-                                            </li>
-                                            <li>
-                                                <a href="lab_conf-talk.html" title="Conferences and Talks">Conferences and Talks</a>
-                                            </li>
-                                    <!-- <li>
-                                        <a href="lab_book.html" title="Books">Books</a>
-                                    </li> -->
-                                    
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                    <a href="events.html" class="dropdown-toggle"   data-hover="dropdown" title="Tools" data-animations="zoomIn">Tools<span class="caret"></span></a>
-                                    <ul class=" dropdown-menu" role="menu">
-                                        <li>
-                                            <a href="http://bioinfo.usu.edu/PredHPI/" target="_blank" title="PredHPI">Pred HPI</a>
-                                        </li>
-                                        <li>
-                                            <a href="http://bioinfo.usu.edu/GreeningDB/" target="_blank" title="GreeningDB">Greening DB</a>
-                                        </li>
-                                        <li>
-                                            <a href="http://bioinfo.usu.edu/rtools/Plant-mSubP/" target="_blank" title="Plant-mSubP">Plant mSubP</a>
-                                        </li>
-                                        <li>
-                                                <a href="http://bioinfo.usu.edu/lacsubpred" target="_blank" title="LacSubPred">Lac SubPred</a>
-                                        </li>
-                                        <li>
-                                                <a href="http://bioinfo.usu.edu/ligpred" target="_blank" title="LigPred">Lig Pred</a>
-                                        </li>
-                                        <li>
-                                                <a href="http://bioinfo.usu.edu/AP-iNET" target="_blank" title="Ap-iNet">Ap-iNet</a>
-                                        </li>
-                                        <li>
-                                                <a href="http://bioinfo3.noble.org/AtSubP/" target="_blank" title="AtSubP">At SubP</a>
-                                        </li>
-                                        <li>
-                                                <a href="http://www.imtech.res.in/raghava/rbpred/" target="_blank" title="RB-Pred">RB-Pred</a>
-                                        </li>
-                                        <li>
-                                                <a href="http://www.imtech.res.in/raghava/rslpred/" target="_blank" title="RSLpred">RS Lpred</a>
-                                        </li>
-                                        <li>
-                                                <a href="http://bioinfo.usu.edu/PLpred/" target="_blank" title="PLpred">PLpred</a>
-                                        </li>
-                                        <li>
-                                                <a href="http://bioinfo.usu.edu/citSATdb/" target="_blank" title="citSATdb">citSATdb</a>
-                                        </li>
-                                    </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown"  data-hover="dropdown" href="#" title="Events" data-animations="zoomIn">Events <span class="caret"></span></a>
-                                <ul class=" dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="lab_events.html" title="Books">Events Page</a>
-                                    </li>
-                                    <li>
-                                        <a href="events_single.html" title="Journal Articles">Events Single Page</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="future_member.html" title="Future Member">Contact</a>
-                            </li>
-                            <!-- <lsi> -->
-                    </ul>
+    <nav class="navbar navbar-white navbar-kawsa navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed"
+                    data-target="#navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle
+                        navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span
+                        class="icon-bar"></span></button>
+                <a style="text-decoration:none" class="navbar-brand" href="index.html"><img alt=""
+                        class="img-responsive" src="assets/img/lab_logo.png">
+                </a>
+                <div class="logo_text1"
+                    style="line-height: 0.5; margin-left: 85px; padding-top: 28px; font-size: 24px;  width: 310px;  ">
+                    KAABiL</div>
+
+                <div class="vl ">
+                    <div class="logo_text"
+                        style="line-height: 1; padding-top: 4px; color:#044f9f ; font-size: 12px; font-weight: normal; width: 310px;  font-style: normal; ">
+                        <b style="color: #9d164f;">K</b>aundal <b style="color: #9d164f;">A</b>rtificial
+                        intelligence <br> &
+                        <b style="color: #9d164f;">A</b>dvanced <b style="color: #9d164f;">Bi</b>oinformatics <b
+                            style="color: #9d164f;">L</b>ab</div>
                 </div>
             </div>
-        </nav><!-- /.navbar -->
-        <header class="sabbi-page-header-classic3 sabbi-page-header-team page-header-lg">
-                <div class="page-header-content conternt-center">
-                    <div class="header-title-block">
-                        <h1 class="page-title">Research</h1>
-                    </div>
-                </div>
-        </header>
+            <div class="navbar-collapse collapse sabbi-navbar-collapse  navbar-nav-hov_underline" id="navbar">
+                <div class="nav-btn-wrap"><a href="#" class="btn btn-primary pull-right">Join Research</a></div>
+                <ul class="nav navbar-nav navbar-right" id="menu-main-nav">
+                    <li>
+                        <a href="index.html" title="Home">Home</a>
+                    </li>
+                    <li class="active">
+                        <a href="lab_research.html" title="Research">Research</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="people.html" class="dropdown-toggle" data-hover="dropdown" title="People"
+                            data-animations="zoomIn">People<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="professor.html" title="Dr Rushmore">Dr. Rakesh Kaundal</a>
+                            </li>
+                            <li class="">
+                                <a href="ourteam.html" title="Our Team">Our Team</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#"
+                            title="Publications" data-animations="zoomIn">Publications <span class="caret"></span></a>
+                        <ul class=" dropdown-menu" role="menu">
+                            <li>
+                                <a href="lab_journal.html" title="Journal Articles">Journal Articles</a>
+                            </li>
+                            <li>
+                                <a href="lab_conf-talk.html" title="Conferences and Talks">Conferences and Talks</a>
+                            </li>
+                            <!-- <li>
+                                        <a href="lab_book.html" title="Books">Books</a>
+                                    </li> -->
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="events.html" class="dropdown-toggle" data-hover="dropdown" title="Tools"
+                            data-animations="zoomIn">Tools<span class="caret"></span></a>
+                        <ul class=" dropdown-menu" role="menu">
+                            <li>
+                                <a href="http://bioinfo.usu.edu/PredHPI/" target="_blank" title="PredHPI">Pred HPI</a>
+                            </li>
+                            <li>
+                                <a href="http://bioinfo.usu.edu/GreeningDB/" target="_blank" title="GreeningDB">Greening
+                                    DB</a>
+                            </li>
+                            <li>
+                                <a href="http://bioinfo.usu.edu/rtools/Plant-mSubP/" target="_blank"
+                                    title="Plant-mSubP">Plant mSubP</a>
+                            </li>
+                            <li>
+                                <a href="http://bioinfo.usu.edu/lacsubpred" target="_blank" title="LacSubPred">Lac
+                                    SubPred</a>
+                            </li>
+                            <li>
+                                <a href="http://bioinfo.usu.edu/ligpred" target="_blank" title="LigPred">Lig Pred</a>
+                            </li>
+                            <li>
+                                <a href="http://bioinfo.usu.edu/AP-iNET" target="_blank" title="Ap-iNet">Ap-iNet</a>
+                            </li>
+                            <li>
+                                <a href="http://bioinfo3.noble.org/AtSubP/" target="_blank" title="AtSubP">At SubP</a>
+                            </li>
+                            <li>
+                                <a href="http://www.imtech.res.in/raghava/rbpred/" target="_blank"
+                                    title="RB-Pred">RB-Pred</a>
+                            </li>
+                            <li>
+                                <a href="http://www.imtech.res.in/raghava/rslpred/" target="_blank" title="RSLpred">RS
+                                    Lpred</a>
+                            </li>
+                            <li>
+                                <a href="http://bioinfo.usu.edu/PLpred/" target="_blank" title="PLpred">PLpred</a>
+                            </li>
+                            <li>
+                                <a href="http://bioinfo.usu.edu/citSATdb/" target="_blank" title="citSATdb">citSATdb</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#" title="Events"
+                            data-animations="zoomIn">Events <span class="caret"></span></a>
+                        <ul class=" dropdown-menu" role="menu">
+                            <li>
+                                <a href="lab_events.html" title="Books">Events Page</a>
+                            </li>
+                            <li>
+                                <a href="events_single.html?event=psc" title="Journal Articles">Events Single Page</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="future_member.html" title="Future Member">Contact</a>
+                    </li>
+                    <!-- <lsi> -->
+                </ul>
+            </div>
+        </div>
+    </nav><!-- /.navbar -->
+    <header class="sabbi-page-header-classic3 sabbi-page-header-team page-header-lg">
+        <div class="page-header-content conternt-center">
+            <div class="header-title-block">
+                <h1 class="page-title">Research</h1>
+            </div>
+        </div>
+    </header>
     <div class="auth-breadcrumb-wrap">
         <div class="container">
             <ol class="sabbi-breadcrumb breadcrumb">
@@ -196,223 +255,348 @@ hr {
         <div class="container">
             <section class="page-appellation">
                 <div class="row">
-                        <div class="col-sm-5">
+                    <!-- <div class="col-sm-5">
                                 <h1>COMING SOON</h1>
                                 <hr>
                                 <p id="demo" style="font-size:30px"></p>
-                        </div>
-                    <!-- <div class="col-sm-5 col-md-4">
+                        </div> -->
+                    <div class="col-sm-5 col-md-4">
                         <div class="page_piky-title">
-                            <h2 class="page-title font-md lil-line">Dr. Rushmore is one of England’s Leading Research University</h2>
+                            <h2 class="page-title font-md lil-line">Dr. Rushmore is one of England’s Leading Research
+                                University</h2>
                         </div>
                     </div>
                     <div class="col-sm-7 col-md-7 col-md-offset-1">
-                        <p class="page_piky-text">Lorem ipsum dolor sit amet, con adipiscing elit. Etiam convallis elit id impedie. Quisq commodo ornare tortor Quiue bibendu m. magna vitae ex interdum cursus. Nullam lacinia pretium nibh, vitae imperdiet lacus tempor sit amet. Donec ultrices est nec tellus finibus facilisis. Nullam sodales justo id magna fringilla rutrum. Duis bibendum id eros congue bibendum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam convallis elit id odio imperdiet feugiat. Quisque commodo ornare tortor. Quisque bibendum magna vitae ex interdum cursus. Nullam lacinia pretium nibh, vitae imperdiet lacus tempor sit amet.</p>
-                    </div> -->
+                        <p class="page_piky-text">Lorem ipsum dolor sit amet, con adipiscing elit. Etiam convallis elit
+                            id impedie. Quisq commodo ornare tortor Quiue bibendu m. magna vitae ex interdum cursus.
+                            Nullam lacinia pretium nibh, vitae imperdiet lacus tempor sit amet. Donec ultrices est nec
+                            tellus finibus facilisis. Nullam sodales justo id magna fringilla rutrum. Duis bibendum id
+                            eros congue bibendum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                            convallis elit id odio imperdiet feugiat. Quisque commodo ornare tortor. Quisque bibendum
+                            magna vitae ex interdum cursus. Nullam lacinia pretium nibh, vitae imperdiet lacus tempor
+                            sit amet.</p>
+                    </div>
                 </div>
             </section>
-            <!-- <section class="icon-card-segment">
-                <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="icon-card text-center">
-                            <figure class="icon-card-limn">
-                                <i class="ion-ios-flask-outline"></i>
-                            </figure>
-                            <h3 class="card-title">Point-of-care (POC) devices</h3>
-                            <p class="card-meta">Lorem ipsum dolor sit amet, con adipiscing elit. Etiam convallis elit id impedie. Quisq commodo</p>
-                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+            <section class="icon-card-segment">
+                <div class="row home-info-block-first">
+                    <div class="MultiCarousel" data-items="1,2,3,4" data-slide="1" id="MultiCarousel"
+                        data-interval="100">
+                        <div class="MultiCarousel-inner" id="content">
+
+                            <div class="col-md-3 col-sm-6 item">
+                                <div class="pad15">
+                                    <article class="sabbi-thumlinepost-card solitude-bg__x">
+                                        <figure class="sabbi-thumlinepost-card-figure">
+                                            <img src="assets/img/AI-processor-LowRes-v1.jpg" alt=""
+                                                class="img-responsive img-thumpost">
+                                        </figure>
+                                        <div class="sabbi-thumlinepost-card-meta">
+                                            <h2 class="meta-title ht-5" style="text-align: left;">Artificial
+                                                Intelligence:
+                                                OMICS bigdata to novel biological discoveries</h2>
+                                            <p class="meta-text">Computational modeling through <i>pattern
+                                                    recognition</i>,
+                                                develop novel algorithms and...</p>
+                                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 item">
+                                <div class="pad15">
+                                    <article class="sabbi-thumlinepost-card solitude-bg__x">
+                                        <figure class="sabbi-thumlinepost-card-figure">
+                                            <img src="assets/img/hpis_Resized.gif" alt=""
+                                                class="img-responsive img-thumpost">
+                                        </figure>
+                                        <div class="sabbi-thumlinepost-card-meta">
+                                            <h2 class="meta-title ht-5" style="text-align: left;">Host-pathogen
+                                                interactions: Understanding mechanisms of infectious diseases</h2>
+                                            <p class="meta-text">Explore cross-kingdom threats and identify novel
+                                                therapeutic candidates...</p>
+                                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 item">
+                                <div class="pad15">
+                                    <article class="sabbi-thumlinepost-card solitude-bg__x">
+                                        <figure class="sabbi-thumlinepost-card-figure">
+                                            <img src="assets/img/functionalbg_resized.png" alt=""
+                                                class="img-responsive img-thumpost">
+                                        </figure>
+                                        <div class="sabbi-thumlinepost-card-meta">
+                                            <h2 class="meta-title ht-5" style="text-align: left;">Protein function
+                                                prediction: Annotation of novel proteomes</h2>
+                                            <p class="meta-text">Identify novel protein features, train in an AI
+                                                framework,
+                                                implement as web servers... </p>
+                                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 item">
+                                <div class="pad15">
+                                    <article class="sabbi-thumlinepost-card solitude-bg__x">
+                                        <figure class="sabbi-thumlinepost-card-figure">
+                                            <img src="assets/img/meta_new.png" alt=""
+                                                class="img-responsive img-thumpost">
+                                        </figure>
+                                        <div class="sabbi-thumlinepost-card-meta">
+                                            <h2 class="meta-title ht-5">Metagenomics: Bioinformatics solutions for crop
+                                                improvement</h2>
+                                            <p class="meta-text">Investigate diversity of enzymes in soil metagenomes
+                                                and
+                                                develop advanced tools...</p>
+                                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 item">
+                                <div class="pad15">
+                                    <article class="sabbi-thumlinepost-card solitude-bg__x">
+                                        <figure class="sabbi-thumlinepost-card-figure">
+                                            <img src="assets/img/sabbi-post/p_agr.jpg" alt=""
+                                                class="img-responsive img-thumpost">
+                                        </figure>
+                                        <div class="sabbi-thumlinepost-card-meta">
+                                            <h2 class="meta-title ht-5">Precision Agriculture: Robotics for integrated
+                                                weed
+                                                management (IWM)</h2>
+                                            <p class="meta-text">Incorporate sensing technology for precise IWM,
+                                                minimize
+                                                damage to crop, environment...</p>
+                                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 item">
+                                <div class="pad15">
+                                    <article class="sabbi-thumlinepost-card solitude-bg__x">
+                                        <figure class="sabbi-thumlinepost-card-figure">
+                                            <img src="assets/img/datamining-lowres.png" alt=""
+                                                class="img-responsive img-thumpost">
+                                        </figure>
+                                        <div class="sabbi-thumlinepost-card-meta">
+                                            <h2 class="meta-title ht-5">NGS studies: Deciphering and making sense of the
+                                                complex -<i>omics</i> bigdata</h2>
+                                            <p class="meta-text">Identification of novel expressed genes from
+                                                transcriptomics studies, methylation patterns...</p>
+                                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
                         </div>
+                        <button class="btn btn-primary leftLst">
+                            <</button> <button class="btn btn-primary rightLst">>
+                        </button>
                     </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="icon-card text-center">
-                            <figure class="icon-card-limn">
-                                <i class="ion-ios-flame-outline"></i>
-                            </figure>
-                            <h3 class="card-title">Point-of-care (POC) devices</h3>
-                            <p class="card-meta">Lorem ipsum dolor sit amet, con adipiscing elit. Etiam convallis elit id impedie. Quisq commodo</p>
-                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="icon-card text-center">
-                            <figure class="icon-card-limn">
-                                <i class="ion-ios-lightbulb-outline"></i>
-                            </figure>
-                            <h3 class="card-title">Point-of-care (POC) devices</h3>
-                            <p class="card-meta">Lorem ipsum dolor sit amet, con adipiscing elit. Etiam convallis elit id impedie. Quisq commodo</p>
-                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="icon-card text-center">
-                            <figure class="icon-card-limn">
-                                <i class="ion-ios-analytics-outline"></i>
-                            </figure>
-                            <h3 class="card-title">Point-of-care (POC) devices</h3>
-                            <p class="card-meta">Lorem ipsum dolor sit amet, con adipiscing elit. Etiam convallis elit id impedie. Quisq commodo</p>
-                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
-                        </div>
-                    </div>
+
                 </div>
-            </section> -->
+
+            </section>
             <!-- /.icon-card-segment -->
-            <!-- <section class="sabbi-section stage-samevide mb_0">
+            <section class="sabbi-section stage-samevide mb_0">
                 <div class="row">
                     <div class="col-sm-6">
                         <ul class="list-unstyled entry-meta-list list-style-round_item">
-                            <li>Lorem ipsum dolor sit amet, con adipiscing elit. Etiam convallis elit id impedie. Quisq commodo ornare tortor Quiue bibendu.</li>
-                            <li>Duis bibendum id eros congue bibendum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-                            <li>Lorem ipsum dolor sit amet, con adipiscing elit. Etiam convallis elit id impedie. Quisq commodo ornare tortor Quiue bibendu.</li>
-                            <li>Duis bibendum id eros congue bibendum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-                            <li>Lorem ipsum dolor sit amet, con adipiscing elit. Etiam convallis elit id impedie. Quisq commodo ornare tortor Quiue bibendu.</li>
-                            <li>Duis bibendum id eros congue bibendum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+                            <li>Lorem ipsum dolor sit amet, con adipiscing elit. Etiam convallis elit id impedie. Quisq
+                                commodo ornare tortor Quiue bibendu.</li>
+                            <li>Duis bibendum id eros congue bibendum.Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit. </li>
+                            <li>Lorem ipsum dolor sit amet, con adipiscing elit. Etiam convallis elit id impedie. Quisq
+                                commodo ornare tortor Quiue bibendu.</li>
+                            <li>Duis bibendum id eros congue bibendum.Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit. </li>
+                            <li>Lorem ipsum dolor sit amet, con adipiscing elit. Etiam convallis elit id impedie. Quisq
+                                commodo ornare tortor Quiue bibendu.</li>
+                            <li>Duis bibendum id eros congue bibendum.Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit. </li>
                         </ul>
                     </div>
                     <div class="col-sm-6">
                         <figure class="samevide-figure">
-                            <img src="assets/img/girl-with-jar.jpg" alt="" class="img-responsive">
+                            <img src="assets/img/doctor.jpg" style="width: 570px; height: 323px;" alt=""
+                                class="img-responsive">
                         </figure>
                     </div>
                 </div>
-            </section> -->
+            </section>
             <!-- /.stage-samevide -->
         </div>
-        <!-- <section class="sabbi-section stage-halfbol stage-full_width">
+        <section class="sabbi-section stage-halfbol stage-full_width">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-sm-8">
                         <aside class="stage-halfbol_content">
                             <h2 class="stage-title font-md lil-line">Rushmore is one of England’s</h2>
-                            <p class="stage-halfbol_text">Lorem ipsum dolor sit amet, con adipiscing elit. Etiam convallis elit id impedie. Quisq commodo ornare tortor Quiue bibendu. magna vitae ex interdum cursus.</p>
+                            <p class="stage-halfbol_text">Lorem ipsum dolor sit amet, con adipiscing elit. Etiam
+                                convallis elit id impedie. Quisq commodo ornare tortor Quiue bibendu. magna vitae ex
+                                interdum cursus.</p>
                             <a href="#" class="btn btn-action btn-gules">Join Research</a>
                         </aside>
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
         <!-- ./stage-halfbol  -->
     </main>
-    
-    
-    <footer class="section-footer">
+
+
+    <footer class="section-footer ">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="footer-site-info">
+                        <header>
+                            <a class="footer-brand" href="index.html"><img alt="" class="img-responsive"
+                                    src="assets/img/bioinfo_logo.png"></a>
+                        </header>
+                        <address>
+                            <h3 class="entry-title">Address</h3>
+                            <div class="address-entry">
+                                <p class="__adtext">Utah State University</p>
+                                <p class="__ad-num">4700 Old Main Hill</p>
+                                <p class="__ad-num">Logan, UT 84322-4700</p>
+                                <p class="__ad-num">United States of America</p>
+                            </div>
+                        </address>
+                        <footer class="contact-info">
+                            <h3 class="entry-title">Contact Information</h3>
+                            <p class="__ci_num">Call: <span>+1 (435) 797-4117</span></p>
+                            <p class="__ci_num">Fax: <span>+1 (435) 797-2766</span></p>
+                            <p class="__ci_num">E-mail: <span>rkaundal@usu.edu</span></p>
+                        </footer>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="row">
+                        <div class="col-sm-5 col-sm-offset-2">
+                            <section class="widget widget_sec">
+                                <div class="widget-main">
+                                    <h2 class="widget-title">Affiliations</h2>
+                                    <ul class="list list-unstyled list-footer-nav">
+                                        <li class="footer_text"><a href="https://psc.usu.edu/" target="_blank">Plants,
+                                                Soils, & Climate</a></li>
+                                        <li class="footer_text"><a href="https://biosystems.usu.edu/"
+                                                target="_blank">CIB</a></li>
+                                        <li class="footer_text"><a href="https://cs.usu.edu/" target="_blank">Computer
+                                                Science</a></li>
+                                        <li class="footer_text"><a href="http://caas.usu.edu/" target="_blank">CAAS</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="widget widget_sec">
+                                <div class="widget-main">
+                                    <h2 class="widget-title">People</h2>
+                                    <ul class="list list-unstyled list-footer-nav">
+                                        <li class="footer_text"><a href="professor.html">Dr. Kaundal</a></li>
+                                        <li class="footer_text"><a href="ourteam.html">Our Team</a></li>
+                                        <li class="footer_text"><a href="people.html">Alumni</a></li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="col-sm-5">
+                            <section class="widget widget_sec">
+                                <div class="widget-main">
+                                    <h2 class="widget-title">Publications</h2>
+                                    <ul class="list list-unstyled list-footer-nav">
+                                        <li class="footer_text"><a href="lab_journal.html">Journal Article</a></li>
+                                        <li class="footer_text"><a href="lab_conf-talk.html">Conferences and Talks</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <!-- <section class="widget widget_sec">
+                                <div class="widget-main">
+                                    <h2 class="widget-title">Services</h2>
+                                    <ul class="list list-unstyled list-footer-nav">
+                                        <li class="footer_text"><a href="#">Editorial Services</a></li>
+                                        <li class="footer_text"><a href="#">University Services</a></li>
+                                        <li class="footer_text"><a href="#">Professonal Services</a></li>
+                                    </ul>
+                                </div>
+                            </section> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="footer-site-info">
+                        <address>
+                            <h3 class="entry-title">Latest Events</h3>
+                            <ul class="event-list list-unstyled">
+                                <li class="lst_news_item">
+                                    <h4 class="title"><a href="events_single.html?event=psc">PSC Showcase</a></h3>
+                                        <div>
+                                            <span class="date">March 23, 2019</span>
+                                        </div>
+                                </li>
+                                <li class="lst_news_item">
+                                    <h4 class="title"><a href="events_single.html?event=rocky">Rocky Bioinformatics
+                                            Conference</a></h3>
+                                        <div>
+                                            <span class="date">December 5-7, 2018</span>
+                                        </div>
+                                </li>
+                                <li class="lst_news_item">
+                                    <h4 class="title"><a href="events_single.html?event=osu">Won President's Cup at
+                                            OSU</a></h3>
+                                        <div>
+                                            <span class="date">December 10, 2013</span>
+                                        </div>
+                                </li>
+                            </ul>
+                            <!-- <ul class="event-list list-unstyled">
+                                <li>
+                                    <h4 class="title"><a href="events_single.html">Study Tour and Christmas Trip</a></h4>
+                                    <div class="date">21st June 2016</div>
+                                </li>
+                                <li>
+                                    <h4 class="title"><a href="events_single.html">Mid Year Lab Party and Summer vacation</a></h4>
+                                    <div class="date">21st June 2016</div>
+                                </li>
+                                <li>
+                                    <h4 class="title"><a href="events_single.html">Science Award 2015-2016</a></h4>
+                                    <div class="date">21st June 2016</div>
+                                </li>
+                            </ul>  -->
+                            <div class="action-wrap"><a href="lab_events.html" class="btn btn-unsolemn btn-action">View
+                                    all Events</a></div>
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="site-footer-bar" class="footer-bar mt_30">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-3">
-                            <div class="footer-site-info">
-                                    <header>
-                                        <a class="footer-brand" href="index.html"><img alt="" class="img-responsive" src="assets/img/bioinfo_logo.png"></a>
-                                    </header>
-                                    <address>
-                                        <h3 class="entry-title">Address</h3>
-                                        <div class="address-entry">
-                                            <p class="__adtext">Utah State University</p>
-                                            <p class="__ad-num">4700 Old Main Hill</p>
-                                            <p class="__ad-num">Logan, UT 84322-4700</p>
-                                            <p class="__ad-num">United States of America</p>
-                                        </div>
-                                    </address>
-                                    <footer class="contact-info">
-                                        <h3 class="entry-title">Contact Information</h3>
-                                        <p class="__ci_num">Call: <span>+1 (435) 797-4117</span></p>
-                                        <p class="__ci_num">Fax: <span>+1 (435) 797-2766</span></p>
-                                        <p class="__ci_num">E-mail: <span>rkaundal@usu.edu</span></p>
-                                    </footer>
-                                </div>
-                    </div>
-                    <div class="col-sm-5">
-                        <div class="row">
-                            <div class="col-sm-5 col-sm-offset-2">
-                                <section class="widget widget_sec">
-                                    <div class="widget-main">
-                                        <h2 class="widget-title">Affiliations</h2>
-                                        <ul class="list list-unstyled list-footer-nav">
-                                            <li class="footer_text"><a href="https://psc.usu.edu/" target="_blank">Plants, Soils, & Climate</a></li>
-                                            <li class="footer_text"><a href="https://biosystems.usu.edu/" target="_blank">CIB</a></li>
-                                            <li class="footer_text"><a href="https://cs.usu.edu/" target="_blank">Computer Science</a></li>
-                                            <li class="footer_text"><a href="http://caas.usu.edu/" target="_blank">CAAS</a></li>
-                                        </ul>
-                                    </div>
-                                </section>
-                                <section class="widget widget_sec">
-                                    <div class="widget-main">
-                                        <h2 class="widget-title">Publications</h2>
-                                        <ul class="list list-unstyled list-footer-nav">
-                                            <li><a href="#">Dr. Kaundal</a></li>
-                                            <li><a href="#">Our Team</a></li>
-                                            <li><a href="#">Alumni</a></li>
-                                        </ul>
-                                    </div>
-                                </section>
-                            </div>
-                            <div class="col-sm-5">
-                                <section class="widget widget_sec">
-                                    <div class="widget-main">
-                                        <h2 class="widget-title">People</h2>
-                                        <ul class="list list-unstyled list-footer-nav">
-                                            <li><a href="#">Books</a></li>
-                                            <li><a href="#">Books Chapter</a></li>
-                                            <li><a href="#">Journal Article</a></li>
-                                            <li><a href="#">Guest Editor</a></li>
-                                        </ul>
-                                    </div>
-                                </section>
-                                <section class="widget widget_sec">
-                                    <div class="widget-main">
-                                        <h2 class="widget-title">Services</h2>
-                                        <ul class="list list-unstyled list-footer-nav">
-                                            <li><a href="#">Editorial Services</a></li>
-                                            <li><a href="#">University Services</a></li>
-                                            <li><a href="#">Professonal Services</a></li>
-                                        </ul>
-                                    </div>
-                                </section>
+                    <div class="col-sm-8">
+                        <div class="widget_black_studio_tinymce" id="black-studio-tinymce-4">
+                            <div class="copyright">Copyright 2017 - <a href="https://wpmanageninja.com/">KAABiL Lab</a>
                             </div>
                         </div>
                     </div>
-    
-                    <div class="col-sm-4">
-                        <div class="footer-site-info">
-                            <address>
-                                <h3 class="entry-title">Latest Events</h3>
-                                <ul class="event-list list-unstyled">
-                                    <li>
-                                        <h4 class="title"><a href="events_single.html">Study Tour and Christmas Trip</a></h4>
-                                        <div class="date">21st June 2016</div>
-                                    </li>
-                                    <li>
-                                        <h4 class="title"><a href="events_single.html">Mid Year Lab Party and Summer vacation</a></h4>
-                                        <div class="date">21st June 2016</div>
-                                    </li>
-                                    <li>
-                                        <h4 class="title"><a href="events_single.html">Science Award 2015-2016</a></h4>
-                                        <div class="date">21st June 2016</div>
-                                    </li>
-                                </ul> 
-                                <div class="action-wrap"><a href="events.html" class="btn btn-unsolemn btn-action">View all Events</a></div>
-                            </address>
-                        </div>
+                    <div class="col-sm-4 ">
+                        <div class="powredby">Developed and Managed by: <a href="https://wpmanageninja.com/">Kaundal
+                                Research Group</a></div>
                     </div>
                 </div>
             </div>
-            <div id="site-footer-bar" class="footer-bar mt_30">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-8">
-                            <div class="widget_black_studio_tinymce" id="black-studio-tinymce-4">
-                                <div class="copyright">Copyright 2017 - <a href="https://wpmanageninja.com/">KAABiL Lab</a></div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 ">
-                            <div class="powredby">Developed and Managed by: <a href="https://wpmanageninja.com/">Kaundal Research Group</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer><!-- /.section-footer -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+        </div>
+    </footer><!-- /.section-footer -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
         window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.2.min.js"><\/script>')
-    </script> 
+    </script>
     <!-- tools -->
     <script src="assets/tools/sequence/js/imagesloaded.pkgd.min.js"></script>
     <script src="assets/tools/sequence/js/hammer.min.js"></script>
@@ -420,52 +604,180 @@ hr {
     <script src="assets/tools/dropdownhover/js/bootstrap-dropdownhover.min.js"></script>
 
     <!-- site-spec -->
-    <script src="assets/js/vendor/bootstrap.min.js"></script> 
-    <script src="assets/js/plugins.js"></script> 
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-     
+
     <script>
-    //      $(document).ready(function(){
-          
-    //       $(window).scroll(function(){
+        //      $(document).ready(function(){
 
-    //         if($(window).scrollTop()>100){
-    //           $('.navbar-collapse').css('background-color', '#0f2439');
-    //         }else{
-    //           $('.navbar-collapse').css('background-color', 'transparent');
-    //         }
+        //       $(window).scroll(function(){
 
-    //       });
+        //         if($(window).scrollTop()>100){
+        //           $('.navbar-collapse').css('background-color', '#0f2439');
+        //         }else{
+        //           $('.navbar-collapse').css('background-color', 'transparent');
+        //         }
 
-    //  });
+        //       });
 
-var countDownDate = new Date("Jan 1, 2020 12:00:00").getTime();
+        //  });
 
-// Update the count down every 1 second
-var countdownfunction = setInterval(function() {
+        var countDownDate = new Date("Jan 1, 2020 12:00:00").getTime();
 
-  // Get todays date and time
-  var now = new Date().getTime();
-  
-  // Find the distance between now an the count down date
-  var distance = countDownDate - now;
-  
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(countdownfunction);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
+        // Update the count down every 1 second
+        var countdownfunction = setInterval(function () {
+
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now an the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(countdownfunction);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+
+
+        $(document).ready(function () {
+            var itemsMainDiv = ('.MultiCarousel');
+            var itemsDiv = ('.MultiCarousel-inner');
+            var itemWidth = "";
+
+            $('.leftLst, .rightLst').click(function () {
+                var condition = $(this).hasClass("leftLst");
+                if (condition)
+                    click(0, this);
+                else
+                    click(1, this)
+            });
+
+            ResCarouselSize();
+
+
+
+
+            $(window).resize(function () {
+                ResCarouselSize();
+            });
+
+            //this function define the size of the items
+            function ResCarouselSize() {
+                var incno = 0;
+                var dataItems = ("data-items");
+                var itemClass = ('.item');
+                var id = 0;
+                var btnParentSb = '';
+                var itemsSplit = '';
+                var sampwidth = $(itemsMainDiv).width();
+                var bodyWidth = $('body').width();
+                $(itemsDiv).each(function () {
+                    id = id + 1;
+                    var itemNumbers = $(this).find(itemClass).length;
+                    btnParentSb = $(this).parent().attr(dataItems);
+                    itemsSplit = btnParentSb.split(',');
+                    $(this).parent().attr("id", "MultiCarousel" + id);
+
+
+                    if (bodyWidth >= 1200) {
+                        incno = itemsSplit[3];
+                        itemWidth = sampwidth / incno;
+                    }
+                    else if (bodyWidth >= 992) {
+                        incno = itemsSplit[2];
+                        itemWidth = sampwidth / incno;
+                    }
+                    else if (bodyWidth >= 768) {
+                        incno = itemsSplit[1];
+                        itemWidth = sampwidth / incno;
+                    }
+                    else {
+                        incno = itemsSplit[0];
+                        itemWidth = sampwidth / incno;
+                    }
+                    $(this).css({ 'transform': 'translateX(0px)', 'width': itemWidth * itemNumbers });
+                    $(this).find(itemClass).each(function () {
+                        $(this).outerWidth(itemWidth);
+                    });
+
+                    $(".leftLst").addClass("over");
+                    $(".rightLst").removeClass("over");
+
+                });
+            }
+
+
+            //this function used to move the items
+            function ResCarousel(e, el, s) {
+                var leftBtn = ('.leftLst');
+                var rightBtn = ('.rightLst');
+                var translateXval = '';
+                var divStyle = $(el + ' ' + itemsDiv).css('transform');
+                var values = divStyle.match(/-?[\d\.]+/g);
+                var xds = Math.abs(values[4]);
+                if (e == 0) {
+                    translateXval = parseInt(xds) - parseInt(itemWidth * s);
+                    $(el + ' ' + rightBtn).removeClass("over");
+
+                    if (translateXval <= itemWidth / 2) {
+                        translateXval = 0;
+                        $(el + ' ' + leftBtn).addClass("over");
+                    }
+                }
+                else if (e == 1) {
+                    var itemsCondition = $(el).find(itemsDiv).width() - $(el).width();
+                    translateXval = parseInt(xds) + parseInt(itemWidth * s);
+                    $(el + ' ' + leftBtn).removeClass("over");
+
+                    if (translateXval >= itemsCondition - itemWidth / 2) {
+                        translateXval = itemsCondition;
+                        $(el + ' ' + rightBtn).addClass("over");
+                    }
+                }
+                $(el + ' ' + itemsDiv).css('transform', 'translateX(' + -translateXval + 'px)');
+            }
+
+            //It is used to get some elements from btn
+            function click(ell, ee) {
+                var Parent = "#" + $(ee).parent().attr("id");
+                var slide = $(Parent).attr("data-slide");
+                ResCarousel(ell, Parent, slide);
+            }
+
+        });
+
+
+        //randomize carousel
+        var $cont = $('#content'),
+            itemsArr = $cont.children().get();
+
+
+        $cont.append(shuffle(itemsArr))
+
+        function shuffle(a) {
+            var j, x, i;
+            for (i = a.length; i; i--) {
+                j = Math.floor(Math.random() * i);
+                x = a[i - 1];
+                a[i - 1] = a[j];
+                a[j] = x;
+            }
+            return a;
+        }
     </script>
 </body>
+
 </html>

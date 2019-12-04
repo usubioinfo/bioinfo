@@ -928,13 +928,25 @@ body .mb_100 {
   font-size: 2.4em;
   color: #fff; }
   .sec-navigate-wrap .seq-next, .sec-navigate-wrap .seq-prev {
-    background-color: #0f2439;
+    background-color: transparent;
     background-repeat: no-repeat;
     background-position: center;
     border: 0;
     line-height: 1;
     height: 49px;
-    width: 39px; }
+    width: 39px;
+    
+   }
+   .sec-navigate-wrap :hover .seq-next :hover :hover, .sec-navigate-wrap .seq-prev :hover :hover{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0;
+    line-height: 1;
+    height: 49px;
+    width: 39px;
+    display: block;
+   }
   .sec-navigate-wrap .seq-next {
     float: right;
     margin-right: 45px;
@@ -1645,7 +1657,7 @@ a.link-with-icon i.fa {
     margin-top: 30px; } }
 
 .stage-halfbol {
-  background-image: url(../img/section/halfbol.jpg);
+  background-image: url(../img/USU_ag.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
