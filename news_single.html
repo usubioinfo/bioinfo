@@ -82,8 +82,17 @@
                         <li>
                             <a href="index.html" title="Home">Home</a>
                         </li>
-                        <li>
-                            <a href="lab_research.html" title="Research">Research</a>
+                        <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#" title="Events"
+                                    data-animations="zoomIn">Research <span class="caret"></span></a>
+                                <ul class=" dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="lab_research.html" title="Books">Research Page</a>
+                                    </li>
+                                    <li  class="">
+                                        <a href="research_single.html?research=ai" title="Journal Articles">Research Single Page</a>
+                                    </li>
+                                </ul>
                         </li>
                         <li class="dropdown">
                                 <a href="people.html" class="dropdown-toggle"   data-hover="dropdown" title="People" data-animations="zoomIn">People<span class="caret"></span></a>
@@ -214,7 +223,7 @@
     </div><!-- /.auth-breadcrumb-wrap -->
     <section class="sabbi-section stage_events_post stage_events_post-single">
         <div class="container">
-                <div class="events_post_single-sagment" id="news1" style="display: none;">
+                <div class="events_post_single-sagment tabcontent" id="news1" style="display: none;">
                         <div class="row">
                             <div class="col-sm-8 col-sm-offset-2">
                                 <article class="sabbi-events-item">
@@ -243,7 +252,7 @@
                         </div>
                     </div><!-- /.events_post_single-sagment -->
             
-            <div class="events_post_single-sagment" id="news2" style="display: none;">
+            <div class="events_post_single-sagment tabcontent" id="news2" style="display: none;">
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2">
                         <article class="sabbi-events-item">
@@ -272,7 +281,7 @@
                 </div>
             </div><!-- /.events_post_single-sagment -->
 
-            <div class="events_post_single-sagment" id="news3" style="display: none;">
+            <div class="events_post_single-sagment tabcontent" id="news3" style="display: none;">
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2">
                             <article class="sabbi-events-item">
@@ -301,7 +310,7 @@
                     </div>
             </div><!-- /.events_post_single-sagment -->
 
-            <div class="events_post_single-sagment" id="news4" style="display: none;">
+            <div class="events_post_single-sagment tabcontent" id="news4" style="display: none;">
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2">
                             <article class="sabbi-events-item">
@@ -329,6 +338,16 @@
                     </div>
             </div><!-- /.events_post_single-sagment -->
             <!-- /.events_post_single-sagment -->
+            <nav aria-label="Page navigation" class="pagination_wraper">
+                    <ul class="pagination">
+                        <!-- <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li> -->
+                        <li><a class="tablinks" onclick="openEvent(event, 'news1')" href="#tabcontent">1</a></li>
+                        <li><a class="tablinks" onclick="openEvent(event, 'news2')" href="#tabcontent">2</a></li>
+                        <li><a class="tablinks" onclick="openEvent(event, 'news3')" href="#tabcontent">3</a></li>
+                        <li><a class="tablinks" onclick="openEvent(event, 'news4')" href="#tabcontent">4</a></li>
+                        <!-- <li><a class="active" href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li> -->
+                    </ul>
+            </nav><!-- /.pagination_wraper -->
     </section>
     
     <footer class="section-footer mt_25">
@@ -502,6 +521,27 @@
     document.getElementById(event).style.display = "block";
     console.log(event);
     
+    function openEvent(evt, yearName) {
+
+var i, tabcontent, tablinks;
+
+tabcontent = document.getElementsByClassName("tabcontent");
+
+for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+}
+
+tablinks = document.getElementsByClassName("tablinks");
+
+for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+}
+
+document.getElementById(yearName).style.display = "block";
+
+evt.currentTarget.className += " active";
+
+}
     </script>
 </body>
 </html>
