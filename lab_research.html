@@ -27,84 +27,8 @@
     <link href="assets/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="pages/lab_research/lab_research.css" rel="stylesheet">
     <link rel="icon" href="assets/img/red_logo.png">
-    <!-- Styles -->
-
-
-    <style>
-        .vl {
-            border-left: 1px solid #0f2439;
-            height: 30px;
-            margin-top: 10px;
-            margin-left: 85px;
-            /* position: absolute; */
-        }
-
-        .bottom-right {
-            /* position: absolute; */
-            bottom: 8px;
-            right: 16px;
-        }
-
-        .logo_text1 {
-            color: #0f2439;
-            /* background-image: url(https://media.giphy.com/media/Lr2xYGw6IMVofbjRSu/giphy.gif); */
-            font-weight: 700;
-            letter-spacing: 12px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            /* color: white;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
-        }
-
-        .middle {
-            background-position-x: center;
-            align-content: center;
-
-        }
-
-        hr {
-            margin: auto;
-            width: 40%;
-        }
-
-        .MultiCarousel {
-            float: left;
-            overflow: hidden;
-            /* padding: 15px; */
-            width: 100%;
-            position: relative;
-        }
-
-        .MultiCarousel .MultiCarousel-inner {
-            transition: 1s ease all;
-            float: left;
-        }
-
-        .MultiCarousel .MultiCarousel-inner .item {
-            float: left;
-        }
-
-        .MultiCarousel .leftLst,
-        .MultiCarousel .rightLst {
-            position: absolute;
-            border-radius: 50%;
-            top: calc(50%);
-        }
-
-        .MultiCarousel .leftLst {
-            left: 0;
-        }
-
-        .MultiCarousel .rightLst {
-            right: 0;
-        }
-
-        .MultiCarousel .leftLst.over,
-        .MultiCarousel .rightLst.over {
-            pointer-events: none;
-            background: #ccc;
-        }
-    </style>
 </head>
 
 <body class="auth-theme-rashmore page-labresearch">
@@ -667,7 +591,7 @@
             document.getElementById("demo").innerHTML = days + "d " + hours + "h "
                 + minutes + "m " + seconds + "s ";
 
-            // If the count down is over, write some text 
+            // If the count down is over, write some text
             if (distance < 0) {
                 clearInterval(countdownfunction);
                 document.getElementById("demo").innerHTML = "EXPIRED";
