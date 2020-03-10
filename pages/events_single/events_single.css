@@ -1,0 +1,50 @@
+.vl {
+  border-left: 1px solid #0f2439;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 85px;
+  /* position: absolute; */
+}
+
+.bottom-right {
+  /* position: absolute; */
+  bottom: 8px;
+  right: 16px;
+}
+
+.logo_text1 {
+  color: #0f2439;
+  /* background-image: url(https://media.giphy.com/media/Lr2xYGw6IMVofbjRSu/giphy.gif); */
+  font-weight: 700;
+  letter-spacing: 12px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  /* color: white;
+text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+}
+
+.event_thumb {
+  width: 240px;
+  height: 172px;
+}
+
+/* dashes in names because that's the CSS style */
+.main-img {
+  width: 65%;
+  height: auto;
+}
+
+.main-img-meta-edge {
+  margin-right: 10px;
+}
+
+.main-img-meta-icon {
+  margin-right: 5px;
+}
+
+.row-margin-top {
+  margin-top: 8px;
+}
+
+.main-img-meta-info {
+  color: #6b6b6b;
+}

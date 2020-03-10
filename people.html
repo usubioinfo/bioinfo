@@ -14,7 +14,7 @@
     <link href="apple-touch-icon.png" rel="apple-touch-icon">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Open+Sans:300,400,400i,600,700" rel="stylesheet">
-     
+
     <!-- Tools -->
     <link href="assets/tools/sequence/css/sequence-theme.basic.css" rel="stylesheet" media="all">
     <link href="assets/tools/dropdownhover/css/animate.min.css" rel="stylesheet">
@@ -24,112 +24,10 @@
     <link href="assets/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="pages/people/people.css" rel="stylesheet">
     <link rel="icon" href="assets/img/red_logo.png">
     <script src="assets/js/vendor/modernizr-2.8.3.min.js">
     </script>
-    <style>
-    .after_modal_appended
-{  
-  position:relative;
-}
-
-.block 
-{
-  width:100%;
-  height:200px;
-}
-
-.modal, .modal-backdrop {
-    /* position: absolute !important; */
-    position: fixed;
-    padding-top: 300px;
-}
-.modal-shadow{
-    	-webkit-box-shadow: 0 5px 15px rgba(0,0,0,0);
-            -moz-box-shadow: 0 5px 15px rgba(0,0,0,0);
-            /* -0-box-shadow: 0 5px 15px rgba(0,0,0,0); */
-    	box-shadow: 0 5px 15px rgba(0,0,0,0);
-    }
-
-    .article-container {
-  position: relative;
-}
-
-.image {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.article-container:hover .img-responsive {
-  opacity: 0.4;
-}
-
-.article-container:hover .middle {
-  opacity: 1;
-}
-
-
-.text {
-  background-color: #0f2439;
-  color: white;
-  font-size: 12px;
-  padding: 16px 32px;
-}
-
-.team-classification{
-  padding: 0.5px; 
-  border-radius: 20px; 
-  text-align: center; 
-  font-size: 20px; 
-  font-weight: bold;
-  background-image: linear-gradient(to right,#0f2439,white,#0f2439);
-}
-
-.vl {
-  border-left: 1px solid #0f2439;
-  height: 30px;
-  margin-top: 10px;
-  margin-left: 85px;
-  /* position: absolute; */
-}
-
-.bottom-right {
-  /* position: absolute; */
-  bottom: 8px;
-  right: 16px;
-}
-
-.logo_text1 {
-    color: #0f2439;
-    /* background-image: url(https://media.giphy.com/media/Lr2xYGw6IMVofbjRSu/giphy.gif); */
-	font-weight: 700;
-    letter-spacing: 12px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    /* color: white;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
-}
-
-.bio { 
-    text-decoration:none;
-    color: #666666;    
-}
-
-    </style>
 </head>
 <body class="auth-theme-rashmore page-team">
     <!--[if lt IE 8]>
@@ -139,14 +37,14 @@
     <nav class="navbar navbar-white navbar-kawsa navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
-                <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> 
+                <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
                 <a style="text-decoration:none" class="navbar-brand" href="index.html"><img alt="" class="img-responsive" src="assets/img/red_logo.png">
                 </a>
-                <div class="logo_text1" style="line-height: 0.5; margin-left: 85px; padding-top: 28px; font-size: 24px;  width: 310px;  ">KAABiL</div>     
+                <div class="logo_text1" style="line-height: 0.5; margin-left: 85px; padding-top: 28px; font-size: 24px;  width: 310px;  ">KAABiL</div>
 
-                <div class="vl ">  
-                <div class="logo_text" style="line-height: 1; padding-top: 4px; color:#044f9f ; font-size: 12px; font-weight: normal; width: 310px;  font-style: normal; "><b style="color: #9d164f;">K</b>aundal <b style="color: #9d164f;">A</b>rtificial 
-                    intelligence <br> & 
+                <div class="vl ">
+                <div class="logo_text" style="line-height: 1; padding-top: 4px; color:#044f9f ; font-size: 12px; font-weight: normal; width: 310px;  font-style: normal; "><b style="color: #9d164f;">K</b>aundal <b style="color: #9d164f;">A</b>rtificial
+                    intelligence <br> &
                     <b style="color: #9d164f;">A</b>dvanced <b style="color: #9d164f;">Bi</b>oinformatics <b style="color: #9d164f;">L</b>ab</div>
                 </div>
             </div>
@@ -194,7 +92,7 @@
                             <!-- <li>
                                 <a href="lab_book.html" title="Books">Books</a>
                             </li> -->
-                            
+
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -251,7 +149,7 @@
                                 </li>
                             </ul>
                     </li>
-                    
+
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown"  data-hover="dropdown" href="#" title="Events" data-animations="zoomIn">Events <span class="caret"></span></a>
                         <ul class=" dropdown-menu" role="menu">
@@ -333,7 +231,7 @@
                             <div class="col-md-8 col-sm-7">
                                     <article class="profile-glimps">
                                             <h2 class="entry-title title-foc-md">Dr. Rakesh Kaundal</h2>
-                                            <p class                                       
+                                            <p class
                                             ="text-foc-md" style="line-height: 1.1;">Assistant Professor, Bioinformatics</p>
                                             <p class="text-foc-md" style="line-height: 1.1;"><a class="bio" target="_blank" href="https://psc.usu.edu/">Department of Plants, Soils, and Climate <i style="color: #D30015; font-size: 12px;" class="fa fa-external-link"></i></a></p>
                                             <p></p>
@@ -364,12 +262,12 @@
                             </div>
                         </div>
                     </section><!-- /.bio__holder -->
-            
+
             <div class="our_team-profile-card__holder blue">
                    <!-- Modal -->
              <div id="myModal" class="modal fade " role="dialog">
                     <div class="modal-dialog">
-              
+
                       <!-- Modal content-->
                       <div class="modal-content modal-shadow">
                         <div class="modal-header">
@@ -409,62 +307,65 @@
                                         </div>
                                         <div >
                                             <p id="AboutLarson" class="teamcontent" style="display: none;" >
-                                                Rousselene Larson,is a researcher at Utah State University with the expertise in 
-                                                Bioinfomatics.She works collaboratively with inter-disciplinary scholars to 
-                                                comprehend research objectives and provide informatics solutions to  projects 
+                                                Rousselene Larson,is a researcher at Utah State University with the expertise in
+                                                Bioinfomatics.She works collaboratively with inter-disciplinary scholars to
+                                                comprehend research objectives and provide informatics solutions to  projects
                                                 involving NGS data analysis.She is highly proficient in Unix/Linux shell
-                                                scripting, R,python,Perl & range of bioinformatics tools/packages.Her Sequence analysis comprises of Genome Assembly, RNA-seq, 
-                                                Bisulfite_seq, and SNP analysis.    
+                                                scripting, R,python,Perl & range of bioinformatics tools/packages.Her Sequence analysis comprises of Genome Assembly, RNA-seq,
+                                                Bisulfite_seq, and SNP analysis.
                                             </p>
                                             <p id="AboutZhang" class="teamcontent" style="display: none;">
-                                                Kaige Zhang is a research associate at The Center for Integrated BioSystems. 
-                                                He received his Ph.D. degree in computer science with Utah State University in 2019, 
-                                                the B.S. degree in electronic engineering from Harbin Institute of Technology, China, in 2011, 
-                                                and M.S. degree in signal and information processing from Harbin Engineering University, China, 
+                                                Kaige Zhang is a research associate at The Center for Integrated BioSystems.
+                                                He received his Ph.D. degree in computer science with Utah State University in 2019,
+                                                the B.S. degree in electronic engineering from Harbin Institute of Technology, China, in 2011,
+                                                and M.S. degree in signal and information processing from Harbin Engineering University, China,
                                                 in 2014. His research interests include computer vision, ML, and their applications
-                                                 in intelligent transportation systems and smart agricultural systems. 
+                                                 in intelligent transportation systems and smart agricultural systems.
                                             </p>
                                             <p id="AboutCristian" class="teamcontent" style="display: none;">
-                                                    Cristian is a plant science MS student from Colombia. 
-                                                    After completing his BS (Computer Science: Universidad del Valle; Cali, Colombia), 
-                                                    he worked as a Research Assistant at CIAT(CGIAR) and the Colombian Sugarcane Research 
-                                                    Center before joining the Kaundal Bioinformatics Laboratory. After his graduation, 
-                                                    he plans to go back to Colombia to join his family, then pursue a Ph.D. degree to become 
+                                                    Cristian is a plant science MS student from Colombia.
+                                                    After completing his BS (Computer Science: Universidad del Valle; Cali, Colombia),
+                                                    he worked as a Research Assistant at CIAT(CGIAR) and the Colombian Sugarcane Research
+                                                    Center before joining the Kaundal Bioinformatics Laboratory. After his graduation,
+                                                    he plans to go back to Colombia to join his family, then pursue a Ph.D. degree to become
                                                     a Professor.
                                             </p>
                                             <p id="AboutDuhan" class="teamcontent" style="display: none;">
-                                                    
+
                                             </p>
                                             <p id="AboutSuyash" class="teamcontent" style="display: none;">
-                                                    
+
                                             </p>
                                             <p id="AboutNikhil" class="teamcontent" style="display: none;">
-                                                    Nikhil is a computer science graduate student at USU. His bachelor's degree is in 
-                                                    Information technology from Osmania University, India. His research focus is in Bioinformatics. 
-                                                    While, he is currently working on Deep learning, developing prediction models for subcellular localization 
-                                                    in Human and Arabidopsis genome and creating SSR prediction database. He is also actively studying Algorithms 
+                                                    Nikhil is a computer science graduate student at USU. His bachelor's degree is in
+                                                    Information technology from Osmania University, India. His research focus is in Bioinformatics.
+                                                    While, he is currently working on Deep learning, developing prediction models for subcellular localization
+                                                    in Human and Arabidopsis genome and creating SSR prediction database. He is also actively studying Algorithms
                                                     and event driven programming.
 
                                             </p>
                                             <p id="AboutMatthew" class="teamcontent" style="display: none;">
                                                     Matthew is the systems administrator to the high performance cluster for the bioinformatics group.
-                                                    A passionate Linux enthusiast, his work includes bioinformatics programming and teaching Linux to new users. 
-                                                    Matthew is starting an MS in computer science this spring and hopes to add an MS statistics to his 
+                                                    A passionate Linux enthusiast, his work includes bioinformatics programming and teaching Linux to new users.
+                                                    Matthew is starting an MS in computer science this spring and hopes to add an MS statistics to his
                                                     plan of study.
                                             </p>
                                             <p id="AboutUdarika" class="teamcontent" style="display: none;">
-                                               
+
                                             </p>
                                             <p id="AboutRaul" class="teamcontent" style="display: none;">
-                                                
+
                                             </p>
                                             <p id="AboutCaleb" class="teamcontent" style="display: none;">
-                                                
+
                                             </p>
                                             <p id="AboutShelby" class="teamcontent" style="display: none;">
-                                                
+
                                             </p>
+
                                             <p id="AboutAkshat" class="teamcontent" style="display: none;">
+                                                
+
                                                 
                                             </p>
                                         </div>
@@ -486,7 +387,7 @@
                           <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
                         </div>
                       </div>
-              
+
                     </div>
                   </div>
                   <div class="title-card team-classification">
@@ -510,7 +411,7 @@
                                         <p class="fig-mail"><strong>Email:</strong> <span>nam-trung.nguyenEmailgriffith.edu.au</span></p>
                                     </div> -->
                                 </figcaption>
-                                
+
                             </figure>
                             <div class="profile-card-meta" >
                                     <ul class="pfofile-social list-unstyled list-inline">
@@ -519,7 +420,7 @@
                                     </ul>
                                 </div>
                         </div><!-- /.profile-card  .profile-card-meta_classic -->
-                        
+
                     </div>
                     <div class="col-sm-8 col-md-3 zoom">
                             <div class="profile-card profile-card-meta_classic ">
@@ -548,7 +449,7 @@
                                         </ul>
                                 </div>
                             </div><!-- /.profile-card  .profile-card-meta_classic -->
-                    </div> 
+                    </div>
                 </div>
                 <div class="title-card team-classification">
                         Graduate
@@ -571,7 +472,7 @@
                                             <p class="fig-mail"><strong>Email:</strong> <span>nam-trung.nguyenEmailgriffith.edu.au</span></p>
                                         </div> -->
                                     </figcaption>
-                                    
+
                                 </figure>
                                 <div class="profile-card-meta" >
                                         <ul class="pfofile-social list-unstyled list-inline">
@@ -610,7 +511,7 @@
                                             </ul>
                                         </div>
                                 </div><!-- /.profile-card  .profile-card-meta_classic -->
-                            </div>    
+                            </div>
                             <div class="col-sm-8 col-md-3 zoom">
                                     <div class="profile-card profile-card-meta_classic ">
                                         <figure class="article-container">
@@ -638,7 +539,7 @@
                                                 </ul>
                                             </div>
                                     </div><!-- /.profile-card  .profile-card-meta_classic -->
-                                </div> 
+                                </div>
                                 <div class="col-sm-8 col-md-3 zoom">
                                         <div class="profile-card profile-card-meta_classic ">
                                             <figure class="article-container">
@@ -666,7 +567,7 @@
                                                     </ul>
                                                 </div>
                                         </div><!-- /.profile-card  .profile-card-meta_classic -->
-                                    </div> 
+                                    </div>
                                 <div class="col-sm-8 col-md-3 flip-card zoom">
                                         <div class="profile-card profile-card-meta_classic ">
                                             <figure class="article-container">
@@ -755,7 +656,7 @@
                                         </ul>
                                     </div>
                                 </div><!-- /.profile-card  .profile-card-meta_classic -->
-                            </div> 
+                            </div>
                 </div>
                 <div class="title-card team-classification">
                     Alumni
@@ -788,7 +689,7 @@
                                     </ul>
                                 </div>
                         </div><!-- /.profile-card  .profile-card-meta_classic -->
-                </div> 
+                </div>
                 <div class="col-sm-8 col-md-3 zoom">
                         <div class="profile-card profile-card-meta_classic ">
                             <figure class="article-container">
@@ -850,7 +751,7 @@
         </div>
     </main>
 
-    
+
     <footer class="section-footer mt_25">
         <div class="container">
             <div class="row">
@@ -984,10 +885,10 @@
             </div>
         </div>
     </footer><!-- /.section-footer -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
         window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.2.min.js"><\/script>')
-    </script> 
+    </script>
     <!-- tools -->
     <script src="assets/tools/sequence/js/imagesloaded.pkgd.min.js"></script>
     <script src="assets/tools/sequence/js/hammer.min.js"></script>
@@ -995,10 +896,10 @@
     <script src="assets/tools/dropdownhover/js/bootstrap-dropdownhover.min.js"></script>
 
     <!-- site-spec -->
-    <script src="assets/js/vendor/bootstrap.min.js"></script> 
-    <script src="assets/js/plugins.js"></script> 
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-     
+
     <script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
         function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
@@ -1010,13 +911,13 @@
 
         $(document).ready(function(){
             $("body").on("click","#modalbtn",function(){
-           
+
            $("#myModal").modal("show");
-           
+
            $(".blue").addClass("after_modal_appended");
-           $('.modal-backdrop').appendTo('.blue');          
+           $('.modal-backdrop').appendTo('.blue');
            $('body').removeClass("modal-open")
-               $('body').css("padding-right","");     
+               $('body').css("padding-right","");
      });
     //       $(window).scroll(function(){
 

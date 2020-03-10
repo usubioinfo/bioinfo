@@ -24,200 +24,8 @@
     <link href="assets/tools/lightbox/ekko-lightbox.min.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="pages/contact/contact.css" rel="stylesheet">
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
-    <style>
-        body {
-          font-family: Arial, Helvetica, sans-serif;
-        }
-        
-        * {
-          box-sizing: border-box;
-        }
-        
-        /* Style inputs */
-        input[type=text], select, textarea {
-          width: 100%;
-          padding: 12px;
-          border: 1px solid #ccc;
-          margin-top: 6px;
-          margin-bottom: 16px;
-          resize: vertical;
-        }
-        
-        input[type=submit] {
-          background-color: #0f2439;
-          color: white;
-          padding: 12px 20px;
-          border: none;
-          cursor: pointer;
-        }
-        
-        input[type=submit]:hover {
-          background-color: #286090;
-        }
-        
-        /* Style the container/contact section */
-        .container {
-          border-radius: 5px;
-          /* background-color: #f2f2f2; */
-          padding: 10px;
-        }
-        
-        /* Create two columns that float next to eachother */
-        .column {
-          float: left;
-          width: 50%;
-          margin-top: 6px;
-          padding: 20px;
-        }
-        
-        /* Clear floats after the columns */
-        .row:after {
-          content: "";
-          display: table;
-          clear: both;
-        }
-        
-        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 600px) {
-          .column, input[type=submit] {
-            width: 100%;
-            margin-top: 0;
-          }
-        }
-
-        * {
-  margin: 0px;
-  padding: 0px;
-}
-
-body {
-  background-color: #05182d;
-}
-
-@-webkit-keyframes backgroundAnimate {
-  from {
-    left: 0;
-    top: 0;
-  }
-  to {
-    left: -10000px;
-    top: -2000px;
-  }
-}
-
-@-moz-keyframes backgroundAnimate {
-  from {
-    left: 0;
-    top: 0;
-  }
-  to {
-    left: -10000px;
-    top: -2000px;
-  }
-}
-
-@-o-keyframes backgroundAnimate {
-  from {
-    left: 0;
-    top: 0;
-  }
-  to {
-    left: -10000px;
-    top: -2000px;
-  }
-}
-
-@keyframes backgroundAnimate {
-  from {
-    left: 0;
-    top: 0;
-  }
-  to {
-    left: -10000px;
-    top: -2000px;
-  }
-}
-
-#back {
-  background: url(http://www.tranexnet.com/img/back.png) repeat 20% 20%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.4;
-  z-index: -1;
-  -webkit-animation-name: backgroundAnimate;
-  -webkit-animation-duration: 500s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-name: backgroundAnimate;
-  -moz-animation-duration: 5s;
-  -moz-animation-timing-function: linear;
-  -moz-animation-iteration-count: infinite;
-  -o-animation-name: backgroundAnimate;
-  -o-animation-duration: 500s;
-  -o-animation-timing-function: linear;
-  -o-animation-iteration-count: infinite;
-  animation-name: backgroundAnimate;
-  animation-duration: 500s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-#front {
-  background: url(http://www.tranexnet.com/img/front.png) repeat 35% 35%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.6;
-  z-index: -1;
-  -webkit-animation-name: backgroundAnimate;
-  -webkit-animation-duration: 300s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-name: backgroundAnimate;
-  -moz-animation-duration: 300s;
-  -moz-animation-timing-function: linear;
-  -moz-animation-iteration-count: infinite;
-  -o-animation-name: backgroundAnimate;
-  -o-animation-duration: 300s;
-  -o-animation-timing-function: linear;
-  -o-animation-iteration-count: infinite;
-  animation-name: backgroundAnimate;
-  animation-duration: 300s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-.vl {
-  border-left: 1px solid #0f2439;
-  height: 30px;
-  margin-top: 10px;
-  margin-left: 85px;
-  /* position: absolute; */
-}
-
-.bottom-right {
-  /* position: absolute; */
-  bottom: 8px;
-  right: 16px;
-}
-
-.logo_text1 {
-    color: #0f2439;
-    /* background-image: url(https://media.giphy.com/media/Lr2xYGw6IMVofbjRSu/giphy.gif); */
-	font-weight: 700;
-    letter-spacing: 12px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    /* color: white;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
-}
-
-        </style>
 </head>
 <body class="auth-theme-rashmore">
     <!--[if lt IE 8]>
@@ -227,14 +35,14 @@ body {
         <nav class="navbar navbar-white navbar-kawsa navbar-fixed-top" role="navigation">
             <div class="container">
                     <div class="navbar-header">
-                            <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> 
+                            <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
                             <a style="text-decoration:none" class="navbar-brand" href="index.html"><img alt="" class="img-responsive" src="assets/img/kaabil_logo.png">
                             </a>
-                            <div class="logo_text1" style="line-height: 0.7; margin-left: 85px; padding-top: 20px; font-size: 24px;  width: 310px;  ">KAABiL</div>     
-        
-                            <div class="vl ">  
-                            <div class="logo_text" style="line-height: 1; padding-top: 4px; color:#044f9f ; font-size: 12px; font-weight: normal; width: 310px;  font-style: normal; "><b style="color: #9d164f;">K</b>aundal <b style="color: #9d164f;">A</b>rtificial 
-                                intelligence <br> & 
+                            <div class="logo_text1" style="line-height: 0.7; margin-left: 85px; padding-top: 20px; font-size: 24px;  width: 310px;  ">KAABiL</div>
+
+                            <div class="vl ">
+                            <div class="logo_text" style="line-height: 1; padding-top: 4px; color:#044f9f ; font-size: 12px; font-weight: normal; width: 310px;  font-style: normal; "><b style="color: #9d164f;">K</b>aundal <b style="color: #9d164f;">A</b>rtificial
+                                intelligence <br> &
                                 <b style="color: #9d164f;">A</b>dvanced <b style="color: #9d164f;">Bi</b>oinformatics <b style="color: #9d164f;">L</b>ab</div>
                             </div>
                         </div>
@@ -270,7 +78,7 @@ body {
                                     <li>
                                         <a href="lab_book.html" title="Books">Books</a>
                                     </li>
-                                    
+
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -329,7 +137,7 @@ body {
                     </div>
             </div>
         </nav><!-- /.navbar -->
-       
+
     </header><!-- /.sabbi-site-head -->
     <div id="back"></div>
 <div id="front"></div>
@@ -361,10 +169,10 @@ body {
                     <iframe src="http://maps.google.com/maps?q=41.742693,-111.810340&amp;z=15&amp;output=embed" style="border:0; height: 650px; width:100%" allowfullscreen="" frameborder="0"></iframe>
                   </div>
             </div>
-          </div> 
+          </div>
     </section>
 
-    
+
     <footer class="section-footer mt_25">
             <div class="container">
                 <div class="row">
@@ -440,7 +248,7 @@ body {
                             </div>
                         </div>
                     </div>
-    
+
                     <div class="col-sm-4">
                         <div class="footer-site-info">
                             <address>
@@ -458,7 +266,7 @@ body {
                                         <h4 class="title"><a href="events_single.html">Science Award 2015-2016</a></h4>
                                         <div class="date">21st June 2016</div>
                                     </li>
-                                </ul> 
+                                </ul>
                                 <div class="action-wrap"><a href="events.html" class="btn btn-unsolemn btn-action">View all Events</a></div>
                             </address>
                         </div>
@@ -480,10 +288,10 @@ body {
                 </div>
             </div>
     </footer><!-- /.section-footer -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
         window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.2.min.js"><\/script>')
-    </script> 
+    </script>
     <!-- tools -->
     <script src="assets/tools/sequence/js/imagesloaded.pkgd.min.js"></script>
     <script src="assets/tools/sequence/js/hammer.min.js"></script>
@@ -492,10 +300,10 @@ body {
     <script src="assets/tools/dropdownhover/js/bootstrap-dropdownhover.min.js"></script>
 
     <!-- site-spec -->
-    <script src="assets/js/vendor/bootstrap.min.js"></script> 
-    <script src="assets/js/plugins.js"></script> 
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-     
+
     <script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
         function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
@@ -507,7 +315,3 @@ body {
     </script>
 </body>
 </html>
-
-
-
-
