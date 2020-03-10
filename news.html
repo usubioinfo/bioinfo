@@ -371,17 +371,17 @@ svg {
     <section class="sabbi-section stage-future_member">
         <div class="container">
 </div>
+<div class="wrapper">
+    <nav class="tabs">
+      <div class="selector"></div>
+      <a href="#tabcontent" class="active tablinks" onclick="openAllTools(event, ['Academic_News1','Academic_News2'])"><i class="fab fa-superpowers"></i>Academic News</a>
+      <a href="#tabcontent" class="tablinks" onclick="openAllTools(event, ['News1','News2'])"><i class="fas fa-hand-rock"></i>News</a>
 
-<div class="container">
+    </nav>
+</div>
+<div class="container tabcontent" id="Academic_News1">
   <div class="row">
-    <div class="wrapper">
-        <nav class="tabs">
-          <div class="selector"></div>
-          <a href="#tabcontent" class="active tablinks" onclick="openAllTools(event, 'Academic_News')"><i class="fab fa-superpowers"></i>Academic News</a>
-          <a href="#tabcontent" class="tablinks" onclick="openTools(event, 'News')"><i class="fas fa-hand-rock"></i>News</a>
-
-        </nav>
-    </div>
+    
     <!-- href="news_single.html?news=news1" -->
     <a class="sabbi-events-link">
     <div class="column-66">
@@ -399,7 +399,7 @@ svg {
   </div>
 </div>
 
-<div class="container" style="background-color:#f1f1f1">
+<div class="container tabcontent" id="Academic_News2" style="background-color:#f1f1f1">
   <div class="row">
         <a class="sabbi-events-link">
     <div class="column-33">
@@ -418,7 +418,7 @@ svg {
   </div>
 </div>
 
-<div class="container">
+<div class="container tabcontent" id="News1" style="display: none;">
   <div class="row">
         <a class="sabbi-events-link">
     <div class="column-66">
@@ -436,7 +436,7 @@ svg {
     </a>
   </div>
 </div>
-<div class="container" style="background-color:#f1f1f1">
+<div class="container tabcontent" id="News2"  style="display: none; background-color:#f1f1f1">
     <div class="row">
             <a class="sabbi-events-link">
       <div class="column-33">
@@ -633,6 +633,27 @@ $(".tabs").on("click","a",function(e){
     "width": activeWidth + "px"
   });
 });
+
+function openAllTools(evt, yearName) {
+
+var i, tabcontent, tablinks;
+
+tabcontent = document.getElementsByClassName("tabcontent");
+console.log(tabcontent);
+tablinks = document.getElementsByClassName("tablinks");
+for (i = 0; i < tabcontent.length; i++) {
+  tabcontent[i].style.display = "none";
+}
+for (i = 0; i < tablinks.length; i++) {
+  tablinks[i].className = tablinks[i].className.replace(" active", "");
+}
+    for (j = 0; j < yearName.length; j++){
+        console.log(yearName[j]);
+  document.getElementById(yearName[j]).style.display = "block";
+}
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
     </script>
 </body>
 </html>

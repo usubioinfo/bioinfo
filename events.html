@@ -900,7 +900,7 @@ svg {
 
     //  });
 
-     var tabs = $('.tabs');
+var tabs = $('.tabs');
 var selector = $('.tabs').find('a').length;
 //var selector = $(".tabs").find(".selector");
 var activeItem = tabs.find('.active');
@@ -950,6 +950,7 @@ function openAllTools(evt, yearName) {
 var i, tabcontent, tablinks;
 
 tabcontent = document.getElementsByClassName("tabcontent");
+console.log(tabcontent);
 
 for (i = 0; i < tabcontent.length; i++) {
   tabcontent[i].style.display = "block";
