@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Open+Sans:300,400,400i,600,700" rel="stylesheet">
     <link href="assets/fonts/ionicons/css/ionicons.css" rel="stylesheet" type="text/css" />
-     
+
     <!-- Tools -->
     <link href="assets/tools/sequence/css/sequence-theme.basic.css" rel="stylesheet" media="all">
     <link href="assets/tools/dropdownhover/css/animate.min.css" rel="stylesheet">
@@ -26,174 +26,27 @@
     <link href="assets/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="pages/events/events.css" rel="stylesheet">
     <link rel="icon" href="assets/img/red_logo.png">
     <script src="assets/js/vendor/modernizr-2.8.3.min.js">
     </script>
-
-    <style>
-       
-.article-container {
-  position: relative;
-}
-
-.image {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.article-container:hover .image {
-  opacity: 0.8;
-}
-
-.article-container:hover .middle {
-  opacity: 1;
-}
-.article-container:hover {
-    background-color: black;
-}
-
-.text {
-  background-color: #4CAF50;
-  color: white;
-  font-size: 12px;
-  padding: 16px 32px;
-}
-
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
-.wrapper{
-  text-align:center;
-  margin: 10px auto;
-}
-
-.tabs{
-  margin-top:0px;
-  font-size:15px;
-  padding:0px;
-  list-style:none;
-  background:#fff;
-  box-shadow:0px 5px 20px rgba(0,0,0,0.1);
-  display:inline-block;
-  border-radius:50px;
-  position:relative;
-}
-
-.tabs a{
-  text-decoration:none;
-  color: #777;
-  text-transform:uppercase;
-  padding:10px 20px;
-  display:inline-block;
-  position:relative;
-  z-index:1;
-  transition-duration:0.6s;
-}
-
-.tabs a.active{
-  color:#fff;
-}
-
-.tabs a i{
-  margin-right:5px;
-}
-
-.tabs .selector{
-  height:100%;
-  display:inline-block;
-  position:absolute;
-  left:0px;
-  top:0px;
-  z-index:1;
-  border-radius:50px;
-  transition-duration:0.6s;
-  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  
-  background: #05abe0;
-  background: -moz-linear-gradient(45deg, #05abe0 0%, #8200f4 100%);
-  background: -webkit-linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
-  background: linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05abe0', endColorstr='#8200f4',GradientType=1 );
-}
-
-.fancy-header {
-  position: relative;
-  height: 200px;
-  background-image: linear-gradient(rgb(15, 36, 57), rgb(15, 36, 57));
-}
-
-h4 {
-  padding: 100px 0;
-  font: 44px "Arial";
-  text-align: center;
-}
-
-.fancy-header h4 {
-  color: white;
-}
-
-svg {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-}
-
-.vl {
-  border-left: 1px solid #0f2439;
-  height: 30px;
-  margin-top: 10px;
-  margin-left: 85px;
-  /* position: absolute; */
-}
-
-.bottom-right {
-  /* position: absolute; */
-  bottom: 8px;
-  right: 16px;
-}
-
-.logo_text1 {
-    color: #0f2439;
-    /* background-image: url(https://media.giphy.com/media/Lr2xYGw6IMVofbjRSu/giphy.gif); */
-	font-weight: 700;
-    letter-spacing: 12px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    /* color: white;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
-}
-    </style> 
 </head>
 <body class="auth-theme-rashmore page-events">
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
+
     <nav class="navbar navbar-white navbar-kawsa navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
-                <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> 
+                <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
                 <a style="text-decoration:none" class="navbar-brand" href="index.html"><img alt="" class="img-responsive" src="assets/img/red_logo.png">
                 </a>
-                <div class="logo_text1" style="line-height: 0.5; margin-left: 85px; padding-top: 28px; font-size: 24px;  width: 310px;  ">KAABiL</div>     
+                <div class="logo_text1" style="line-height: 0.5; margin-left: 85px; padding-top: 28px; font-size: 24px;  width: 310px;  ">KAABiL</div>
 
-                <div class="vl ">  
-                <div class="logo_text" style="line-height: 1; padding-top: 4px; color:#044f9f ; font-size: 12px; font-weight: normal; width: 310px;  font-style: normal; "><b style="color: #9d164f;">K</b>aundal <b style="color: #9d164f;">A</b>rtificial 
-                    intelligence <br> & 
+                <div class="vl ">
+                <div class="logo_text" style="line-height: 1; padding-top: 4px; color:#044f9f ; font-size: 12px; font-weight: normal; width: 310px;  font-style: normal; "><b style="color: #9d164f;">K</b>aundal <b style="color: #9d164f;">A</b>rtificial
+                    intelligence <br> &
                     <b style="color: #9d164f;">A</b>dvanced <b style="color: #9d164f;">Bi</b>oinformatics <b style="color: #9d164f;">L</b>ab</div>
                 </div>
             </div>
@@ -237,11 +90,11 @@ svg {
                                     </li>
                                     <li>
                                         <a href="lab_conf-talk.html" title="Conferences and Talks">Conferences and Talks</a>
-                                    </li>    
+                                    </li>
                             <!-- <li>
                                 <a href="lab_book.html" title="Books">Books</a>
                             </li> -->
-                            
+
                         </ul>
                     </li>
                     <li class="dropdown active">
@@ -298,7 +151,7 @@ svg {
                                 </li>
                             </ul>
                     </li>
-                    
+
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown"  data-hover="dropdown" href="#" title="Events" data-animations="zoomIn">Events <span class="caret"></span></a>
                         <ul class=" dropdown-menu" role="menu">
@@ -359,7 +212,7 @@ svg {
             </nav>
     </div>
 
-    
+
         <div class="container">
             <div class="events_post-sagment tabcontent title-card" id="HPI" >
                 <header class="fancy-header">
@@ -370,23 +223,23 @@ svg {
                   </svg>
                 </header>
                 <div class="row" style="padding: 20px;">
-                    
+
                     <div class="col-sm-3  show-text-predhpi zoom">
                             <a href="http://bioinfo.usu.edu/PredHPI/" target="_blank" class="sabbi-events-link">
-                              
+
                         <!-- <figcaption class="mask flex-center"> -->
                         <article class="sabbi-events-item tools-container container article-container" style="width: 200px; height: 220px;">
-                                
+
                                 <figure >
-                                        
+
                                          <img class="sabbi-events-img img-responsive image" style=" height: 150px; padding-block-start: 20px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/predhpi.jpg" alt="thompson">
                                         <h2 class="sabbi-events-title font-md__x">PredHPI</h2>
                                         <div class="middle">
                                                 <div class="text">Details</div>
                                         </div>
                                 </figure>
-                
-                               
+
+
                             <!-- <div class="events-item-meta">
                                 <div class="events-loc"><i class="ion-location"></i><span class="text">5005 Heavenly Village Way #2b, Lake Tahoe</span></div>
                                 <div class="events-date"><i class="ion-calendar"></i><span class="text">21st January 2017</span></div>
@@ -415,9 +268,9 @@ svg {
                                 </div> -->
                             </article><!-- /.sabbi-events-item -->
                             <!-- <div class="overlay">
-                                    <div class="text"> <strong>AP-iNET is a computational prediction system for host-pathogen 
-                                        protein-protein interactions in the Arabidopsis-Pseudomonas model system. 
-                                        This webtool allows users to input host and pathogen protein sequences to predict 
+                                    <div class="text"> <strong>AP-iNET is a computational prediction system for host-pathogen
+                                        protein-protein interactions in the Arabidopsis-Pseudomonas model system.
+                                        This webtool allows users to input host and pathogen protein sequences to predict
                                         whether they are interacting within a host-pathogen network.
                                     </strong>
                                     </div>
@@ -425,7 +278,7 @@ svg {
                             </a>
                         </div>
                 </div>
-                
+
             </div><!-- /.events_post-sagment -->
             <div class="events_post-sagment tabcontent title-card" id="CLP">
                     <header class="fancy-header">
@@ -456,7 +309,7 @@ svg {
                             </div> -->
                         </article><!-- /.sabbi-events-item -->
                         <!-- <div class="overlay">
-                                <div class="text"> <strong>Identification of and 3 significant multilocation proteins(cytoplasm-nucleus, 
+                                <div class="text"> <strong>Identification of and 3 significant multilocation proteins(cytoplasm-nucleus,
                                     mitochondrion-plastid and cytoplasm-golgi apparatus).
                                 </strong>
                                 </div>
@@ -483,9 +336,9 @@ svg {
                                 </div> -->
                             </article><!-- /.sabbi-events-item -->
                             <!-- <div class="overlay">
-                                    <div class="text"> <strong>A highly accurate Arabidopsis thaliana Subcellular 
-                                        Localization predictor. It also hosts the whole Arabidopsis-proteome predictions 
-                                        and the comparision with Swiss-Prot / TAIR annotations along with the training/testing 
+                                    <div class="text"> <strong>A highly accurate Arabidopsis thaliana Subcellular
+                                        Localization predictor. It also hosts the whole Arabidopsis-proteome predictions
+                                        and the comparision with Swiss-Prot / TAIR annotations along with the training/testing
                                         datasets.
                                     </strong>
                                     </div>
@@ -512,9 +365,9 @@ svg {
                                     </div> -->
                                 </article><!-- /.sabbi-events-item -->
                                 <!-- <div class="overlay">
-                                        <div class="text"> <strong>The finished rice (Oryza sativa L.) genome sequence now demands 
-                                            for a fully automated system towards reliable and accurate prediction of subcellular 
-                                            localization of rice proteins. RSLpred is developed with this aim for genome-scale 
+                                        <div class="text"> <strong>The finished rice (Oryza sativa L.) genome sequence now demands
+                                            for a fully automated system towards reliable and accurate prediction of subcellular
+                                            localization of rice proteins. RSLpred is developed with this aim for genome-scale
                                             subcellular prediction of encoded rice proteins.
                                         </strong>
                                         </div>
@@ -541,9 +394,9 @@ svg {
                                         </div> -->
                                     </article><!-- /.sabbi-events-item -->
                                     <!-- <div class="overlay">
-                                            <div class="text"> <strong>This online tool firstly identifies a query protein to be 
-                                                a plastid or non-plastid one and then, classifies the identified plastid proteins 
-                                                further into four categories viz. Chloroplast, Chromoplast, Amyloplast or Etioplast 
+                                            <div class="text"> <strong>This online tool firstly identifies a query protein to be
+                                                a plastid or non-plastid one and then, classifies the identified plastid proteins
+                                                further into four categories viz. Chloroplast, Chromoplast, Amyloplast or Etioplast
                                                 proteins.
                                             </strong>
                                             </div>
@@ -581,8 +434,8 @@ svg {
                             </div> -->
                         </article><!-- /.sabbi-events-item -->
                         <!-- <div class="overlay">
-                                <div class="text"> <strong>A host pathogen interactions database for citrus greening disease, 
-                                    which provides a BLAST Service with several proteomes related to the disease. 
+                                <div class="text"> <strong>A host pathogen interactions database for citrus greening disease,
+                                    which provides a BLAST Service with several proteomes related to the disease.
                                     Also includes the old prototypes of PredHPI tools.
                                 </strong>
                                 </div>
@@ -609,8 +462,8 @@ svg {
                                 </div> -->
                             </article><!-- /.sabbi-events-item -->
                             <!-- <div class="overlay">
-                                    <div class="text"> <strong>A host pathogen interactions database for citrus greening disease, 
-                                        which provides a BLAST Service with several proteomes related to the disease. 
+                                    <div class="text"> <strong>A host pathogen interactions database for citrus greening disease,
+                                        which provides a BLAST Service with several proteomes related to the disease.
                                         Also includes the old prototypes of PredHPI tools.
                                     </strong>
                                     </div>
@@ -618,7 +471,7 @@ svg {
                                   </a>
                         </div>
                 </div>
-                
+
             </div><!-- /.events_post-sagment -->
             <div class="events_post-sagment tabcontent title-card" id="Bio">
                     <header class="fancy-header">
@@ -649,7 +502,7 @@ svg {
                                 </div> -->
                             </article><!-- /.sabbi-events-item -->
                             <!-- <div class="overlay">
-                                    <div class="text"> <strong>A machine learning based classification system for laccases 
+                                    <div class="text"> <strong>A machine learning based classification system for laccases
                                         derived for physichochemical properties.
                                     </strong>
                                     </div>
@@ -668,18 +521,18 @@ svg {
                                                 </div>
                                             </figcaption>
                                         </figure>
-                                
+
                                     <!-- <div class="events-item-meta">
                                         <div class="events-loc"><i class="ion-location"></i><span class="text">5005 Heavenly Village Way #2b, Lake Tahoe</span></div>
                                         <div class="events-date"><i class="ion-calendar"></i><span class="text">21st January 2017</span></div>
                                     </div> -->
                                 </article><!-- /.sabbi-events-item -->
                                 <!-- <div class="overlay">
-                                        <div class="text"> <strong>It is used to discover novel 
-                                            lignin related proteins not discoverable through more general means. 
-                                            We created high quality training sets from known lignin 
+                                        <div class="text"> <strong>It is used to discover novel
+                                            lignin related proteins not discoverable through more general means.
+                                            We created high quality training sets from known lignin
                                             related enzymes and models using a SVM.This allows for greater ability to
-                                            recognize certain types of proteins at the expense of the inability 
+                                            recognize certain types of proteins at the expense of the inability
                                             to generally classify proteins.
                                         </strong>
                                         </div>
@@ -717,9 +570,9 @@ svg {
                                     </div> -->
                                 </article><!-- /.sabbi-events-item -->
                                 <!-- <div class="overlay">
-                                        <div class="text"> <strong>A first of its kind worldwide, this Support 
-                                            Vector Machine (SVM) based server forecasts rice leaf blast severity 
-                                            based on the weather parameters for general use to plant pathologists 
+                                        <div class="text"> <strong>A first of its kind worldwide, this Support
+                                            Vector Machine (SVM) based server forecasts rice leaf blast severity
+                                            based on the weather parameters for general use to plant pathologists
                                             and farming community.
                                         </strong>
                                         </div>
@@ -742,7 +595,7 @@ svg {
             <!-- /.pagination_wraper -->
         </div>
     </section><!-- /.stage_events_post -->
-    
+
     <footer class="section-footer mt_25">
         <div class="container">
             <div class="row">
@@ -841,7 +694,7 @@ svg {
                                     </div>
                                 </li>
                             </ul>
-                            
+
                             <div class="action-wrap"><a href="lab_events.html" class="btn btn-unsolemn btn-action">View all Events</a></div>
                         </address>
                     </div>
@@ -863,10 +716,10 @@ svg {
             </div>
         </div>
     </footer><!-- /.section-footer -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
         window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.2.min.js"><\/script>')
-    </script> 
+    </script>
     <!-- tools -->
     <script src="assets/tools/sequence/js/imagesloaded.pkgd.min.js"></script>
     <script src="assets/tools/sequence/js/hammer.min.js"></script>
@@ -874,10 +727,10 @@ svg {
     <script src="assets/tools/dropdownhover/js/bootstrap-dropdownhover.min.js"></script>
 
     <!-- site-spec -->
-    <script src="assets/js/vendor/bootstrap.min.js"></script> 
-    <script src="assets/js/plugins.js"></script> 
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-     
+
     <script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
         function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
@@ -887,7 +740,7 @@ svg {
         ga('create','UA-XXXXX-X','auto');ga('send','pageview');
 
     //     $(document).ready(function(){
-          
+
     //       $(window).scroll(function(){
 
     //         if($(window).scrollTop()>100){
@@ -906,7 +759,7 @@ var selector = $('.tabs').find('a').length;
 var activeItem = tabs.find('.active');
 var activeWidth = activeItem.innerWidth();
 $(".selector").css({
-  "left": activeItem.position.left + "px", 
+  "left": activeItem.position.left + "px",
   "width": activeWidth + "px"
 });
 
@@ -917,7 +770,7 @@ $(".tabs").on("click","a",function(e){
   var activeWidth = $(this).innerWidth();
   var itemPos = $(this).position();
   $(".selector").css({
-    "left":itemPos.left + "px", 
+    "left":itemPos.left + "px",
     "width": activeWidth + "px"
   });
 });
