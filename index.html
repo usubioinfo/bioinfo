@@ -21,6 +21,7 @@
     <link href="assets/tools/sequence/css/sequence-theme.basic.css" rel="stylesheet" media="all">
     <link href="assets/tools/dropdownhover/css/animate.min.css" rel="stylesheet">
     <link href="assets/tools/dropdownhover/css/bootstrap-dropdownhover.min.css" rel="stylesheet">
+    <link href="pages/home/home.css" rel="stylesheet">
 
     <!-- site spec -->
     <link href="assets/tools/lightbox/ekko-lightbox.min.css" rel="stylesheet">
@@ -36,138 +37,6 @@
 	gtag('config', 'UA-119048537-8');
     </script>
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
-
-    <style>
-        @keyframes animatedBackground {
-            from {
-                background-position: 0 0;
-            }
-
-            to {
-                background-position: 100% 0;
-            }
-        }
-
-        /*sliding animation*/
-        @keyframes slidy {
-            0% {
-                left: 0%;
-            }
-
-            20% {
-                left: 0%;
-            }
-
-            25% {
-                left: -100%;
-            }
-
-            45% {
-                left: -100%;
-            }
-
-            50% {
-                left: -200%;
-            }
-
-            70% {
-                left: -200%;
-            }
-
-            75% {
-                left: -300%;
-            }
-
-            95% {
-                left: -300%;
-            }
-
-            100% {
-                left: -400%;
-            }
-        }
-
-        div#sequence {
-            overflow: hidden;
-        }
-
-        div#sliding_animation ul li {
-            width: 20%;
-            float: left;
-        }
-
-        div#sliding_animation ul {
-            position: relative;
-            width: 500%;
-            margin: 0;
-            left: 0;
-            text-align: left;
-            font-size: 0;
-            animation: 10s slidy infinite;
-        }
-
-        .MultiCarousel {
-            float: left;
-            overflow: hidden;
-            /* padding: 15px; */
-            width: 100%;
-            position: relative;
-        }
-
-        .MultiCarousel .MultiCarousel-inner {
-            transition: 1s ease all;
-            float: left;
-        }
-
-        .MultiCarousel .MultiCarousel-inner .item {
-            float: left;
-        }
-
-        .MultiCarousel .leftLst,
-        .MultiCarousel .rightLst {
-            position: absolute;
-            border-radius: 50%;
-            top: calc(50%);
-        }
-
-        .MultiCarousel .leftLst {
-            left: 0;
-        }
-
-        .MultiCarousel .rightLst {
-            right: 0;
-        }
-
-        .MultiCarousel .leftLst.over,
-        .MultiCarousel .rightLst.over {
-            pointer-events: none;
-            background: #ccc;
-        }
-
-        .vl {
-            border-left: 1px solid #0f2439;
-            height: 30px;
-            margin-top: 10px;
-            margin-left: 85px;
-            /* position: absolute; */
-        }
-
-        .bottom-right {
-            /* position: absolute; */
-            bottom: 8px;
-            right: 16px;
-        }
-
-        .logo_text1 {
-            color: #0f2439;
-            /* background-image: url(https://media.giphy.com/media/Lr2xYGw6IMVofbjRSu/giphy.gif); */
-            font-weight: 700;
-            letter-spacing: 12px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            /* color: white;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
-        }
-    </style>
 </head>
 
 <body class="auth-theme-rashmore">
@@ -382,8 +251,8 @@
                                     <a href="#" class="btn-link btn-more">READ MORE</a>
                                 </div>
                             </li>
-                            <li class="seq-step1" id="step2"
-                                style="background:url(assets/img/g195.png); background-color: black;  background-size:fit">
+                            <li class="seq-step1" id="step2" style="background-color: black;">
+                                <img class="fix-picture" src="assets/img/g195.png"/>
                                 <div class="bg-blend"></div>
                                 <div class="seq-content">
 
@@ -551,7 +420,7 @@
                         </div>
                     </div>
 
-                        <button class="btn btn-primary leftLst" ><</button> 
+                        <button class="btn btn-primary leftLst" ><</button>
                             <button class="btn btn-primary rightLst">></button>
                 </div>
 
