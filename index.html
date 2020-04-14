@@ -37,6 +37,13 @@
 	gtag('config', 'UA-119048537-8');
     </script>
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        .btn-group button {
+          padding: 10px 24px; /* Some padding */
+          cursor: pointer; /* Pointer/hand icon */
+          float: left; /* Float the buttons side by side */
+        }
+        </style>
 </head>
 
 <body class="auth-theme-rashmore">
@@ -65,13 +72,20 @@
                     </div>
                 </div>
                 <div class="navbar-collapse collapse sabbi-navbar-collapse  navbar-nav-hov_underline" id="navbar">
-                    <div class="nav-btn-wrap"><a href="future_member.html#enroll" class="btn btn-primary pull-right">Join Research</a></div>
+                    <!-- <div class="row">
+                    <div class="nav-btn-wrap"><a href="future_member.html#enroll" class="btn btn-primary pull- ">Join Research</a></div> -->
+                    <div class="nav-btn-wrap btn-group  pull-right">
+                        <button class="btn btn-primary" target =  "_blank" onclick="window.location.href='http://bioinfo.usu.edu/covidTracker/'">Covid 19 Tracker</button>
+                        <button class="btn btn-primary"  onclick="window.location.href='future_member.html#enroll'">Join Research</button>
+                      </div>
+                    <!-- <div class="nav-btn-wrap"><a href="future_member.html#enroll" class="btn btn-primary pull-right">Join Research</a></div> -->
+                    <!-- </div> -->
                     <ul class="nav navbar-nav navbar-right" id="menu-main-nav">
                         <li class="active">
                             <a href="index.html" title="Home">Home</a>
                         </li>
                         <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#" title="Events"
+                                <a class="dropdown-toggle" dfata-toggle="dropdown" data-hover="dropdown" href="#" title="Events"
                                     data-animations="zoomIn">Research <span class="caret"></span></a>
                                 <ul class=" dropdown-menu" role="menu">
                                     <li>
@@ -193,12 +207,16 @@
                         <li>
                             <a href="future_member.html" title="Future Member">Contact</a>
                         </li>
+        
                         <!-- <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown"  data-hover="dropdown" href="#" title="Events" data-animations="zoomIn">News <span class="caret"></span></a>
                                 <ul class=" dropdown-menu" role="menu"> -->
                                     <li class="">
-                                        <a href="sep_news.html" title="News">News</a>
+                                        <a href="news.html" title="News">News</a>
                                     </li>
+                                    <!-- <li class="">
+                                        <a href="http://bioinfo.usu.edu/covidTracker/" title="News">Covid Tracker</a>
+                                    </li> -->
                                     <!-- <li>
                                         <a href="news_single.html?news=news1" title="News Single">News Single Page</a>
                                     </li>
@@ -431,9 +449,14 @@
                         <h2 class="stage-title">Latest News:</h2>
                         <ul class="list-unstyled lst_news_list" tabindex="0">
                             <li class="lst_news_item">
-                                <h3 class="title mg_0"><a href="http://dx.doi.org/10.1093/bib/bbz162"
-                                        target="_blank">Host-pathogen interaction paper accepted in <i>Briefings in
-                                            Bioinformatics</i></a></h3>
+                                <h3 class="title mg_0"><a href="http://bioinfo.usu.edu/covidTracker/"
+                                        target="_blank">Covid 19 tracker built by KAABiL is online</i></a></h3>
+                                <div>
+                                    <span class="date">April 10, 2020</span>
+                                </div>
+                            </li>
+                            <li class="lst_news_item">
+                                <h3 class="title mg_0"><a href="events_single.html">Host-pathogen interaction paper accepted in Briefings in Bioinformatics</a></h3>
                                 <div>
                                     <span class="date">Nov 20, 2019</span>
                                 </div>
@@ -446,15 +469,9 @@
                                     <span class="date">Oct 08, 2019</span>
                                 </div>
                             </li>
-                            <li class="lst_news_item">
-                                <h3 class="title mg_0"><a href="events_single.html">Cardiovascular disease: Commonality
-                                        with cancer</a></h3>
-                                <div>
-                                    <span class="date">Oct 12, 2016</span>
-                                </div>
-                            </li>
+                            
                         </ul>
-                        <a href="#" class="btn btn-unsolemn btn-action read-more">VIEW ALL</a>
+                        <a href="news.html" class="btn btn-unsolemn btn-action read-more">VIEW ALL</a>
                     </article>
                 </div>
                 <!-- <div class="col-sm-4">
@@ -659,7 +676,7 @@
                 <div class="col-sm-4">
                     <article class="sabbi-thumlinepost-card solitude-bg__x">
                         <figure class="sabbi-thumlinepost-card-figure">
-                            <img alt="" class="img-responsive img-thumpost" style="width: 557px; height: 360px;" src="http://bioinfo.usu.edu/wp-content/uploads/2019/03/kaundal-rakesh2.jpg">
+                            <img alt="" class="img-responsive img-thumpost" style="width: 557px; height: 360px;" src="assets/img/profile/RK_2.jpg">
                         </figure>
                         <h2 class="entry-title" style="font-size: 15px;">Dr. Rakesh Kaundal</h2>
                         <div class="card_st_fix">Rakesh is an Assistant Professor of Bioinformatics in the Department of Plants, Soils, and Climate at Utah State University,
