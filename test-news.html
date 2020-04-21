@@ -86,17 +86,19 @@
                             </ul>
                         </li>
                         <li class="dropdown">
-                          <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#" title="Publications" data-animations="zoomIn">
-                            Publications <span class="caret"></span>
-                          </a>
-                          <ul class=" dropdown-menu" role="menu">
-                            <li>
-                              <a href="lab_journal.html" title="Journal Articles">Journal Articles</a>
-                            </li>
-                            <li>
-                              <a href="lab_conf-talk.html" title="Conferences and Talks">Conferences and Talks</a>
-                            </li>
-                          </ul>
+                            <a class="dropdown-toggle" data-toggle="dropdown"  data-hover="dropdown" href="#" title="Publications" data-animations="zoomIn">Publications <span class="caret"></span></a>
+                            <ul class=" dropdown-menu" role="menu">
+                                    <li>
+                                            <a href="lab_journal.html" title="Journal Articles">Journal Articles</a>
+                                        </li>
+                                        <li>
+                                            <a href="lab_conf-talk.html" title="Conferences and Talks">Conferences and Talks</a>
+                                        </li>
+                                <!-- <li>
+                                    <a href="lab_book.html" title="Books">Books</a>
+                                </li> -->
+
+                            </ul>
                         </li>
                         <li class="dropdown">
                                 <a href="events.html" class="dropdown-toggle"   data-hover="dropdown" title="Tools" data-animations="zoomIn">Tools<span class="caret"></span></a>
@@ -206,108 +208,86 @@
         </div>
     </div><!-- /.auth-breadcrumb-wrap -->
     <section class="sabbi-section stage-future_member">
-        <div class="container">
-</div>
-<div class="wrapper">
-    <nav class="tabs">
-      <div class="selector"></div>
-      <a href="#tabcontent" class="active tablinks" onclick="openAllTools(event, ['Academic_News1','Academic_News2'])"><i class="fab fa-superpowers"></i>Research News</a>
-      <a href="#tabcontent" class="tablinks" onclick="openAllTools(event, ['News1','News2','News3'])"><i class="fas fa-hand-rock"></i>Other News</a>
+    <div class="container"></div>
 
-    </nav>
-</div>
-<section class="container tabcontent" id="Academic_News1">
+<article class="container-fluid">
   <div class="row">
-    <div class="column-66">
-      <p class="" style="color:#0f2439;"><b>Naveen Duhan, a PhD student from our lab, attended the International Plant Animal Genome Conference in San Diego.</b></p>
-      <div class="events-date" style="color: gray;"><i class="ion-calendar"></i> <span class="text" >Jan 11, 2020 - Jan 15,2020</span></div>
-      <p style="color: black;">
-        Naveen presented a poster on citSatdb and gave an oral presentation on GreeningDB.
-        <br><b>citSatdb:</b> Genome Wide Simple Sequence Repeat (SSR) Marker Database of Citrus Species for Germplasm Characterization and Crop Improvement
-        <br><b>GreeningDB:</b> Database of Protein Features and Protein-Protein Interactions of the Bacteria Causing HLB<br>
-        <b>Oral Talk</b><br>
-        <b>GreeningDB</b><br><br><br>
-      </p>
-    </div>
-    <div class="column-33 box">
-      <img src="assets/img/events/Sand_2020/1.jpg" width="335" height="471" style="transform: rotate(90deg) scale(1.1) ;">
-    </div>
+
+    <!-- News - General -->
+    <article class="col-sm-4">
+      <div class="text-center" style="font-size: 230%;"><b>General</b></div><br>
+      <section class="thumbnail">
+        <img src="assets/img/events/Sand_2020/1.jpg"/>
+        <div class="caption">
+          <h5>Naveen goes to town</h5>
+          <p>
+            Naveen hit the streets and presented a poster on citSatdb and gave an oral presentation on GreeningDB.
+          </p>
+        </div>
+      </section>
+
+      <section class="thumbnail">
+        <img src="assets/img/profile/shelby.jpg"/>
+        <div class="caption">
+          <h5>Shelby's here: Whaddup!</h5>
+          <p>
+            We have a new HPC admin and he's poppin', if he does say so himself.
+          </p>
+        </div>
+      </section>
+
+      <section class="thumbnail">
+        <img src="assets/img/profile/rsz_akshat.jpg"/>
+        <div class="caption">
+          <h5>Guy with a beard joined the team</h5>
+          <p>
+            He is joining as a graduate research assistant. Helpful! He also has a beard.
+          </p>
+        </div>
+      </section>
+    </article>
+
+    <!-- News - Science -->
+    <article class="col-sm-4">
+      <div class="text-center" style="font-size: 230%;"><b>Science</b></div><br>
+      <section class="thumbnail">
+        <img src="assets/img/events/Sand_2020/deephpi.png"/>
+        <div class="caption">
+          <h5>deepHPI is Online!</h5>
+          <p>
+            To bolster and accelerate research on infectious disease, we have implemented deepHPI.
+            The deepHPI web server is a platform that uses Convolutional Neural Network (CNN)...
+          </p>
+        </div>
+      </section>
+
+      <section class="thumbnail">
+        <img src="assets/img/covid19.PNG"/>
+        <div class="caption">
+          <h5>COVID-19 is here and we can track it!</h5>
+          <p>
+            We're afraid of COVID-19 and so are you but now we know more about the monster under our bed. Stop sneezing, guys!
+          </p>
+        </div>
+      </section>
+    </article>
+
+    <!-- Blog -->
+    <article class="col-sm-4">
+      <div class="text-center" style="font-size: 230%;"><b>Blog</b></div><br>
+      <section class="thumbnail">
+        <img src="assets/img/profile/shelby.jpg"/>
+        <div class="caption">
+          <h5>Local teenager defies rules</h5>
+          <p>
+            A local teenager put his stuff against the wall even though it said not to. Spicy!
+          </p>
+        </div>
+      </section>
+    </article>
+
   </div>
-</section>
-
-  <section class="container tabcontent" id="Academic_News2" style="background-color:#f1f1f1">
-    <div class="row">
-      <div class="column-33">
-        <img src="assets/img/events/Sand_2020/deephpi.png" alt="Image" width="335" height="471">
-      </div>
-      <div class="column-66">
-        <p class="" style="color:#0f2439;"><b>deepHPI server is now online</b></p>
-        <div class="events-date" style="color: gray;"><i class="ion-calendar"></i> <span class="text" >Nov 1, 2019</span></div>
-
-        <p style="color: black;">
-          To bolster and accelerate research on infectious disease, we have implemented deepHPI.
-          The deepHPI web server is a platform that uses Convolutional Neural Network (CNN) models for the accurate prediction of host-pathogen
-          protein-protein interactions. The server delivers four host-pathogen model types: plant-pathogen, human-bacteria, human-virus, and animal-pathogen.
-          This is to account for a wide range of analyses and use cases, as well as provide an enriched visualization of
-          the resulting host-pathogen network.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="container tabcontent" id="News3" style="display: none;">
-    <div class="row">
-      <div class="column-66">
-        <p class="" style="color:#0f2439;"><b>Covid Tracker.</b></p>
-        <div class="events-date" style="color: gray;"><i class="ion-calendar"></i> <span class="text" >April 10, 2020</span></div>
-
-        <p style="color: black;">
-          A new website is now online for tracking global COVID-19. Developed by Naveen Duhan, a Phd student at KAABiL.
-        </p>
-        <a target="_blank" rel="noopener noreferrer" href="http://bioinfo.usu.edu/covidTracker/">
-          Covid 19 Tracker <i style="color: #D30015; font-size: 12px;" class="fa fa-external-link"></i>
-        </a>
-      </div>
-      <div class="column-33 box">
-        <img src="assets/img/covid19.PNG" alt="Image" width="335" height="471" style="transform: scale(1.1)  ;" >
-      </div>
-    </div>
-  </section>
-  <section class="container tabcontent" id="News2"  style="display: none; background-color:#f1f1f1">
-    <div class="row">
-      <div class="column-33 box">
-        <img src="assets/img/profile/shelby.jpg" style="transform: scale(1.1)  ;" alt="App" width="335" height="471">
-      </div>
-      <div class="column-66">
-        <p class="" style="color:#0f2439;"><b>New HPC Admin</b></p>
-        <div class="events-date" style="color: gray;"><i class="ion-calendar"></i> <span class="text">Feb 21, 2020</span></div>
-        <p style="color: black;">
-          Shelby McCowan, a Biochemistry undergraduate student, has joined KAABiL as a high-performance computing admin.
-        </p>
-      </div>
-    </div>
-  </section>
-  <section class="container tabcontent" id="News1" style="display: none;">
-    <div class="row">
-      <div class="column-66">
-        <p style="color:#0f2439;"><b>New Researcher</b></p>
-        <div class="events-date" style="color: gray;">
-          <i class="ion-calendar"></i> <span class="text" >Feb 21, 2020</span>
-        </div>
-
-        <p style="color: black;">
-          Akshat Kumar, a Master's student in the Computer Science
-          Department, has joined as a graduate research assistant. His initial research is focused on RNA-seq pipelines, particularly
-          on developing a new Python library for processing high-throughput NGS data.
-        </p>
-      </div>
-      <div class="column-33 box">
-        <img src="assets/img/profile/rsz_akshat.jpg" alt="Image" width="335" height="471" style="transform: scale(1.1)  ;" >
-      </div>
-    </div>
-  </section>
-
-        </div>
+</article>
     </section>
     <!-- /.stage-future_member -->
 
