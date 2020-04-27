@@ -2428,6 +2428,7 @@ a.link-with-icon i.fa {
   border-radius: 5px!important;
   margin-left: 15px!important;
   font-family: 'Montserrat', sans-serif!important;
+  padding: 7px 12px!important;
 }
 
 .navbar-button:hover {
