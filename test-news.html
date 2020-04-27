@@ -52,9 +52,13 @@
                         </div>
                     </div>
             <div class="navbar-collapse collapse sabbi-navbar-collapse  navbar-nav-hov_underline" id="navbar">
-                <div class="nav-btn-wrap btn-group  pull-right">
-                  <button class="btn btn-primary" target =  "_blank" onclick="window.location.href='http://bioinfo.usu.edu/covidTracker/'">Covid 19 Tracker</button>
-                  <button class="btn btn-primary"  onclick="window.location.href='#enroll'">Join Research</button>
+                <div class="nav-btn-wrap btn-group pull-right">
+                  <a class="btn navbar-button" target="_blank" rel="noopener noreferrer" href="http://bioinfo.usu.edu/covidTracker/">
+                    Covid 19 Tracker
+                  </a>
+                  <a class="btn navbar-button" href="#enroll">
+                    Join Research
+                  </a>
                 </div>
                   <ul class="nav navbar-nav navbar-right" id="menu-main-nav">
                     <li>
@@ -191,36 +195,33 @@
     <div class="container"></div>
 
 <article class="container-fluid">
-  <div class="row">
+  <div class="row flex-row">
 
     <!-- News - General -->
-    <article class="col-sm-4">
-      <div class="text-center" style="font-size: 230%;"><b>General</b></div><br>
-      <section class="thumbnail">
-        <img src="assets/img/events/Sand_2020/1.jpg"/>
+    <article class="flex-col">
+      <div class="text-center col-header" style="font-size: 170%;"><b>General</b></div><br>
+      <section class="thumbnail news-item">
         <div class="caption">
-          <h5>Naveen presents at International Plant Animal Genome Conference</h5>
-          <p>
-            Naveen a poster on citSatdb and gave an oral presentation on GreeningDB.
+          <h5 class="header">Naveen presents at International Plant Animal Genome Conference</h5>
+          <p class="desc">
+            Naveen presented a poster on citSatdb and gave an oral presentation on GreeningDB.
           </p>
         </div>
       </section>
 
-      <section class="thumbnail">
-        <img src="assets/img/profile/shelby.jpg"/>
+      <section class="thumbnail news-item">
         <div class="caption">
-          <h5>New HPC Admin: Shelby McCowan</h5>
-          <p>
+          <h5 class="header">New HPC Admin: Shelby McCowan</h5>
+          <p class="desc">
             Shelby McCowan has joined the team and will be taking over as the new HPC Admin.
           </p>
         </div>
       </section>
 
-      <section class="thumbnail">
-        <img src="assets/img/profile/rsz_akshat.jpg"/>
+      <section class="thumbnail news-item">
         <div class="caption">
-          <h5>New Graduate Research Assistant</h5>
-          <p>
+          <h5 class="header">New Graduate Research Assistant</h5>
+          <p class="desc">
             Akshat Kumar has joined KAABiL as a new graduate research assistant.
           </p>
         </div>
@@ -228,24 +229,22 @@
     </article>
 
     <!-- News - Science -->
-    <article class="col-sm-4">
-      <div class="text-center" style="font-size: 230%;"><b>Science</b></div><br>
-      <section class="thumbnail">
-        <img src="assets/img/events/Sand_2020/deephpi.png"/>
+    <article class="flex-col">
+      <div class="text-center col-header" style="font-size: 170%;"><b>Science</b></div><br>
+      <section class="thumbnail news-item">
         <div class="caption">
-          <h5>deepHPI is Online!</h5>
-          <p>
+          <h5 class="header">deepHPI is Online!</h5>
+          <p class="desc">
             To bolster and accelerate research on infectious disease, we have implemented deepHPI.
             The deepHPI web server is a platform that uses Convolutional Neural Network (CNN)...
           </p>
         </div>
       </section>
 
-      <section class="thumbnail">
-        <img src="assets/img/covid19.PNG"/>
+      <section class="thumbnail news-item">
         <div class="caption">
-          <h5>COVID-19 Tracker</h5>
-          <p>
+          <h5 class="header">COVID-19 Tracker</h5>
+          <p class="desc">
             KAABiL now has a dashboard for tracking global COVID-19 data
           </p>
         </div>
@@ -253,13 +252,12 @@
     </article>
 
     <!-- Blog -->
-    <article class="col-sm-4">
-      <div class="text-center" style="font-size: 230%;"><b>Blog</b></div><br>
-      <section class="thumbnail">
-        <img src="assets/img/profile/shelby.jpg"/>
+    <article class="col-sm-3">
+      <div class="text-center col-header" style="font-size: 170%;"><b>Blog</b></div><br>
+      <section class="thumbnail news-item">
         <div class="caption">
-          <h5>New Blog</h5>
-          <p>
+          <h5 class="header">New Blog</h5>
+          <p class="desc">
             KAABiL has a blog that we might write to one day.
           </p>
         </div>

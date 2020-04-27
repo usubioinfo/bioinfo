@@ -13,7 +13,7 @@ email:hello@authlab.io;
 3. Reuseable
 4. Navigation
 5. Publicaton
-6. Site Page & Section 
+6. Site Page & Section
 7. Footer
 */
 /*-------------------------------------------------------*/
@@ -171,8 +171,8 @@ img {
 .solitude-bg__x.solitude-bg__x.solitude-bg__x {
   background-color: #EDF2F6; }
 
-/* -------------------------------- 
-Reused Components 
+/* --------------------------------
+Reused Components
 -------------------------------- */
 /* align item */
 .pos-y_center {
@@ -738,7 +738,7 @@ body .mb_100 {
 .small-lgx {
   font-size: .6em; }
 
-/* -------------------------------- 
+/* --------------------------------
  Navigation
 -------------------------------- */
 .navbar-nav {
@@ -854,7 +854,7 @@ body .mb_100 {
   background: #D30015;
   margin-top: 25px; } */
   /* .navbar-toggle .icon-bar {
-    background-color: rgb(10, 1, 1); 
+    background-color: rgb(10, 1, 1);
   } */
 
 /* .navbar-white {
@@ -891,7 +891,7 @@ body .mb_100 {
   .navbar-nav-hov_underline .navbar-nav li a:hover, .navbar-nav-hov_underline .navbar-nav li a:focus {
     background: transparent;
     border-bottom: 4px solid rgb(233, 10, 10); } */
-/* 
+/*
 .navbar-nav-hov_underline .navbar-nav .dropdown-menu {
   font-size: inherit;
   border-radius: 0;
@@ -916,7 +916,7 @@ body .mb_100 {
       color: #e5eef7; }
   .navbar-nav-hov_underline .navbar-nav .dropdown-menu li.active a {
     color: #D30015; } */
-/* 
+/*
 @media (max-width: 767px) {
   .navbar-nav {
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.24);
@@ -935,7 +935,7 @@ body .mb_100 {
     line-height: 1;
     height: 49px;
     width: 39px;
-    
+
    }
    .sec-navigate-wrap :hover .seq-next :hover :hover, .sec-navigate-wrap .seq-prev :hover :hover{
     background-color: transparent;
@@ -1107,7 +1107,7 @@ body .mb_100 {
 
 .auth-theme-rashmore .seq .seq-title, .auth-theme-rashmore .seq .seq-subtitle {
   margin-bottom: 0;
-  
+
 }
 
 .page-journal {
@@ -1169,10 +1169,10 @@ body .mb_100 {
 
   .sabbi-page-header-classic2 {
     background-image: url(../img/slider/events_hd.jpg);
-    background-position-x: center; 
-    background-position-y: center; 
+    background-position-x: center;
+    background-position-y: center;
     background-repeat: no-repeat;
-    background-size: contain; 
+    background-size: contain;
     background-color: #2a5882;
     height: 450px;
     text-align: center; }
@@ -1256,7 +1256,7 @@ body .mb_100 {
     margin-bottom: 30px;
     margin-top: 20px; } }
 
-/* -------------------------------- 
+/* --------------------------------
  Publicaton
 -------------------------------- */
 /*selected publication*/
@@ -1478,8 +1478,8 @@ a.link-with-icon i.fa {
 .oli-user_male_circle:before {
   content: "\e92b"; }
 
-/* -------------------------------- 
- Site Page & Section 
+/* --------------------------------
+ Site Page & Section
 -------------------------------- */
 .__fs16 {
   font-size: 16px;
@@ -1627,7 +1627,7 @@ a.link-with-icon i.fa {
 }
 
 .sabbi-section, .section-brand_quickfact {
-  
+
   margin-top: 25px;
   margin-bottom: 40px; }
 
@@ -2205,7 +2205,7 @@ a.link-with-icon i.fa {
 .zoom:hover {
   -ms-transform: scale(1.05); /* IE 9 */
   -webkit-transform: scale(1.05); /* Safari 3-8 */
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
 .title-card {
@@ -2306,7 +2306,7 @@ a.link-with-icon i.fa {
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #e6ebef;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #e6ebef; }
 
-/* -------------------------------- 
+/* --------------------------------
  Footer
 -------------------------------- */
 /* style footer */
@@ -2418,3 +2418,18 @@ a.link-with-icon i.fa {
   color: #D30015;
 }
 
+/* Custom Button in this absolute mess of CSS */
+.navbar-button {
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s;
+  color: #d30015;
+  border: solid 1px #d30015;
+  border-radius: 5px!important;
+  margin-left: 15px!important;
+}
+
+.navbar-button:hover {
+  background: #d30015!important;
+  color: white;
+}
