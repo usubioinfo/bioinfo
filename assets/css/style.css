@@ -2435,3 +2435,7 @@ a.link-with-icon i.fa {
   background: #d30015!important;
   color: white!important;
 }
+
+.navbar-nav {
+  margin-top: 11px!important;
+}
