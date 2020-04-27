@@ -2420,13 +2420,14 @@ a.link-with-icon i.fa {
 
 /* Custom Button in this absolute mess of CSS */
 .navbar-button {
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.25s;
   color: #d30015;
   border: solid 1px #d30015;
   border-radius: 5px!important;
   margin-left: 15px!important;
+  font-family: 'Montserrat', sans-serif!important;
 }
 
 .navbar-button:hover {
