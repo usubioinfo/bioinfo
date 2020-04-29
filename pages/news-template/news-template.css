@@ -1,0 +1,24 @@
+.article-header {
+  font-size: 240%;
+  color: #333;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.article-desc {
+  font-size: 150%;
+  color: #808080;
+  font-weight: 400;
+  margin-bottom: 30px;
+  font-family: 'Montserrat', sans-serif!important;
+}
+
+.article-paragraph {
+  font-size: 130%;
+  color: #333;
+  font-weight: 500;
+  margin: 30px 0;
+  font-family: 'Montserrat', sans-serif!important;
+  line-height: 205%;
+}

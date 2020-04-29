@@ -2439,3 +2439,8 @@ a.link-with-icon i.fa {
 .navbar-nav {
   margin-top: 11px!important;
 }
+
+/* typo is intentional, that's how the template creators spelt it... */
+.pfofile-social li a {
+  transition: all 0.25s;
+}
