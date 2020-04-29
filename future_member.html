@@ -26,6 +26,7 @@
     <link href="assets/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="pages/future_member/future_member.css" rel="stylesheet">
     <link rel="icon" href="assets/img/red_logo.png">
     <script src="assets/js/vendor/modernizr-2.8.3.min.js">
     </script>
@@ -239,7 +240,7 @@
             <div class="row">
                 <div class="col-sm-8">
                     <p class="future_member-text" style="text-align: justify;">
-                        If you would like to join us, we are always looking for <b>independently funded research fellows</b> or
+                        If you would like to join us, we are always looking for <b>independently-funded research fellows</b> or
                         <b>extended visitors</b>. Please use the <a href="#enroll"><u>form</u></a> below to exlpore the possible options.
                         <b>Summer student</b> postions are also available for up to 3 - 4 months period.
 
@@ -304,21 +305,17 @@
                     </div>
                      <div class = "col-sm-8" id="scroll_contact_form">
                     <form id="contact-form" class="form-future_memb" action="assets/api/sendmail.php" method="post">
-                        <div class="form-group">
-                            <label for="futureName">Your Name<sup style="color: red;">*</sup></label>
-                            <input name="name" id="futureName" type="text" class="form-control" placeholder="Type Your Full Name">
+                        <div>
+                            <input name="name" id="futureName" type="text" class="form-control kbl-form" placeholder="Full Name">
                         </div>
-                        <div class="form-group">
-                            <label for="InputEmail">Your E-mail<sup style="color: red;">*</sup></label>
-                            <input name="email"  id="InputEmail" type="email" class="form-control" placeholder="Type Your E-mail Address">
+                        <div>
+                            <input name="email"  id="InputEmail" type="email" class="form-control kbl-form" placeholder="Email">
                         </div>
-                        <div class="form-group">
-                            <label for="Inputphone">Your Phone <b style="font-weight: normal;">(</b><i style="font-weight: normal;">optional</i><b style="font-weight: normal;">)</b></label>
-                            <input  name="contact_num" id="Inputphone" type="tel" class="form-control"  placeholder="Type Your Phone Number">
+                        <div>
+                            <input  name="contact_num" id="Inputphone" type="tel" class="form-control kbl-form"  placeholder="Phone Number">
                         </div>
-                        <div class="form-group">
-                            <label for="InputMessage">Your Message<sup style="color: red;">*</sup></label>
-                            <textarea name="message"  id="InputMessage" class="form-control" rows="10" placeholder="Type Your Message"></textarea>
+                        <div>
+                            <textarea name="message"  id="InputMessage" class="form-control kbl-form" rows="15" placeholder="Say something to us!"></textarea>
                         </div>
 
                         <div class="form-group">
@@ -326,7 +323,7 @@
                             <div id="form_errors"></div>
                             <div class="row">
 
-                                <div class="col-sm-6 col-sm-offset-6 text-right">
+                                <div class="col-sm-6 col-sm-offset-3 text-center">
                                     <button type="submit" class="btn btn-gules">Send Message</button>
                                 </div>
                             </div>
