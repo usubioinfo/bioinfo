@@ -2444,3 +2444,7 @@ a.link-with-icon i.fa {
 .pfofile-social li a {
   transition: all 0.25s;
 }
+
+.btn {
+  transition: all 0.3s!important;
+}
