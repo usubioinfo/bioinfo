@@ -1,2 +1,4 @@
 .DS_Store
 /ranchSAT
+/node_modules
+public/css
