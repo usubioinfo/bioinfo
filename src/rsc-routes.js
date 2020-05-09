@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
-const baseUrl = require('./config/appcfg').baseUrl;
-console.log(baseUrl)
+let baseUrl = require('./config/appcfg').baseUrl;
+
+baseUrl = baseUrl + 'assets/'
 
 const baseFilePath = __dirname + '/../assets/'
 
 module.exports = (app) => {
-  app.use(baseUrl + 'images/', express.static(baseFilePath + 'images'));
   app.use(baseUrl + 'api/', express.static(baseFilePath + 'api'));
   app.use(baseUrl + 'css/', express.static(baseFilePath + 'css'));
   app.use(baseUrl + 'fonts', express.static(baseFilePath + 'fonts'));

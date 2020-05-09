@@ -2,3 +2,4 @@
 /ranchSAT
 /node_modules
 public/css
+env.njk

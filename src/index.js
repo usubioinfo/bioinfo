@@ -39,6 +39,9 @@ require('./rsc-routes')(app);
 
 
 // Pages
+app.get(baseUrl, (req, res) => {
+  res.render(__dirname + '/views/pages/index/index.njk');
+});
 /*
 app.get(baseUrl, (req, res) => {
   res.render(__dirname + '/views/pages/index/index.njk');
