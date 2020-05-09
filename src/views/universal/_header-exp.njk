@@ -1,4 +1,4 @@
-{% macro header(css="", bs4=false, scss=false, modernizr=true) %}
+{% macro header(bs4=false, scss=false, modernizr=true) %}
 <head>
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -28,9 +28,7 @@
     <link href="assets/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
-    {% if css.length %}
-      <link href="pages/{{ css }}/{{ css }}.css" rel="stylesheet">
-    {% endif %}
+    <link href="pages/events/events.css" rel="stylesheet">
     <link rel="icon" href="assets/img/red_logo.png">
     {% if modernizr %}
       <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>

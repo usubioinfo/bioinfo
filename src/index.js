@@ -40,8 +40,17 @@ require('./rsc-routes')(app);
 
 // Pages
 app.get(baseUrl, (req, res) => {
-  res.render(__dirname + '/views/pages/index/index.njk');
+  res.render(__dirname + '/views/pages/home/home.njk');
 });
+
+app.get('/:topLevelPage', (req, res) => {
+  res.render(__dirname + `/views/pages/${req.params.topLevelPage}/${req.params.topLevelPage}.njk`);
+});
+
+app.get('/:topLevelPage/:midLevelPage', (req, res) => {
+  res.render(__dirname + `/views/pages/${req.params.topLevelPage}/${req.params.midLevelPage}/${req.params.midLevelPage}.njk`);
+});
+
 /*
 app.get(baseUrl, (req, res) => {
   res.render(__dirname + '/views/pages/index/index.njk');
