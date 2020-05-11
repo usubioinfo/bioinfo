@@ -38,106 +38,21 @@
             </a>
         </div>
         <ul class="nav navbar-nav navbar-right" id="menu-main-nav">
-            <li class="{{ activeRoute('Home', activePage) }}">
-                <a href="/" title="Home">Home</a>
-            </li>
-            <li class="dropdown {{ activeRoute('Research', activePage) }}">
-                <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#" title="Events" data-animations="zoomIn">Research
-                    <span class="caret"></span></a>
+          {% from "./_navbar-options.njk" import navOptions, calcDropdown, anchorGen %}
+          {% for option in navOptions %}
+            <li class="{{ calcDropdown(option.options)}} {{ activeRoute(option.name, activePage) }}">
+                {{ anchorGen(option.name, option.options, option.link) }}
+                {% if option.options %}
                 <ul class="dropdown-menu" role="menu">
-                    <li class="{{ activeSubroute('Lab Research', activeSubpage) }}">
-                        <a href="/research/lab-research" title="Lab Research">Lab Research</a>
+                  {% for subOption in option.options %}
+                    <li class="{{ activeSubroute(subOption.name, activeSubpage) }}">
+                        <a href="{{ subOption.link }}" title="{{ subOption.name }}">{{ subOption.name }}</a>
                     </li>
-                    <li class="{{ activeSubroute('Research Articles', activeSubpage) }}">
-                        <a href="/research/research-articles" title="Research Articles">Research Articles</a>
-                    </li>
+                  {% endfor %}
                 </ul>
+                {% endif %}
             </li>
-            <li class="dropdown {{ activeRoute('People', activePage) }}">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="/people" title="People" data-hover="dropdown" data-animations="zoomIn">People
-                    <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu" role="menu">
-                    <li class="{{ activeSubroute('Dr. Rakesh Kaundal', activeSubpage) }}">
-                        <a href="/people/rakesh" title="Dr Rakesh Kaundal">Dr. Rakesh Kaundal</a>
-                    </li>
-                    <li class="{{ activeSubroute('Our Team', activeSubpage) }}">
-                        <a href="/people/our-team" title="Our Team">Our Team</a>
-                    </li>
-                    <li class="{{ activeSubroute('Alumni', activeSubpage) }}">
-                        <a href="/people/alumni" title="Alumni">Alumni</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="dropdown {{ activeRoute('Publications', activePage) }}">
-                <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#" title="Publications" data-animations="zoomIn">Publications
-                    <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu" role="menu">
-                    <li>
-                        <a href="/publications/journal-articles" title="Journal Articles">Journal Articles</a>
-                    </li>
-                    <li>
-                        <a href="/publications/conferences" title="Conferences and Talks">Conferences and Talks</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="dropdown {{ activeRoute('Tools', activePage) }}">
-                <a href="events.html" class="dropdown-toggle" data-hover="dropdown" title="Tools" data-animations="zoomIn">Tools<span class="caret"></span></a>
-                <ul class=" dropdown-menu" role="menu">
-                    <li>
-                        <a href="http://bioinfo.usu.edu/deepHPI/" target="_blank" title="deepHPI">deepHPI</a>
-                    </li>
-                    <li>
-                        <a href="http://bioinfo.usu.edu/NECminer/" target="_blank" title="NECminer">NECminer</a>
-                    </li>
-                    <li>
-                        <a href="http://bioinfo.usu.edu/PredHPI/" target="_blank" title="PredHPI">PredHPI</a>
-                    </li>
-                    <li>
-                        <a href="http://bioinfo.usu.edu/GreeningDB/" target="_blank" title="GreeningDB">GreeningDB</a>
-                    </li>
-                    <li>
-                        <a href="http://bioinfo.usu.edu/citSATdb/" target="_blank" title="citSATdb">citSATdb</a>
-                    </li>
-                    <li>
-                        <a href="http://bioinfo.usu.edu/rtools/Plant-mSubP/" target="_blank" title="Plant-mSubP">Plant-mSubP</a>
-                    </li>
-                    <li>
-                        <a href="http://bioinfo.usu.edu/lacsubpred" target="_blank" title="LacSubPred">LacSubPred</a>
-                    </li>
-                    <li>
-                        <a href="http://bioinfo.usu.edu/ligpred" target="_blank" title="LigPred">LigPred</a>
-                    </li>
-                    <li>
-                        <a href="http://bioinfo.usu.edu/AP-iNET" target="_blank" title="Ap-iNet">AP-iNET</a>
-                    </li>
-                    <li>
-                        <a href="http://bioinfo3.noble.org/AtSubP/" target="_blank" title="AtSubP">AtSubP</a>
-                    </li>
-                    <li>
-                        <a href="http://bioinfo.usu.edu/PLpred/" target="_blank" title="PLpred">PLpred</a>
-                    </li>
-                    <li>
-                        <a href="http://www.imtech.res.in/raghava/rslpred/" target="_blank" title="RSLpred">RSLpred</a>
-                    </li>
-                    <li>
-                        <a href="http://www.imtech.res.in/raghava/rbpred/" target="_blank" title="RB-Pred">RB-Pred</a>
-                    </li>
-                    <li>
-                        <a href="http://bioinfo.usu.edu/legumeSSRdb/" target="_blank" title="deepHPI">legumeSSRdb</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="{{ activeRoute('Events', activePage) }}">
-                <a href="/events">Events</a>
-            </li>
-            <li class="{{ activeRoute('Contact', activePage) }}">
-                <a href="/contact" title="Future Member">Contact</a>
-            </li>
-            <li class="{{ activeRoute('News', activePage) }}">
-                <a href="/contact" title="News">News</a>
-            </li>
+          {% endfor %}
         </ul>
     </section>
 </article>
