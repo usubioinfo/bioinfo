@@ -45,11 +45,11 @@
                 <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#" title="Events" data-animations="zoomIn">Research
                     <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-                    <li>
-                        <a href="lab_research.html" title="Books">Research Page</a>
+                    <li class="{{ activeSubroute('Lab Research', activeSubpage) }}">
+                        <a href="/research/lab-research" title="Lab Research">Lab Research</a>
                     </li>
-                    <li class="">
-                        <a href="research_single.html?research=ai" title="Journal Articles">Research Single Page</a>
+                    <li class="{{ activeSubroute('Research Articles', activeSubpage) }}">
+                        <a href="/research/research-articles" title="Research Articles">Research Articles</a>
                     </li>
                 </ul>
             </li>
@@ -73,12 +73,12 @@
                 <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#" title="Publications" data-animations="zoomIn">Publications
                     <span class="caret"></span>
                 </a>
-                <ul class=" dropdown-menu" role="menu">
+                <ul class="dropdown-menu" role="menu">
                     <li>
-                        <a href="lab_journal.html" title="Journal Articles">Journal Articles</a>
+                        <a href="/publications/journal-articles" title="Journal Articles">Journal Articles</a>
                     </li>
                     <li>
-                        <a href="lab_conf-talk.html" title="Conferences and Talks">Conferences and Talks</a>
+                        <a href="/publications/conferences" title="Conferences and Talks">Conferences and Talks</a>
                     </li>
                 </ul>
             </li>
@@ -129,25 +129,14 @@
                     </li>
                 </ul>
             </li>
-
-            <li class="dropdown {{ activeRoute('Events', activePage) }}">
-                <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#" title="Events" data-animations="zoomIn">Events
-                    <span class="caret"></span>
-                </a>
-                <ul class=" dropdown-menu" role="menu">
-                    <li>
-                        <a href="lab_events.html" title="Books">Events Page</a>
-                    </li>
-                    <li>
-                        <a href="events_single.html?event=psc" title="Journal Articles">Events Single Page</a>
-                    </li>
-                </ul>
+            <li class="{{ activeRoute('Events', activePage) }}">
+                <a href="/events">Events</a>
             </li>
             <li class="{{ activeRoute('Contact', activePage) }}">
-                <a href="future_member.html" title="Future Member">Contact</a>
+                <a href="/contact" title="Future Member">Contact</a>
             </li>
             <li class="{{ activeRoute('News', activePage) }}">
-                <a href="news.html" title="News">News</a>
+                <a href="/contact" title="News">News</a>
             </li>
         </ul>
     </section>

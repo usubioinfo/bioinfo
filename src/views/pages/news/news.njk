@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<!--I can write -->
+{% from "universal/_header.njk" import header %}
+{{ header("news") }}
+
+<body class="auth-theme-rashmore">
+  {% from "universal/_navbar.njk" import navbar %}
+  {{ navbar("News") }}
+
+  <header class="sabbi-page-header page-header-lg">
+      <div class="page-header-content conternt-center">
+          <div class="header-title-block">
+              <h1 class="page-title">News</h1>
+          </div>
+      </div>
+  </header><!-- /.sabbi-page-header  -->
+  <div class="auth-breadcrumb-wrap">
+      <div class="container">
+          <ol class="breadcrumb sabbi-breadcrumb list-unstyled list-inline">
+              <li><a href="index.html">Home</a></li>
+              <li class="active">News</li>
+          </ol>
+      </div>
+  </div><!-- /.auth-breadcrumb-wrap -->
+  <section class="sabbi-section stage-future_member">
+  <div class="container"></div>
+
+<article class="container-fluid">
+<div class="row flex-row">
+
+  <!-- News - General -->
+  <article class="flex-col">
+    <div class="text-center col-header" style="font-size: 140%;"><b>General</b></div><br>
+    <section class="thumbnail news-item">
+      <div class="caption">
+        <h5 class="header">Naveen presents at International Plant Animal Genome Conference</h5>
+        <p class="desc">
+          Naveen presented a poster on citSatdb and gave an oral presentation on GreeningDB.
+        </p>
+      </div>
+    </section>
+
+    <section class="thumbnail news-item">
+      <div class="caption">
+        <h5 class="header">New HPC Admin: Shelby McCowan</h5>
+        <p class="desc">
+          Shelby McCowan has joined the team and will be taking over as the new HPC Admin.
+        </p>
+      </div>
+    </section>
+
+    <section class="thumbnail news-item">
+      <div class="caption">
+        <h5 class="header">New Graduate Research Assistant</h5>
+        <p class="desc">
+          Akshat Kumar has joined KAABiL as a new graduate research assistant.
+        </p>
+      </div>
+    </section>
+  </article>
+
+  <!-- News - Science -->
+  <article class="flex-col">
+    <div class="text-center col-header" style="font-size: 140%;"><b>Science</b></div><br>
+    <section>
+      <a class="thumbnail news-item" href="news-template.html">
+        <div class="caption">
+          <h5 class="header">deepHPI is Online!</h5>
+          <p class="desc">
+            To bolster and accelerate research on infectious disease, we have implemented deepHPI.
+            The deepHPI web server is a platform that uses Convolutional Neural Network (CNN)...
+          </p>
+        </div>
+      </a>
+    </section>
+
+    <section class="thumbnail news-item">
+      <div class="caption">
+        <h5 class="header">COVID-19 Tracker</h5>
+        <p class="desc">
+          KAABiL now has a dashboard for tracking global COVID-19 data
+        </p>
+      </div>
+    </section>
+  </article>
+
+  <!-- Blog -->
+  <article class="col-sm-3">
+    <div class="text-center col-header" style="font-size: 140%;"><b>Blog</b></div><br>
+    <section class="thumbnail news-item">
+      <img src="assets/kbl-img/blog.png" alt="...">
+      <div class="caption">
+        <h5 class="header">New Blog</h5>
+        <p class="desc">
+          KAABiL has a blog that we might write to one day.
+        </p>
+      </div>
+    </section>
+  </article>
+
+</div>
+</article>
+  </section>
+
+  {% include "universal/_footer.njk" %}
+  {% from "universal/_footer-scripts.njk" import scripts %}
+  {{ scripts() }}
+</body>
+
+</html>
