@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<!--I can write -->
+{% from "universal/_header.njk" import header %}
+{{ header("home") }}
+
+<body class="auth-theme-rashmore">
+    <header class="sabbi-site-head">
+        {% from "universal/_navbar.njk" import navbar %}
+        {{ navbar("Home") }}
+        {% include "./_head-carousel.njk" %}
+    </header><!-- /.sabbi-site-head -->
+
+    <section class="sabbbi-section home-info mt_35">
+        <div class="container">
+            <div class="row home-info-block-first">
+              {% include "./multi-carousel.njk" %}
+            </div>
+            <div class="row mt_30">
+                <div class="col-sm-4">
+                    <article class="news-card sabbi-thumlinepost-card solitude-bg__x">
+                        <h2 class="stage-title">Latest News:</h2>
+                        <ul class="list-unstyled lst_news_list" tabindex="0">
+                            <li class="lst_news_item">
+                                <h3 class="title mg_0"><a href="http://bioinfo.usu.edu/covidTracker/"
+                                        target="_blank">Covid 19 tracker built by KAABiL is online</i></a>
+                                </h3>
+                                <div>
+                                    <span class="date">April 10, 2020</span>
+                                </div>
+                            </li>
+                            <li class="lst_news_item">
+                                <h3 class="title mg_0"><a href="events_single.html">Host-pathogen interaction paper accepted in Briefings in Bioinformatics</a></h3>
+                                <div>
+                                    <span class="date">Nov 20, 2019</span>
+                                </div>
+                            </li>
+                            <li class="lst_news_item">
+                                <h3 class="title mg_0"><a href="https://doi.org/10.1093/aobpla/plz068"
+                                        target="_blank">Plant-mSubP subcellular localization tool accepted for
+                                        publication in <i>AoB Plants</i></a></h3>
+                                <div>
+                                    <span class="date">Oct 08, 2019</span>
+                                </div>
+                            </li>
+
+                        </ul>
+                        <a href="news.html" class="btn btn-unsolemn btn-action read-more">VIEW ALL</a>
+                    </article>
+                </div>
+                <div class="col-sm-4">
+                    <article class="sabbi-thumlinepost-card card-video solitude-bg__x">
+                        <figure class="sabbi-thumlinepost-card-figure">
+                            <a class="video-play" href="https://www.youtube.com/watch?v=r-Ay28WKFLY"
+                                data-toggle="lightbox"><img src="assets/img/rs_usu_winter.jpg" alt=""
+                                    class="img-responsive img-thumpost"></a>
+                            <figcaption>Dr. Kaundal's Remarkable Journey</figcaption>
+                        </figure>
+                        <h3 class="entry-title"><a href="#">Dr. Kaundal's Remarkable Journey</a></h3>
+                        <p class="entry-text">Our research have appeared in high-impact journals including <i>Briefings
+                                in Bioinformatics</i>, <i>Plant Physiology</i>, <i>Proteomics</i>, <i>AoB Plants</i>,
+                            and many others</p>
+                    </article>
+                </div>
+                <div class="col-sm-4">
+                    <article class="news-card sabbi-thumlinepost-card solitude-bg__x">
+                        <h2 class="stage-title">Latest Events:</h2>
+                        <ul class="list-unstyled lst_news_list" tabindex="0">
+                            <li class="lst_news_item">
+                                <h3 class="title mg_0"><a href="events_single.html?event=psc">PSC Showcase</a></h3>
+                                <div>
+                                    <span class="date">March 23, 2019</span>
+                                </div>
+                            </li>
+                            <li class="lst_news_item">
+                                <h3 class="title mg_0"><a href="events_single.html?event=rocky">Rocky Bioinformatics
+                                        Conference</a></h3>
+                                <div>
+                                    <span class="date">December 5-7, 2018</span>
+                                </div>
+                            </li>
+                            <li class="lst_news_item">
+                                <h3 class="title mg_0"><a href="events_single.html?event=osu">Won President's Cup at
+                                        OSU</a></h3>
+                                <div>
+                                    <span class="date">December 10, 2013</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="lab_events.html" class="btn btn-unsolemn btn-action read-more">VIEW ALL</a>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section><!-- /.home-info -->
+    <section class="section-brand_quickfact section">
+        <div class="container">
+            <div class="brand_quickfact-wrap">
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="brand_quickfact-content font-2 text-center">
+                                    <div class="brand_quickfact-count_value">20</div>
+                                    <div class="brand_quickfact-label">Journal Articles</div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="brand_quickfact-content font-2 text-center">
+                                    <div class="brand_quickfact-count_value">$1,524,048</div>
+                                    <div class="brand_quickfact-label">Grants Received</div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="brand_quickfact-content font-2 text-center">
+                                    <div class="brand_quickfact-count_value">7</div>
+                                    <div class="brand_quickfact-label">Research members</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include "./paper.njk" %}
+    {% include "./the-team.njk" %}
+
+    {% include "universal/_footer.njk" %}
+    {% from "universal/_footer-scripts.njk" import scripts %}
+    {{ scripts() }}
+</body>
+
+</html>

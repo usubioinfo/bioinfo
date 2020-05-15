@@ -1,0 +1,12 @@
+<!-- routeName: name of header, activeRoute: name of currently active route -->
+{% macro activeRoute(routeName, activeRoute) %}
+  {% if routeName === activeRoute %}
+    active
+  {% endif %}
+{% endmacro %}
+
+{% macro activeSubroute(routeName, activeSubroute) %}
+  {% if routeName === activeSubroute %}
+    active
+  {% endif %}
+{% endmacro %}

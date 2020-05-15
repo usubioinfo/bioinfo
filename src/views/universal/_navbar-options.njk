@@ -1,0 +1,84 @@
+{% set home = { name: "Home", options: [], link: "/" } %}
+
+{% set research = {
+  name: "Research",
+  options: [
+    {name: "Lab Research", link: "/research/lab-research"},
+    {name: "Research Articles", link: "/research/research-articles"}
+  ],
+  link: "#"
+  }
+%}
+
+{% set people = {
+  name: "People",
+  options: [
+    {name: "Dr. Rakesh Kaundal", link: "/people/rakesh"},
+    {name: "Our Team", link: "/people/our-team"},
+    {name: "Alumni", link: "/people/alumni"}
+  ],
+  link: "/people"
+  }
+%}
+
+{% set publications = {
+  name: "Publications",
+  options: [
+    {name: "Journal Articles", link: "/publications/journal-articles"},
+    {name: "Conferences and Talks", link: "/publications/conferences"}
+  ],
+  link: "#"
+  }
+%}
+
+{% set tools = {
+  name: "Tools",
+  options: [
+    {name: "deepHPI", link: "http://bioinfo.usu.edu/deepHPI/"},
+    {name: "NECminer", link: "http://bioinfo.usu.edu/NECminer/"},
+    {name: "PredHPI", link: "http://bioinfo.usu.edu/PredHPI/"},
+    {name: "GreeningDB", link: "http://bioinfo.usu.edu/GreeningDB/"},
+    {name: "citSATdb", link: "http://bioinfo.usu.edu/citSATdb/"},
+    {name: "Plant-mSubP", link: "http://bioinfo.usu.edu/rtools/Plant-mSubP/"},
+    {name: "LacSubPred", link: "http://bioinfo.usu.edu/lacsubpred/"},
+    {name: "LigPred", link: "http://bioinfo.usu.edu/ligpred/"},
+    {name: "AP-iNET", link: "http://bioinfo.usu.edu/AP-iNET/"},
+    {name: "AtSubP", link: "http://bioinfo3.noble.org/AtSubP/"},
+    {name: "PLpred", link: "http://bioinfo.usu.edu/PLpred/"},
+    {name: "RSLpred", link: "http://www.imtech.res.in/raghava/rslpred/"},
+    {name: "RB-Pred", link: "http://www.imtech.res.in/raghava/rbpred/"},
+    {name: "legumeSSRdb", link: "http://bioinfo.usu.edu/legumeSSRdb/"}
+  ],
+  link: "/tools"
+  }
+%}
+
+{% set events = { name: "Events", options: [], link: "/events" } %}
+{% set contact = { name: "Contact", options: [], link: "/contact" } %}
+{% set news = { name: "News", options: [], link: "/news" } %}
+
+{% set navOptions = [home, research, people, publications, tools, events, contact, news] %}
+
+{% macro calcDropdown(array) %}
+  {% if array.length %}
+    dropdown
+  {% endif %}
+{% endmacro %}
+
+{% macro anchorGen(name, array, link) %}
+  {% if array.length %}
+    <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="{{ link }}" title="{{ name }}" data-animations="zoomIn">
+      {{ name }} <span class="caret"></span>
+    </a>
+  {% else %}
+    <a href="{{ link }}" title="{{ name }}">{{ name }}</a>
+  {% endif %}
+{% endmacro %}
+
+{% macro toolAnchorGen(name, link, topLevelName) %}
+  {% if topLevelName === "Tools" %}
+    <a href="{{ link }}" title="{{ name }}" target="_blank" rel="noopener noreferrer">{{ name }}</a>
+  {% else %}
+    <a href="{{ link }}" title="{{ name }}">{{ name }}</a>
+  {% endif %}
+{% endmacro %}
