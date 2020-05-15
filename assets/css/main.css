@@ -79,6 +79,20 @@
   color: #2f2f2f;
 }
 
+.vl {
+  border-left: 1px solid #0f2439;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 85px;
+  /* position: absolute; */
+}
+
+.bottom-right {
+  /* position: absolute; */
+  bottom: 8px;
+  right: 16px;
+}
+
 .logo_text1 {
   color: #0f2439;
   /* background-image: url(https://media.giphy.com/media/Lr2xYGw6IMVofbjRSu/giphy.gif); */
@@ -87,4 +101,9 @@
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   /* color: white;
 text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+}
+
+.bio {
+  text-decoration: none;
+  color: #666666;
 }
