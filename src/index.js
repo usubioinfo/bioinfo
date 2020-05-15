@@ -11,7 +11,7 @@ const SetAsyncExtension = require('nunjucks-setasync');
 const resourceRoutes = require('./rsc-routes');
 
 const baseUrl = '/';
-const port = 3000;
+const port = 3010;
 
 const app = express();
 
