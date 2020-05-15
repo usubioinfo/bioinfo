@@ -4,19 +4,12 @@
    Author's custom styles
    ========================================================================== */
 
+.kbl-header {
+  background-image: url(/assets/img/old_main_contact.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.kbl-header.research {
+  background-image: url(/assets/img/events_slide.jpg)!important;
+}
