@@ -2417,34 +2417,3 @@ a.link-with-icon i.fa {
 .footer_text:hover a{
   color: #D30015;
 }
-
-/* Custom Button in this absolute mess of CSS */
-.navbar-button {
-  font-weight: 500!important;
-  cursor: pointer;
-  transition: all 0.25s!important;
-  color: #d30015!important;
-  border: solid 1px #d30015!important;
-  border-radius: 5px!important;
-  margin-left: 15px!important;
-  font-family: 'Montserrat', sans-serif!important;
-  padding: 7px 12px!important;
-}
-
-.navbar-button:hover {
-  background: #d30015!important;
-  color: white!important;
-}
-
-.navbar-nav {
-  margin-top: 11px!important;
-}
-
-/* typo is intentional, that's how the template creators spelt it... */
-.pfofile-social li a {
-  transition: all 0.25s;
-}
-
-.btn {
-  transition: all 0.3s!important;
-}
