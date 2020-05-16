@@ -1,4 +1,4 @@
 {
-  "ext": "njk, html, css, scss, js",
+  "ext": "njk, html, js",
   "ignore": ["node_modules"]
 }

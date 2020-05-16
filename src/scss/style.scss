@@ -1,0 +1,18 @@
+@import './colors';
+
+.kbl-btn {
+  font-weight: 500!important;
+  cursor: pointer;
+  transition: all 0.25s!important;
+  color: $color-primary!important;
+  border: solid 1px $color-primary!important;
+  border-radius: 5px!important;
+  margin-left: 15px!important;
+  font-family: 'Montserrat', sans-serif!important;
+  padding: 7px 12px!important;
+
+  &:hover {
+    background: $color-primary!important;
+    color: white!important;
+  }
+}

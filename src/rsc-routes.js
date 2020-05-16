@@ -3,7 +3,7 @@ const router = express.Router();
 const path = require('path');
 let baseUrl = require('./config/appcfg').baseUrl;
 
-assetsBaseUrl = baseUrl + 'assets/'
+const assetsBaseUrl = baseUrl + 'assets/'
 
 const baseFilePath = __dirname + '/../assets/'
 
