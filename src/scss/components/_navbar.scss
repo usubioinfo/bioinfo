@@ -1,0 +1,21 @@
+@import '../colors';
+@import '../globals';
+
+.nav-option {
+  font-weight: 500;
+  border-bottom: $transparent;
+  transition: $time-mid;
+  cursor: pointer;
+
+  color: $color-text-main!important;
+
+  font-size: 110%;
+
+  &:hover {
+    border-color: $color-primary;
+  }
+
+  & a {
+    color: $color-text-main!important;
+  }
+}

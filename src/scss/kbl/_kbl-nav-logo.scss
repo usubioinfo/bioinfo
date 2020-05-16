@@ -1,0 +1,36 @@
+@import '../colors';
+@import '../globals';
+
+.vl {
+  border-left: 1px solid #0f2439;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 85px;
+  /* position: absolute; */
+}
+
+.bottom-right {
+  /* position: absolute; */
+  bottom: 8px;
+  right: 16px;
+}
+
+.logo-heading {
+  color: #0d2d4d;
+  font-weight: 700;
+  letter-spacing: 12px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  line-height: 0.5;
+  margin-left: 85px;
+  padding-top: 28px;
+  font-size: 24px;
+  width: 310px;
+}
+
+.logo-text {
+  line-height: 1;
+  padding-top: 4px;
+  color:#044f9f;
+  font-size: 12px;
+  width: 310px;
+}
