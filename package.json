@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build-task:scss-compile": "node-sass-chokidar --source-map true src/scss/ -o assets/kbl-css",
-    "build-task:autoprefixer": "postcss dist/css/*.css --use autoprefixer -d assets/kbl-css",
+    "build-task:autoprefixer": "postcss assets/kbl-css/*.css --use autoprefixer -d assets/kbl-css",
     "sass:build": "npm-run-all -p build-task:*",
     "sass:watch": "chokidar 'src/scss/**/*.scss' -c 'npm run sass:build'",
     "dev-scss": "npm-run-all -p sass:*",
