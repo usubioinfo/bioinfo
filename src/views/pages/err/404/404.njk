@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+{% from "universal/_header.njk" import header %}
+{{ header() }}
+
+<body class="auth-theme-rashmore">
+  {% from "universal/_navbar.njk" import navbar %}
+  {{ navbar() }}
+
+  <a class="error-section" href="/">
+  <div class="mass-pad-y error-bg">
+    <h1 class="text-center">404 Error</h1><br><br>
+    <h4 class="text-center">
+      It looks like you've found a part of the site that exist. Click anywhere to go back.
+    </h4>
+  </div>
+</a>
+
+  {% include "universal/_footer.njk" %}
+  {% from "universal/_footer-scripts.njk" import scripts %}
+  {{ scripts() }}
+</body>
+
+</html>

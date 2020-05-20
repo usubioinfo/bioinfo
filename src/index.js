@@ -43,12 +43,18 @@ app.get(baseUrl, (req, res) => {
   res.render(__dirname + '/views/pages/home/home.njk');
 });
 
-app.get('/:topLevelPage', (req, res) => {
-  res.render(__dirname + `/views/pages/${req.params.topLevelPage}/${req.params.topLevelPage}.njk`);
+app.get('/:topLevelPage', (req, res, next) => {
+  res.render(__dirname + `/views/pages/${req.params.topLevelPage}/${req.params.topLevelPage}.njk`, (err, html) => {
+    if (err) return next(err);
+    res.send(html);
+  });
 });
 
-app.get('/:topLevelPage/:midLevelPage', (req, res) => {
-  res.render(__dirname + `/views/pages/${req.params.topLevelPage}/${req.params.midLevelPage}/${req.params.midLevelPage}.njk`);
+app.get('/:topLevelPage/:midLevelPage', (req, res, next) => {
+  res.render(__dirname + `/views/pages/${req.params.topLevelPage}/${req.params.midLevelPage}/${req.params.midLevelPage}.njk`, (err, html) => {
+    if (err) return next(err);
+    res.send(html);
+  });
 });
 
 /*
@@ -80,6 +86,11 @@ app.get(baseUrl + 'resources/:rscname', (req, res) => {
   res.render(__dirname + rscString);
 });
 */
+
+// Handle 404s
+app.use((err, req, res, next) => {
+  res.render(__dirname + '/views/pages/err/404/404.njk');
+});
 
 app.listen(port, () => {
   console.log('Backend started on port ' + port);

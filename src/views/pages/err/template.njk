@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+{% from "universal/_header.njk" import header %}
+{{ header() }}
+
+<body class="auth-theme-rashmore">
+  {% from "universal/_navbar.njk" import navbar %}
+  {{ navbar() }}
+
+
+
+  {% include "universal/_footer.njk" %}
+  {% from "universal/_footer-scripts.njk" import scripts %}
+  {{ scripts() }}
+</body>
+
+</html>
