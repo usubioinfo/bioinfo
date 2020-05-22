@@ -5,7 +5,6 @@ let importString = '';
 
 function printFile(file) {
   if (file.split('.').pop() === 'scss') {
-    console.log(file.split('/'));
     addToImportString(file);
   }
 }
@@ -29,12 +28,9 @@ function traverseDir(dir) {
         printFile(fullPath);
       }
    });
- }
-
-console.log(__dirname);
+}
 
 traverseDir(__dirname + '/views');
-console.log(importString);
 
 fs.writeFile(`${__dirname}/scss/pages/_importer.scss`, importString, (err) => {
   if (err) return console.log(err);
