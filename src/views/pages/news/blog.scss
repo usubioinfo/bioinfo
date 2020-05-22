@@ -1,7 +1,12 @@
 @import '../../../scss/colors';
 
 p.blog {
-  font-size: 140%;
+  $padding: 10px;
+
+  padding: $padding 15px;
+
+  font-size: 18px;
+  line-height: 34px;
   color: $color-text-main;
 }
 
@@ -14,4 +19,5 @@ h1.blog {
 
 .container-fluid.blog {
   background: #fff!important;
+  margin-bottom: 80px;
 }
