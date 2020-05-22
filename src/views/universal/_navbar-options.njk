@@ -77,8 +77,8 @@
 
 {% macro toolAnchorGen(name, link, topLevelName) %}
   {% if topLevelName === "Tools" %}
-    <a href="{{ link }}" title="{{ name }}" target="_blank" rel="noopener noreferrer">{{ name }}</a>
+    <a href="{{ link }}" title="{{ name }}" target="_blank" rel="noopener noreferrer" class="nav-suboption">{{ name }}</a>
   {% else %}
-    <a href="{{ link }}" title="{{ name }}">{{ name }}</a>
+    <a href="{{ link }}" title="{{ name }}" class="nav-suboption">{{ name }}</a>
   {% endif %}
 {% endmacro %}
