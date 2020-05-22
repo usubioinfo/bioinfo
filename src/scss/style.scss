@@ -5,3 +5,13 @@
 @import './export-components';
 @import './export-pages';
 @import './pages/importer';
+
+.flex-col {
+  flex: 1;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.flex-row {
+  display: flex;
+}
