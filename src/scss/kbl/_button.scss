@@ -2,7 +2,7 @@
 @import '../globals';
 
 @mixin kbl-btn-outline($btn-color, $btn-txt-color) {
-  font-weight: 500!important;
+  font-weight: 600!important;
   cursor: pointer;
   transition: $time-mid!important;
   color: $btn-txt-color!important;

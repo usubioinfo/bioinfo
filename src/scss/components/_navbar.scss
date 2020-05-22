@@ -2,14 +2,14 @@
 @import '../globals';
 
 .nav-option {
-  font-weight: 500;
+  font-weight: 600;
   border-bottom: $transparent;
   transition: $time-mid;
   cursor: pointer;
 
   color: $color-text-main!important;
 
-  font-size: 110%;
+  font-size: 112%!important;
 
   &:hover {
     border-color: $color-primary;

@@ -1,0 +1,13 @@
+@import '../../../scss/colors';
+
+p.blog {
+  font-size: 140%;
+  color: $color-text-main;
+}
+
+h1.blog {
+  $padding: 30px;
+  padding-top: $padding;
+  padding-bottom: $padding;
+  color: $color-text-main;
+}
