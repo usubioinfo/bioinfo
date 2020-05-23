@@ -3,23 +3,41 @@
 
 .nav-option {
   font-weight: 600;
-  border-bottom: $transparent;
+  border-bottom: 4px solid $transparent;
   transition: $time-mid;
   cursor: pointer;
+  font-family: "Montserrat", sans-serif;
 
-  color: $color-text-main!important;
+  color: $color-text-main;
 
-  font-size: 112%!important;
+  font-size: 105%;
+  padding-bottom: 12px;
 
   &:hover {
-    border-color: $color-primary;
+    border-bottom: 4px solid $color-primary!important;
   }
 
   & a {
-    color: $color-text-main!important;
+    color: $color-text-main;
   }
+}
+
+.current .nav-option {
+  border-bottom: 4px solid $color-primary!important;
 }
 
 .nav-suboption {
   font-weight: 500!important;
+  color: $color-text-main!important;
+  transition: $time-mid;
+
+  &:hover {
+    background: #ececec!important;
+    color: $color-primary!important;
+  }
+}
+
+.nav-dropdown {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
 }

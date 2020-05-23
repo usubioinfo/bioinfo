@@ -53,28 +53,6 @@
   color: #d43a49;
 }
 
-/* NEWS cards */
-.news-item {
-  transition: all 0.3s;
-  cursor: pointer;
-}
-
-.news-item:hover {
-  border-color: #e66767!important;
-}
-
-.news-item .header {
-  font-size: 130%;
-  font-weight: 700;
-}
-
-.news-item .desc {
-  font-size: 100%;
-  font-weight: 400;
-  color: #909090;
-  margin-top: 10px;
-}
-
 .col-header {
   color: #2f2f2f;
 }

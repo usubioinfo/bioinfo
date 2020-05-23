@@ -1,4 +1,5 @@
 @import '../../../scss/colors';
+@import '../../../scss/globals';
 
 h5.header {
   color: $color-text-main!important;
@@ -6,4 +7,35 @@ h5.header {
 
 .col-header {
   color: $color-text-main!important;
+}
+
+.news-item-container {
+  padding: 4px 15px;
+}
+
+.news-item {
+  border: 1px solid $color-border-gray;
+  border-radius: $btn-radius;
+  transition: $time-mid;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #e66767;
+  }
+
+  .header {
+    font-size: 130%;
+    font-weight: 700;
+  }
+
+  .desc {
+    font-size: 100%;
+    font-weight: 400;
+    color: #909090;
+    margin-top: 10px;
+  }
+
+  img {
+    border-radius: 10px!important;
+  }
 }

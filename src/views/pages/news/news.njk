@@ -1,16 +1,10 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
 <html class="no-js" lang="en">
-<!--<![endif]-->
-<!--I can write -->
 {% from "universal/_header.njk" import header %}
-{{ header() }}
+{{ header(bs4=true) }}
 
-<body class="auth-theme-rashmore">
-  {% from "universal/_navbar.njk" import navbar %}
+<body>
+  {% from "universal/_navbar-bs4.njk" import navbar %}
   {{ navbar("News") }}
 
   <header class="kbl-header sabbi-page-header page-header-lg">
@@ -78,26 +72,31 @@
       </div>
     </a>
 
-    <a class="thumbnail news-item" href="/news/covidtracker">
-      <div class="caption">
-        <h5 class="header">COVID-19 Tracker</h5>
-        <p class="desc">
-          KAABiL now has a dashboard for tracking global COVID-19 data
-        </p>
-      </div>
-    </a>
+    <section class="row news-item-container">
+      <a class="news-item col-xs-12" href="/news/covidtracker">
+        <div class="col-xs-3">
+          <img src="https://intermountainhealthcare.org/-/media/coronavirus-covid-19.jpg?la=en&h=286&w=300&mw=300&hash=CE04AC2D6DB0A5068DBB7D0CCEF7636A1C66C738" class="img-responsive col-xs-12">
+        </div>
+        <div class="col-xs-9">
+          <h5 class="header">COVID-19 Tracker</h5>
+          <p class="desc">
+            KAABiL now has a dashboard for tracking global COVID-19 data
+          </p>
+        </div>
+      </a>
+    </section>
   </article>
 
   <!-- Blog -->
-  <article class="col-sm-3">
+  <article class="col-sm-3 news-item-container">
     <div class="text-center col-header" style="font-size: 140%;">
       <b>Blog</b>
     </div>
 
     <br>
 
-    <section>
-      <a class="thumbnail news-item" href="/news/newblog">
+    <section class="row news-item-container">
+      <a class="news-item col-xs-12" href="/news/newblog">
         <img src="assets/kbl-img/blog.png" alt="...">
         <div class="caption">
           <h5 class="header">New Blog</h5>
@@ -115,7 +114,7 @@
 
   {% include "universal/_footer.njk" %}
   {% from "universal/_footer-scripts.njk" import scripts %}
-  {{ scripts() }}
+  {{ scripts(bs4=true) }}
 </body>
 
 </html>

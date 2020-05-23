@@ -1,4 +1,4 @@
-{% macro scripts(bs4=false) %}
+{% macro scripts(bs4=false, customJS=true) %}
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>
     window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.2.min.js"><\/script>')
@@ -14,13 +14,15 @@
 <script src="assets/tools/sequence/js/sequence.min.js"></script>
 <script src="assets/tools/intlTelInput/js/intlTelInput.js"></script>
 <script src="assets/tools/lightbox/ekko-lightbox.min.js"></script>
-<script src="assets/tools/dropdownhover/js/bootstrap-dropdownhover.min.js"></script>
+{% if not bs4 %}
+  <script src="assets/tools/dropdownhover/js/bootstrap-dropdownhover.min.js"></script>
+  <script src="assets/js/vendor/bootstrap.min.js"></script>
+{% endif %}
 <!-- site-spec -->
-<script src="assets/js/vendor/bootstrap.min.js"></script>
 <script src="assets/js/plugins.js"></script>
 <script src="assets/js/main.js"></script>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-
+{% if customJS %}
 <script>
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
     function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
@@ -260,4 +262,5 @@ cardImage[0].src = document.getElementById(personName).src
 
 }
 </script>
+{% endif %}
 {% endmacro %}

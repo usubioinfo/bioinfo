@@ -67,18 +67,18 @@
 
 {% macro anchorGen(name, array, link) %}
   {% if array.length %}
-    <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="{{ link }}" title="{{ name }}" data-animations="zoomIn">
+    <a class="dropdown-toggle nav-option" data-toggle="dropdown" data-hover="dropdown" href="{{ link }}" title="{{ name }}" data-animations="zoomIn">
       {{ name }} <span class="caret"></span>
     </a>
   {% else %}
-    <a href="{{ link }}" title="{{ name }}">{{ name }}</a>
+    <a href="{{ link }}" title="{{ name }}" class="nav-option">{{ name }}</a>
   {% endif %}
 {% endmacro %}
 
-{% macro toolAnchorGen(name, link, topLevelName) %}
+{% macro toolAnchorGen(name, link, topLevelName, extraClasses="") %}
   {% if topLevelName === "Tools" %}
-    <a href="{{ link }}" title="{{ name }}" target="_blank" rel="noopener noreferrer" class="nav-suboption">{{ name }}</a>
+    <a href="{{ link }}" title="{{ name }}" target="_blank" rel="noopener noreferrer" class="nav-suboption {{ extraClasses }}">{{ name }}</a>
   {% else %}
-    <a href="{{ link }}" title="{{ name }}" class="nav-suboption">{{ name }}</a>
+    <a href="{{ link }}" title="{{ name }}" class="nav-suboption {{ extraClasses }}">{{ name }}</a>
   {% endif %}
 {% endmacro %}

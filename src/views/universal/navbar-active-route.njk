@@ -10,3 +10,9 @@
     active
   {% endif %}
 {% endmacro %}
+
+{% macro currentRoute(routeName, activeRoute) %}
+  {% if routeName === activeRoute %}
+    current
+  {% endif %}
+{% endmacro %}
