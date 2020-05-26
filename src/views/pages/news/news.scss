@@ -18,14 +18,24 @@ h5.header {
   border-radius: $btn-radius;
   transition: $time-mid;
   cursor: pointer;
+  background: #fff!important;
 
   &:hover {
-    border-color: #e66767;
+    background: #eee!important;
+
+    .header {
+      color: $color-primary!important;
+    }
+
+    .desc {
+      color: #838383;
+    }
   }
 
   .header {
     font-size: 130%;
     font-weight: 700;
+    transition: $time-mid;
   }
 
   .desc {
@@ -33,9 +43,10 @@ h5.header {
     font-weight: 400;
     color: #909090;
     margin-top: 10px;
+    transition: $time-mid;
   }
 
   img {
-    border-radius: 10px!important;
+    border-radius: $btn-radius!important;
   }
 }

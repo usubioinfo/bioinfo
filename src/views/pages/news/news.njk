@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-{% set bs4 = false %}
+{% set bs4 = true %}
 <html class="no-js" lang="en">
 {% from "universal/_header.njk" import header %}
 {{ header(bs4=bs4) }}
 
 <body>
-  {% from "universal/_navbar.njk" import navbar %}
+  {% from "universal/_navbar-bs4.njk" import navbar %}
   {{ navbar("News") }}
 
   <header class="kbl-header sabbi-page-header page-header-lg">
@@ -18,99 +18,132 @@
   <div class="auth-breadcrumb-wrap">
       <div class="container">
           <ol class="breadcrumb sabbi-breadcrumb list-unstyled list-inline">
-              <li><a href="/">Home</a></li>
-              <li class="active">News</li>
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item active">News</li>
           </ol>
       </div>
   </div><!-- /.auth-breadcrumb-wrap -->
-  <section class="sabbi-section stage-future_member">
-  <div class="container"></div>
 
-<article class="container-fluid">
-<div class="row flex-row">
+  <article class="container-fluid py-5 mb-5">
+    <div class="row flex-row">
 
-  <!-- News - General -->
-  <article class="flex-col">
-    <div class="text-center col-header" style="font-size: 140%;"><b>General</b></div><br>
-    <section class="thumbnail news-item">
-      <div class="caption">
-        <h5 class="header">Naveen presents at International Plant Animal Genome Conference</h5>
-        <p class="desc">
-          Naveen presented a poster on citSatdb and gave an oral presentation on GreeningDB.
-        </p>
-      </div>
-    </section>
-
-    <section class="thumbnail news-item">
-      <div class="caption">
-        <h5 class="header">New HPC Admin: Shelby McCowan</h5>
-        <p class="desc">
-          Shelby McCowan has joined the team and will be taking over as the new HPC Admin.
-        </p>
-      </div>
-    </section>
-
-    <section class="thumbnail news-item">
-      <div class="caption">
-        <h5 class="header">New Graduate Research Assistant</h5>
-        <p class="desc">
-          Akshat Kumar has joined KAABiL as a new graduate research assistant.
-        </p>
-      </div>
-    </section>
-  </article>
-
-  <!-- News - Science -->
-  <article class="flex-col">
-    <div class="text-center col-header" style="font-size: 140%;"><b>Science</b></div><br>
-    <a class="thumbnail news-item" href="/news/newdeephpi">
-      <div class="caption">
-        <h5 class="header">deepHPI is Online!</h5>
-        <p class="desc">
-          To bolster and accelerate research on infectious disease, we have implemented deepHPI.
-          The deepHPI web server is a platform that uses Convolutional Neural Network (CNN)...
-        </p>
-      </div>
-    </a>
-
-    <section class="row news-item-container">
-      <a class="news-item col-xs-12" href="/news/covidtracker">
-        <!-- <img src="https://intermountainhealthcare.org/-/media/coronavirus-covid-19.jpg?la=en&h=286&w=300&mw=300&hash=CE04AC2D6DB0A5068DBB7D0CCEF7636A1C66C738"
-          class="img-responsive col-xs-3"> -->
-        <div class="col-xs-12">
-          <h5 class="header">COVID-19 Tracker</h5>
-          <p class="desc">
-            KAABiL now has a dashboard for tracking global COVID-19 data
-          </p>
+      <!-- News - General -->
+      <article class="col">
+        <div class="text-center col-header mb-4" style="font-size: 140%;">
+          <b>General</b>
         </div>
-      </a>
-    </section>
-  </article>
 
-  <!-- Blog -->
-  <article class="col-sm-3 news-item-container">
-    <div class="text-center col-header" style="font-size: 140%;">
-      <b>Blog</b>
+        <section class="row news-item-container">
+          <a class="news-item col-12" href="/news/deephpi">
+            <div class="row pl-0">
+              <div class="col-3 pl-0 my-auto">
+                <img src="/assets/img/events/IMG_20200113_151858.jpg" class="img-fluid">
+              </div>
+              <div class="col-9 pl-0 pt-3">
+                <h5 class="header">Naveen presents at International Plant Animal Genome Conference</h5>
+                <p class="desc">
+                  Naveen presented a poster on citSatdb and gave an oral presentation on GreeningDB.
+                </p>
+              </div>
+            </div>
+          </a>
+        </section>
+
+        <section class="row news-item-container">
+          <a class="news-item col-12" href="/news/deephpi">
+            <div class="row pl-0">
+              <div class="col-9 pt-3">
+                <h5 class="header">New HPC Admin: Shelby McCowan</h5>
+                <p class="desc">
+                  Shelby McCowan has joined the team and will be taking over as the new HPC Admin.
+                </p>
+              </div>
+              <div class="col-3 pr-0 my-auto">
+                <img src="/assets/img/profile/shelby.jpg" class="img-fluid">
+              </div>
+            </div>
+          </a>
+        </section>
+
+        <section class="row news-item-container">
+          <a class="news-item col-12" href="/news/deephpi">
+            <div class="row pl-0">
+              <div class="col-3 pl-0 my-auto">
+                <img src="/assets/img/profile/akshat.jpeg" class="img-fluid">
+              </div>
+              <div class="col-9 pl-0 pt-3">
+                <h5 class="header">New Graduate Research Assistant</h5>
+                <p class="desc">
+                  Akshat Kumar has joined KAABiL as a new graduate research assistant.
+                </p>
+              </div>
+            </div>
+          </a>
+        </section>
+      </article>
+
+      <!-- News - Science -->
+      <article class="col">
+        <div class="text-center col-header mb-4" style="font-size: 140%;">
+          <b>Science</b>
+        </div>
+
+        <section class="row news-item-container">
+          <a class="news-item col-12" href="/news/deephpi">
+            <div class="row pl-0">
+              <div class="col-3 pl-0 my-auto">
+                <img src="http://bioinfo.usu.edu/assets/img/events/PAG-2019/g2.jpg" class="img-fluid">
+              </div>
+              <div class="col-9 pl-0 pt-3">
+                <h5 class="header">deepHPI is Online!</h5>
+                <p class="desc">
+                  To bolster and accelerate research on infectious disease, we have implemented deepHPI.
+                  The deepHPI web server is a platform that uses Convolutional Neural Network (CNN)...
+                </p>
+              </div>
+            </div>
+          </a>
+        </section>
+
+        <section class="row news-item-container">
+          <a class="news-item col-12" href="/news/covidtracker">
+            <div class="row pl-0">
+              <div class="col-3 pl-0 my-auto">
+                <img src="https://intermountainhealthcare.org/-/media/coronavirus-covid-19.jpg?la=en&h=286&w=300&mw=300&hash=CE04AC2D6DB0A5068DBB7D0CCEF7636A1C66C738"
+                  class="img-fluid">
+              </div>
+              <div class="col-9 pl-0 pt-3">
+                <h5 class="header">COVID-19 Tracker</h5>
+                <p class="desc">
+                  KAABiL now has a dashboard for tracking global COVID-19 data
+                </p>
+              </div>
+            </div>
+          </a>
+        </section>
+      </article>
+
+      <!-- Blog -->
+      <article class="col-sm-3">
+        <div class="text-center col-header mb-4" style="font-size: 140%;">
+          <b>Blog</b>
+        </div>
+
+        <section class="row news-item-container">
+          <a class="news-item col-12" href="/news/newblog">
+            <img src="assets/kbl-img/blog.png" alt="...">
+            <div class="caption">
+              <h5 class="header">New Blog</h5>
+              <p class="desc">
+                KAABiL has a blog that we might write to one day.
+              </p>
+            </div>
+          </a>
+        </section>
+      </article>
+
     </div>
-
-    <br>
-
-    <section class="row news-item-container">
-      <a class="news-item col-xs-12" href="/news/newblog">
-        <img src="assets/kbl-img/blog.png" alt="...">
-        <div class="caption">
-          <h5 class="header">New Blog</h5>
-          <p class="desc">
-            KAABiL has a blog that we might write to one day.
-          </p>
-        </div>
-      </a>
-    </section>
   </article>
-
-</div>
-</article>
-  </section>
 
   {% include "universal/_footer.njk" %}
   {% from "universal/_footer-scripts.njk" import scripts %}
