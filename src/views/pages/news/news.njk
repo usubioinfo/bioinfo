@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% set bs4 = false %}
 <html class="no-js" lang="en">
 {% from "universal/_header.njk" import header %}
-{{ header(bs4=true) }}
+{{ header(bs4=bs4) }}
 
 <body>
-  {% from "universal/_navbar-bs4.njk" import navbar %}
+  {% from "universal/_navbar.njk" import navbar %}
   {{ navbar("News") }}
 
   <header class="kbl-header sabbi-page-header page-header-lg">
@@ -74,10 +75,9 @@
 
     <section class="row news-item-container">
       <a class="news-item col-xs-12" href="/news/covidtracker">
-        <div class="col-xs-3">
-          <img src="https://intermountainhealthcare.org/-/media/coronavirus-covid-19.jpg?la=en&h=286&w=300&mw=300&hash=CE04AC2D6DB0A5068DBB7D0CCEF7636A1C66C738" class="img-responsive col-xs-12">
-        </div>
-        <div class="col-xs-9">
+        <!-- <img src="https://intermountainhealthcare.org/-/media/coronavirus-covid-19.jpg?la=en&h=286&w=300&mw=300&hash=CE04AC2D6DB0A5068DBB7D0CCEF7636A1C66C738"
+          class="img-responsive col-xs-3"> -->
+        <div class="col-xs-12">
           <h5 class="header">COVID-19 Tracker</h5>
           <p class="desc">
             KAABiL now has a dashboard for tracking global COVID-19 data
@@ -114,7 +114,7 @@
 
   {% include "universal/_footer.njk" %}
   {% from "universal/_footer-scripts.njk" import scripts %}
-  {{ scripts(bs4=true) }}
+  {{ scripts(bs4=bs4) }}
 </body>
 
 </html>
