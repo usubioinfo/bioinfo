@@ -23,15 +23,15 @@
         </section>
         <section class="row">
           <div class="col-12 text-right">
-            {% from "./_navbar-options.njk" import navOptions, calcDropdown, anchorGen, toolAnchorGen %}
+            {% from "./_navbar-options.njk" import navOptions, calcDropdown, anchorGenBS4, toolAnchorGenBS4 %}
 
             {% for option in navOptions %}
               <span class="col {{ calcDropdown(option.options)}} {{ currentRoute(option.name, activePage) }}">
-                  {{ anchorGen(option.name, option.options, option.link) }}
+                  {{ anchorGenBS4(option.name, option.options, option.link) }}
                   {% if option.options %}
-                  <div class="dropdown-menu nav-dropdown mt-2">
+                  <div class="dropdown-menu bs4 nav-dropdown mt-2">
                     {% for subOption in option.options %}
-                     {{ toolAnchorGen(subOption.name, subOption.link, option.name, "dropdown-item nav-dropdown-item py-2 {{ activeSubroute(subOption.name, activeSubpage) }}") }}
+                     {{ toolAnchorGenBS4(subOption.name, subOption.link, option.name, "dropdown-item nav-dropdown-item py-2 {{ activeSubroute(subOption.name, activeSubpage) }}") }}
                     {% endfor %}
                   </div>
                   {% endif %}
