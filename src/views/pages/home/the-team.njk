@@ -10,13 +10,16 @@
                     <div class="card_st_fix">Rakesh is an Assistant Professor of Bioinformatics in the Department of Plants, Soils, and Climate at Utah State University,
                     and is the Director of Bioinformatics Facility at the Center for Integrated BioSystems, USU. He also...
                         <ul class="pfofile-social list-unstyled list-inline">
-                            <li><a target="_blank" href="https://orcid.org/0000-0001-8683-1240"> <img
-                                        src="assets/img/profile/social/gs.png" alt="sabbi-social"
-                                        class="img-responsive"></a></li>
-                            <li><a target="_blank"
-                                    href="https://scholar.google.com/citations?user=Vu1-tr8AAAAJ&hl=en&oi=ao"> <img
-                                        src="assets/img/profile/social/id.png" alt="sabbi-social"
-                                        class="img-responsive"></a></li>
+                            <li class="d-inline">
+                              <a target="_blank" href="https://orcid.org/0000-0001-8683-1240">
+                                <img src="assets/img/profile/social/gs.png" class="img-fluid">
+                              </a>
+                            </li>
+                            <li class="d-inline">
+                              <a target="_blank" href="https://scholar.google.com/citations?user=Vu1-tr8AAAAJ&hl=en&oi=ao">
+                                <img src="assets/img/profile/social/id.png" class="img-fluid">
+                              </a>
+                            </li>
                         </ul>
                         <div class="action-wrap" style="padding-bottom: 15px;"><a href="/people/rakesh"
                                 class=" btn-unsolemn btn-action read-more">Read More</a></div>
@@ -65,56 +68,19 @@
                 </div>
             </div>
         </div>
+        {% from "components/person-card.njk" import personCard %}
         <div class="row">
             <div class="col-md-3 col-sm-6">
-                <div class="profile-card profile-card-meta_center">
-                    <figure>
-                        <img class="img-responsive" style="height: 250px;"
-                            src="assets/img/profile/2.jpg"
-                            alt="sabbi-profile-pic">
-                        <figcaption>
-                            <h3 class="fig-title">Rousselene B. Larson</h3>
-                            <div class="fig-meta">Bioinformatics Scientist</div>
-                        </figcaption>
-                    </figure>
-                </div>
+              {{ personCard("assets/img/profile/2.jpg", "Rousselene B. Larson", "Bioinformatics Scientist") }}
             </div>
             <div class="col-md-3 col-sm-6">
-                <div class="profile-card profile-card-meta_center">
-                    <figure>
-                        <img class="img-responsive" style="height: 250px;" src="assets/img/profile/Kaige Zhang.jpg"
-                            alt="sabbi-profile-pic">
-                        <figcaption>
-                            <h3 class="fig-title">Kaige Zhang</h3>
-                            <div class="fig-meta">Research Assistant, Ph.D.</div>
-                        </figcaption>
-                    </figure>
-                </div>
+              {{ personCard("assets/img/profile/Kaige Zhang.jpg", "Kaige Zhang", "Research Assistant, PhD") }}
             </div>
             <div class="col-md-3 col-sm-6">
-                <div class="profile-card profile-card-meta_center">
-                    <figure>
-                        <img class="img-responsive" style="height: 250px;"
-                            src="assets/img/profile/loaiza orduz-cristian.jpg"
-                            alt="sabbi-profile-pic">
-                        <figcaption>
-                            <h3 class="fig-title">Cristian D. Loaiza</h3>
-                            <div class="fig-meta">MS Student | PSC</div>
-                        </figcaption>
-                    </figure>
-                </div>
+              {{ personCard("assets/img/profile/loaiza orduz-cristian.jpg", "Cristian D. Loaiza", "MS Student | PSC") }}
             </div>
             <div class="col-md-3 col-sm-6">
-                <div class="profile-card profile-card-meta_center">
-                    <figure>
-                        <img class="img-responsive" style="height: 250px;" src="assets/img/profile/1.jpg"
-                            alt="sabbi-profile-pic">
-                        <figcaption>
-                            <h3 class="fig-title">Naveen Duhan</h3>
-                            <div class="fig-meta">Ph.D. Student | PSC</div>
-                        </figcaption>
-                    </figure>
-                </div>
+              {{ personCard("assets/img/profile/1.jpg", "Naveen Duhan", "PhD Student | PSC") }}
             </div>
         </div>
         <div class="action-wrap text-right-sm">

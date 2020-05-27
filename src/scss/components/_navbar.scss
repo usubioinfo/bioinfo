@@ -1,6 +1,9 @@
 @import '../colors';
 @import '../globals';
 
+nav.bs4 {
+  border-bottom: 1px solid #dedede;
+}
 
 .bs4.nav-option {
   font-weight: 600;
@@ -9,13 +12,13 @@
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
 
-  color: $color-text-main;
+  color: $color-text-main!important;
 
-  font-size: 105%;
+  font-size: 100%;
   padding-bottom: 12px;
 
   &:hover {
-    border-bottom: 4px solid $color-primary!important;
+    border-bottom: 4px solid $color-primary-bg!important;
   }
 
   & a {

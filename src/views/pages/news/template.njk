@@ -1,5 +1,6 @@
 {% macro newsPage(title='DEFAULT', fileName='', linkName='') %}
 {% set file = "pages/news/" + fileName + "/content.njk" %}
+{% set bs4 = true %}
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -9,15 +10,15 @@
   <!--<![endif]-->
   <!--I can write -->
   {% from "universal/_header.njk" import header %}
-  {{ header() }}
+  {{ header(bs4=bs4) }}
 
-  <body class="auth-theme-rashmore">
-    {% from "universal/_navbar.njk" import navbar %}
+  <body>
+    {% from "universal/_navbar-bs4.njk" import navbar %}
     {{ navbar("News") }}
 
     <div class="container-fluid blog" style="margin-top: 103px;">
-      <div class="row">
-        <div class="col-xs-6 col-xs-offset-3">
+      <div class="row justify-content-center">
+        <div class="col-6">
           <h1 class="text-center blog">{{ title }}</h1>
           {% include (file) %}
         </div>
@@ -26,7 +27,7 @@
 
     {% include "universal/_footer.njk" %}
     {% from "universal/_footer-scripts.njk" import scripts %}
-    {{ scripts() }}
+    {{ scripts(bs4=bs4) }}
   </body>
 </html>
 {% endmacro %}

@@ -3,15 +3,15 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!-->
+{% set bs4 = true %}
 <html class="no-js" lang="en">
 <!--<![endif]-->
-<!--I can write -->
 {% from "universal/_header.njk" import header %}
-{{ header("home", scss=true) }}
+{{ header("home", scss=true, bs4=bs4) }}
 
 <body class="auth-theme-rashmore">
     <header class="sabbi-site-head">
-        {% from "universal/_navbar.njk" import navbar %}
+        {% from "universal/_navbar-bs4.njk" import navbar %}
         {{ navbar("Home") }}
         {% include "./_head-carousel.njk" %}
     </header><!-- /.sabbi-site-head -->
@@ -57,10 +57,13 @@
                     <article class="sabbi-thumlinepost-card card-video solitude-bg__x">
                         <figure class="sabbi-thumlinepost-card-figure">
                             <a class="video-play" href="https://www.youtube.com/watch?v=r-Ay28WKFLY"
-                                data-toggle="lightbox"><img src="assets/img/rs_usu_winter.jpg" alt=""
-                                    class="img-responsive img-thumpost"></a>
+                                data-toggle="modal" data-target="#videoModal"><img src="assets/img/rs_usu_winter.jpg" alt=""
+                                    class="img-fluid img-thumpost"></a>
                             <figcaption>Dr. Kaundal's Remarkable Journey</figcaption>
                         </figure>
+                        <div class="modal fade" id="videoModal" tabindex="-1">
+                          {% include "./video-modal.njk" %}
+                        </div>
                         <h3 class="entry-title"><a href="#">Dr. Kaundal's Remarkable Journey</a></h3>
                         <p class="entry-text">Our research have appeared in high-impact journals including <i>Briefings
                                 in Bioinformatics</i>, <i>Plant Physiology</i>, <i>Proteomics</i>, <i>AoB Plants</i>,
@@ -134,7 +137,7 @@
 
     {% include "universal/_footer.njk" %}
     {% from "universal/_footer-scripts.njk" import scripts %}
-    {{ scripts() }}
+    {{ scripts(bs4=bs4) }}
 </body>
 
 </html>

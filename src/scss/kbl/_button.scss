@@ -1,23 +1,54 @@
 @import '../colors';
 @import '../globals';
 
-@mixin kbl-btn-outline($btn-color, $btn-txt-color) {
+@mixin kbl-button {
   font-weight: 600!important;
   cursor: pointer;
   transition: $time-mid!important;
-  color: $btn-txt-color!important;
-  border: solid 1px $btn-color!important;
   border-radius: $btn-radius!important;
-  margin-left: 15px!important;
   font-family: 'Montserrat', sans-serif!important;
   padding: 7px 12px!important;
+}
+
+@mixin kbl-btn-outline($btn-color, $btn-txt-color) {
+  @include kbl-button;
+
+  color: $btn-txt-color!important;
+  border: solid 1px $btn-color!important;
 
   &:hover {
     background: $btn-color!important;
     color: white!important;
   }
+
+  &:focus {
+    text-decoration: none;
+    background: $btn-color!important;
+    color: white!important;
+  }
+}
+
+@mixin kbl-btn-solid($btn-color, $btn-txt-color, $btn-hvr-color) {
+  @include kbl-button;
+
+  background: $btn-color;
+  color: $btn-txt-color;
+
+  &:hover {
+    background: $btn-hvr-color;
+    color: #fff!important;
+  }
+
+  &:focus {
+    background: $btn-hvr-color;
+    color: #fff!important;
+  }
 }
 
 .kbl-btn-1 {
   @include kbl-btn-outline($color-primary, $color-primary);
+}
+
+.kbl-btn-1-solid {
+  @include kbl-btn-solid($color-primary, #fff, $color-primary-dark);
 }

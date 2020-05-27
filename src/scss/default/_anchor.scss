@@ -1,0 +1,25 @@
+@import '../globals';
+@import '../colors';
+
+a.kbl-link {
+  color: $color-primary!important;
+  border-bottom: 1px solid rgba(#fff, 0)!important;
+  text-decoration: none!important;
+  transition: $time-mid;
+
+  &:hover:not(:focus) {
+    border-color: $color-primary!important;
+    text-decoration: none!important;
+  }
+
+  &:hover {
+    border-color: $color-primary!important;
+    text-decoration: none!important;
+  }
+
+  &:focus {
+    color: $color-primary-dark!important;
+    border-color: $color-primary-dark;
+    text-decoration: none!important;
+  }
+}

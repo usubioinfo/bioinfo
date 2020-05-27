@@ -5,6 +5,7 @@
 @import './export-components';
 @import './export-pages';
 @import './pages/importer';
+@import './default/export';
 
 .flex-col {
   flex: 1;
@@ -27,4 +28,23 @@ body {
   .footer-bar {
     background: #fff!important;
   }
+}
+
+.kbl-top {
+  margin-top: $navbar-height!important;
+}
+
+.header-icon-wrapper {
+  h1, h2, h3, h4, h5, h6, p {
+    color: $color-text-main!important;
+  }
+}
+
+::selection {
+  background: $color-primary-light;
+  color: #fff;
+}
+::-moz-selection {
+  background: $color-primary-light;
+  color: #fff;
 }

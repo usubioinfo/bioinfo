@@ -1,0 +1,21 @@
+@import '../colors';
+@import '../globals';
+
+.kbl-person-card {
+  background: $color-bg-gray;
+  border-radius: $border-radius;
+  word-wrap: break-word;
+  width: 220px;
+
+  .card-title {
+    font-weight: $font-weight-heavy;
+    font-size: 110%;
+    color: $color-text-main;
+  }
+
+  .card-subtitle {
+    font-weight: $font-weight-medium;
+    font-size: 95%;
+    color: $color-text-soft;
+  }
+}

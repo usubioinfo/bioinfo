@@ -1,0 +1,39 @@
+@import '../colors';
+@import '../globals';
+
+@mixin kbl-form-base {
+  border-radius: $border-radius;
+  transition: $time-slow;
+  box-shadow: none;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin: 10px 0;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+@mixin kbl-form {
+  @include kbl-form-base;
+
+  border: 1px solid $color-border-gray;
+
+  &:hover:not(:focus) {
+    border-color: $color-primary-very-light!important;
+  }
+
+  &:focus {
+    border-color: $color-primary;
+  }
+}
+
+input.kbl-form {
+  @include kbl-form;
+  padding: 5px 10px!important;
+}
+
+textarea.kbl-form {
+  @include kbl-form;
+  padding: 10px 10px!important;
+}

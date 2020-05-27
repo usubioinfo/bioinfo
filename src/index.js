@@ -6,6 +6,14 @@ const path = require('path');
 const nunjucks = require('nunjucks');
 const sass = require('node-sass-middleware');
 const SetAsyncExtension = require('nunjucks-setasync');
+const rateLimit = require('express-rate-limit');
+
+// Prevent DDoS
+// This should be done on every application at KAABiL regardless of how much traffic we get
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100
+});
 
 // Routes
 const resourceRoutes = require('./rsc-routes');
@@ -89,6 +97,7 @@ app.get(baseUrl + 'resources/:rscname', (req, res) => {
 
 // Handle 404s
 app.use((err, req, res, next) => {
+  console.log(err);
   res.render(__dirname + '/views/pages/err/404/404.njk');
 });
 
