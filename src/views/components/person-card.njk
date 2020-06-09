@@ -1,11 +1,75 @@
 {% macro personCard(img="", name="", subtitle="") %}
-  <div class="kbl-person-card">
-    <figure>
-      <img class="w-100 mb-2" style="height: 250px;" src="{{ img }}" alt="sabbi-profile-pic">
-      <figcaption class="pb-2">
-        <div class="card-title px-3 mb-0">{{ name }}</div>
-        <div class="card-subtitle px-3">{{ subtitle }}</div>
-      </figcaption>
-    </figure>
+  <div class="kbl-person-card-container">
+    <div class="kbl-person-card">
+      <figure>
+        <img class="w-100 mb-2" style="height: 250px;" src="{{ img }}" alt="sabbi-profile-pic">
+        <figcaption class="pb-2">
+          <div clas="title-wrapper">
+            <div class="card-title px-3 mb-0">{{ name }}</div>
+            <div class="card-subtitle px-3">{{ subtitle }}</div>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
   </div>
+{% endmacro %}
+
+{% macro personCardModal(person) %}
+  <div class="kbl-person-card-container">
+    <div class="kbl-person-card select text-left" data-toggle="modal" data-target="#{{ person.modifier }}Modal">
+      <figure>
+        <img class="w-100 mb-2" style="height: 250px;" src="{{ person.img }}">
+        <figcaption class="pb-2 text-left px-3">
+          <div class="title-wrapper">
+            <div class="card-title mb-0">{{ person.name }}</div>
+            <div class="card-subtitle">{{ person.subtitle }}</div>
+          </div>
+          <span class="kbl-social-wrapper">
+            {% for media in person.social %}
+              {{ socialSet(media) }}
+            {% endfor %}
+          </span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="modal fade" id="{{ person.modifier }}Modal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <section class="modal-header">
+          <div class="container-fluid text-left">
+            <h4 class="modal-title" style="flex-basis: 100%;">{{ person.name }}</h4>
+            <h6 class="modal-subtitle" style="flex-basis: 100%;">{{ person.subtitle }}</h6>
+          </div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </section>
+        <section class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-4">
+                <img class="w-100 mb-2 modal-img" style="height: 250px;" src="{{ person.img }}">
+              </div>
+              <p class="col-8 text-left">
+                {{ person.bio }}
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="modal-footer" style="justify-content: start;">
+          <span>{{ person.email }}</span>
+        </section>
+      </div>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro socialSet(social) %}
+  {% if social.type === "twitter" %}
+    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener"><ion-icon name="logo-twitter"></ion-icon></a>
+  {% elif social.type === "linkedin" %}
+    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener"><ion-icon name="logo-linkedin"></ion-icon></a>
+  {% endif %}
 {% endmacro %}

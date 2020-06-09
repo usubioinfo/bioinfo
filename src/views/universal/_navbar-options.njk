@@ -3,10 +3,9 @@
 {% set research = {
   name: "Research",
   options: [
-    {name: "Lab Research", link: "/research/lab-research"},
     {name: "Research Articles", link: "/research/research-articles"}
   ],
-  link: "#"
+  link: "/research"
   }
 %}
 
@@ -81,6 +80,14 @@
     <a href="{{ link }}" title="{{ name }}" target="_blank" rel="noopener noreferrer" class="nav-suboption {{ extraClasses }}">{{ name }}</a>
   {% else %}
     <a href="{{ link }}" title="{{ name }}" class="nav-suboption {{ extraClasses }}">{{ name }}</a>
+  {% endif %}
+{% endmacro %}
+
+{% set headers = ["Tools", "People", "Research"] %}
+
+{% macro genHeaderLink(title="", link="") %}
+  {% if headers.includes(title) %}
+    <h6 class="dropdown-header"><a href="{{ link }}">{{ title }}</h6>
   {% endif %}
 {% endmacro %}
 

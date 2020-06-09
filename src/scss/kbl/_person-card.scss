@@ -1,11 +1,13 @@
 @import '../colors';
 @import '../globals';
 
+$card-width: 220px;
+
 .kbl-person-card {
   background: $color-bg-gray;
   border-radius: $border-radius;
   word-wrap: break-word;
-  width: 220px;
+  width: $card-width;
 
   .card-title {
     font-weight: $font-weight-heavy;
@@ -18,4 +20,27 @@
     font-size: 95%;
     color: $color-text-soft;
   }
+
+  &.select {
+    cursor: pointer;
+    transition: $time-mid;
+
+    &:hover {
+      background: $color-primary-bg;
+    }
+  }
+}
+
+.kbl-person-card-container {
+  border-radius: $border-radius;
+  overflow: hidden;
+  width: $card-width;
+}
+
+.modal-img {
+  width: 210px;
+}
+
+.modal-subtitle {
+  color: $color-text-soft;
 }

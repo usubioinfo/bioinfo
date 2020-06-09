@@ -20,6 +20,7 @@
 
 body {
   color: $color-text-main;
+  overflow-x: hidden;
 }
 
 .section-footer {
@@ -32,11 +33,25 @@ body {
 
 .kbl-top {
   margin-top: $navbar-height!important;
+  padding-left: 0!important;
+  padding-right: 0!important;
+  background: $color-bg-gray;
 }
 
 .header-icon-wrapper {
   h1, h2, h3, h4, h5, h6, p {
     color: $color-text-main!important;
+  }
+}
+
+.kbl-social-wrapper a {
+  font-size: 150%!important;
+  color: $color-primary-light!important;
+  transition: $time-mid;
+  margin-right: 5px;
+
+  &:hover {
+    color: $color-primary!important;
   }
 }
 

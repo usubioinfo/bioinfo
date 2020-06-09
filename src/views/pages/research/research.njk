@@ -1,53 +1,53 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
+{% set bs4 = true %}
 <html class="no-js" lang="en">
-<!--<![endif]-->
-<!--I can write -->
-{% from "universal/_header.njk" import header %}
-{{ header("lab_research") }}
 
-<body class="auth-theme-rashmore">
-  {% from "universal/_navbar.njk" import navbar %}
+{% from "universal/_header.njk" import header %}
+{{ header("lab_research", bs4=bs4) }}
+
+<body>
+  {% from "universal/_navbar-bs4.njk" import navbar %}
   {{ navbar("Research", "Lab Research") }}
 
-  <header class="sabbi-page-header-classic3 sabbi-page-header-team page-header-lg">
-      <div class="page-header-content conternt-center">
-          <div class="header-title-block">
-              <h1 class="page-title">Research</h1>
-          </div>
+  <!--
+  {% from "components/img-header2.njk" import imgHeader2 %}
+  {{ imgHeader2("Research", "sabbi-page-header-classic3 sabbi-page-header-team page-header-lg") }}
+
+  {% from "components/breadcrumb.njk" import breadcrumb %}
+  {{ breadcrumb([ {name: "Home", location: "/"}, {name: "Research", location: ""} ]) }}
+-->
+
+  <article class="container-fluid kbl-top">
+    <div class="row justify-content-center pt-4">
+      <div class="col-auto">
+        <h1><ion-icon name="flask-outline" class="kbl-header-icon"></ion-icon></h1>
       </div>
-  </header>
-  <div class="auth-breadcrumb-wrap">
-      <div class="container">
-          <ol class="sabbi-breadcrumb breadcrumb">
-              <li><a href="index.html">Home</a></li>
-              <li class="active">Lab Research</li>
-          </ol>
+      <div class="col-auto pt-3 header-icon-wrapper">
+        <h1>Research</h1>
+        <h6>
+          Everything happening in our lab, and more!
+        </h6>
       </div>
-  </div><!-- /.auth-breadcrumb-wrap -->
+    </div>
+  </article>
+
   <main class="sabbi-page-wrap">
       <div class="container">
           <section class="page-appellation">
               <div class="row">
-                  <!-- <div class="col-sm-5">
-                              <h1>COMING SOON</h1>
-                              <hr>
-                              <p id="demo" style="font-size:30px"></p>
-                      </div> -->
                   <div class="col-sm-5 col-md-4">
                       <div class="page_piky-title">
                           <h2 class="page-title font-md lil-line">Dr. Kaundal's research: <i>information to inference</i> in OMICS data science</h2>
                       </div>
                   </div>
                   <div class="col-sm-7 col-md-7 col-md-offset-1">
-                      <p class="page_piky-text">Biological data are accumulating faster than people’s capacity to analyze them. Our research interests and goals revolve
-                      around mitigating these bigdata issues in the context of “<i>information to inference</i>” scope. At USU, Dr. Kaundal has developed an <b>independent</b> and <b>collaborative</b>
-                      research program in bioinformatics, primarily focusing on computational mining of large multi-dimensional -<i>omics</i> datasets, and computational modeling using
-                      supervised (Machine Learning) and unsupervised (Bayesian-based) learning. Our group is actively developing novel tools and software to apply the gained knowledge
-                      towards organismal improvement. Research in KAABiL laboratory generally falls under the following major program objectives:</p>
+                      <p class="page_piky-text">
+                        Biological data is accumulating faster than people’s capacity to analyze them. Our research interests and goals revolve
+                        around mitigating this issue in the context of “<i>information to inference</i>” scope. At USU, Dr. Kaundal has developed an <b>independent</b> and <b>collaborative</b>
+                        research program in bioinformatics, primarily focusing on computational mining of large multi-dimensional -<i>omics</i> datasets, and computational modeling using
+                        supervised (Machine Learning) and unsupervised (Bayesian-based) learning. Our group is actively developing novel tools and software to apply the gained knowledge
+                        towards organismal improvement. Research in KAABiL laboratory generally falls under the following major program objectives:
+                      </p>
                   </div>
               </div>
           </section>
@@ -216,7 +216,7 @@
 
   {% include "universal/_footer.njk" %}
   {% from "universal/_footer-scripts.njk" import scripts %}
-  {{ scripts() }}
+  {{ scripts(bs4=bs4) }}
 </body>
 
 </html>

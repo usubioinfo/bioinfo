@@ -6,28 +6,35 @@
 <html class="no-js" lang="en">
 <!--<![endif]-->
 <!--I can write -->
+{% set bs4 = true %}
 {% from "universal/_header.njk" import header %}
-{{ header("lab_events") }}
+{{ header("lab_events", bs4=bs4) }}
 
 <body class="auth-theme-rashmore">
-  {% from "universal/_navbar.njk" import navbar %}
+  {% from "universal/_navbar-bs4.njk" import navbar %}
   {{ navbar("Events") }}
 
-  <header class="kbl-header sabbi-page-header page-header-lg">
-      <div class="page-header-content conternt-center">
-          <div class="header-title-block">
-              <h1 class="page-title">Events</h1>
-          </div>
+  <!--
+  {% from "components/img-header.njk" import imgHeader %}
+  {{ imgHeader("Events") }}
+
+  {% from "components/breadcrumb.njk" import breadcrumb %}
+  {{ breadcrumb([ {name: "Home", location: "/"}, {name: "Events", location: ""} ]) }}
+-->
+  <article class="container-fluid kbl-top">
+    <div class="row justify-content-center pt-4">
+      <div class="col-auto">
+        <h1><ion-icon name="megaphone-outline" class="kbl-header-icon"></ion-icon></h1>
       </div>
-  </header>
-  <div class="auth-breadcrumb-wrap">
-      <div class="container">
-          <ol class="breadcrumb sabbi-breadcrumb list-unstyled list-inline">
-              <li><a href="index.html">Home</a></li>
-              <li class="active"><a href="#">Events</a></li>
-          </ol>
+      <div class="col-auto pt-3 header-icon-wrapper">
+        <h1>Events</h1>
+        <h6>
+          What's coming up?
+        </h6>
       </div>
-  </div><!-- /.auth-breadcrumb-wrap -->
+    </div>
+  </article>
+
   <section class="sabbi-section stage_events_post">
       <div class="container">
           <div class="events_post-sagment tabcontent" id="20">
@@ -233,7 +240,7 @@
 
   {% include "universal/_footer.njk" %}
   {% from "universal/_footer-scripts.njk" import scripts %}
-  {{ scripts() }}
+  {{ scripts(bs4=bs4) }}
 </body>
 
 </html>
