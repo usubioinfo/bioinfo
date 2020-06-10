@@ -19,7 +19,7 @@ const limiter = rateLimit({
 const resourceRoutes = require('./rsc-routes');
 
 const baseUrl = '/';
-const port = 3010;
+const port = 3000;
 
 const app = express();
 
