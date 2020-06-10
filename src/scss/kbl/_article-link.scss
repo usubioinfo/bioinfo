@@ -1,0 +1,37 @@
+@import '../colors';
+@import '../globals';
+
+.kbl-article-link {
+  transition: $time-mid;
+  border: 1px solid $color-primary-very-light;
+  border-radius: $border-radius;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $color-primary;
+
+    .link-icon, .title {
+      color: $color-primary;
+    }
+  }
+}
+
+.kbl-article-link .content-wrapper {
+  padding: 20px 10px!important;
+}
+
+.kbl-article-link {
+  .link-icon, .title {
+    transition: $time-fast;
+    color: $color-text-main;
+  }
+}
+
+.kbl-article-link .link-icon {
+  font-size: 350%!important;
+}
+
+.kbl-article-link .title {
+  font-size: 110%!important;
+  font-weight: $font-weight-medium!important;
+}
