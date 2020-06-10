@@ -53,3 +53,8 @@ nav.bs4 {
   color: $color-primary!important;
   font-size: inherit!important;
 }
+
+.dropdown-item:active {
+  background: $color-bg-main!important;
+  background-color: $color-bg-main!important;
+}

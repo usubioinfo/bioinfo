@@ -102,12 +102,6 @@
   background-image: linear-gradient(rgb(15, 36, 57), rgb(15, 36, 57));
 }
 
-h4 {
-  padding: 100px 0;
-  font: 44px "Arial";
-  text-align: center;
-}
-
 .fancy-header h4 {
   color: white;
 }
