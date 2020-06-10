@@ -23,10 +23,9 @@
 {% set publications = {
   name: "Publications",
   options: [
-    {name: "Journal Articles", link: "/publications/journal-articles"},
     {name: "Conferences and Talks", link: "/publications/conferences"}
   ],
-  link: "#"
+  link: "publications"
   }
 %}
 
@@ -83,11 +82,11 @@
   {% endif %}
 {% endmacro %}
 
-{% set headers = ["Tools", "People", "Research"] %}
+{% set headers = ["Tools", "People", "Research", "Publications"] %}
 
 {% macro genHeaderLink(title="", link="") %}
   {% if headers.includes(title) %}
-    <h6 class="dropdown-header"><a href="{{ link }}">{{ title }}</h6>
+    <a href="{{ link }}" class="dropdown-item"><h4 class="dropdown-header">{{ title }}</h4></a>
   {% endif %}
 {% endmacro %}
 

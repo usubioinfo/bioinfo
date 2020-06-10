@@ -42,12 +42,15 @@
             {% from "./_navbar-options.njk" import navOptions, calcDropdown, anchorGen, toolAnchorGen %}
 
             {% for option in navOptions %}
-              <li class="nav-option {{ calcDropdown(option.options)}} {{ activeRoute(option.name, activePage) }}">
+              {% set dropdownCalc = calcDropdown(option.options) %}
+              {% set activeRouteClass = activeRoute(option.name, activePage) %}
+              <li class="nav-option {{ dropdownCalc }} {{ activeRouteClass }}">
                   {{ anchorGen(option.name, option.options, option.link) }}
                   {% if option.options %}
                   <ul class="dropdown-menu" role="menu">
                     {% for subOption in option.options %}
-                      <li class="{{ activeSubroute(subOption.name, activeSubpage) }}">
+                      {% set activeSubrouteClass = activeSubroute(subOption.name, activeSubpage) %}
+                      <li class="{{ activeSubrouteClass }}">
                         {{ toolAnchorGen(subOption.name, subOption.link, option.name) }}
                       </li>
                     {% endfor %}

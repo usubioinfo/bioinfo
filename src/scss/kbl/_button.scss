@@ -31,16 +31,16 @@
 @mixin kbl-btn-solid($btn-color, $btn-txt-color, $btn-hvr-color) {
   @include kbl-button;
 
-  background: $btn-color;
-  color: $btn-txt-color;
+  background: $btn-color!important;
+  color: $btn-txt-color!important;
 
   &:hover {
-    background: $btn-hvr-color;
+    background: $btn-hvr-color!important;
     color: #fff!important;
   }
 
   &:focus {
-    background: $btn-hvr-color;
+    background: $btn-hvr-color!important;
     color: #fff!important;
   }
 }

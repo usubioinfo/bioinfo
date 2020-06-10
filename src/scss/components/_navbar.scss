@@ -45,3 +45,11 @@ nav.bs4 {
   padding-top: 0!important;
   padding-bottom: 0!important;
 }
+
+.bs4 .dropdown-header {
+  font-weight: $font-weight-heavy;
+  cursor: pointer;
+  padding-left: 0!important;
+  color: $color-primary!important;
+  font-size: inherit!important;
+}
