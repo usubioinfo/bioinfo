@@ -1,26 +1,21 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
+{% set bs4 = true %}
 <html class="no-js" lang="en">
-<!--<![endif]-->
-<!--I can write -->
 {% from "universal/_header.njk" import header %}
-{{ header("lab_journal") }}
+{{ header(bs4=bs4) }}
 
-<body class="auth-theme-rashmore">
-  {% from "universal/_navbar.njk" import navbar %}
+<body>
+  {% from "universal/_navbar-bs4.njk" import navbar %}
   {{ navbar("Publications", "Journal Articles") }}
 
+<!--
   <header class="sabbi-page-header-classic page-header-lg">
       <div class="page-header-content conternt-center">
           <div class="header-title-block">
-              <!-- <h2 class="page-sub-title">Peer Reviewed Journal Articles</h2> -->
               <h1 class="page-title">Publications</h1>
           </div>
       </div>
-  </header><!-- /.sabbi-page-header-classic .page-header-lg -->
+  </header>
   <div class="auth-breadcrumb-wrap">
           <div class="container">
               <ol class="breadcrumb sabbi-breadcrumb">
@@ -29,14 +24,27 @@
                   <li class="active">Journal Articles</li>
               </ol>
           </div>
-      </div><!-- /.auth-breadcrumb-wrap -->
+      </div>
+-->
+
+      <article class="container-fluid kbl-top">
+        <div class="row justify-content-center pt-4">
+          <div class="col-auto">
+            <h1><ion-icon name="document-outline" class="kbl-header-icon"></ion-icon></h1>
+          </div>
+          <div class="col-auto pt-3 header-icon-wrapper">
+            <h1>Publications</h1>
+            <h6>
+              Research published by Dr. Kaundal and the team
+            </h6>
+          </div>
+        </div>
+      </article>
+
   <main class="sabbi-page-wrap">
       <section class="section-journal-papers">
           <div class="container">
               <nav class="journal-papers-nav">
-                  <!-- <div class="nav-meta">
-                      <p><strong>Disclaimer:</strong> The papers below are intended for private viewing by the page owner or those who otherwise have legitimate access to them. No part of it may in any form or by any electronic, mechanical, photocopying, recording, or any other means be reproduced, stored in a retrieval system or be broadcast or transmitted without the prior permission of the respective publishers. If your organization has a valid subscription of the journals, click on the DOI link for the legitimate copy of the papers.</p>
-                  </div> -->
                   <ul class="journal-papers-nav-list list-inline">
                          <li><button class="tablinks" onclick="openJournal(event, '17-19')" style=" background: transparent; border: none !important;">
                               <a href="#tabcontent" class="link-prev_def active">2017-2019</a>
@@ -625,7 +633,7 @@
 
   {% include "universal/_footer.njk" %}
   {% from "universal/_footer-scripts.njk" import scripts %}
-  {{ scripts() }}
+  {{ scripts(bs4=bs4) }}
 </body>
 
 </html>

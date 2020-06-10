@@ -1,18 +1,14 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
+{% set bs4 = true %}
 <html class="no-js" lang="en">
-<!--<![endif]-->
-<!--I can write -->
 {% from "universal/_header.njk" import header %}
-{{ header("lab_conf-talk") }}
+{{ header("lab_conf-talk", bs4=bs4) }}
 
-<body class="auth-theme-rashmore">
-  {% from "universal/_navbar.njk" import navbar %}
+<body>
+  {% from "universal/_navbar-bs4.njk" import navbar %}
   {{ navbar("Publications", "Conferences") }}
 
+  <!--
   <header class="sabbi-page-header-classic2 sabbi-page-header-team page-header-lg">
           <div class="page-header-content conternt-center">
               <div class="header-title-block">
@@ -21,14 +17,30 @@
           </div>
   </header>
   <div class="auth-breadcrumb-wrap">
-          <div class="container">
-              <ol class="breadcrumb sabbi-breadcrumb">
-                  <li><a href="/">Home</a></li>
-                  <li><a href="#">Publications</a></li>
-                  <li class="active">Conferences and Talks</li>
-              </ol>
-          </div>
-      </div><!-- /.auth-breadcrumb-wrap -->
+    <div class="container">
+      <ol class="breadcrumb sabbi-breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="#">Publications</a></li>
+        <li class="active">Conferences and Talks</li>
+      </ol>
+    </div>
+  </div>
+  -->
+
+  <article class="container-fluid kbl-top">
+    <div class="row justify-content-center pt-4">
+      <div class="col-auto">
+        <h1><ion-icon name="calendar-outline" class="kbl-header-icon"></ion-icon></h1>
+      </div>
+      <div class="col-auto pt-3 header-icon-wrapper">
+        <h1>Conferences and Talks</h1>
+        <h6>
+          Presentations by Dr. Kaundal and the team
+        </h6>
+      </div>
+    </div>
+  </article>
+
   <div class="container">
       <section class="ripepage-peak">
               <div class="container">
@@ -50,40 +62,40 @@
                           <!-- <div class="nav-meta">
                               <p><strong>Disclaimer:</strong> The papers below are intended for private viewing by the page owner or those who otherwise have legitimate access to them. No part of it may in any form or by any electronic, mechanical, photocopying, recording, or any other means be reproduced, stored in a retrieval system or be broadcast or transmitted without the prior permission of the respective publishers. If your organization has a valid subscription of the journals, click on the DOI link for the legitimate copy of the papers.</p>
                           </div> -->
-                          <div class="dropdown">
+                          <div class="dropdown conf">
                                   <button class="dropbtn">2019-2017</button>
-                                  <div class="dropdown-content">
+                                  <div class="dropdown-content conf">
                                       <a class="tablinks" onclick="openJournal(event, '2017')" href="#tabcontent" class="link-prev_def active">2017</a>
                                       <a class="tablinks" onclick="openJournal(event, '2018')" href="#tabcontent" class="link-prev_def active">2018</a>
                                       <a class="tablinks" onclick="openJournal(event, '2019')" href="#tabcontent" class="link-prev_def active">2019</a>
                                   </div>
                           </div>
-                          <div class="dropdown">
+                          <div class="dropdown conf">
                                   <button class="dropbtn">2016-2014</button>
-                                  <div class="dropdown-content">
+                                  <div class="dropdown-content conf">
                                       <a class="tablinks" onclick="openJournal(event, '2014')" href="#tabcontent" class="link-prev_def active">2014</a>
                                       <a class="tablinks" onclick="openJournal(event, '2015')" href="#tabcontent" class="link-prev_def active">2015</a>
                                       <a class="tablinks" onclick="openJournal(event, '2016')" href="#tabcontent" class="link-prev_def active">2016</a>
                                   </div>
                           </div>
-                          <div class="dropdown">
+                          <div class="dropdown conf">
                                   <button class="dropbtn">2013-2011</button>
-                                  <div class="dropdown-content">
+                                  <div class="dropdown-content conf">
                                       <a class="tablinks" onclick="openJournal(event, '2012')" href="#tabcontent" class="link-prev_def active">2012</a>
                                       <a class="tablinks" onclick="openJournal(event, '2013')" href="#tabcontent" class="link-prev_def active">2013</a>
                                   </div>
                           </div>
-                          <div class="dropdown">
+                          <div class="dropdown conf">
                                   <button class="dropbtn">2010-2008</button>
-                                  <div class="dropdown-content">
+                                  <div class="dropdown-content conf">
                                       <a class="tablinks" onclick="openJournal(event, '2008')" href="#tabcontent" class="link-prev_def active">2008</a>
                                       <a class="tablinks" onclick="openJournal(event, '2009')" href="#tabcontent" class="link-prev_def active">2009</a>
                                       <a class="tablinks" onclick="openJournal(event, '2010')" href="#tabcontent" class="link-prev_def active">2010</a>
                                   </div>
                           </div>
-                          <div class="dropdown">
+                          <div class="dropdown conf">
                                   <button class="dropbtn">2002-2004</button>
-                                  <div class="dropdown-content">
+                                  <div class="dropdown-content conf">
                                       <a class="tablinks" onclick="openJournal(event, '2002')" href="#tabcontent" class="link-prev_def active">2002</a>
                                       <a class="tablinks" onclick="openJournal(event, '2004')" href="#tabcontent" class="link-prev_def active">2004</a>
                                   </div>
@@ -1041,7 +1053,7 @@
 
   {% include "universal/_footer.njk" %}
   {% from "universal/_footer-scripts.njk" import scripts %}
-  {{ scripts() }}
+  {{ scripts(bs4=bs4) }}
 </body>
 
 </html>

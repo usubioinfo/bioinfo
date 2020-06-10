@@ -7,12 +7,12 @@
   border-radius: 15px;
 }
 
-.dropdown {
+.dropdown.conf {
   position: relative;
   display: inline-block;
 }
 
-.dropdown-content {
+.dropdown-content.conf {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
@@ -21,22 +21,22 @@
   z-index: 1;
 }
 
-.dropdown-content a {
+.dropdown-content.conf a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
-.dropdown-content a:hover {
+.dropdown-content.conf a:hover {
   background-color: #ddd;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown.conf:hover .dropdown-content {
   display: block;
 }
 
-.dropdown:hover .dropbtn {
+.dropdown.conf:hover .dropbtn {
   background-color: rgb(15, 36, 57);
 }
 
