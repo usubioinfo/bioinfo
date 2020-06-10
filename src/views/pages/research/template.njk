@@ -1,5 +1,5 @@
 {% macro newsPage(title='DEFAULT', fileName='', linkName='') %}
-{% set file = "pages/news/" + fileName + "/content.njk" %}
+{% set file = "pages/research/" + fileName + "/content.njk" %}
 {% set bs4 = true %}
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -8,7 +8,7 @@
 
   <body>
     {% from "universal/_navbar-bs4.njk" import navbar %}
-    {{ navbar("News") }}
+    {{ navbar("Research") }}
 
     <div class="container-fluid blog" style="margin-top: 103px;">
       <div class="row justify-content-center">
