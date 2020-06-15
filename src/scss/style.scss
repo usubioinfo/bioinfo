@@ -7,6 +7,8 @@
 @import './pages/importer';
 @import './default/export';
 
+@import '../views/pages/people/people';
+
 .flex-col {
   flex: 1;
   padding-right: 15px;
@@ -62,4 +64,13 @@ body {
 ::-moz-selection {
   background: $color-primary-light;
   color: #fff;
+}
+
+// Correct FontAwesome to Ion Icons
+.correct-fa i {
+  font-size: 125%;
+
+  &.fa-laptop {
+    font-size: 115%!important;
+  }
 }

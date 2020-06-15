@@ -9,6 +9,7 @@ const baseFilePath = __dirname + '/../assets/'
 
 module.exports = (app) => {
   app.use(assetsBaseUrl + 'api/', express.static(baseFilePath + 'api'));
+  app.use(assetsBaseUrl + 'fa/', express.static(baseFilePath + 'fa'));
   app.use(assetsBaseUrl + 'css/', express.static(baseFilePath + 'css'));
   app.use(assetsBaseUrl + 'fonts', express.static(baseFilePath + 'fonts'));
   app.use(assetsBaseUrl + 'ico/', express.static(baseFilePath + 'ico'));

@@ -1,0 +1,38 @@
+@import '../../../scss/colors';
+@import '../../../scss/globals';
+
+.rakesh-header {
+  color: $color-text-main!important;
+}
+
+.workplace-header {
+  color: $color-text-soft!important;
+}
+
+.workplace-desc {
+  font-weight: $font-weight-medium!important;
+  font-size: 110%!important;
+  color: $color-text-main!important;
+}
+
+.biography {
+  color: $color-text-main!important;
+}
+
+.bio-header {
+  color: $color-text-main!important;
+}
+
+.bio-desc {
+  color: $color-text-soft!important;
+  font-weight: $font-weight-medium!important;
+}
+
+.contact-title {
+  color: $color-text-main!important;
+
+  .contact-desc {
+    color: $color-text-soft!important;
+    font-weight: $font-weight-medium;
+  }
+}
