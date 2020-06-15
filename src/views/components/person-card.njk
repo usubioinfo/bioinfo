@@ -71,5 +71,9 @@
     <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener"><ion-icon name="logo-twitter"></ion-icon></a>
   {% elif social.type === "linkedin" %}
     <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener"><ion-icon name="logo-linkedin"></ion-icon></a>
+  {% elif social.type === "facebook" %}
+    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener"><ion-icon name="logo-facebook"></ion-icon></a>
+  {% elif social.type === "website" %}
+    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener"><ion-icon name="desktop-outline"></ion-icon></a>
   {% endif %}
 {% endmacro %}

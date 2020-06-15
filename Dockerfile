@@ -8,5 +8,5 @@ COPY . .
 
 RUN npm run sass:build
 
-EXPOSE 3010
+EXPOSE 3000
 CMD ["node", "src/index.js"]
