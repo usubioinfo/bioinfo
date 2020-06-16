@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+{% set bs4 = true %}
+<html class="no-js" lang="en">
+{% from "universal/_header.njk" import header %}
+{{ header(bs4=bs4) }}
+
+<body>
+  {% from "universal/_navbar-bs4.njk" import navbar %}
+  {{ navbar("Contact") }}
+
+  <!--
+  {% from "components/img-header.njk" import imgHeader %}
+  {{ imgHeader("Contact") }}
+
+  {% from "components/breadcrumb.njk" import breadcrumb %}
+  {{ breadcrumb([ {name: "Home", location: "/"}, {name: "Contact", location: ""} ]) }}-->
+
+  <article class="container-fluid kbl-top">
+    <div class="row justify-content-center pt-4">
+      <div class="col-auto">
+        <h1><ion-icon name="call-outline" class="kbl-header-icon"></ion-icon></h1>
+      </div>
+      <div class="col-auto pt-3 header-icon-wrapper">
+        <h1>Contact Us!</h1>
+        <h6>
+          See what we're about and give us a call!
+        </h6>
+      </div>
+    </div>
+  </article>
+
+  <article class="container">
+    <section class="row">
+      <div class="col-12">
+        <p class="kbl-text">
+          If you would like to join us, we are always looking for <b>independently-funded research fellows</b> or
+          <b>extended visitors</b>. Please use the <a href="/contact#enroll" class="kbl-link">form</a> below to explore our options.
+          <b>Summer student</b> positions are also available for up to a 3 - 4 month period.
+        </p>
+      </div>
+    </section>
+  </article>
+
+  <section class="sabbi-section stage-future_member">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-8">
+                  <p class="future_member-text" style="text-align: justify;">
+                      If you would like to join us, we are always looking for <b>independently-funded research fellows</b> or
+                      <b>extended visitors</b>. Please use the <a href="/contact#enroll" class="kbl-link">form</a> below to explore our options.
+                      <b>Summer student</b> positions are also available for up to a 3 - 4 month period.
+
+                  </p>
+                  <p class="future_member-text" style="text-align: justify;">A number of research projects are available within  the  general  areas  of
+                                                  bioinformatics,  computational  systems  biology,
+                                                  biological  bigdata  mining, comparative genomics, and functional genomics in KAABiL
+                                                  lab.
+                                                  Postdoctoral researchers, research higher degree (PhD and Masters),
+                                                  honours and undergraduate students are welcome to join our group.</p>
+                  <figure class="future_member-figure">
+                      <img src="assets/img/bio_tech_fall.JPG"  alt="" class="img-responsive">
+                  </figure>
+                  <h2 class="font-md__x stage-vrb-title">Masters and Honors</h2>
+                  <p class="future_member-text" style="text-align: justify;">Students are required to have a good understanding of
+                                          biomolecular sciences and computer programming
+                                          as well as experience in supervised learning and
+                                           unsupervised learning (Bayesian-based).
+                                          Students will need to demonstrate adaptability to the multidisciplinary nature of our projects. Masters and honors students are
+                                          encouraged to <a href="/contact#enroll" class="kbl-link">contact</a> Dr. Kaundal to express interest.
+                                          <b>Both degree options in either the <a target="_blank" rel="noreferrer noopen" href="https://cs.usu.edu/" class="kbl-link">Department of Computer Science</a>
+                                              or <a target="_blank" rel="noreferrer noopen" href="https://psc.usu.edu/" class="kbl-link">Department of Plants, Soils & Climate</a> are available.</b></p>
+                  <div class="__fm_seg" id="join_reaserch_ln">
+                      <figure class="future_member-figure">
+                          <img src="assets/img/colorful.JPG"  alt="" class="img-responsive">
+                      </figure>
+                     <h2 class="font-md__x stage-vrb-title">PhD</h2>
+                     <p style="text-align: justify;">PhD opportunities with government and university-funded scholarships are available each year,
+                                                      both to domestic and international students. Knowledge or experience in using scripting languages (Perl, Python) and
+                                                      statistical/mathematical toolkits (R, Matlab) with some kind of programming experience in
+                                                      any C, C++, or Java is preferable.
+                                                      <b>Both degree options in either the <a target="_blank" href="https://cs.usu.edu/" class="kbl-link">Department of Computer Science</a>
+                                                          or <a target="_blank" href="https://psc.usu.edu/" class="kbl-link">Department of Plants, Soils & Climate</a> are available.</b>
+                                                  </p>
+
+                     <h3 class="__fm_title" >Key criteria</h3>
+                     <p style="text-align: justify;"><strong >Domestic students</strong> – Students should have strong academic track record
+                                                          (including research and write-up) with first class honours.
+                                                          The student’s research and academic background might be in one or
+                                                          more of biological sciences (plant/animal),
+                                                          mathematics, statistics, computer science, data analytics, biological engineering
+                                                          and related life science disciplines.</p>
+                     <p style="text-align: justify;" class="future_member-text" ><strong>International students</strong> –
+                                                          International students are expected to have masters and honours
+                                                          degrees with a strong academic and research background in a relevant field.
+                                                          An overall IELTS score of 6.0+ with a
+                                                          minimum score of 5 in each band is preferable. This can be subtituted with a TOEFL
+                                                          score of 79+.
+                                                          For more details on eligibility, please visit the USU graduate school
+                                                          <a target="_blank" href="https://gradschool.usu.edu/apply/" class="kbl-link">website</a>. </p>
+                  </div>
+                  <div class="__fm_seg">
+                     <h2 class="font-md__x stage-vrb-title">Postdoctoral Research Fellow</h2>
+                     <p style="text-align: justify;">A postdoctoral research fellow with strong research and publication records in the area
+                                                      of bioinformatics and computational biology is encouraged to
+                                                      directly contact <a href="people/rakesh" class="kbl-link">Dr. Kaundal</a> to express interest.</p>
+
+                     <h3 class="__fm_title" id="enroll">Key criteria</h3>
+                     <p style="text-align: justify;" class="future_member-text">A PhD in one or
+                          more biological sciences (plant/animal),
+                          mathematics, statistics, computer science, data analytics, biological engineering,
+                          or any related discipline in life sciences is required, along with strong evidence of
+                          prior productivity and high-impact publications.</p>
+                  </div>
+                  <div class = "col-sm-8" id="scroll_contact_form">
+                    <form id="contact-form" class="form-future_memb" action="assets/api/sendmail.php" method="post">
+                        <div>
+                            <input name="name" id="futureName" type="text" class="form-control kbl-form" placeholder="Full Name">
+                        </div>
+                        <div>
+                            <input name="email"  id="InputEmail" type="email" class="form-control kbl-form" placeholder="Email">
+                        </div>
+                        <div>
+                            <input  name="phone" type="tel" class="form-control kbl-form"  placeholder="Phone Number">
+                        </div>
+                        <div>
+                            <textarea name="message"  id="InputMessage" class="form-control kbl-form" rows="15" placeholder="Say something to us!"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <div id="form_success"></div>
+                            <div id="form_errors"></div>
+                            <div class="row">
+
+                                <div class="col-sm-6 col-sm-offset-3 text-center">
+                                    <button type="submit" class="btn kbl-btn-1-solid">Send Message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form><!-- /form.form-future_memb -->
+                  </div>
+                  <div class="col-4">
+                    <aside class="embed-responsive embed-responsive-1by1">
+                        <iframe src="http://maps.google.com/maps?q=41.742693,-111.810340&amp;z=15&amp;output=embed" allowfullscreen="" frameborder="0"></iframe>
+                    </aside>
+                  </div>
+              </div>
+              <aside class="col-sm-4">
+                  <address class="addr_future_memb">
+                      <h4 class="entry-title">Address</h4>
+                      <div class="address-entry">
+                              <p class="__adtext">Utah State University</p>
+                              <p class="__ad-num">4700 Old Main Hill</p>
+                              <p class="__ad-num">Logan, UT 84322-4700</p>
+                              <p class="__ad-num">United States of America</p>
+                      </div>
+                      <footer class="contact-info">
+                              <h4 class="entry-title">Contact Information</h4>
+                              <p class="__ci_num">Call: <span>+1 (435)-797-4117</span></p>
+                              <p class="__ci_num">Fax: <span>+1 (435) 797-2766</span></p>
+                              <p class="__ci_num">E-mail: <span>rkaundal@usu.edu</span></p>
+                      </footer>
+                  </address><!-- /.addr_future_memb -->
+                  <a href="/contact#enroll" class="btn kbl-btn-1-solid text-left">Go to Contact Form</a>
+              </aside>
+          </div>
+      </div>
+  </section><!-- /.stage-future_member -->
+
+  {% include "universal/_footer.njk" %}
+  {% from "universal/_footer-scripts.njk" import scripts %}
+  {{ scripts(bs4=bs4) }}
+</body>
+
+</html>

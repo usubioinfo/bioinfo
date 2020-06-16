@@ -3,4 +3,8 @@
 
 .kbl-heading {
   color: $color-text-main;
+
+  &.dark {
+    color: $color-text-hard;
+  }
 }
