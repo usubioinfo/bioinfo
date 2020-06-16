@@ -4,7 +4,7 @@
 {{ header() }}
 
 <body class="auth-theme-rashmore">
-  {% from "universal/_navbar-bs4.njk" import navbar %}
+  {% from "universal/_navbar.njk" import navbar %}
   {{ navbar("People", "Alumni") }}
 
 <!--
@@ -60,6 +60,7 @@
     {% endfor %}
   </div>
 
+<!--
   <div class="row">
     <div class="col-12">
       <div class="kbl-header-bar text-center py-2">
@@ -75,7 +76,7 @@
       </div>
     {% endfor %}
   </div>
-
+-->
 </article>
 
   {% include "universal/_footer.njk" %}

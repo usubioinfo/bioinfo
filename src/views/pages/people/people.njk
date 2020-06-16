@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-{% set bs4 = true %}
 <html class="no-js" lang="en">
 {% from "universal/_header.njk" import header %}
-{{ header(bs4=bs4) }}
+{{ header() }}
 
 <body class="auth-theme-rashmore">
-  {% from "universal/_navbar-bs4.njk" import navbar %}
+  {% from "universal/_navbar.njk" import navbar %}
   {{ navbar("People") }}
 
   <!--
@@ -105,7 +104,7 @@
 
   {% include "universal/_footer.njk" %}
   {% from "universal/_footer-scripts.njk" import scripts %}
-  {{ scripts(bs4=bs4) }}
+  {{ scripts() }}
 </body>
 
 </html>
