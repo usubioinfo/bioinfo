@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-{% set bs4 = true %}
 <html class="no-js" lang="en">
 {% from "universal/_header.njk" import header %}
-{{ header(bs4=bs4) }}
+{{ header() }}
 
 <body>
-  {% from "universal/_navbar-bs4.njk" import navbar %}
+  {% from "universal/_navbar.njk" import navbar %}
   {{ navbar("Contact") }}
 
   <!--
@@ -108,7 +107,7 @@
           directly contact <a href="people/rakesh" class="kbl-link">Dr. Kaundal</a> to express interest.
         </p>
 
-        <!-- Because the person who designed the Navbar is an idiot, this has to have enroll until
+        <!-- Because the person who designed the Navbar is an idiot, this has to have #enroll until
             someone competent fixes the navbar out of the good of their heart -->
         <h5 class="kbl-heading dark" id="enroll">Key Criteria</h5>
         <p class="kbl-text">
@@ -149,7 +148,7 @@
 
   {% include "universal/_footer.njk" %}
   {% from "universal/_footer-scripts.njk" import scripts %}
-  {{ scripts(bs4=bs4) }}
+  {{ scripts() }}
 </body>
 
 </html>

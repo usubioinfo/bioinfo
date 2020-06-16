@@ -1,10 +1,9 @@
 {% macro researchPage(title='DEFAULT', fileName='', linkName='') %}
 {% set file = "pages/research/" + fileName + "/content.njk" %}
-{% set bs4 = true %}
 <!DOCTYPE html>
 <html class="no-js" lang="en">
   {% from "universal/_header.njk" import header %}
-  {{ header(bs4=bs4) }}
+  {{ header() }}
 
   <body>
     {% from "universal/_navbar-bs4.njk" import navbar %}
@@ -21,7 +20,7 @@
 
     {% include "universal/_footer.njk" %}
     {% from "universal/_footer-scripts.njk" import scripts %}
-    {{ scripts(bs4=bs4) }}
+    {{ scripts() }}
   </body>
 </html>
 {% endmacro %}

@@ -1,17 +1,10 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
 <html class="no-js" lang="en">
-<!--<![endif]-->
-<!--I can write -->
-{% set bs4 = true %}
 {% from "universal/_header.njk" import header %}
-{{ header("lab_events", bs4=bs4) }}
+{{ header("lab_events") }}
 
-<body class="auth-theme-rashmore">
-  {% from "universal/_navbar-bs4.njk" import navbar %}
+<body>
+  {% from "universal/_navbar.njk" import navbar %}
   {{ navbar("Events") }}
 
   <!--
@@ -240,7 +233,7 @@
 
   {% include "universal/_footer.njk" %}
   {% from "universal/_footer-scripts.njk" import scripts %}
-  {{ scripts(bs4=bs4) }}
+  {{ scripts() }}
 </body>
 
 </html>

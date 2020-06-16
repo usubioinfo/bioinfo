@@ -1,66 +1,56 @@
-{% from "universal/navbar-active-route.njk" import activeRoute, activeSubroute %}
+{% from "universal/navbar-active-route.njk" import activeRoute, activeSubroute, currentRoute %}
 
 {% macro navbar(activePage="", activeSubpage="") %}
 
-<nav class="navbar navbar-white navbar-kawsa navbar-fixed-top">
-  <article class="container">
-      <section class="navbar-header">
-          <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-          </button>
-          <a style="text-decoration:none" class="navbar-brand" href="/">
-            <img alt="" class="img-responsive" src="assets/img/red_logo.png">
-          </a>
-          <div class="logo-heading">KAABiL</div>
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-md bs4" style="background: #fff!important;">
+  <article class="container-fluid px-5">
+    <section class="row px-5 w-100 mb-1">
 
-          <div class="vl">
-              <div class="logo-text">
-                  <b style="color: #9d164f;">K</b>aundal
-                  <b style="color: #9d164f;">A</b>rtificial intelligence
-                  <br>
-                  &
-                  <b style="color: #9d164f;">A</b>dvanced
-                  <b style="color: #9d164f;">Bi</b>oinformatics
-                  <b style="color: #9d164f;">L</b>ab
-              </div>
-          </div>
-      </section>
-      <section class="navbar-collapse collapse sabbi-navbar-collapse  navbar-nav-hov_underline" id="navbar">
-          <div class="nav-btn-wrap btn-group pull-right">
-              <a class="kbl-btn-1" target="_blank" rel="noopener noreferrer" href="http://bioinfo.usu.edu/covidTracker/">
-                  Covid 19 Tracker
-              </a>
-              <a class="kbl-btn-1" href="#enroll" style="margin-left: 15px!important;">
-                  Join Research
-              </a>
-          </div>
-          <ul class="nav navbar-nav navbar-right" id="menu-main-nav">
+      <div class="col-4 pl-5">
+        <a class="navbar-brand d-inline" href="#">
+          <img src="/assets/img/kbllogo.png">
+        </a>
+      </div>
 
-            {% from "./_navbar-options.njk" import navOptions, calcDropdown, anchorGen, toolAnchorGen %}
+      <div class="col-8 mt-auto pr-5">
+
+        <section class="row pb-4">
+          <div class="col-12 text-right">
+            <a class="kbl-btn-1" target="_blank" rel="noopener noreferrer" href="http://bioinfo.usu.edu/covidTracker/">
+                Covid 19 Tracker
+            </a>
+            <a class="kbl-btn-1 ml-2" href="/contact">
+                Contact
+            </a>
+          </div>
+        </section>
+
+        <section class="row">
+          <div class="col-12 text-right">
+            {% from "./_navbar-options.njk" import navOptions, calcDropdown, anchorGenBS4, toolAnchorGenBS4, genHeaderLink %}
 
             {% for option in navOptions %}
-              {% set dropdownCalc = calcDropdown(option.options) %}
-              {% set activeRouteClass = activeRoute(option.name, activePage) %}
-              <li class="nav-option {{ dropdownCalc }} {{ activeRouteClass }}">
-                  {{ anchorGen(option.name, option.options, option.link) }}
+              <span class="bs4 col {{ calcDropdown(option.options)}} {{ currentRoute(option.name, activePage) }}">
+                  {{ anchorGenBS4(option.name, option.options, option.link) }}
                   {% if option.options %}
-                  <ul class="dropdown-menu" role="menu">
+                  <div class="dropdown-menu bs4 nav-dropdown mt-2">
+                    {{ genHeaderLink(option.name, option.link) }}
                     {% for subOption in option.options %}
-                      {% set activeSubrouteClass = activeSubroute(subOption.name, activeSubpage) %}
-                      <li class="{{ activeSubrouteClass }}">
-                        {{ toolAnchorGen(subOption.name, subOption.link, option.name) }}
-                      </li>
+                     {{ toolAnchorGenBS4(subOption.name, subOption.link, option.name, "dropdown-item nav-dropdown-item py-2 {{ activeSubroute(subOption.name, activeSubpage) }}") }}
                     {% endfor %}
-                  </ul>
+                  </div>
                   {% endif %}
-              </li>
+              </span>
             {% endfor %}
+          </div>
+        </section>
 
-          </ul>
-      </section>
+      </div>
+
+    </section>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
   </article>
 </nav>
 {% endmacro %}

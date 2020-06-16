@@ -1,17 +1,12 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
 {% set bs4 = true %}
 <html class="no-js" lang="en">
-<!--<![endif]-->
 {% from "universal/_header.njk" import header %}
-{{ header("home", scss=true, bs4=bs4) }}
+{{ header("home") }}
 
-<body class="auth-theme-rashmore">
+<body>
     <header class="sabbi-site-head">
-        {% from "universal/_navbar-bs4.njk" import navbar %}
+        {% from "universal/_navbar.njk" import navbar %}
         {{ navbar("Home") }}
         {% include "./_head-carousel.njk" %}
     </header><!-- /.sabbi-site-head -->
@@ -137,7 +132,7 @@
 
     {% include "universal/_footer.njk" %}
     {% from "universal/_footer-scripts.njk" import scripts %}
-    {{ scripts(bs4=bs4) }}
+    {{ scripts() }}
 </body>
 
 </html>
