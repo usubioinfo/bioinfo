@@ -1,0 +1,39 @@
+{% macro researchCarouselCard(researchItem) %}
+  <article class="kbl-research-card-container mx-auto">
+    <div class="kbl-research-card pb-3">
+      <section class="img-wrapper mb-2">
+        <img src="{{ researchItem.img }}">
+      </section>
+      <section class="px-3 flex-text-wrapper h-100">
+        <div class="card-title mb-3">{{ researchItem.heading }}</div>
+        <div class="card-subtitle mb-3">{{ researchItem.desc }}</div>
+        <div class="read-more-end"><span class="text">Read More</span></div>
+      </section>
+    </div>
+  </article>
+{% endmacro %}
+
+<!--
+<div class="kbl-research-card-container h-100">
+  <div class="kbl-research-card h-100">
+    <figure class="h-100">
+      <div class="img-wrapper mb-2">
+        <img class="w-100 mb-2" src="{{ researchItem.img }}">
+      </div>
+      <article class="container-fluid px-3 d-flex flex-column">
+        <div class="d-flex flex-column">
+          <section class="col-auto">
+            <div class="title-wrapper">
+              <div class="card-title mb-3">{{ researchItem.heading }}</div>
+              <div class="card-subtitle">{{ researchItem.desc }}</div>
+            </div>
+          </section>
+          <section class="col">
+            <span>Read</span>
+          </section>
+        </div>
+      </article>
+    </figure>
+  </div>
+</div>
+-->

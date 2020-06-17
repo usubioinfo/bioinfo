@@ -1,0 +1,13 @@
+<article class="MultiCarousel" data-items="1,2,3,4" data-slide="1" id="MultiCarousel" data-interval="100">
+    <div class="MultiCarousel-inner" id="content">
+      {% from "./_research-data.njk" import cards %}
+      {% from "components/research-carousel-card.njk" import researchCarouselCard %}
+      {% for card in cards %}
+        <div class="col-md-2 col-sm-6 col-stretch item">
+          {{ researchCarouselCard(card) }}
+        </div>
+      {% endfor %}
+    </div>
+    <button class="btn kbl-btn-circle-solid leftLst" ><b><</b></button>
+    <button class="btn kbl-btn-circle-solid rightLst"><b>></b></button>
+</article>

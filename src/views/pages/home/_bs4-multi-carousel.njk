@@ -1,0 +1,33 @@
+{% from "./_research-data.njk" import cards, slides1, slides2 %}
+{% from "components/research-carousel-card.njk" import researchCarouselCard %}
+
+<div id="researchCarousel" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="row">
+        {% for card in slides1 %}
+          <div class="col-4 col-stretch mx-auto">
+            {{ researchCarouselCard(card) }}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row">
+        {% for card in slides2 %}
+          <div class="col-4 col-stretch text-center">
+            {{ researchCarouselCard(card) }}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#researchCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#researchCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>

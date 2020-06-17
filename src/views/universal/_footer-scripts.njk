@@ -23,6 +23,28 @@
 $('#videoModal').on('hidden.bs.modal', function () {
     $("#videoModal iframe").attr("src", $("#videoModal iframe").attr("src"));
 });
+
+// BS4 Stuff
+$('#homePageBS4Carousel').on('slide.bs.carousel', function (e) {
+
+    var $e = $(e.relatedTarget);
+    var idx = $e.index();
+    var itemsPerSlide = 3;
+    var totalItems = $('.carousel-item').length;
+
+    if (idx >= totalItems-(itemsPerSlide-1)) {
+        var it = itemsPerSlide - (totalItems - idx);
+        for (var i=0; i<it; i++) {
+            // append slides to end
+            if (e.direction=="left") {
+                $('.carousel-item').eq(i).appendTo('.carousel-inner');
+            }
+            else {
+                $('.carousel-item').eq(0).appendTo('.carousel-inner');
+            }
+        }
+    }
+});
 </script>
 {% if customJS %}
 <script>
@@ -56,15 +78,7 @@ $(".selector").css({
 });
 
 $(document).ready(function(){
-            $("body").on("click","#modalbtn",function(){
 
-           $("#myModal").modal("show");
-
-           $(".blue").addClass("after_modal_appended");
-           $('.modal-backdrop').appendTo('.blue');
-           $('body').removeClass("modal-open")
-               $('body').css("padding-right","");
-     });
     //       $(window).scroll(function(){
 
     //         if($(window).scrollTop()>100){
@@ -138,8 +152,8 @@ $(document).ready(function(){
                              $(this).outerWidth(itemWidth);
                          });
 
-                         $(".leftLst").addClass("over");
-                         $(".rightLst").removeClass("over");
+                         $(".leftLst").addClass("disabled");
+                         $(".rightLst").removeClass("disabled");
 
                      });
                  }
@@ -155,21 +169,21 @@ $(document).ready(function(){
                      var xds = Math.abs(values[4]);
                      if (e == 0) {
                          translateXval = parseInt(xds) - parseInt(itemWidth * s);
-                         $(el + ' ' + rightBtn).removeClass("over");
+                         $(el + ' ' + rightBtn).removeClass("disabled");
 
                          if (translateXval <= itemWidth / 2) {
                              translateXval = 0;
-                             $(el + ' ' + leftBtn).addClass("over");
+                             $(el + ' ' + leftBtn).addClass("disabled");
                          }
                      }
                      else if (e == 1) {
                          var itemsCondition = $(el).find(itemsDiv).width() - $(el).width();
                          translateXval = parseInt(xds) + parseInt(itemWidth * s);
-                         $(el + ' ' + leftBtn).removeClass("over");
+                         $(el + ' ' + leftBtn).removeClass("disabled");
 
                          if (translateXval >= itemsCondition - itemWidth / 2) {
                              translateXval = itemsCondition;
-                             $(el + ' ' + rightBtn).addClass("over");
+                             $(el + ' ' + rightBtn).addClass("disabled");
                          }
                      }
                      $(el + ' ' + itemsDiv).css('transform', 'translateX(' + -translateXval + 'px)');

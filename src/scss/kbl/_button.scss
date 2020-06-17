@@ -52,3 +52,24 @@
 .kbl-btn-1-solid {
   @include kbl-btn-solid($color-primary, #fff, $color-primary-dark);
 }
+
+.kbl-btn-circle-solid {
+  border-radius: 999px!important;
+  cursor: pointer;
+  color: #fff!important;
+  background: $color-primary!important;
+  transition: $time-mid!important;
+
+  &.disabled {
+    pointer-events: none!important;
+    background: $color-btn-gray!important;
+  }
+
+  &:hover {
+    background: $color-primary-dark!important;
+  }
+
+  &:focus {
+
+  }
+}
