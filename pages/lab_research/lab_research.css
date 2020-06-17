@@ -19,6 +19,8 @@ hr {
 .MultiCarousel .MultiCarousel-inner {
     transition: 1s ease all;
     float: left;
+    display: flex;
+    flex-wrap: nowrap
 }
 
 .MultiCarousel .MultiCarousel-inner .item {

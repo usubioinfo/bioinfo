@@ -86,3 +86,37 @@ i.ion-ios-paper-outline {
 .carousel-control-next-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f22' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E")!important;
 }
+
+.gray-bg {
+  background: $color-bg-gray!important;
+  border-radius: $border-radius;
+  overflow: hidden;
+}
+
+// Get of this!
+.home-news-item {
+  .hn-header {
+    font-size: 107%!important;
+    font-weight: $font-weight-heavy;
+    color: $color-text-main!important;
+    transition: $time-mid;
+
+    &.shrink {
+      line-height: 103%!important;
+    }
+
+    &:hover {
+      color: $color-primary!important;
+    }
+  }
+
+  .hn-date {
+    color: $color-text-soft!important;
+    font-style: italic;
+  }
+}
+
+.remarkable {
+  font-weight: $font-weight-heavy;
+  font-size: 125%!important;
+}
