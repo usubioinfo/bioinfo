@@ -1,0 +1,22 @@
+@import '../../../scss/colors';
+@import '../../../scss/globals';
+
+.year-selector {
+  color: $color-text-main!important;
+  cursor: pointer;
+  transition: $time-fast;
+  border-radius: $border-radius;
+  font-weight: $font-weight-medium;
+  font-size: 110%;
+  padding: 6px 13px!important;
+
+  &:hover {
+    background: $color-primary-light!important;
+    color: #fff!important;
+  }
+
+  &.active {
+    background: $color-primary!important;
+    color: #fff!important;
+  }
+}

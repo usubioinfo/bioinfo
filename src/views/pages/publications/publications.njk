@@ -41,33 +41,18 @@
       </article>
 
   <main class="sabbi-page-wrap">
+      {% from './_functions.njk' import selector, activeCheck %}
       <section class="section-journal-papers">
           <div class="container">
-              <nav class="journal-papers-nav d-inline">
-                  <ul class="journal-papers-nav-list list-inline">
-                         <li><button class="tablinks" onclick="openJournal(event, '17-19')" style=" background: transparent; border: none !important;">
-                              <a href="#tabcontent" class="link-prev_def active">2017-2019</a>
-                             </button>
-                         </li>
-                         <li><button class="tablinks" onclick="openJournal(event, '14-16')" style=" background: transparent; border: none !important;">
-                              <a href="#tabcontent" class="link-prev_def">2014-2016</a>
-                             </button>
-                         </li>
-                         <li><button class="tablinks" onclick="openJournal(event, '11-13')" style=" background: transparent; border: none !important;">
-                              <a href="#tabcontent" class="link-prev_def">2011-2013</a>
-                             </button>
-                         </li>
-                         <li><button class="tablinks" onclick="openJournal(event, '08-10')" style=" background: transparent; border: none !important;">
-                              <a href="#tabcontent" class="link-prev_def">2008-2010</a>
-                             </button>
-                         </li>
-                         <li><button class="tablinks" onclick="openJournal(event, '05-07')" style=" background: transparent; border: none !important;">
-                              <a href="#tabcontent" class="link-prev_def">2005-2007</a>
-                             </button>
-                         </li>
-                  </ul>
-              </nav><!--  /.journal-papers-nav -->
-              <div class="journal-papers-mound-wrap tabcontent"  id="17-19">
+            <h2>{{ routerYearRange }}</h2>
+            <section class="row justify-content-center">
+              {{ selector("2005-2007") }}
+              {{ selector("2008-2010") }}
+              {{ selector("2011-2013") }}
+              {{ selector("2014-2016") }}
+              {{ selector("2017-2019") }}
+            </section>
+              <div class="journal-papers-mound-wrap tabcontent {{ activeCheck('2017-2019') }}" id="17-19">
 
                       <div class="journal-papers-mound">
                                       <nav class="journal-papers-mound-nav">
@@ -213,7 +198,7 @@
                               </div>
                   </div>
               </div><!-- /.journal-papers-mound-wrap-->
-              <div class="journal-papers-mound-wrap tabcontent" style="display: none" id="14-16">
+              <div class="journal-papers-mound-wrap tabcontent {{ activeCheck('2014-2016') }}" id="14-16">
 
                               <div class="journal-papers-mound">
                                       <nav class="journal-papers-mound-nav">
@@ -321,7 +306,7 @@
                                               </div>
                                   </div>
               </div><!-- /.journal-papers-mound-wrap-->
-              <div class="journal-papers-mound-wrap tabcontent" style="display: none" id="11-13">
+              <div class="journal-papers-mound-wrap tabcontent {{ activeCheck('2011-2013') }}" id="11-13">
 
                       <div class="journal-papers-mound">
                                   <nav class="journal-papers-mound-nav">
@@ -436,7 +421,7 @@
                           </div>
 
           </div><!-- /.journal-papers-mound-wrap-->
-              <div class="journal-papers-mound-wrap tabcontent" style="display: none" id="08-10">
+              <div class="journal-papers-mound-wrap tabcontent {{ activeCheck('2008-2010') }}" id="08-10">
 
                               <div class="journal-papers-mound">
                                       <nav class="journal-papers-mound-nav">
@@ -514,7 +499,7 @@
                                       </div>
                               </div>
               </div><!-- /.journal-papers-mound-wrap-->
-              <div class="journal-papers-mound-wrap tabcontent" style="display: none" id="05-07">
+              <div class="journal-papers-mound-wrap tabcontent {{ activeCheck('2005-2007') }}" id="05-07">
 
                       <div class="journal-papers-mound">
                                   <nav class="journal-papers-mound-nav">

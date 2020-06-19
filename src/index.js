@@ -28,6 +28,9 @@ let nunEnv = nunjucks.configure(__dirname + '/views', {
   express: app
 });
 
+// Publications Query
+
+
 nunEnv.addExtension('SetAsyncExtension', new SetAsyncExtension());
 
 app.use(baseUrl + 'scss', sass({
@@ -49,6 +52,19 @@ require('./rsc-routes')(app);
 // Pages
 app.get(baseUrl, (req, res) => {
   res.render(__dirname + '/views/pages/home/home.njk');
+});
+
+app.get('/publications', (req, res, next) => {
+  if (req.query.range) {
+    nunEnv.addGlobal(`routerYearRange`, req.query.range);
+  } else {
+    nunEnv.addGlobal(`routerYearRange`, '2017-2019');
+  }
+
+  res.render(__dirname + `/views/pages/publications/publications.njk`, (err, html) => {
+    if (err) return next(err);
+    res.send(html);
+  });
 });
 
 app.get('/:topLevelPage', (req, res, next) => {
