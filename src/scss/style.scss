@@ -9,17 +9,6 @@
 
 @import '../views/pages/people/people';
 
-.flex-col {
-  flex: 1;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-.flex-row {
-  display: flex;
-}
-
-
 body {
   color: $color-text-main;
   overflow-x: hidden;
@@ -119,4 +108,13 @@ i.ion-ios-paper-outline {
 .remarkable {
   font-weight: $font-weight-heavy;
   font-size: 125%!important;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-self-end {
+  align-self: baseline;
 }

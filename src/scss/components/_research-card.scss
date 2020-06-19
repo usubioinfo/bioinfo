@@ -83,6 +83,7 @@ $card-width: 250px;
     cursor: pointer;
     border-bottom: 1px solid $transparent;
     transition: $time-mid;
+    color: $color-text-main;
 
     &:hover {
       color: $color-primary;

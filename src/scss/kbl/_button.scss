@@ -25,6 +25,7 @@
     text-decoration: none;
     background: $btn-color!important;
     color: white!important;
+    box-shadow: none!important;
   }
 }
 
@@ -42,6 +43,7 @@
   &:focus {
     background: $btn-hvr-color!important;
     color: #fff!important;
+    box-shadow: none!important;
   }
 }
 
@@ -70,6 +72,6 @@
   }
 
   &:focus {
-
+    box-shadow: none!important;
   }
 }
