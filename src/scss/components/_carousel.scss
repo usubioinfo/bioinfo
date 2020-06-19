@@ -1,0 +1,23 @@
+// home carousel
+div#sequence {
+    overflow: hidden;
+}
+
+div#sliding_animation ul li {
+    width: 20%;
+    float: left;
+}
+
+div#sliding_animation ul {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 10s slidy infinite;
+}
+
+.fix-picture {
+  transform: scale(1.1) translate(45px, 20px);
+}
