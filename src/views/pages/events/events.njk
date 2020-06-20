@@ -30,12 +30,18 @@
 
   <section class="sabbi-section stage_events_post">
       <div class="container">
-          <div class="events_post-sagment tabcontent" id="20">
+        {% from './_functions.njk' import selector, activeCheck %}
+        <section class="row justify-content-center my-5">
+          {{ selector("2013") }}
+          {{ selector("2018") }}
+          {{ selector("2019") }}
+        </section>
+          <div class="events_post-sagment tabcontent {{ activeCheck('2019') }}" id="20">
               <h4 class="sagment-title">2020</h4>
               <div class="row">
                   <div class="col-sm-6">
                       <article class="sabbi-events-item">
-                          <a href="events_single.html?event=pag" class="sabbi-events-link">
+                          <a href="/events/pag" class="sabbi-events-link">
                               <figure class="img-hover-zoom">
                                   <img class="sabbi-events-img img-responsive lab_event"
                                   style=""
@@ -57,12 +63,12 @@
                   </div>
               </div>
           </div><!-- /.events_post-sagment -->
-          <div class="events_post-sagment tabcontent" id="19">
+          <div class="events_post-sagment tabcontent {{ activeCheck('2019') }}" id="19">
               <h4 class="sagment-title">2019</h4>
               <div class="row">
                   <div class="col-sm-6">
                       <article class="sabbi-events-item">
-                          <a href="events_single.html?event=pag" class="sabbi-events-link">
+                          <a href="/events/pag" class="sabbi-events-link">
                               <figure class="img-hover-zoom">
                                   <img class="sabbi-events-img img-responsive lab_event"
                                   style=""
@@ -84,7 +90,7 @@
                   </div>
                   <div class="col-sm-6">
                       <article class="sabbi-events-item">
-                          <a href="events_single.html?event=psc" class="sabbi-events-link">
+                          <a href="/events/psc" class="sabbi-events-link">
                               <figure class="img-hover-zoom">
                                   <img class="sabbi-events-img img-responsive lab_event"
                                       src="assets/img/events/PSCshowcase_2019/d791cf15-ac89-4759-97d8-239827926698.JPG"
@@ -105,7 +111,7 @@
                   </div>
                   <div class="col-sm-6">
                       <article class="sabbi-events-item">
-                          <a href="events_single.html?event=cricket" class="sabbi-events-link">
+                          <a href="/events/cricket" class="sabbi-events-link">
                               <figure class="img-hover-zoom">
                                   <img class="sabbi-events-img img-responsive lab_event"
                                       src="assets/img/events/Cricket_2019/7d2e764e.JPG"
@@ -126,7 +132,7 @@
                   </div>
                   <div class="col-sm-6">
                       <article class="sabbi-events-item">
-                          <a href="events_single.html?event=winter" class="sabbi-events-link">
+                          <a href="/events/winter" class="sabbi-events-link">
                               <figure class="img-hover-zoom">
                                   <img class="sabbi-events-img img-responsive lab_event"
                                       src="assets/img/events/USU_winter/IMG_1201.JPG" alt="thompson">
@@ -146,15 +152,14 @@
                   </div>
               </div>
           </div><!-- /.events_post-sagment -->
-          <div class="events_post-sagment tabcontent" style="display: none" id="18">
+          <div class="events_post-sagment tabcontent {{ activeCheck('2018') }}" id="18">
               <h4 class="sagment-title">2018</h4>
               <div class="row">
                   <div class="col-sm-6">
                       <article class="sabbi-events-item">
-                          <a href="events_single.html?event=rocky" class="sabbi-events-link">
+                          <a href="/events/rocky" class="sabbi-events-link">
                               <figure class="img-hover-zoom">
                                   <img class="sabbi-events-img img-responsive lab_event"
-                                      style="transform: rotate(180deg);"
                                       src="assets/img/events/Rocky_2018/IMG_1335.JPG" alt="thompson">
                                   <figcaption>
                                       <h2 class="sabbi-events-title font-md__x" style="color: black;">Rocky
@@ -172,7 +177,7 @@
                   </div>
                   <div class="col-sm-6">
                       <article class="sabbi-events-item">
-                          <a href="events_single.html?event=hsing" class="sabbi-events-link">
+                          <a href="/events/hsing" class="sabbi-events-link">
                               <figure class="img-hover-zoom">
                                   <img class="sabbi-events-img img-responsive lab_event"
                                       src="assets/img/events/NCHU-2018/IMG_5118.JPG" alt="thompson">
@@ -192,12 +197,12 @@
                   </div>
               </div>
           </div><!-- /.events_post-sagment -->
-          <div class="events_post-sagment tabcontent" style="display: none" id="13">
+          <div class="events_post-sagment tabcontent {{ activeCheck('2013') }}" id="13">
               <h4 class="sagment-title">2013</h4>
               <div class="row">
                   <div class="col-sm-6">
                       <article class="sabbi-events-item">
-                          <a href="events_single.html?event=osu" class="sabbi-events-link">
+                          <a href="/events/osucup" class="sabbi-events-link">
                               <figure class="img-hover-zoom">
                                   <img class="sabbi-events-img img-responsive lab_event"
                                       src="assets/img/events/OSU-President's Cup Dec2013//11310703416_5d39f89a49.png"
@@ -219,15 +224,6 @@
 
               </div>
           </div><!-- /.events_post-sagment -->
-          <nav aria-label="Page navigation" class="pagination_wraper">
-              <ul class="pagination">
-                  <!-- <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li> -->
-                  <li><a class="tablinks" onclick="openEvent(event, '19')" href="#tabcontent">1</a></li>
-                  <li><a class="tablinks" onclick="openEvent(event, '18')" href="#tabcontent">2</a></li>
-                  <li><a class="tablinks" onclick="openEvent(event, '13')" href="#tabcontent">3</a></li>
-                  <!-- <li><a class="active" href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li> -->
-              </ul>
-          </nav><!-- /.pagination_wraper -->
       </div>
   </section><!-- /.stage_events_post -->
 

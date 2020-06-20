@@ -1,0 +1,26 @@
+{% macro eventPage(title='DEFAULT', fileName='', linkName='') %}
+{% set file = "pages/events/" + fileName + "/content.njk" %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  {% from "universal/_header.njk" import header %}
+  {{ header("events_single") }}
+
+  <body>
+    {% from "universal/_navbar.njk" import navbar %}
+    {{ navbar("Events") }}
+
+    <div class="container-fluid blog" style="margin-top: 103px;">
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <h1 class="text-center blog">{{ title }}</h1>
+          {% include (file) %}
+        </div>
+      </div>
+    </div>
+
+    {% include "universal/_footer.njk" %}
+    {% from "universal/_footer-scripts.njk" import scripts %}
+    {{ scripts() }}
+  </body>
+</html>
+{% endmacro %}
