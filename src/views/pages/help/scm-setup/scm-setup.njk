@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+{% from "universal/_header.njk" import header %}
+{{ header() }}
+
+<body>
+  {% from "universal/_navbar.njk" import navbar %}
+  {{ navbar() }}
+
+  <div class="container nav-margin pt-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-7 text-center">
+        <h3 class="kbl-heading pb-4">Source Control Setup</h3>
+
+        <p class="kbl-text text-thicc text-left">
+          This project uses Git and GitHub. Git is software for
+          <a href="https://www.perforce.com/blog/vcs/what-source-control#:~:text=These two terms are used,binary files and digital assets."
+            class="kbl-link" target="_blank" rel="noopener noreferrer">Source Control Management</a>. Source control gives us the ability to
+          do the following:
+        </p>
+
+        <ul class="kbl-text text-thicc text-left px-3">
+          <li>- back up our code</li>
+          <li>- roll back new changes if the new version is broken</li>
+          <li>- allow anyone to work on files without worrying about conflicting changes</li>
+          <li>- centralize our repository so that there's no question as to what the latest version is</li>
+          <li>- track all changes across a file ever</li>
+        </ul>
+
+        <p class="kbl-text text-thicc text-left">
+          Now, that covers why we use Git, but we also use
+          <a class="kbl-link" href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+          as well. GitHub hosts repositories so that we don't have to write our own Git server and manage it ourselves.
+          It's also free, and offers many other features as well that make running your own repository easier. We personally
+          don't require many of these features, as our site is not big enough, but the hosting is very nice to have. Managing
+          Git through a GUI is a plus, and we can see changes made to the site much more easily.
+        </p>
+
+        <p class="kbl-text text-thicc text-left">
+          To use GitHub, you'll first want to
+          <a class="kbl-link" href="https://github.com/join" target="_blank" rel="noopener noreferrer">create an account</a>.
+          After you've created an account, open a terminal on your computer. Keep in mind these instructions are for Mac/Linux users.
+          In the terminal, type in <code>cat ~/.ssh/id_rsa.pub</code><br>
+          If you get an error, that just means you haven't created an RSA key yet. To create a key, type in
+          <code>ssh-keygen -t rsa -C "your_email@example.com"</code><br>
+          Use the email you signed up to GitHub with. Just hit Enter through the prompts,
+          the defaults are okay.
+        </p>
+
+        <p class="kbl-text text-thicc text-left">
+          Now that you've created a key, use <code>cat ~/.ssh/id_rsa.pub</code> again. Copy the output of the command,
+          it should look like this:<br>
+          <code>ssh-rsa *long string of characters* your_username@some_workstation</code><br>
+        </p>
+
+        <p class="kbl-text text-thicc text-left">
+          Once you've copied your key, go to your GitHub account and go to your settings, under the top right menu:<br><br>
+          <img src="assets/kbl-img/findsettings.png" class="img-fluid"/><br><br>
+          Then, in your settings, go to 'SSH and GPG keys' and click 'New SSH key' at the top right:<br><br>
+          <img src="assets/kbl-img/sshkeys.png" class="img-fluid"/><br><br>
+        </p>
+
+        <p class="kbl-text text-thicc text-left">
+          In the 'Title' field, type in any name for the key (something like 'My Desktop'), then paste your key in the 'Key' field and click
+          the 'Add SSH key' button. Almost done!
+        </p>
+
+        <p class="kbl-text text-thicc text-left">
+          The last part of the setup is pretty easy. In a local terminal, type in<br>
+          <code>git config --global user.name "YOUR GITHUB NAME"</code><br>
+          then<br>
+          <code>git config --global user.email "YOUR_GITHUB_EMAIL@example.com"</code><br><br>
+          Make sure these are the credentials you used for your GitHub account.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {% include "universal/_footer.njk" %}
+  {% from "universal/_footer-scripts.njk" import scripts %}
+  {{ scripts() }}
+</body>
+
+</html>

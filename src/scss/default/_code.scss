@@ -1,0 +1,8 @@
+@import '../globals';
+@import '../colors';
+
+code {
+  font-size: 87.5%;
+  word-wrap: break-word;
+  color: $code-color!important;
+}

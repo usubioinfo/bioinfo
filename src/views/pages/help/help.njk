@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+{% from "universal/_header.njk" import header %}
+{{ header() }}
+
+<body>
+  {% from "universal/_navbar.njk" import navbar %}
+  {{ navbar() }}
+
+  <div class="container nav-margin pt-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+        <h2 class="kbl-heading text-center">KAABiL Site Editing Guide</h2>
+        <p class="kbl-text text-thicc text-left">
+          This a guide for changing the website under the current software stack. The guide will also explain
+          the purpose for the stack, as well as how to navigate it. The guide is split across several parts
+          to keep them from becoming one massive article to scroll through. The first part is all about setting up
+          the source control environment. If you have already done that, you can move on.
+        </p>
+
+        <h5 class="kbl-heading"><a href="help/scm-setup" class="kbl-link">Part 1: Source Control Setup</a></h5>
+        <h5 class="kbl-heading"><a href="help/dev-env" class="kbl-link">Part 2: Dev Environment</a></h5>
+      </div>
+    </div>
+  </div>
+
+  {% include "universal/_footer.njk" %}
+  {% from "universal/_footer-scripts.njk" import scripts %}
+  {{ scripts() }}
+</body>
+
+</html>

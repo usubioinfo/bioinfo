@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+{% from "universal/_header.njk" import header %}
+{{ header() }}
+
+<body>
+  {% from "universal/_navbar.njk" import navbar %}
+  {{ navbar() }}
+
+  <div class="container nav-margin pt-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-7 text-left">
+        <h3 class="kbl-heading pb-4 text-center">Run the Website Locally</h3>
+
+        <p class="kbl-text text-thicc">
+          To get the website on your machine, first find a place you want to put it on your computer, and then run<br>
+          <code>git clone git@github.com:MusicDev33/bioinformatics.git</code><br>
+          Once you've cloned the repository, go into the 'bioinformatics' folder that was created and type
+          <code>npm install</code>. This will install all the NPM packages in that folder.
+        </p>
+
+        <p class="kbl-text text-thicc">
+          To run the website locally, you'll need two terminal windows open, and they both need to be
+          in the same bioinformatics folder. In one, run <code>npm run dev-js</code>, and in the other,
+          run <code>npm run dev-scss</code>. Now you can open your browser to
+          <code>http://localhost:3000</code>
+          (or <a href="http://localhost:3000" target="_blank" rel="noopener noreferrer" class="kbl-link">click here</a>)
+          and you'll be able to see your changes. Just refresh the page when you make a change. Ctrl+R also refreshes web pages as well.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {% include "universal/_footer.njk" %}
+  {% from "universal/_footer-scripts.njk" import scripts %}
+  {{ scripts() }}
+</body>
+
+</html>

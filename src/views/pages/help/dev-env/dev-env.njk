@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+{% from "universal/_header.njk" import header %}
+{{ header() }}
+
+<body>
+  {% from "universal/_navbar.njk" import navbar %}
+  {{ navbar() }}
+
+  <div class="container nav-margin pt-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-7 text-left">
+        <h3 class="kbl-heading pb-4 text-center">The Development Environment</h3>
+        <p class="kbl-text text-thicc">
+          The development environment is the environment in which the local version of the website will run while you test it.
+          The reason we test locally is so that we don't run testing on the live site with people possibly using it.
+          It also reduces the chances of us accidentally breaking a page. This means we basically have to run the live site on
+          our workstations, which means we need to download and install the tech stack.<br><br>
+          As of June 22, 2020, our tech stack consists of
+          <a href="https://nodejs.org/en/" target="_blank" rel="noopener noreferrer" class="kbl-link">NodeJS</a>,
+          <a href="https://expressjs.com" target="_blank" rel="noopener noreferrer" class="kbl-link">Express</a>,
+          <a href="https://sass-lang.com" target="_blank" rel="noopener noreferrer" class="kbl-link">SASS</a>, and
+          <a href="https://mozilla.github.io/nunjucks/" target="_blank" rel="noopener noreferrer" class="kbl-link">Nunjucks</a>.
+        </p>
+        <p class="kbl-text text-thicc">
+          This tech stack consists of server-side frameworks and client-side frameworks. The server-side parts are not necessary to
+          make changes to the website, and only exist to process the Nunjucks pages and turn them into HTML for us, as well as parse the
+          SASS.
+        </p>
+        <p class="kbl-text text-thicc">
+          First, you'll want to install NodeJS on your Linux machine with
+          <a href="https://computingforgeeks.com/how-to-install-nodejs-on-ubuntu-debian-linux-mint/"
+            target="_blank" rel="noopener noreferrer" class="kbl-link">this guide</a>, or on MacOS with
+          <a href="https://nodesource.com/blog/installing-nodejs-tutorial-mac-os-x/"
+            target="_blank" rel="noopener noreferrer" class="kbl-link">this guide</a>.
+          To make sure Node is installed, check your installation in a terminal with<br>
+          <code>node -v</code><br>
+          and make sure you also have NPM with<br>
+          <code>npm -v</code><br>
+        </p>
+
+        <p class="kbl-text text-thicc">
+          Last, we'll go ahead and install Nodemon and ts-node-dev with NPM:<br>
+          <code>sudo npm install nodemon ts-node-dev -g</code><br>
+          The <code>-g</code> flag installs this globally on your computer, which is why you'll need to run
+          it with <code>sudo</code>. This allows you to use Nodemon and ts-node-dev on any application. Now your development
+          environment is set up.<br><br> Time to start
+          <a href="help/run-local" class="kbl-link">editing the site</a>!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {% include "universal/_footer.njk" %}
+  {% from "universal/_footer-scripts.njk" import scripts %}
+  {{ scripts() }}
+</body>
+
+</html>

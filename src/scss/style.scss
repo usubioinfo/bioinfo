@@ -30,6 +30,10 @@ body {
   background: $color-bg-gray;
 }
 
+.nav-margin {
+  margin-top: $navbar-height!important;
+}
+
 .header-icon-wrapper {
   h1, h2, h3, h4, h5, h6, p {
     color: $color-text-main!important;
@@ -96,4 +100,9 @@ i.ion-ios-paper-outline {
 
 .align-self-end {
   align-self: baseline;
+}
+
+.text-thicc {
+  // font-weight: $font-weight-medium!important;
+  font-size: 120%;
 }
