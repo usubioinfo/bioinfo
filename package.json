@@ -11,6 +11,7 @@
     "sass:importer": "node src/importer.js",
     "dev-scss": "npm-run-all -p sass:*",
     "dev-js": "nodemon src/index.js",
+    "update": "git pull origin master",
     "production": "NODE_ENV=test node src/index.js"
   },
   "repository": {
