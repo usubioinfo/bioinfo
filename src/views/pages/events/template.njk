@@ -1,19 +1,32 @@
-{% macro eventPage(title='DEFAULT', fileName='', linkName='') %}
+{% macro eventPage(title='DEFAULT', fileName='', event={img: '', location: '', date: '', media: []}) %}
 {% set file = "pages/events/" + fileName + "/content.njk" %}
 <!DOCTYPE html>
 <html class="no-js" lang="en">
   {% from "universal/_header.njk" import header %}
-  {{ header("events_single") }}
+  {{ header() }}
 
   <body>
     {% from "universal/_navbar.njk" import navbar %}
     {{ navbar("Events") }}
 
-    <div class="container-fluid blog" style="margin-top: 103px;">
+    <div class="container blog" style="margin-top: 103px;">
       <div class="row justify-content-center">
-        <div class="col-6">
+        <div class="col-6 text-center">
           <h1 class="text-center blog">{{ title }}</h1>
-          {% include (file) %}
+          <img class="img-fluid col-12 p-0" src="{{ event.img }}">
+          <div class="text-left event-details mt-2">
+            <span class="mr-4"><i class="ion-location mr-2"></i>{{ event.location }}</span>
+            <span><i class="ion-calendar mr-3"></i>{{ event.date }}</span>
+          </div>
+          <div class="text-left">
+            {% include (file) %}
+            <h3 class="kbl-heading pt-4">From Media</h3>
+          </div>
+          <div class="row">
+            {% for pic in event.media %}
+              <img class="col-12 col-sm-6 col-md-4 my-3 event-thumbnail" src="{{ pic }}">
+            {% endfor %}
+          </div>
         </div>
       </div>
     </div>

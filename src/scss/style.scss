@@ -84,28 +84,6 @@ i.ion-ios-paper-outline {
 }
 
 // Get of this!
-.home-news-item {
-  .hn-header {
-    font-size: 107%!important;
-    font-weight: $font-weight-heavy;
-    color: $color-text-main!important;
-    transition: $time-mid;
-
-    &.shrink {
-      line-height: 103%!important;
-    }
-
-    &:hover {
-      color: $color-primary!important;
-    }
-  }
-
-  .hn-date {
-    color: $color-text-soft!important;
-    font-style: italic;
-  }
-}
-
 .remarkable {
   font-weight: $font-weight-heavy;
   font-size: 125%!important;

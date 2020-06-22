@@ -1,3 +1,18 @@
 {% from "pages/events/template.njk" import eventPage %}
 
-{{ eventPage("Visit to National Chung Hsing University", "hsing") }}
+{% set event = {
+    img: 'assets/img/events/NCHU-2018/IMG_5118.JPG',
+    location: '145 Xingda Road, S District, Taichung City, Taiwan',
+    date: 'Mar 2-9, 2018',
+    media: [
+      'assets/img/events/NCHU-2018/IMG_5082.JPG',
+      'assets/img/events/NCHU-2018/IMG_5098.JPG',
+      'assets/img/events/NCHU-2018/IMG_5117.JPG',
+      'assets/img/events/NCHU-2018/IMG_5195.JPG',
+      'assets/img/events/NCHU-2018/IMG_5001.JPG',
+      'assets/img/events/NCHU-2018/IMG_5063.JPG'
+    ]
+  }
+%}
+
+{{ eventPage("Visit to National Chung Hsing University", "hsing", event) }}

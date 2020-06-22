@@ -1,3 +1,18 @@
 {% from "pages/events/template.njk" import eventPage %}
 
-{{ eventPage("Utah State University Winter", "winter") }}
+{% set event = {
+    img: 'assets/img/events/USU_winter/IMG_1201.JPG',
+    location: '4700 Old Main Hill, Logan, UT',
+    date: 'Dec 1, 2019',
+    media: [
+      'assets/img/events/USU_winter/IMG_1204.JPG',
+      'assets/img/events/USU_winter/IMG_1206.JPG',
+      'assets/img/events/USU_winter/IMG_1909.JPG',
+      'assets/img/events/USU_winter/IMG_1910.JPG',
+      'assets/img/events/USU_winter/IMG_1911.JPG',
+      'assets/img/events/USU_winter/IMG_2886.JPG'
+    ]
+  }
+%}
+
+{{ eventPage("Utah State University Winter", "winter", event) }}
