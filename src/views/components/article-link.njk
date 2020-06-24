@@ -1,6 +1,11 @@
 {% macro articleLink(article) %}
-  <a class="row kbl-article-link no-gutters" href="/research/{{ article.link }}">
-    <ion-icon name="document-text-outline" class="link-icon col-1 px-2"></ion-icon>
-    <span class="title col my-auto text-truncate">{{ article.title }}</span>
+  <a href="{{ article.link }}">
+    <div class="kbl-container flex interactive h-100">
+      <img class="img-fluid" src="{{ article.img }}" />
+      <div class="flex-text-wrapper h-100 pt-2 px-3 pb-0">
+        <h5 class="kbl-heading article-header pb-1">{{ article.title }}</h5>
+        <p class="article-desc mt-auto">{{ article.subtitle }}</p>
+      </div>
+    </div>
   </a>
 {% endmacro %}

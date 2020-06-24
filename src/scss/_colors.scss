@@ -1,9 +1,22 @@
-// $color-primary: #d400ff;
-$color-primary-dark: #980f23;
-$color-primary: #bb1a31;
-$color-primary-light: #d73e55;
-$color-primary-very-light: #f17789;
-$color-primary-bg: rgba(#b91f2e,.18);
+@function tint($color, $percentage) {
+  @return mix($color, white, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix($color, black, $percentage);
+}
+
+// $color-primary: #00a3ff;
+$color-primary: #b4132a;
+
+// Shades
+$color-primary-very-dark: shade($color-primary, 45%);
+$color-primary-dark: shade($color-primary, 70%);
+
+// Tints
+$color-primary-light: tint($color-primary, 70%);
+$color-primary-very-light: tint($color-primary, 45%);
+$color-primary-bg: rgba($color-primary, .18);
 
 $code-color: #ee316f;
 
@@ -17,3 +30,15 @@ $color-text-main: #2a2a2a;
 $color-text-soft: #6f6f6f;
 
 $color-btn-gray: #c4c4c4;
+
+
+// Logos
+$color-google: #4285F4;
+$color-orcid: #A6CE39;
+$color-researchgate: #40ba9b;
+$color-facebook: #3b5998;
+$color-linkedin: #2867B2;
+$color-twitter: #1DA1F2;
+
+$logo-map: ("google": $color-google, "orcid": $color-orcid, "researchgate": $color-researchgate,
+            "facebook": $color-facebook, "linkedin": $color-linkedin, "twitter": $color-twitter, "kbl": $color-primary);

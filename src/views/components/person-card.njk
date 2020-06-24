@@ -68,14 +68,14 @@
 
 {% macro socialSet(social) %}
   {% if social.type === "twitter" %}
-    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="correct-fa align-middle"><i class="fab fa-twitter-square"></i></a>
+    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="kbl-icon-{{ social.type }} correct-fa align-middle"><i class="fab fa-twitter-square"></i></a>
   {% elif social.type === "linkedin" %}
-    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="correct-fa align-middle"><i class="fab fa-linkedin"></i></a>
+    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="kbl-icon-{{ social.type }} correct-fa align-middle"><i class="fab fa-linkedin"></i></a>
   {% elif social.type === "facebook" %}
-    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="correct-fa align-middle"><i class="fab fa-facebook-square"></i></a>
+    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="kbl-icon-{{ social.type }} correct-fa align-middle"><i class="fab fa-facebook-square"></i></a>
   {% elif social.type === "researchgate" %}
-    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="correct-fa align-middle"><i class="ai ai-researchgate-square"></i></a>
+    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="kbl-icon-{{ social.type }} correct-fa align-middle"><i class="ai ai-researchgate-square"></i></a>
   {% elif social.type === "website" %}
-    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="correct-fa align-middle"><i class="fas fa-laptop"></i></a>
+    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="kbl-icon-kbl correct-fa align-middle"><i class="fas fa-laptop"></i></a>
   {% endif %}
 {% endmacro %}

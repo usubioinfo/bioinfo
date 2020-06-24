@@ -40,6 +40,37 @@ body {
   }
 }
 
+.kbl-container {
+  border-radius: $border-radius;
+  overflow: hidden;
+  border: 1px solid $color-border-gray;
+  transition: $time-mid;
+
+  &.flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article-header {
+    transition: $time-mid;
+  }
+
+  .article-desc {
+    font-weight: $font-weight-medium;
+    color: $color-text-soft;
+  }
+
+  &.interactive:hover {
+    background: $color-bg-gray;
+    cursor: pointer;
+
+    .article-header {
+      color: $color-primary!important;
+    }
+  }
+}
+
+/*
 .kbl-social-wrapper a {
   font-size: 150%!important;
   color: $color-primary-light!important;
@@ -50,6 +81,7 @@ body {
     color: $color-primary!important;
   }
 }
+*/
 
 ::selection {
   background: $color-primary-light;
@@ -71,6 +103,10 @@ body {
 
 i.ion-ios-paper-outline {
   color: $color-primary!important;
+}
+
+.pub-item.with-icon .elem-wrapper i {
+  border-color: $color-primary!important;
 }
 
 .carousel-control-prev-icon {
@@ -136,5 +172,18 @@ footer {
 
   &.thicc {
     font-weight: $font-weight-medium!important;
+  }
+}
+
+@each $name, $color in $logo-map {
+  a.kbl-icon-#{$name} {
+    color: tint($color, 60%)!important;
+    transition: $time-mid;
+    font-size: 150%!important;
+    margin-right: 5px;
+
+    &:hover {
+      color: $color!important;
+    }
   }
 }

@@ -36,7 +36,7 @@ nav.bs4 {
   transition: $time-mid;
 
   &:hover {
-    background: #ebebeb!important;
+    background: $color-bg-gray!important;
     color: $color-primary!important;
   }
 }

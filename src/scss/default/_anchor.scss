@@ -11,8 +11,13 @@ a.kbl-link {
     font-weight: $font-weight-heavy!important;
   }
 
+  &.dull {
+    color: $color-text-main!important;
+  }
+
   &:hover:not(:focus) {
     border-color: $color-primary!important;
+    color: $color-primary!important;
     text-decoration: none!important;
   }
 
