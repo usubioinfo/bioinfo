@@ -7,6 +7,10 @@ a.kbl-link {
   text-decoration: none!important;
   transition: $time-mid;
 
+  &.thicc {
+    font-weight: $font-weight-heavy!important;
+  }
+
   &:hover:not(:focus) {
     border-color: $color-primary!important;
     text-decoration: none!important;

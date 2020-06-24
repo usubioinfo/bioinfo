@@ -106,3 +106,35 @@ i.ion-ios-paper-outline {
   // font-weight: $font-weight-medium!important;
   font-size: 120%;
 }
+
+.footer-section {
+  .kbl-text {
+    line-height: 200%;
+
+    &.soft {
+      font-style: italic!important;
+      color: $color-text-soft!important;
+    }
+  }
+}
+
+footer {
+  background: $color-bg-gray;
+}
+
+.footer-bottom-text {
+  font-size: 90%!important;
+}
+
+.footer-link {
+  color: $color-text-main!important;
+  transition: $time-mid;
+
+  &:hover {
+    color: $color-primary!important;
+  }
+
+  &.thicc {
+    font-weight: $font-weight-medium!important;
+  }
+}
