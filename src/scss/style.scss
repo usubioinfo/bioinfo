@@ -177,7 +177,7 @@ footer {
 
 @each $name, $color in $logo-map {
   a.kbl-icon-#{$name} {
-    color: tint($color, 60%)!important;
+    color: tint($color, 75%)!important;
     transition: $time-mid;
     font-size: 150%!important;
     margin-right: 5px;
