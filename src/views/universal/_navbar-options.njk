@@ -29,6 +29,7 @@
   }
 %}
 
+<!--
 {% set tools = {
   name: "Tools",
   options: [
@@ -47,6 +48,20 @@
     {name: "RSLpred", link: "http://www.imtech.res.in/raghava/rslpred/"},
     {name: "RB-Pred", link: "http://www.imtech.res.in/raghava/rbpred/"},
     {name: "legumeSSRdb", link: "http://bioinfo.usu.edu/legumeSSRdb/"}
+  ],
+  link: "/tools"
+  }
+%}
+-->
+
+{% set tools = {
+  name: "Tools",
+  options: [
+    {name: "Host-Pathogen Prediction", link: "/tools#hpi"},
+    {name: "Cellular Localization Prediction", link: "/tools#cellularloc"},
+    {name: "Databases", link: "/tools#db"},
+    {name: "Bioenergy", link: "/tools#bionrg"},
+    {name: "Miscellaneous", link: "/tools#misc"}
   ],
   link: "/tools"
   }
@@ -76,7 +91,7 @@
 
 {% macro toolAnchorGen(name, link, topLevelName, extraClasses="") %}
   {% if topLevelName === "Tools" %}
-    <a href="{{ link }}" title="{{ name }}" target="_blank" rel="noopener noreferrer" class="nav-suboption {{ extraClasses }}">{{ name }}</a>
+    <a href="{{ link }}" title="{{ name }}" class="nav-suboption {{ extraClasses }}">{{ name }}</a>
   {% else %}
     <a href="{{ link }}" title="{{ name }}" class="nav-suboption {{ extraClasses }}">{{ name }}</a>
   {% endif %}
@@ -102,7 +117,7 @@
 
 {% macro toolAnchorGenBS4(name, link, topLevelName, extraClasses="") %}
   {% if topLevelName === "Tools" %}
-    <a href="{{ link }}" title="{{ name }}" target="_blank" rel="noopener noreferrer" class="bs4 nav-suboption {{ extraClasses }}">{{ name }}</a>
+    <a href="{{ link }}" title="{{ name }}" class="bs4 nav-suboption {{ extraClasses }}">{{ name }}</a>
   {% else %}
     <a href="{{ link }}" title="{{ name }}" class="bs4 nav-suboption {{ extraClasses }}">{{ name }}</a>
   {% endif %}

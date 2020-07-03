@@ -43,11 +43,11 @@
     {% from "./_tool-section.njk" import toolSection %}
     {% from "./_tool-data.njk" import hpi, clpt, dbs, bioenergy, misc %}
 
-    {{ toolSection("Host-Pathogen Interaction Prediction Tools", hpi) }}
-    {{ toolSection("Cellular Localization Prediction Tools", clpt) }}
-    {{ toolSection("Databases", dbs) }}
-    {{ toolSection("Bioenergy", bioenergy) }}
-    {{ toolSection("Miscellaneous", misc) }}
+    {{ toolSection("Host-Pathogen Interaction Prediction Tools", hpi, "hpi") }}
+    {{ toolSection("Cellular Localization Prediction Tools", clpt, "cellularloc") }}
+    {{ toolSection("Databases", dbs, "db") }}
+    {{ toolSection("Bioenergy", bioenergy, "bionrg") }}
+    {{ toolSection("Miscellaneous", misc, "misc") }}
   </article>
 
   {% include "universal/_footer.njk" %}

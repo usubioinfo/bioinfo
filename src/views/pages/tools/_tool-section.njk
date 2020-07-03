@@ -13,8 +13,8 @@
   </a>
 {% endmacro %}
 
-{% macro toolSection(title, tools=[]) %}
-  <div class="row my-5">
+{% macro toolSection(title, tools=[], id="default") %}
+  <div class="row my-5" id="{{ id }}">
     <div class="col-12">
       <div class="kbl-header-bar text-center py-2">
         <h4 class="kbl-heading my-auto">{{ title }}</h4>
