@@ -41,6 +41,9 @@ $card-width: 250px;
 
   .img-tool {
     flex-basis: 120px;
+    overflow-y: hidden;
+    border-bottom: 1px solid $color-border-gray;
+    transition: $time-mid;
   }
 }
 
@@ -65,6 +68,10 @@ $card-width: 250px;
 
       .card-title {
         color: $color-primary;
+      }
+
+      .img-tool {
+        border-color: $color-primary-very-light;
       }
     }
   }
