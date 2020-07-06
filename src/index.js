@@ -71,7 +71,7 @@ app.get('/events', (req, res, next) => {
   if (req.query.range) {
     nunEnv.addGlobal(`routerEventsYearRange`, req.query.range);
   } else {
-    nunEnv.addGlobal(`routerEventsYearRange`, '2019');
+    nunEnv.addGlobal(`routerEventsYearRange`, '2020');
   }
 
   res.render(__dirname + `/views/pages/events/events.njk`, (err, html) => {
