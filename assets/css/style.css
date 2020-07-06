@@ -206,15 +206,6 @@ img.grayscale:hover {
   border-radius: 6px; }
 
 /* text */
-.text-right {
-  text-align: right; }
-
-.text-left {
-  text-align: left; }
-
-.text-center {
-  text-align: center; }
-
 .stage_image, .notice {
   background-repeat: no-repeat;
   background-size: cover; }

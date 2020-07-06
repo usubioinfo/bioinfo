@@ -187,3 +187,13 @@ footer {
     }
   }
 }
+
+.modal-arrow-select {
+  color: $color-text-main!important;
+  transition: $time-mid;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-primary!important;
+  }
+}

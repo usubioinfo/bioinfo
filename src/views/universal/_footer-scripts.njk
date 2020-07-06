@@ -20,31 +20,33 @@
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <!-- To stop videos playing after modal is closed -->
 <script>
-$('#videoModal').on('hidden.bs.modal', function () {
+$('#videoModal').on('hidden.bs.modal', () => {
     $("#videoModal iframe").attr("src", $("#videoModal iframe").attr("src"));
 });
 
 // BS4 Stuff
-$('#homePageBS4Carousel').on('slide.bs.carousel', function (e) {
+$('#homePageBS4Carousel').on('slide.bs.carousel', (e) => {
 
-    var $e = $(e.relatedTarget);
-    var idx = $e.index();
-    var itemsPerSlide = 3;
-    var totalItems = $('.carousel-item').length;
+  const $e = $(e.relatedTarget);
+  const idx = $e.index();
+  const itemsPerSlide = 3;
+  const totalItems = $('.carousel-item').length;
 
-    if (idx >= totalItems-(itemsPerSlide-1)) {
-        var it = itemsPerSlide - (totalItems - idx);
-        for (var i=0; i<it; i++) {
-            // append slides to end
-            if (e.direction=="left") {
-                $('.carousel-item').eq(i).appendTo('.carousel-inner');
-            }
-            else {
-                $('.carousel-item').eq(0).appendTo('.carousel-inner');
-            }
-        }
+  if (idx >= totalItems - (itemsPerSlide - 1)) {
+    var it = itemsPerSlide - (totalItems - idx);
+    for (let i=0; i<it; i++) {
+      // append slides to end
+      if (e.direction=="left") {
+        $('.carousel-item').eq(i).appendTo('.carousel-inner');
+      }
+      else {
+        $('.carousel-item').eq(0).appendTo('.carousel-inner');
+      }
     }
+  }
 });
+
+
 </script>
 {% if customJS %}
 <script>
