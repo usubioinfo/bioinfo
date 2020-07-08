@@ -2,17 +2,22 @@
 
 {% macro navbar(activePage="", activeSubpage="") %}
 
-<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-md bs4" style="background: #fff!important;">
-  <article class="container-fluid px-5">
+{% from "./_navbar-small.njk" import navbarSmall %}
+
+{{ navbarSmall(activePage, activeSubpage) }}
+
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-md bs4 d-none d-xl-block"
+  style="background: #fff!important;">
+  <article class="container-fluid px-3">
     <section class="row px-5 w-100 mb-1">
 
-      <div class="col-4 pl-5">
+      <div class="col-3 pl-5">
         <a class="navbar-brand d-inline" href="/">
           <img src="/assets/img/kbllogo.png">
         </a>
       </div>
 
-      <div class="col-8 mt-auto pr-5">
+      <div class="col-9 mt-auto pr-5">
 
         <section class="row pb-4">
           <div class="col-12 text-right">
@@ -48,9 +53,6 @@
       </div>
 
     </section>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
   </article>
 </nav>
 {% endmacro %}

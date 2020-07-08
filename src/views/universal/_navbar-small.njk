@@ -1,0 +1,74 @@
+{% from "universal/navbar-active-route.njk" import activeRoute, activeSubroute, currentRoute %}
+
+{% macro navbarSmall(activePage="", activeSubpage="") %}
+
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-md bs4 d-xl-none" style="background: #fff!important;">
+  <article class="container-fluid">
+    <section class="row w-100 mb-1">
+
+      <div class="col-5 pl-5">
+        <a class="navbar-brand d-inline" href="/">
+          <img src="/assets/img/kbllogo.png">
+        </a>
+      </div>
+
+      <div class="col-7 text-right my-auto">
+        <a class="kbl-btn-1" target="_blank" rel="noopener noreferrer" href="http://bioinfo.usu.edu/covidTracker/">
+            Covid 19 Tracker
+        </a>
+        <a class="kbl-btn-1 ml-2" href="/contact">
+            Contact
+        </a>
+      </div>
+
+      <div class="col-12 mt-auto d-none d-md-block">
+        <section class="row">
+          <div class="col-12 text-right">
+            {% from "./_navbar-options.njk" import navOptions, calcDropdown, anchorGenBS4, toolAnchorGenBS4, genHeaderLink %}
+
+            {% for option in navOptions %}
+              <span class="bs4 col {{ calcDropdown(option.options)}} {{ currentRoute(option.name, activePage) }}">
+                  {{ anchorGenBS4(option.name, option.options, option.link) }}
+                  {% if option.options %}
+                  <div class="dropdown-menu bs4 nav-dropdown mt-2">
+                    {{ genHeaderLink(option.name, option.link) }}
+                    {% for subOption in option.options %}
+                     {{ toolAnchorGenBS4(subOption.name, subOption.link, option.name, "dropdown-item nav-dropdown-item py-2 {{ activeSubroute(subOption.name, activeSubpage) }}") }}
+                    {% endfor %}
+                  </div>
+                  {% endif %}
+              </span>
+            {% endfor %}
+          </div>
+        </section>
+      </div>
+
+      {% from "./_navbar-options.njk" import anchorGenBS4Small %}
+      <div class="collapse" id="hiddenNav">
+        <div class="col-12 mt-auto">
+          {% for option in navOptions %}
+            <section class="row py-1">
+              <span class="bs4 col {{ calcDropdown(option.options)}} {{ currentRoute(option.name, activePage) }}">
+                  {{ anchorGenBS4Small(option.name, option.options, option.link) }}
+                  {% if option.options %}
+                  <div class="dropdown-menu bs4 nav-dropdown mt-2">
+                    {{ genHeaderLink(option.name, option.link) }}
+                    {% for subOption in option.options %}
+                     {{ toolAnchorGenBS4(subOption.name, subOption.link, option.name, "dropdown-item nav-dropdown-item py-2 {{ activeSubroute(subOption.name, activeSubpage) }}") }}
+                    {% endfor %}
+                  </div>
+                  {% endif %}
+              </span>
+            </section>
+          {% endfor %}
+        </div>
+      </div>
+
+    </section>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#hiddenNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </article>
+</nav>
+{% endmacro %}

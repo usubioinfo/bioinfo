@@ -115,6 +115,16 @@
   {% endif %}
 {% endmacro %}
 
+{% macro anchorGenBS4Small(name, array, link) %}
+  {% if array.length %}
+    <a class="dropdown-toggle bs4 nav-option pb-0" data-toggle="dropdown" data-hover="dropdown" href="{{ link }}" title="{{ name }}" data-animations="zoomIn">
+      {{ name }} <span class="caret"></span>
+    </a>
+  {% else %}
+    <a href="{{ link }}" title="{{ name }}" class="bs4 nav-option pb-0">{{ name }}</a>
+  {% endif %}
+{% endmacro %}
+
 {% macro toolAnchorGenBS4(name, link, topLevelName, extraClasses="") %}
   {% if topLevelName === "Tools" %}
     <a href="{{ link }}" title="{{ name }}" class="bs4 nav-suboption {{ extraClasses }}">{{ name }}</a>
