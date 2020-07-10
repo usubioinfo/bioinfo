@@ -3,4 +3,8 @@
 
 .kbl-text {
   color: $color-text-hard!important;
+
+  &.soft {
+    color: $color-text-soft!important;
+  }
 }

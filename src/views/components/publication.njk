@@ -1,0 +1,19 @@
+{% macro publication(article) %}
+  <article class="row py-2">
+    <section class="col-3">
+      <p class="kbl-text soft">
+        {{ article.authors | safe }}
+      </p>
+    </section>
+
+    <section class="col-6">
+      <p class="kbl-text">
+        {{ article.content | safe }}
+      <p>
+    </section>
+
+    <section class="col-3">
+      <span class="kbl-text">DOI: <a class="kbl-link" href="{{ article.doiLink }}">{{ article.doiTitle }}</a></span>
+    </section>
+  </article>
+{% endmacro %}
