@@ -25,17 +25,12 @@
    margin-top: 11px!important;
  }
 
- /* typo is intentional, that's how the template creators spelt it... */
- .pfofile-social li a {
-   transition: all 0.25s;
- }
-
  .btn {
    transition: all 0.3s!important;
  }
 
 .kbl-header {
-  background-image: url(/assets/img/old_main_contact.jpg);
+  background-image: url('https://mph.usu.edu/images/admissions.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }

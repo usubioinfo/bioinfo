@@ -1,9 +1,5 @@
-{% macro imgHeader(title="") %}
-  <header class="kbl-header sabbi-page-header page-header-lg">
-    <div class="page-header-content conternt-center">
-      <div class="header-title-block">
-        <h1 class="page-title green-text">{{ title }}</h1>
-      </div>
-    </div>
-  </header>
+{% macro imgHeader(img="") %}
+  <section class="container-fluid px-0">
+    <img class="kbl-header-img" src="{{ img }}"/>
+  </section>
 {% endmacro %}
