@@ -23,7 +23,7 @@
 -->
 
 {% from "components/publication.njk" import publication %}
-{% from "./_data.njk" import pub2019, pub2018, pub2016, pub2014, pub2013 %}
+{% from "./_data.njk" import pub2019, pub2018, pub2016, pub2014, pub2013, pub2012, pub2011, pub2010, pub2009, pub2007, pub2006, pub2005 %}
 {% from './_functions.njk' import selector, activeCheck %}
 
 <article class="container pt-5 pb-3">
@@ -68,317 +68,67 @@
   </section>
 </article>
 
-  <main class="sabbi-page-wrap">
-      <section class="section-journal-papers">
-          <div class="container">
-              <div class="journal-papers-mound-wrap tabcontent {{ activeCheck('2011-2013') }}" id="11-13">
+<article class="container {{ activeCheck('2011-2013') }}">
+  <section class="py-4">
+    <h3 class="kbl-heading text-center">2013</h3>
+    {% for article in pub2013 %}
+      {{ publication(article) }}
+    {% endfor %}
+  </section>
 
-                      <div class="journal-papers-mound">
-                                  <nav class="journal-papers-mound-nav">
-                                      <h3 class="nav-title">2013</h3>
-                                  </nav>
-                                  <div class="journal-papers-list">
-                                      <div class="journal-papers">
-                                          <div class="row">
-                                              <div class="col-sm-3">
-                                                  <p class="jp-name">Kaundal R, Sahu SS, Verma R, Weirick T.</p>
-                                              </div>
-                                              <div class="col-sm-6">
-                                                  <div class="journal-papers-meta">
-                                                      <p>Identification and characterization of plastid-type proteins from sequence-attributed features using machine learning.
-                                                          <em>PMCID:</em><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3851450 /" class="pdf-link" target="_blank">PMC3851450</a>
-                                                          </a></p>
-                                                  </div>
-                                              </div>
-                                              <div class="col-sm-3">
-                                                  <div class="journal-papers-doi"><span>DOI:</span> <a target="_blank" href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-S14-S7">10.1186/1471-2105-14-S14-S7</a></div>
-                                              </div>
-                                          </div>
-                                      </div><!-- /.journal-papers -->
-                                  </div>
-                                  <div class="journal-papers-list">
-                                          <div class="journal-papers">
-                                              <div class="row">
-                                                  <div class="col-sm-3">
-                                                      <p class="jp-name">Ahmed F, Kaundal R, Raghava GP.</p>
-                                                  </div>
-                                                  <div class="col-sm-6">
-                                                      <div class="journal-papers-meta">
-                                                          <p>PHDcleav: a SVM based method for predicting human Dicer cleavage sites using sequence and secondary structure of miRNA precursors.
-                                                          <em>PMCID:</em><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3851333/" class="pdf-link" target="_blank">PMC3851333</a>
-                                                          </a></p>
-                                                      </div>
-                                                  </div>
-                                                  <div class="col-sm-3">
-                                                      <div class="journal-papers-doi"><span>DOI:</span> <a target="_blank" href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-S14-S9">10.1186/1471-2105-14-S14-S9</a></div>
-                                                  </div>
-                                              </div>
-                                          </div><!-- /.journal-papers -->
-                                      </div>
-                                      <div class="journal-papers-list">
-                                              <div class="journal-papers">
-                                                  <div class="row">
-                                                      <div class="col-sm-3">
-                                                          <p class="jp-name">Wren JD, Dozmorov MG, Burian D, Kaundal R, Perkins A, Perkins E, Kupfer DM, Springer GK.</p>
-                                                      </div>
-                                                      <div class="col-sm-6">
-                                                          <div class="journal-papers-meta">
-                                                              <p>Proceedings of the 2013 MidSouth Computational Biology and Bioinformatics Society (MCBIOS) Conference.
-                                                                  <em>PMCID:</em><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3851158/" class="pdf-link" target="_blank">PMC3851158</a>
-                                                                  </a></p>
-                                                          </div>
-                                                      </div>
-                                                      <div class="col-sm-3">
-                                                          <div class="journal-papers-doi"><span>DOI:</span> <a target="_blank" href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-S14-S1">10.1186/1471-2105-14-S14-S1</a></div>
-                                                      </div>
-                                                  </div>
-                                              </div><!-- /.journal-papers -->
-                                          </div>
-                      </div>
-                      <div class="journal-papers-mound">
-                              <nav class="journal-papers-mound-nav">
-                                  <h3 class="nav-title">2012</h3>
-                              </nav>
-                              <div class="journal-papers-list">
-                                  <div class="journal-papers">
-                                      <div class="row">
-                                          <div class="col-sm-3">
-                                              <p class="jp-name">Wren JD, Dozmorov MG, Burian D, Kaundal R, Bridges S, Kupfer DM.</p>
-                                          </div>
-                                          <div class="col-sm-6">
-                                              <div class="journal-papers-meta">
-                                                  <p>Proceedings of the 2012 MidSouth Computational
-                                                      Biology and Bioinformatics Society (MCBIOS) conference.
-                                                      <em>Introduction.</em>
-                                                      <em>PMCID:</em><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3439718/" class="pdf-link" target="_blank">PMC3439718</a>
-                                                      </a></p>
-                                              </div>
-                                          </div>
-                                          <div class="col-sm-3">
-                                              <div class="journal-papers-doi"><span>DOI:</span> <a target="_blank" href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-13-S15-S1">10.1186/1471-2105-13-S15-S1</a></div>
-                                          </div>
-                                      </div>
-                                  </div><!-- /.journal-papers -->
-                              </div>
-                      </div>
-                      <div class="journal-papers-mound">
-                              <nav class="journal-papers-mound-nav">
-                                  <h3 class="nav-title">2011</h3>
-                              </nav>
-                              <div class="journal-papers-list">
-                                  <div class="journal-papers">
-                                      <div class="row">
-                                          <div class="col-sm-3">
-                                              <p class="jp-name">Lee, J., Kaundal, R., Li, J., Zhao, P.X. and Allen, R. 2011.</p>
-                                          </div>
-                                          <div class="col-sm-6">
-                                              <div class="journal-papers-meta">
-                                                  <p>Genome-wide identification of alternative polyadenylation (APA) genes in Arabidopsis and their biological validation
-                                                     <em> (submitted). </em></a></p>
-                                              </div>
-                                          </div>
-                                          <div class="col-sm-3">
-                                              <!-- <div class="journal-papers-doi"><span>DOI:</span> <a href="#">10.1016/j.icheatmasstransfer.2016.12.017</a></div> -->
-                                          </div>
-                                      </div>
-                                  </div><!-- /.journal-papers -->
-                              </div>
-                          </div>
+  <section class="py-4">
+    <h3 class="kbl-heading text-center">2012</h3>
+    {% for article in pub2012 %}
+      {{ publication(article) }}
+    {% endfor %}
+  </section>
 
-          </div><!-- /.journal-papers-mound-wrap-->
-              <div class="journal-papers-mound-wrap tabcontent {{ activeCheck('2008-2010') }}" id="08-10">
+  <section class="py-4">
+    <h3 class="kbl-heading text-center">2011</h3>
+    {% for article in pub2011 %}
+      {{ publication(article) }}
+    {% endfor %}
+  </section>
+</article>
 
-                              <div class="journal-papers-mound">
-                                      <nav class="journal-papers-mound-nav">
-                                          <h3 class="nav-title">2010</h3>
-                                      </nav>
-                                      <div class="journal-papers-list">
-                                          <div class="journal-papers">
-                                              <div class="row">
-                                                  <div class="col-sm-3">
-                                                      <p class="jp-name">Kaundal, R., Saini, R. and Zhao, P.X. 2010.</p>
-                                                  </div>
-                                                  <div class="col-sm-6">
-                                                      <div class="journal-papers-meta">
-                                                          <p>Combining machine learning and homology-based approaches to
-                                                              accurately predict subcellular localization in Arabidopsis.
-                                                              <em>Plant Physiology 154(1):</em> <strong>36-54.</strong>
-                                                              <em>PMCID:</em><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2938157/" class="pdf-link" target="_blank">PMC2832251</a>
-                                                          </a></p>
-                                                      </div>
-                                                  </div>
-                                                  <div class="col-sm-3">
-                                                      <div class="journal-papers-doi"><span>DOI:</span> <a target="_blank" href="http://www.plantphysiol.org/content/154/1/36">10.1104/pp.110.156851</a></div>
-                                                  </div>
-                                              </div>
-                                          </div><!-- /.journal-papers -->
-                                          <div class="journal-papers">
-                                              <div class="row">
-                                                  <div class="col-sm-3">
-                                                      <p class="jp-name">Benedito, V.A., Li, H., Dai, X.,
-                                                          Wandrey, M., He, J., Kaundal, R., Torres-Jerez, I.,
-                                                          Gomez, S.K., Harrison, M.J., Tang, Y., Zhao, P.X. and
-                                                          Udvardi, M.K. 2010.</p>
-                                                  </div>
-                                                  <div class="col-sm-6">
-                                                      <div class="journal-papers-meta">
-                                                          <p>Genomic inventory and transcriptional
-                                                              analysis of Medicago truncatula transporters.
-                                                              <em>Plant Physiology152(3):</em>
-                                                              <strong>1716-1730.</strong>
-                                                              <em>PMCID:</em><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2832251/" class="pdf-link" target="_blank">PMC2832251</a>
-                                                          </a></p>
-                                                      </div>
-                                                  </div>
-                                                  <div class="col-sm-3">
-                                                      <div class="journal-papers-doi"><span>DOI:</span> <a target="_blank" href="http://www.plantphysiol.org/content/152/3/1716" target="_blank">10.1104/pp.109.148684</a></div>
-                                                  </div>
-                                              </div>
-                                          </div><!-- /.journal-papers -->
-                                      </div>
-                                  </div>
-                              <div class="journal-papers-mound">
-                                      <nav class="journal-papers-mound-nav">
-                                          <h3 class="nav-title">2009</h3>
-                                      </nav>
-                                      <div class="journal-papers-list">
-                                          <div class="journal-papers">
-                                              <div class="row">
-                                                  <div class="col-sm-3">
-                                                      <p class="jp-name">Kaundal, R. and Raghava, G.P.S. 2009.</p>
-                                                  </div>
-                                                  <div class="col-sm-6">
-                                                      <div class="journal-papers-meta">
-                                                          <p>RSLpred: predicting subcellular localization of rice
-                                                              proteins combining compositional and evolutionary information.
-                                                          <em>Proteomics 9(9):</em><strong> 2324-2342.</strong>
-                                                              <em>PMCID:</em><a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/pmic.200700597" class="pdf-link" target="_blank">200700597</a>
-                                                          </a></p>
-                                                      </div>
-                                                  </div>
-                                                  <div class="col-sm-3">
-                                                      <div class="journal-papers-doi"><span>DOI:</span> <a target="_blank" href="https://onlinelibrary.wiley.com/doi/abs/10.1002/pmic.200700597">10.1002/pmic.200700597</a></div>
-                                                  </div>
-                                              </div>
-                                          </div><!-- /.journal-papers -->
-                                      </div>
-                              </div>
-              </div><!-- /.journal-papers-mound-wrap-->
-              <div class="journal-papers-mound-wrap tabcontent {{ activeCheck('2005-2007') }}" id="05-07">
+<article class="container {{ activeCheck('2008-2010') }}">
+  <section class="py-4">
+    <h3 class="kbl-heading text-center">2010</h3>
+    {% for article in pub2010 %}
+      {{ publication(article) }}
+    {% endfor %}
+  </section>
 
-                      <div class="journal-papers-mound">
-                                  <nav class="journal-papers-mound-nav">
-                                      <h3 class="nav-title">2007</h3>
-                                  </nav>
-                                  <div class="journal-papers-list">
-                                      <div class="journal-papers">
-                                          <div class="row">
-                                              <div class="col-sm-3">
-                                                  <p class="jp-name">Kapoor, A.S. and Kaundal, R. 2007.</p>
-                                              </div>
-                                              <div class="col-sm-6">
-                                                  <div class="journal-papers-meta">
-                                                      <p>Development of weather based forewarning systems for rice blast.
-                                                          Himachal Journal of Agricultural Research 33(2): 211-217.</a></p>
-                                                  </div>
-                                              </div>
-                                              <div class="col-sm-3">
-                                                  <!-- <div class="journal-papers-doi"><span>DOI:</span> <a href="#">10.1016/j.icheatmasstransfer.2016.12.017</a></div> -->
-                                              </div>
-                                          </div>
-                                      </div><!-- /.journal-papers -->
-                                  </div>
-                      </div>
-                      <div class="journal-papers-mound">
-                              <nav class="journal-papers-mound-nav">
-                                  <h3 class="nav-title">2006</h3>
-                              </nav>
-                              <div class="journal-papers-list">
-                                  <div class="journal-papers">
-                                      <div class="row">
-                                          <div class="col-sm-3">
-                                              <p class="jp-name">Kaundal, R., Kapoor, A.S. and Raghava, G.P.S. 2006.</p>
-                                          </div>
-                                          <div class="col-sm-6">
-                                              <div class="journal-papers-meta">
-                                                  <p>Machine learning techniques in disease
-                                                      forecasting: a case study on rice blast prediction.
-                                                      <em>BMC Bioinformatics 7(1):</em> <strong> 485. </strong>
-                                                      <em>PMCID:</em><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1647291/" class="pdf-link" target="_blank">PMC1647291</a>
-                                                  </a></p>
-                                              </div>
-                                          </div>
-                                          <div class="col-sm-3">
-                                              <div class="journal-papers-doi"><span>DOI:</span> <a target="_blank" href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-7-485" target="_blank">10.1186/1471-2105-7-485</a></div>
-                                          </div>
-                                      </div>
-                                  </div><!-- /.journal-papers -->
-                                  <div class="journal-papers">
-                                      <div class="row">
-                                          <div class="col-sm-3">
-                                              <p class="jp-name">Kaundal, R. and Sharma, B.K. 2006.</p>
-                                          </div>
-                                          <div class="col-sm-6">
-                                              <div class="journal-papers-meta">
-                                                  <p>Genotype x environment interaction and stability analysis for
-                                                      yield and other quantitative traits in maize (Zea mays L.) under
-                                                      rainfed and high rainfall valley areas of the sub-montane.
-                                                      Research on Crops 7(1): 171-180.</a></p>
-                                              </div>
-                                          </div>
-                                          <div class="col-sm-3">
-                                              <!-- <div class="journal-papers-doi"><span>DOI:</span> <a href="#">10.1016/j.icheatmasstransfer.2016.12.017</a></div> -->
-                                          </div>
-                                      </div>
-                                  </div><!-- /.journal-papers -->
-                              </div>
-                      </div>
-                      <div class="journal-papers-mound">
-                              <nav class="journal-papers-mound-nav">
-                                  <h3 class="nav-title">2005</h3>
-                              </nav>
-                              <div class="journal-papers-list">
-                                  <div class="journal-papers">
-                                      <div class="row">
-                                          <div class="col-sm-3">
-                                              <p class="jp-name">Kaundal, R. and Sharma, B.K. 2005.</p>
-                                          </div>
-                                          <div class="col-sm-6">
-                                              <div class="journal-papers-meta">
-                                                  <p>Genetic variability and
-                                                          association studies for different yield components over the
-                                                          environments in elite cultivars of Zea mays L. Himachal Journal of Agricultural
-                                                          Research 31(1): 31-38.</a></p>
-                                              </div>
-                                          </div>
-                                          <div class="col-sm-3">
-                                              <!-- <div class="journal-papers-doi"><span>DOI:</span> <a href="#">10.1016/j.icheatmasstransfer.2016.12.017</a></div> -->
-                                          </div>
-                                      </div>
-                                  </div><!-- /.journal-papers -->
-                                  <div class="journal-papers">
-                                      <div class="row">
-                                          <div class="col-sm-3">
-                                              <p class="jp-name">Kaundal, R. and Kapoor, A.S. 2005.</p>
-                                          </div>
-                                          <div class="col-sm-6">
-                                              <div class="journal-papers-meta">
-                                                  <p>Virulence pattern of Pyricularia grisea in district Kangra of Himachal Pradesh. Himachal Journal of Agricultural Research 31(2): 170-172.</a></p>
-                                              </div>
-                                          </div>
-                                          <div class="col-sm-3">
-                                              <!-- <div class="journal-papers-doi"><span>DOI:</span> <a href="#">10.1016/j.icheatmasstransfer.2016.12.017</a></div> -->
-                                          </div>
-                                      </div>
-                                  </div><!-- /.journal-papers -->
-                              </div>
-                          </div>
+  <section class="py-4">
+    <h3 class="kbl-heading text-center">2009</h3>
+    {% for article in pub2009 %}
+      {{ publication(article) }}
+    {% endfor %}
+  </section>
+</article>
 
+<article class="container {{ activeCheck('2005-2007') }}">
+  <section class="py-4">
+    <h3 class="kbl-heading text-center">2007</h3>
+    {% for article in pub2007 %}
+      {{ publication(article) }}
+    {% endfor %}
+  </section>
 
-      </div><!-- /.journal-papers-mound-wrap-->
-          <div>
-      </section><!-- /.section-journal-papers -->
-  </main>
+  <section class="py-4">
+    <h3 class="kbl-heading text-center">2006</h3>
+    {% for article in pub2006 %}
+      {{ publication(article) }}
+    {% endfor %}
+  </section>
+
+  <section class="py-4">
+    <h3 class="kbl-heading text-center">2005</h3>
+    {% for article in pub2005 %}
+      {{ publication(article) }}
+    {% endfor %}
+  </section>
+</article>
 
   {% include "universal/_footer.njk" %}
   {% from "universal/_footer-scripts.njk" import scripts %}
