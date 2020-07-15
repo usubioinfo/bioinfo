@@ -7,13 +7,8 @@
   {% from "universal/_navbar.njk" import navbar %}
   {{ navbar("News") }}
 
-<!--
-
-  {% from "components/breadcrumb.njk" import breadcrumb %}
-  {{ breadcrumb([ {name: "Home", location: "/"}, {name: "News", location: ""} ]) }}
--->
   {% from "components/img-header.njk" import imgHeader %}
-  {{ imgHeader("https://mph.usu.edu/images/admissions.jpg") }}
+  {{ imgHeader() }}
 
   <article class="container-fluid pb-5 pt-1 my-5">
     <div class="row">

@@ -8,19 +8,7 @@
   {{ navbar("Publications") }}
 
   {% from "components/img-header.njk" import imgHeader %}
-  {{ imgHeader("https://mph.usu.edu/images/admissions.jpg") }}
-
-<!--
-  <div class="auth-breadcrumb-wrap">
-          <div class="container">
-              <ol class="breadcrumb sabbi-breadcrumb">
-                  <li><a href="/">Home</a></li>
-                  <li><a href="#">Publications</a></li>
-                  <li class="active">Journal Articles</li>
-              </ol>
-          </div>
-      </div>
--->
+  {{ imgHeader() }}
 
 {% from "components/publication.njk" import publication %}
 {% from "./_data.njk" import pub2019, pub2018, pub2016, pub2014, pub2013, pub2012, pub2011, pub2010, pub2009, pub2007, pub2006, pub2005 %}

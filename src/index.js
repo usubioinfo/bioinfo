@@ -8,6 +8,9 @@ const sass = require('node-sass-middleware');
 const SetAsyncExtension = require('nunjucks-setasync');
 const rateLimit = require('express-rate-limit');
 
+const assetPath = path.resolve(__dirname, '../assets');
+console.log(__dirname);
+
 // Prevent DDoS
 // This should be done on every application at KAABiL regardless of how much traffic we get
 const limiter = rateLimit({
@@ -53,6 +56,20 @@ require('./rsc-routes')(app);
 app.get(baseUrl, (req, res) => {
   res.render(__dirname + '/views/pages/home/home.njk');
 });
+
+app.get('/assets/header-img', (req, res, next) => {
+  const date = new Date();
+  if (date.getMonth() <= 1 || date.getMonth() >= 10) {
+    return res.sendFile(`${assetPath}/kbl-img/usuwinter.jpeg`);
+  } else {
+    return res.sendFile(`${assetPath}/kbl-img/ususpring6.jpg`);
+  }
+});
+
+// Default browser behaviour fix
+app.get('/favicon.ico', (req, res, next) => {
+  return res.sendStatus(404);
+})
 
 app.get('/publications', (req, res, next) => {
   if (req.query.range) {
