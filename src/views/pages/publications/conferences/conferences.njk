@@ -29,268 +29,42 @@
   </div>
   -->
 
-  <div class="container">
-      <section class="ripepage-peak">
-              <div class="container">
-                      <div class="row">
-                              <div class="col-sm-9">
-                                  <p class="page_piky-text"><li><strong>*</strong> indicates the corresponding author, italic font indicates contribution by bioinformatics staff member supervised by me</li>
-                                         <li><strong><u>underlined font</u></strong> indicates contribution by an undergraduate student mentored</li>
-                                         <li><strong><u><em>underlined italic font</em></u></strong> indicates contribution by a graduate student
-                                          mentored by me.</li>
-                                         <li><strong>$</strong> denotes equal contributions</li>
-                                         <li><strong>^</strong> indicates contributions by students
-                                          of a collaborator mentored by me</li></p>
-                              </div>
-                              <!-- <div class="col-sm-3">
-                                  <div class="btn_pdf_wrap"><a href="#" class="btn btn-gules tt_up">Download All PDF</a></div>
-                              </div> -->
-                          </div>
-                      <nav class="journal-papers-nav journal-papers-nav-list list-inline">
-                          <!-- <div class="nav-meta">
-                              <p><strong>Disclaimer:</strong> The papers below are intended for private viewing by the page owner or those who otherwise have legitimate access to them. No part of it may in any form or by any electronic, mechanical, photocopying, recording, or any other means be reproduced, stored in a retrieval system or be broadcast or transmitted without the prior permission of the respective publishers. If your organization has a valid subscription of the journals, click on the DOI link for the legitimate copy of the papers.</p>
-                          </div> -->
-                          <div class="dropdown conf">
-                                  <button class="dropbtn">2019-2017</button>
-                                  <div class="dropdown-content conf">
-                                      <a class="tablinks" onclick="openJournal(event, '2017')" href="#tabcontent" class="link-prev_def active">2017</a>
-                                      <a class="tablinks" onclick="openJournal(event, '2018')" href="#tabcontent" class="link-prev_def active">2018</a>
-                                      <a class="tablinks" onclick="openJournal(event, '2019')" href="#tabcontent" class="link-prev_def active">2019</a>
-                                  </div>
-                          </div>
-                          <div class="dropdown conf">
-                                  <button class="dropbtn">2016-2014</button>
-                                  <div class="dropdown-content conf">
-                                      <a class="tablinks" onclick="openJournal(event, '2014')" href="#tabcontent" class="link-prev_def active">2014</a>
-                                      <a class="tablinks" onclick="openJournal(event, '2015')" href="#tabcontent" class="link-prev_def active">2015</a>
-                                      <a class="tablinks" onclick="openJournal(event, '2016')" href="#tabcontent" class="link-prev_def active">2016</a>
-                                  </div>
-                          </div>
-                          <div class="dropdown conf">
-                                  <button class="dropbtn">2013-2011</button>
-                                  <div class="dropdown-content conf">
-                                      <a class="tablinks" onclick="openJournal(event, '2012')" href="#tabcontent" class="link-prev_def active">2012</a>
-                                      <a class="tablinks" onclick="openJournal(event, '2013')" href="#tabcontent" class="link-prev_def active">2013</a>
-                                  </div>
-                          </div>
-                          <div class="dropdown conf">
-                                  <button class="dropbtn">2010-2008</button>
-                                  <div class="dropdown-content conf">
-                                      <a class="tablinks" onclick="openJournal(event, '2008')" href="#tabcontent" class="link-prev_def active">2008</a>
-                                      <a class="tablinks" onclick="openJournal(event, '2009')" href="#tabcontent" class="link-prev_def active">2009</a>
-                                      <a class="tablinks" onclick="openJournal(event, '2010')" href="#tabcontent" class="link-prev_def active">2010</a>
-                                  </div>
-                          </div>
-                          <div class="dropdown conf">
-                                  <button class="dropbtn">2002-2004</button>
-                                  <div class="dropdown-content conf">
-                                      <a class="tablinks" onclick="openJournal(event, '2002')" href="#tabcontent" class="link-prev_def active">2002</a>
-                                      <a class="tablinks" onclick="openJournal(event, '2004')" href="#tabcontent" class="link-prev_def active">2004</a>
-                                  </div>
-                          </div>
+  {% from './_functions.njk' import selector, activeCheck %}
+  {% from 'components/conf-card.njk' import confCard %}
+  {% from './dates/17-19.njk' import pub2019 %}
 
+  <article class="container">
+    <section class="row pt-5">
+      <div class="col-12 kbl-text">
+        <li><strong>*</strong> indicates the corresponding author, italic font indicates contribution by bioinformatics staff member supervised by me</li>
+        <li><strong><u>underlined font</u></strong> indicates contribution by an undergraduate student mentored</li>
+        <li><strong><u><em>underlined italic font</em></u></strong> indicates contribution by a graduate student mentored by me.</li>
+        <li><strong>$</strong> denotes equal contributions</li>
+        <li><strong>^</strong> indicates contributions by students of a collaborator mentored by me</li>
+      </div>
+    </section>
 
+    <section class="row justify-content-center py-5">
+      {{ selector("2017-2019") }}
+      {{ selector("2014-2016") }}
+      {{ selector("2011-2013") }}
+      {{ selector("2008-2010") }}
+      {{ selector("2005-2007") }}
+    </section>
+  </article>
 
-
-
-                      </nav><!--  /.journal-papers-nav -->
-              </div>
-
-      </section><!-- /.ripepage-peak -->
-  </div>
+  <article class="container">
+    <section class="row">
+      {% for conference in pub2019 %}
+        <div class="col-12">
+          {{ confCard(conference) }}
+        </div>
+      {% endfor %}
+    </section>
+  </article>
 
   <section class="deff-timeline-section">
       <div class="container">
-          <div class="auth-deff_timeline_timeline-segment tabcontent " id="2019">
-              <ul class="auth-deff_timeline list-unstyled ">
-                  <li class="title-card" style="height: 236.78px ;">
-                              <div class="time-span">
-                                  <div class="time-year">2019</div>
-                                  <div class="time-month">Aug 07</div>
-                              </div>
-                              <div class="timeline-meta">
-                                  <h3 class="staff-title zoom" onmouseover = "">Phatak S.<sup>^</sup>, Thomas A.,<strong data-toggle="tooltip" data-placement="top">Kaundal R.</strong>, <i data-toggle="tooltip" data-placement="top">Jones R.</i>, Hintze K. and Benninghoff A.</h3>
-                                      <!-- <div class="__time">7:00pm</div> -->
-                                  <div class="__loc"><span>Location: </span>The Animal, Dairy and Veterinary Sciences Summer Student Research
-                                      Symposium; Utah State University (USU), Logan (UT)</div>
-                                  <p class="meta-text">Impact of the Total
-                                          Western Diet for Rodents on Colon Mucosal Gene Expression in a Multigenerational Murine Model of
-                                          Colitis-associated Colorectal Cancer.
-                                          <em>1<sup>st</sup> place in flash talk presentation</em>
-                                          <button class="btn1 btn info pull-right" style="margin-top: 35px; margin-left: 10px;">Oral presentation</button>
-                                  </p>
-                              </div>
-                  </li><!-- /timeline-item -->
-                  <br>
-                  <li class="title-card" style="height: 236.78px ;">
-                      <div class="time-span">
-                                  <div class="time-year">2019</div>
-                                  <div class="time-month">Apr 10-11</div>
-                              </div>
-                              <div class="timeline-meta">
-                                  <h3 class="staff-title zoom"><i><u>Loaiza C.D.</u></i> and <b>Kaundal R<sup>*</sup>.</b></h3>
-                                      <!-- <div class="__time">7:00pm</div> -->
-                                  <div class="__loc"><span>Location: </span>The Annual Student Research Symposium; Utah State University (USU), Logan (UT),
-                                      USA</div>
-                                  <p class="meta-text">Prediction of Host-Pathogen protein-protein interactions using
-                                          machine learning.
-                                          <button class="btn1 btn info pull-right" style="margin-top: 75px; margin-left: 10px;">Oral presentation</button>
-                                      </p>
-                      </div>
-                  </li><!-- /timeline-item -->
-                  <br>
-                  <li class="title-card" style="height: 236.78px ;">
-                      <div class="time-span">
-                                  <div class="time-year">2019</div>
-                                  <div class="time-month">Aug 07</div>
-                      </div>
-                      <div class="timeline-meta" >
-                                  <h3 class="staff-title zoom"><u>Lister M.</u>, <i>Larson R.B.</i> and <b>Kaundal R*.</b></h3>
-                                      <!-- <div class="__time">7:00pm</div> -->
-                                  <div class="__loc"><span>Location: </span>The Annual Student Research Symposium;
-                                      Utah State University (USU), Logan (UT),
-                                      USA</div>
-                                  <p class="meta-text">Centralizing Bioinformatics via High-Performance
-                                          Computing: Applications, Opportunities, and Challenges in the Era of Large-scale -Omics Data.
-                                          <!-- <button class="btn1 btn info pull-right" style="margin-top: 40px; margin-left: 10px;">Info</button> -->
-                                          <!-- <button class="btn1 btn info pull-right" style="margin-top: 40px;">Info</button> -->
-                                  </p>
-                      </div>
-                  </li><!-- /timeline-item -->
-                  <br>
-                  <li class="title-card" style="height: 236.78px ;">
-                      <div class="time-span">
-                                  <div class="time-year">2019</div>
-                                  <div class="time-month">April 10-11</div>
-                      </div>
-                      <div class="timeline-meta">
-                                  <h3 class="staff-title zoom"><u><i>Ediriweera U.</i> </u> and <b>Kaundal R<sup>*</sup></b></h3>
-                                      <!-- <div class="__time">7:00pm</div> -->
-                                  <div class="__loc"><span>Location:</span>The Annual Student Research Symposium; Utah State University (USU), Logan
-                                      (UT), USA</div>
-                                  <p class="meta-text">Computational Prediction of Host-Pathogen Protein Interactions in
-                                          Melioidosis pathogen Burkholderia pseudomallei and Human reveals novel Virulence Factors and
-                                          Infectivity Mechanisms
-                                          <button class="btn1 btn info pull-right" style="margin-top: 50px; margin-left: 10px;">Oral presentation</button>
-                                          <!-- <ul><em>1 st place in flash talk presentation</em></ul> -->
-                                      </p>
-                      </div>
-                  </li><!-- /timeline-item -->
-                  <br>
-                  <li class="title-card" style="height: 236.78px ;">
-                      <div class="time-span">
-                                  <div class="time-year">2019</div>
-                                  <div class="time-month">April 02</div>
-                      </div>
-                      <div class="timeline-meta">
-                                  <h3 class="staff-title zoom"><u>Lister M.</u>, <i>Larson R.B.</i> and <b>Kaundal R*.</b></h3>
-                                      <!-- <div class="__time">7:00pm</div> -->
-                                  <div class="__loc"><span>Location: </span>The Annual Plants, Soils, and Climate Showcase, College of Agriculture
-                                      and Applied Sciences; Utah State University (USU), Logan (UT), USA</div>
-                                  <p class="meta-text">High-Performance Computing for Bioinformatics and the
-                                          Challenges of Big -OMICS Data.
-                                          <button class="btn1 btn info pull-right" style="margin-top: 50px; margin-left: 10px;">Oral presentation</button>
-                                          <!-- <ul><em>1 st place in flash talk presentation</em></ul> -->
-                                      </p>
-                      </div>
-                  </li><!-- /timeline-item -->
-                  <br>
-                  <li class="title-card" style="height: 236.78px ;">
-                              <div class="time-span">
-                                  <div class="time-year">2019</div>
-                                  <div class="time-month">April 02</div>
-                              </div>
-                              <div class="timeline-meta">
-                                  <h3 class="staff-title zoom"><b>Kaundal R<sup>*</sup>.</b>, <u><i>Duhan N.</i></u>, Acharya B., Pudussery M.V., Ferreira J.F.S., Suarez D.L. and Sandhu D<sup>*</sup>.</h3>
-                                      <!-- <div class="__time">7:00pm</div> -->
-                                  <div class="__loc"><span>Location: </span>The Annual Plants, Soils, and Climate Showcase, College of Agriculture and
-                                      Applied Sciences; Utah State University (USU), Logan (UT), USA</div>
-                                  <p class="meta-text">Comparative transcriptomics study of alfalfa (Medicago sativa L.) reveals novel genotype-specific
-                                          salt tolerance mechanisms.
-                                          <button class="btn1 btn info pull-right" style="margin-top: 35px; margin-left: 10px;">Oral presentation</button>
-                                          <!-- <ul><em>1 st place in flash talk presentation</em></ul> -->
-                                      </p>
-                              </div>
-                  </li><!-- /timeline-item -->
-                  <br>
-                  <li class="title-card" style="height: 236.78px ;">
-                              <div class="time-span">
-                                  <div class="time-year">2019</div>
-                                  <div class="time-month">April 02</div>
-                              </div>
-                              <div class="timeline-meta">
-                                  <h3 class="staff-title zoom"><i><u>Loaiza C.D.</u></i> and <b>Kaundal R<sup>*</sup>.</b></h3>
-                                      <!-- <div class="__time">7:00pm</div> -->
-                                  <div class="__loc"><span>Location: </span>The Annual Plants, Soils, and Climate Showcase, College of Agriculture and Applied Sciences;
-                                      Utah State University (USU), Logan (UT), USA</div>
-                                  <p class="meta-text">Deciphering plant-pathogen interactomes: a study on citrus greening
-                                          disease.
-                                          <button class="btn1 btn info pull-right" style="margin-top: 50px; margin-left: 10px;">Oral presentation</button>
-                                          <!-- <ul><em>1 st place in flash talk presentation</em></ul> -->
-                                      </p>
-                              </div>
-                  </li><!-- /timeline-item -->
-                  <br>
-                  <li class="title-card" style="height: 236.78px ;">
-                              <div class="time-span">
-                                  <div class="time-year">2019</div>
-                                  <div class="time-month">March 28-30</div>
-                              </div>
-                              <div class="timeline-meta">
-                                  <h3 class="staff-title zoom"><u><i>Ediriweera U.</i> </u> and <b>Kaundal R<sup>*</sup></b></h3>
-                                      <!-- <div class="__time">7:00pm</div> -->
-                                  <div class="__loc"><span>Location: </span>The 16<sup>th</sup> MidSouth Computational Biology & Bioinformatics Society (MCBIOS)
-                                      annual conference; University of Alabama, Birmingham (AL), USA</div>
-                                  <p class="meta-text">Computational Prediction of Host-Pathogen Protein Interactions in
-                                          Melioidosis pathogen Burkholderia pseudomallei and Human reveals novel Virulence Factors and
-                                          Infectivity Mechanisms.
-                                          <button class="btn1 btn info pull-right" style="margin-top: 50px; margin-left: 10px;">Oral presentation</button>
-                                          <!-- <ul><em>1 st place in flash talk presentation</em></ul> -->
-                                      </p>
-                              </div>
-                  </li><!-- /timeline-item -->
-                  <br>
-                  <li class="title-card" style="height: 236.78px ;">
-                      <div class="time-span">
-                                  <div class="time-year">2019</div>
-                                  <div class="time-month">Jan 12-16</div>
-                      </div>
-                      <div class="timeline-meta">
-                                  <h3 class="staff-title zoom"><i><u>Loaiza C.D.</u></i> and <b>Kaundal R<sup>*</sup>.</b></h3>
-                                      <!-- <div class="__time">7:00pm</div> -->
-                                  <div class="__loc"><span>Location: </span>The Plant and Animal Genome XXVII International Conference (PAG); Town and
-                                      Country Hotel, San Diego (California), USA</div>
-                                  <p class="meta-text">An integrated in silico approach to explore Citrus and HLB host-
-                                      pathogen interactions.
-                                          <!-- <ul><em>1 st place in flash talk presentation</em></ul> -->
-                                      </p>
-                      </div>
-                  </li><!-- /timeline-item -->
-                  <br>
-                  <li class="title-card" style="height: 236.78px ;">
-                              <div class="time-span">
-                                  <div class="time-year">2019</div>
-                                  <div class="time-month">Jan 20-23</div>
-                              </div>
-                              <div class="timeline-meta">
-                                  <h3 class="staff-title zoom">Moley L.A.<sup>^</sup> , <i>Jones R.</i>, <b>Kaundal R.<sup>*</sup></b>, Thomas, A.J., Benninghoff, A.D. and Isom, C.</h3>
-                                      <!-- <div class="__time">7:00pm</div> -->
-                                  <div class="__loc"><span>Location: </span>The 45 th Annual International Embryo Transfer Society Conference; Sheraton Hotel,
-                                      New Orleans (LA), USA</div>
-                                  <p class="meta-text">Gene
-                                      expression analysis and DNA methylation patterns of porcine SCNT blastocysts with high and low
-                                      incidence of apoptosis.
-                                      <button class="btn1 btn info pull-right" style="margin-top: 50px; margin-left: 10px;">Oral presentation</button>
-                                      <button class="btn1 btn warning pull-right" style="margin-top: 50px; margin-left: 10px;">Poster presentation</button>
-                                          <!-- <ul><em>1 st place in flash talk presentation</em></ul> -->
-                                      </p>
-                              </div>
-                  </li><!-- /timeline-item -->
-
-                <br>
-
-              </ul><!-- /.auth-deff_timeline -->
-          </div>
           <div class="auth-deff_timeline_timeline-segment tabcontent" style="display: none" id="2018">
               <ul class="auth-deff_timeline list-unstyled">
                   <li class="title-card" style="height: 236.78px ;">

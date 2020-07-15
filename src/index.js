@@ -67,6 +67,19 @@ app.get('/publications', (req, res, next) => {
   });
 });
 
+app.get('/publications/conferences', (req, res, next) => {
+  if (req.query.range) {
+    nunEnv.addGlobal(`routerYearRange`, req.query.range);
+  } else {
+    nunEnv.addGlobal(`routerYearRange`, '2017-2019');
+  }
+
+  res.render(__dirname + `/views/pages/publications/conferences/conferences.njk`, (err, html) => {
+    if (err) return next(err);
+    res.send(html);
+  });
+});
+
 app.get('/events', (req, res, next) => {
   if (req.query.range) {
     nunEnv.addGlobal(`routerEventsYearRange`, req.query.range);

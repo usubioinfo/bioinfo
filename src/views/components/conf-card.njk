@@ -1,0 +1,14 @@
+{% macro confCard(conference) %}
+  <section class="kbl-conf-card my-3">
+    <div class="row no-gutters">
+      <div class="col-auto">
+        <img class="conf-card-img" src="/assets/img/conf.jpg"/>
+      </div>
+      <div class="col p-4">
+        <div class="conf-authors">{{ conference.authors | safe }}</div>
+        <div class="conf-location mb-4"><b>Location: </b>{{ conference.location }}</div>
+        <div class="conf-desc">{{ conference.desc }}</div>
+      </div>
+    </div>
+  </section>
+{% endmacro %}
