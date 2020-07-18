@@ -19,12 +19,39 @@
     height: $size;
   }
 
+  .year-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 150%;
+    font-weight: $font-weight-heavy;
+
+    background: $color-bg-main;
+    width: 80%;
+    text-align: center;
+    border-radius: $border-radius;
+    border: 1px solid $color-border-gray;
+    color: $color-text-main;
+  }
+
+  .year-banner.date {
+    font-size: 120%;
+    top: 65%;
+    left: 50%;
+  }
+
   .conf-authors {
     font-size: 110%;
     font-family: "Montserrat";
+    color: $color-text-main;
   }
 
   .conf-location {
     color: $color-text-soft;
+  }
+
+  .conf-desc {
+    color: $color-text-main;
   }
 }
