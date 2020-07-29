@@ -40,13 +40,6 @@
   }
 %}
 
-{% set template = {
-    img: "",
-    title: "",
-    link: ""
-  }
-%}
-
 {% set greeningDB = {
     img: "/assets/img/tools/greeningdb.PNG",
     title: "GreeningDB",
@@ -89,8 +82,37 @@
   }
 %}
 
-{% set hpi = [predhpi, apinet] %}
+{% set template = {
+    img: "",
+    title: "",
+    link: ""
+  }
+%}
+
+{% set necMiner = {
+    img: "/assets/img/tools/legumeSSRdb.png",
+    title: "NECminer",
+    link: "http://bioinfo.usu.edu/NECminer/"
+  }
+%}
+
+{% set deepHPI = {
+    img: "/assets/img/tools/legumeSSRdb.png",
+    title: "deepHPI",
+    link: "http://bioinfo.usu.edu/deepHPI/"
+  }
+%}
+
+{% set interactome = {
+    img: "/assets/kbl-img/interactome.png",
+    title: "Interactome",
+    link: "http://bioinfo.usu.edu/interactome/"
+  }
+%}
+
+{% set hpi = [predhpi, apinet, deepHPI, interactome] %}
 {% set clpt = [plantmSubp, atSubP, rslPredP, plPred] %}
 {% set dbs = [greeningDB, citSATdb, legumeSSRdb] %}
 {% set bioenergy = [lacSubPred, ligPred] %}
+{% set metagenomics = [necMiner] %}
 {% set misc = [rbPred] %}

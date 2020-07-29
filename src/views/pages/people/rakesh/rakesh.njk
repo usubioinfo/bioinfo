@@ -7,242 +7,148 @@
   {% from "universal/_navbar.njk" import navbar %}
   {{ navbar("People", "Dr. Rakesh Kaundal") }}
 
-  <header class="sabbi-page-header-classic page-header-lg">
-          <div class="page-header-content conternt-center">
-          </div>
-      </header><!-- /.sabbi-page-header-classic .page-header-lg -->
-  <div class="container">
-      <div class="row">
-          <div class="col-sm-4 col-md-4 pull-up-240 ">
-              <img class="img-bit-round zoom" alt="" style="width: 210px; height:289.85px" src="assets/img/profile/kaundal-rakesh2.jpg">
-              <div class="sp-blank-20"></div>
-              <address class="addr_future_memb">
-                  <h4 class="entry-title">Address</h4>
-                  <div class="address-entry">
-                          <p class="__adtext">Utah State University</p>
-                          <p class="__ad-num">4700 Old Main Hill</p>
-                          <p class="__ad-num">Logan, UT 84322-4700</p>
-                          <p class="__ad-num">United States of America</p>
+  {% from "components/img-header.njk" import imgHeader %}
+  {{ imgHeader() }}
+
+  <article class="container">
+    {% include "../_new-rakesh.njk" %}
+
+    <section class="row justify-content-center my-5">
+      <div class="col-10 pb-5">
+        <h3 class="kbl-heading text-center">Education</h3>
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-sm-10 ">
+              <ol class="ol-timeline ">
+                <li class="tl-item with-icon zoom">
+                  <p><span class="item-section">2007-2011</span></p>
+                  <div class="content-wrapper">
+                    <h3 class="title">Postdoctoral Fellow (Bioinformatics)</h3>
+                    <div class="description">Noble Foundation, Ardmore (OK), USA</div>
                   </div>
-                  <footer class="contact-info">
-                      <h4 class="entry-title">Contact Information</h4>
-                      <p class="__ci_num">Call: <span>+1 (435)-797-4117</span></p>
-                      <p class="__ci_num">Fax: <span>+1 (435) 797-2766</span></p>
-                      <p class="__ci_num">E-mail: <span>rkaundal@usu.edu</span></p>
-                  </footer>
-              </address>
-          </div>
-          <div class="col-sm-8">
-                  <article class="profile-glimps">
-                          <h2 class="entry-title title-foc-md">Dr. Rakesh Kaundal</h2>
-                          <p class="text-foc-md" style="line-height: 1.1;">Assistant Professor, Bioinformatics</p>
-                          <p class="text-foc-md" style="line-height: 1.1;"><a class="bio" target="_blank" href="https://psc.usu.edu/">Department of Plants, Soils, and Climate <i style="color: #D30015; font-size: 12px;" class="fa fa-external-link"></i></a></p>
-                          <p></p>
-                          <p class="text-foc-md" style="line-height: 1;">Director, Bioinformatics Facility</p>
-                          <p class="text-foc-md" style="line-height: 1;"><a class="bio" target="_blank" href="https://biosystems.usu.edu/">Center for Integrated BioSystems <i style="color: #D30015; font-size: 12px;" class="fa fa-external-link"></i></a></p>
-                          <p class="text-foc-md" style="line-height: 1;">College of Agriculture and Applied Sciences</p>
-                          <p></p>
-                          <p class="text-foc-md" style="line-height: 1;">Adjunct Assistant Professor</p>
-                          <p class="text-foc-md" style="line-height: 1;"><a class="bio" target="_blank" href="https://cs.usu.edu/">Department of Computer Science <i style="color: #D30015; font-size: 12px;" class="fa fa-external-link"></i></a></p>
-                          <p class="text-foc-md" style="line-height: 1;">College of Science</p><br>
-                          <div class="stage-content-biog">
-                              <h3 class="stage-title">Biography</h3>
-                              <p class="stage-text" style="text-align: justify;">
-                                  <strong><em>Bioinformatics and Computational Biology:</em></strong> <br>
-                                  Highly successful track record of integrating biology and bigdata
-                                      analytics with over 14 years’ experience in bioinformatics, computational biology, and scientific programming.
-                                      In-depth knowledge of bioinformatics data analysis tools and databases, information management, and
-                                      integration to support diverse activities essential for organismal improvement and genomics-enabled studies.<br>
-                                  <strong><em>Research Interests:</em></strong> <br>
-                                  Next-generation sequencing data (analysis, alignment, assembly, annotation); Computational
-                                      modeling of -omics bigdata; Systems biology, develop algorithms to study intra- and inter-species interaction
-                                      networks (e.g. host-pathogen interactions), predict Gene Regulatory Networks; Metagenomics (e.g. rhizosphere
-                                      microbiome interacting with the host); Computational genomics. Develop workflows to facilitate data mining;
-                                      Develop and maintain scientific software / tools.<br>
-                                  </p>
-                          </div><!-- /.stage-content-biog -->
-                  </article>
-              <section class="gimps-container">
-                  <h4  class="gimps-title">Education</h4>
-                  <div class="row">
-                      <div class="col-md-8 col-md-offset-1 col-sm-10 ">
-                          <ol class="ol-timeline ">
-                              <li class="tl-item with-icon zoom">
-                                  <p><span class="item-section">2007-2011</span></p>
-                                  <div class="content-wrapper">
-                                      <h3 class="title">Postdoctoral Fellow (Bioinformatics)</h3>
-                                      <div class="description">Noble Foundation, Ardmore (OK), USA</div>
-                                  </div>
-                              </li>
-                              <li class="tl-item with-icon zoom">
-                                  <p><span class="item-section">2006</span></p>
-                                  <div class="content-wrapper">
-                                      <h3 class="title">Ph.D. (Plant Breeding & Genetics)</h3>
-                                      <div class="description">Dr. B.R. Ambedkar University, India</div>
-                                  </div>
-                              </li>
-                              <li class="tl-item with-icon zoom">
-                                  <p><span class="item-section">2004</span></p>
-                                  <div class="content-wrapper">
-                                      <h3 class="title">PGDBI (Bioinformatics)</h3>
-                                      <div class="description">Sikkim Manipal University, India</div>
-                                  </div>
-                              </li>
-                              <li class="tl-item with-icon zoom">
-                                  <p><span class="item-section">1998</span></p>
-                                  <div class="content-wrapper">
-                                      <h3 class="title">M.Sc. (Plant Breeding & Genetics)</h3>
-                                      <div class="description">CSK HP Agricultural University, India</div>
-                                  </div>
-                              </li>
-                              <li class="tl-item with-icon zoom">
-                                      <p><span class="item-section">1995</span></p>
-                                      <div class="content-wrapper">
-                                          <h3 class="title">B.Sc. (Agriculture)</h3>
-                                          <div class="description">CSK HP Agricultural University, India</div>
-                                      </div>
-                                  </li>
-                          </ol>
-                      </div>
+                </li>
+                <li class="tl-item with-icon zoom">
+                  <p><span class="item-section">2006</span></p>
+                  <div class="content-wrapper">
+                    <h3 class="title">Ph.D. (Plant Breeding & Genetics)</h3>
+                    <div class="description">Dr. B.R. Ambedkar University, India</div>
                   </div>
-              </section><!-- /.gimps-container -->
-              <section class="gimps-container appoint-timeline-holder">
-                  <h4  class="gimps-title">Professional Appointments</h4>
-                  <div class="row">
-                      <div class="col-sm-9">
-                          <ol class="appoint-timeline  list-unstyled">
-                              <li class="zoom">
-                                  <span class="year">Jul 2017 - present</span>
-                                  <div class="appoint-meta">
-                                      <h5 class="meta-title">Assistant Professor, Bioinformatics</h5>
-                                      <div class="meta-span">Utah State University (USU), Logan, Utah, USA</div>
-                                  </div>
-                              </li>
-                              <li class="zoom">
-                                  <span class="year">Jul 2017 - present</span>
-                                  <div class="appoint-meta">
-                                      <h5 class="meta-title">Director, Bioinformatics Facility, Center for Integrated BioSystems (CIB)</h5>
-                                      <div class="meta-span">Utah State University (USU), Logan, Utah, USA </div>
-                                  </div>
-                              </li>
-                              <li class="zoom">
-                                  <span class="year">Jul 2017 - present</span>
-                                  <div class="appoint-meta">
-                                      <h5 class="meta-title">Adjunct Assistant Professor, Computer Science</h5>
-                                      <div class="meta-span">Utah State University (USU), Logan, Utah, USA</div>
-                                  </div>
-                              </li>
-                              <li class="zoom">
-                                  <span class="year">Jul 2014 - May 2017</span>
-                                  <div class="appoint-meta">
-                                      <h5 class="meta-title">Director, High-Performance Computing | Bioinformatics Facility, Institute for Integrative Genome Biology
-                                              (IIGB)</h5>
-                                      <div class="meta-span">University of California, Riverside (UCR), California, USA</div>
-                                  </div>
-                              </li>
-                              <li class="zoom">
-                                      <span class="year">Mar 2011 - Jun 2014</span>
-                                      <div class="appoint-meta">
-                                          <h5 class="meta-title">Faculty (Research Scientist), National Institute for Microbial Forensics &
-                                                  Food and Agricultural Biosecurity (NIMFFAB), Department of Biochemistry & Molecular Biology</h5>
-                                          <div class="meta-span">Oklahoma State University (OSU), Stillwater, Oklahoma, USA</div>
-                                      </div>
-                                  </li>
-                                  <li class="zoom">
-                                          <span class="year">Apr 2007 - Mar 2011</span>
-                                          <div class="appoint-meta">
-                                              <h5 class="meta-title">Postdoctoral Research Fellow, Bioinformatics Lab, Plant Biology Division</h5>
-                                              <div class="meta-span">The Samuel Roberts Noble Foundation, Ardmore, Oklahoma, USA</div>
-                                          </div>
-                                  <!-- </li>
-                                  <li class="zoom">
-                                          <span class="year">Jan 2005 - Mar 2007</span>
-                                          <div class="appoint-meta">
-                                              <h5 class="meta-title">Project Assistant, Bioinformatics Center</h5>
-                                              <div class="meta-span">Institute of Microbial Technology (IMTECH-CSIR), Chandigarh,India</div>
-                                          </div>
-                                  </li>
-                                  <li class="zoom">
-                                          <span class="year">Aug 2001 - Dec 2004</span>
-                                          <div class="appoint-meta">
-                                              <h5 class="meta-title">Research Associate</h5>
-                                              <div class="meta-span">CSK HP Agricultural University, Palampur, Himachal Pradesh, India</div>
-                                          </div>
-                                  </li>
-                                  <li class="zoom">
-                                          <span class="year">Mar 2001 - Aug 2001</span>
-                                          <div class="appoint-meta">
-                                              <h5 class="meta-title">Junior Research Fellow</h5>
-                                              <div class="meta-span">CSK HP Agricultural University, Palampur, Himachal Pradesh, India</div>
-                                          </div>
-                                  </li>
-                                  <li class="zoom">
-                                          <span class="year">Sept 1998 - Oct 2000</span>
-                                          <div class="appoint-meta">
-                                              <h5 class="meta-title">Marketing Officer</h5>
-                                              <div class="meta-span">Nunhems-Proagro Seeds Pvt. Ltd., New Delhi, India</div>
-                                          </div>
-                                  </li>
-                                  <li class="zoom">
-                                          <span class="year">Apr 1996 - May 1997</span>
-                                          <div class="appoint-meta">
-                                              <h5 class="meta-title">Scientific Assistant (Tea Breeding)</h5>
-                                              <div class="meta-span">Institute of Himalayan Bioresource Technology (IHBT-CSIR), Palampur,India</div>
-                                          </div>
-                                  </li> -->
-                          </ol>
-                      </div>
+                </li>
+                <li class="tl-item with-icon zoom">
+                  <p><span class="item-section">2004</span></p>
+                  <div class="content-wrapper">
+                    <h3 class="title">PGDBI (Bioinformatics)</h3>
+                    <div class="description">Sikkim Manipal University, India</div>
                   </div>
-              </section><!-- /.gimps-container .appoint-timeline-holder -->
-              <section class="gimps-container">
-                  <h4  class="gimps-title">Awards & Prizes</h4>
-                  <div class="row">
-                      <div class="col-sm-11">
-                          <ul class="awards-list list-unstyled">
-                              <li>
-                                  <span class="year"><b>2013</b></span>
-                                  <div class="awards-meta">
-                                      <h5 class="awards-title">1<sup>st</sup> prize:</h5>
-                                      <div class="awards-meta"><span><a href="https://go.okstate.edu/" target="_blank">OSU</a> President’s Cup for creative interdisciplinarity in bioinformatics and computational biology</span></div>
-                                  </div>
-                              </li>
-                              <li>
-                                  <span class="year"><b>2012</b></span>
-                                  <div class="awards-meta">
-                                      <h5 class="awards-title">3<sup>rd</sup> place:</h5>
-                                      <div class="awards-meta"><span><a href="https://go.okstate.edu/" target="_blank">OSU</a> President’s Cup for creative interdisciplinarity on the project “<i>EDNA: Powerful New Technology for
-                                              <b>E</b>lectronic <b>D</b>iagnostic <b>N</b>ucleic acid <b>A</b>nalysis</i>”</span></div>
-                                  </div>
-                              </li>
-                              <li>
-                                  <span class="year"><b>2003</b></span>
-                                  <div class="awards-meta">
-                                      <h5 class="awards-title">Qualified National Eligibility Test (NET-ICAR)</h5>
-                                      <div class="awards-meta"><span>Conducted by <a href="https://icar.org.in/" target="_blank">Indian Council of Agricultural Research (ICAR)</a>, New Delhi, India</span></div>
-                                  </div>
-                              </li>
-                              <li>
-                                  <span class="year"><b>2002</b></span>
-                                  <div class="awards-meta">
-                                      <h5 class="awards-title">3<sup>rd</sup> best award for poster paper presentation (<i>Weather-based forewarning of rice blast in H.P.</i>)</h5>
-                                      <div class="awards-meta"><span>International Conference on Challenges and Options for Sustainable Development of the Himalayas -
-                                              Beyond 2002, held at <a href="http://www.hillagric.ac.in/" target="_blank">CSK HPAU</a>, Palampur, India</span></div>
-                                  </div>
-                              </li>
-                              <!-- <li>
-                                  <span class="year">1991</span>
-                                  <div class="awards-meta">
-                                      <h5 class="awards-title">Merit Certificate for securing first rank in the school in Class XII</h5> -->
-                                      <!-- <div class="awards-meta"><span>The University of Queensland</span></div> -->
-                                  <!-- </div>
-                              </li> -->
-                          </ul>
-                      </div>
+                </li>
+                <li class="tl-item with-icon zoom">
+                  <p><span class="item-section">1998</span></p>
+                  <div class="content-wrapper">
+                    <h3 class="title">M.Sc. (Plant Breeding & Genetics)</h3>
+                    <div class="description">CSK HP Agricultural University, India</div>
                   </div>
-              </section><!-- /.gimps-container -->
-          </div><!-- #main -->
+                </li>
+                <li class="tl-item with-icon zoom">
+                  <p><span class="item-section">1995</span></p>
+                  <div class="content-wrapper">
+                    <h3 class="title">B.Sc. (Agriculture)</h3>
+                    <div class="description">CSK HP Agricultural University, India</div>
+                  </div>
+                </li>
+              </ol>
+            </div>
+        </div>
       </div>
-  </div>
+    </section>
+
+    <section class="row justify-content-center mt-5">
+      <div class="col-7">
+        <h2 class="kbl-heading text-center pb-4">Professional Appointments</h2>
+
+        <div class="kbl-grey-card my-3">
+          <div class="kbl-text soft appt-date">Jul 2017 - Present</div>
+          <h5 class="kbl-heading">Assistant Professor, Bioinformatics</h5>
+          <div class="kbl-text appt-desc">Utah State University (USU), Logan, Utah, USA</div>
+        </div>
+
+        <div class="kbl-grey-card my-3">
+          <div class="kbl-text soft appt-date">Jul 2017 - Present</div>
+          <h5 class="kbl-heading">Director, Bioinformatics Facility, Center for Integrated BioSystems (CIB)</h5>
+          <div class="kbl-text appt-desc">Utah State University (USU), Logan, Utah, USA</div>
+        </div>
+
+        <div class="kbl-grey-card my-3">
+          <div class="kbl-text soft appt-date">Jul 2017 - Present</div>
+          <h5 class="kbl-heading">Adjunct Assistant Professor, Computer Science</h5>
+          <div class="kbl-text appt-desc">Utah State University (USU), Logan, Utah, USA</div>
+        </div>
+
+        <div class="kbl-grey-card my-3">
+          <div class="kbl-text soft appt-date">Jul 2014 - May 2017</div>
+          <h5 class="kbl-heading">Director, High-Performance Computing | Bioinformatics Facility, Institute for Integrative Genome Biology (IIGB)</h5>
+          <div class="kbl-text appt-desc">University of California, Riverside (UCR), California, USA</div>
+        </div>
+
+        <div class="kbl-grey-card my-3">
+          <div class="kbl-text soft appt-date">Apr 2007 - Mar 2011</div>
+          <h5 class="kbl-heading">Postdoctoral Research Fellow, Bioinformatics Lab, Plant Biology Division</h5>
+          <div class="kbl-text appt-desc">The Samuel Roberts Noble Foundation, Ardmore, Oklahoma, USA</div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="row justify-content-center mt-5">
+      <div class="col-8">
+        <h2 class="kbl-heading text-center pb-3">Awards & Prizes</h2>
+
+        <div class="row">
+          <section class="col-6 my-2">
+            <div class="kbl-grey-card">
+              <h5 class="kbl-heading">2013 - 1st Prize</h5>
+              <div class="kbl-text soft award-desc">
+                <a class="kbl-link" href="https://go.okstate.edu/">OSU</a>
+                President’s Cup for creative interdisciplinarity in bioinformatics and computational biology
+              </div>
+            </div>
+          </section>
+
+          <section class="col-6 my-2">
+            <div class="kbl-grey-card">
+              <h5 class="kbl-heading">2012 - 3rd Prize</h5>
+              <div class="kbl-text soft award-desc">
+                <a class="kbl-link" href="https://go.okstate.edu/">OSU</a>
+                President’s Cup for creative interdisciplinarity on the project “<b>EDNA</b>:
+                Powerful New Technology for <b>E</b>lectronic <b>E</b>iagnostic <b>E</b>ucleic acid <b>E</b>nalysis”
+              </div>
+            </div>
+          </section>
+
+          <section class="col-6 my-2">
+            <div class="kbl-grey-card">
+              <h5 class="kbl-heading">2003 - Qualified National Eligibility Test (NET-ICAR)</h5>
+
+              <div class="kbl-text soft award-desc">
+                Conducted by
+                <a class="kbl-link" href="https://icar.org.in/">
+                  Indian Council of Agricultural Research (ICAR)</a>, New Delhi, India
+              </div>
+            </div>
+          </section>
+
+          <section class="col-6 my-2">
+            <div class="kbl-grey-card">
+              <h5 class="kbl-heading">2002 - 3rd Prize best award for poster paper presentation (Weather-based forewarning of rice blast in H.P.)</h5>
+
+              <div class="kbl-text soft award-desc">
+                International Conference on Challenges and Options for Sustainable Development of the
+                Himalayas - Beyond 2002, held at <a class="kbl-link" href="http://www.hillagric.ac.in/" >CSK HPAU</a>, Palampur, India
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </article>
 
   {% include "universal/_footer.njk" %}
   {% from "universal/_footer-scripts.njk" import scripts %}

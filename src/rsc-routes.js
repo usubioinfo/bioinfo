@@ -17,6 +17,7 @@ module.exports = (app) => {
   app.use(assetsBaseUrl + 'js/', express.static(baseFilePath + 'js'));
   app.use(assetsBaseUrl + 'kbl-css/', express.static(baseFilePath + 'kbl-css'));
   app.use(assetsBaseUrl + 'kbl-img/', express.static(baseFilePath + 'kbl-img'));
+  app.use(assetsBaseUrl + 'kbl-js/', express.static(baseFilePath + 'kbl-js'));
   app.use(assetsBaseUrl + 'tools/', express.static(baseFilePath + 'tools'));
 
   app.use(baseUrl + 'pages/', express.static(__dirname + '/../pages'));

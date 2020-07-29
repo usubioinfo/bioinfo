@@ -4,7 +4,8 @@
       <div class="col-auto position-relative">
         <div class="year-banner">{{ conference.year }}</div>
         <div class="year-banner date">{{ conference.date }}</div>
-        <img class="conf-card-img" src="/assets/img/conf.jpg"/>
+        <img class="conf-card-img"
+          src="{{ RaikouServer }}/image/aspect/bioinfo/conf.jpg?a=width&w=1&h=1"/>
       </div>
       <div class="col p-4">
         <div class="conf-authors">{{ conference.authors | safe }}</div>

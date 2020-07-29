@@ -31,7 +31,8 @@ let nunEnv = nunjucks.configure(__dirname + '/views', {
   express: app
 });
 
-// Publications Query
+
+nunEnv.addGlobal(`RaikouServer`, 'http://bioinfocore.usu.edu/raikou');
 
 
 nunEnv.addExtension('SetAsyncExtension', new SetAsyncExtension());

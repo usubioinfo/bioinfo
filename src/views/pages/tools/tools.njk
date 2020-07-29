@@ -41,10 +41,11 @@
 
   <article class="container">
     {% from "./_tool-section.njk" import toolSection %}
-    {% from "./_tool-data.njk" import hpi, clpt, dbs, bioenergy, misc %}
+    {% from "./_tool-data.njk" import hpi, clpt, metagenomics, dbs, bioenergy, misc %}
 
     {{ toolSection("Host-Pathogen Interaction Prediction Tools", hpi, "hpi") }}
     {{ toolSection("Cellular Localization Prediction Tools", clpt, "cellularloc") }}
+    {{ toolSection("Metagenomics", metagenomics, "metagenomics") }}
     {{ toolSection("Databases", dbs, "db") }}
     {{ toolSection("Bioenergy", bioenergy, "bionrg") }}
     {{ toolSection("Miscellaneous", misc, "misc") }}

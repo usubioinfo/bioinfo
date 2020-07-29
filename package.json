@@ -40,6 +40,8 @@
     "nunjucks-setasync": "^1.0.4",
     "path": "^0.12.7",
     "postcss-cli": "^7.1.1",
-    "sass": "^1.26.5"
+    "sass": "^1.26.5",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
   }
 }
