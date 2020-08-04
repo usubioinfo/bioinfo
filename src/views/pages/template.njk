@@ -1,15 +1,25 @@
+{% from "universal/_header.njk" import header %}
+{% from "universal/_navbar.njk" import navbar %}
+{% from "universal/_footer-scripts.njk" import scripts %}
+
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-{% from "universal/_header.njk" import header %}
-{{ header() }}
 
-<body>
-  {% from "universal/_navbar.njk" import navbar %}
-  {{ navbar() }}
+  {% block header %}
+    {{ header() }}
+  {% endblock %}
 
-  {% include "universal/_footer.njk" %}
-  {% from "universal/_footer-scripts.njk" import scripts %}
-  {{ scripts() }}
-</body>
+  <body>
+    {% block navbar %}
+      {{ navbar() }}
+    {% endblock %}
+
+    {% block content %}
+
+    {% endblock %}
+
+    {% include "universal/_footer.njk" %}
+    {{ scripts() }}
+  </body>
 
 </html>

@@ -105,14 +105,21 @@
 
 {% set huco = {
     img: "/assets/kbl-img/interactome.png",
-    title: "Interactome",
+    title: "HuCoPIA",
     link: "http://bioinfo.usu.edu/hucopia/"
+  }
+%}
+
+{% set ranchSAT = {
+    img: "https://i.pinimg.com/originals/18/84/ea/1884ead71b1206cb144274463839b340.jpg",
+    title: "ranchSATdb",
+    link: "http://bioinfo.usu.edu/ranchSATdb/"
   }
 %}
 
 {% set hpi = [predhpi, apinet, deepHPI, huco] %}
 {% set clpt = [plantmSubp, atSubP, rslPredP, plPred] %}
-{% set dbs = [greeningDB, citSATdb, legumeSSRdb] %}
+{% set dbs = [greeningDB, citSATdb, legumeSSRdb, ranchSAT] %}
 {% set bioenergy = [lacSubPred, ligPred] %}
 {% set metagenomics = [necMiner] %}
 {% set misc = [rbPred] %}

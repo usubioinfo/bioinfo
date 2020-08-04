@@ -1,6 +1,18 @@
 @import '../globals';
 @import '../colors';
 
+$elements: div, h1, h2, h3, h4, h5, h6, span, p;
+
+a {
+  text-decoration: none!important;
+
+  @each $element in $elements {
+    #{$element} {
+      text-decoration: none!important;
+    }
+  }
+}
+
 a.kbl-link {
   color: $color-primary!important;
   border-bottom: 1px solid rgba(#fff, 0)!important;

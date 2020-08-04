@@ -1,18 +1,13 @@
 {% macro scripts(customJS=true) %}
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script>
-    window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.2.min.js"><\/script>')
-</script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 
 <!-- tools -->
 <script src="assets/tools/sequence/js/imagesloaded.pkgd.min.js"></script>
 <script src="assets/tools/sequence/js/hammer.min.js"></script>
 <script src="assets/tools/sequence/js/sequence.min.js"></script>
 <script src="assets/tools/intlTelInput/js/intlTelInput.js"></script>
-<script src="assets/tools/lightbox/ekko-lightbox.min.js"></script>
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 <!-- site-spec -->
 <script src="assets/js/plugins.js"></script>
@@ -226,60 +221,6 @@ $(document).ready(function(){
                      $(this).find(":button").hide();
                  });
              });
-
-function openAllTools(evt, yearName) {
-/*
-var i, tabcontent, tablinks;
-
-tabcontent = document.getElementsByClassName("tabcontent");
-console.log(tabcontent);
-tablinks = document.getElementsByClassName("tablinks");
-for (i = 0; i < tabcontent.length; i++) {
-tabcontent[i].style.display = "none";
-}
-for (i = 0; i < tablinks.length; i++) {
-tablinks[i].className = tablinks[i].className.replace(" active", "");
-}
-for (j = 0; j < yearName.length; j++){
-    console.log(yearName[j]);
-document.getElementById(yearName[j]).style.display = "block";
-}
-*/
-}
-
-function openAboutModal(evt, personName, about, title, subTitle, email) {
-
-titleContent = document.getElementsByClassName("modal-title");
-for (i = 0; i < titleContent.length; i++) {
-titleContent[i].style.display = "none";
-}
-
-subtitleContent = document.getElementsByClassName("modalsubtitle");
-for (i = 0; i < subtitleContent.length; i++) {
-subtitleContent[i].style.display = "none";
-}
-
-teamcontent = document.getElementsByClassName("teamcontent");
-for (i = 0; i < teamcontent.length; i++) {
-teamcontent[i].style.display = "none";
-}
-
-teamemail = document.getElementsByClassName("teamemail");
-for (i = 0; i < teamemail.length; i++) {
-teamemail[i].style.display = "none";
-}
-document.getElementById(about).style.display = 'block'
-document.getElementById(title).style.display = 'block'
-document.getElementById(subTitle).style.display = 'block'
-document.getElementById(email).style.display = 'block'
-
-console.log(document.getElementById(personName).src);
-var cardImage = document.getElementsByClassName("detailsCard")
-cardImage[0].src = document.getElementById(personName).src
-
-
-
-}
 </script>
 {% endif %}
 {% endmacro %}

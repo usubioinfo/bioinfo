@@ -8,6 +8,7 @@
   border-radius: $btn-radius!important;
   font-family: 'Montserrat', sans-serif!important;
   padding: 7px 12px!important;
+  text-decoration: none;
 }
 
 @mixin kbl-btn-outline($btn-color, $btn-txt-color) {

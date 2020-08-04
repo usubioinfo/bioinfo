@@ -29,31 +29,6 @@
   }
 %}
 
-<!--
-{% set tools = {
-  name: "Tools",
-  options: [
-    {name: "ranchSATdb", link: "http://bioinfo.usu.edu/ranchSATdb/"},
-    {name: "deepHPI", link: "http://bioinfo.usu.edu/deepHPI/"},
-    {name: "NECminer", link: "http://bioinfo.usu.edu/NECminer/"},
-    {name: "PredHPI", link: "http://bioinfo.usu.edu/PredHPI/"},
-    {name: "GreeningDB", link: "http://bioinfo.usu.edu/GreeningDB/"},
-    {name: "citSATdb", link: "http://bioinfo.usu.edu/citSATdb/"},
-    {name: "Plant-mSubP", link: "http://bioinfo.usu.edu/rtools/Plant-mSubP/"},
-    {name: "LacSubPred", link: "http://bioinfo.usu.edu/lacsubpred/"},
-    {name: "LigPred", link: "http://bioinfo.usu.edu/ligpred/"},
-    {name: "AP-iNET", link: "http://bioinfo.usu.edu/AP-iNET/"},
-    {name: "AtSubP", link: "http://bioinfo3.noble.org/AtSubP/"},
-    {name: "PLpred", link: "http://bioinfo.usu.edu/PLpred/"},
-    {name: "RSLpred", link: "http://www.imtech.res.in/raghava/rslpred/"},
-    {name: "RB-Pred", link: "http://www.imtech.res.in/raghava/rbpred/"},
-    {name: "legumeSSRdb", link: "http://bioinfo.usu.edu/legumeSSRdb/"}
-  ],
-  link: "/tools"
-  }
-%}
--->
-
 {% set tools = {
   name: "Tools",
   options: [
@@ -79,24 +54,6 @@
   {% endif %}
 {% endmacro %}
 
-{% macro anchorGen(name, array, link) %}
-  {% if array.length %}
-    <a class="dropdown-toggle nav-option" data-toggle="dropdown" data-hover="dropdown" href="{{ link }}" title="{{ name }}" data-animations="zoomIn">
-      {{ name }} <span class="caret"></span>
-    </a>
-  {% else %}
-    <a href="{{ link }}" title="{{ name }}" class="nav-option">{{ name }}</a>
-  {% endif %}
-{% endmacro %}
-
-{% macro toolAnchorGen(name, link, topLevelName, extraClasses="") %}
-  {% if topLevelName === "Tools" %}
-    <a href="{{ link }}" title="{{ name }}" class="nav-suboption {{ extraClasses }}">{{ name }}</a>
-  {% else %}
-    <a href="{{ link }}" title="{{ name }}" class="nav-suboption {{ extraClasses }}">{{ name }}</a>
-  {% endif %}
-{% endmacro %}
-
 {% set headers = ["Tools", "People", "Research", "Publications"] %}
 
 {% macro genHeaderLink(title="", link="") %}
@@ -107,7 +64,7 @@
 
 {% macro anchorGenBS4(name, array, link) %}
   {% if array.length %}
-    <a class="dropdown-toggle bs4 nav-option" data-toggle="dropdown" data-hover="dropdown" href="{{ link }}" title="{{ name }}" data-animations="zoomIn">
+    <a class="dropdown-toggle bs4 nav-option" data-toggle="dropdown" data-hover="dropdown" href="#" title="{{ name }}" data-animations="zoomIn">
       {{ name }} <span class="caret"></span>
     </a>
   {% else %}
@@ -131,4 +88,30 @@
   {% else %}
     <a href="{{ link }}" title="{{ name }}" class="bs4 nav-suboption {{ extraClasses }}">{{ name }}</a>
   {% endif %}
+{% endmacro %}
+
+<!-- Bootstrap 5...ugh -->
+
+{% macro genHeaderAnchor(option) %}
+  {% if option.options.length %}
+    <a class="dropdown-toggle nav-option" data-toggle="dropdown" href="#" title="{{ option.name }}" id="dropdownMenuLink" data-offset="40, 20">
+      {{ option.name }}
+    </a>
+  {% else %}
+    <a class="nav-option" href="{{ option.link }}" title="{{ option.name }}">
+      {{ option.name }}
+    </a>
+  {% endif %}
+{% endmacro %}
+
+{% macro dropdownAnchorGen(option) %}
+  <li>
+    <a class="dropdown-item nav-suboption" href="{{ option.link }}">{{ option.name }}</a>
+  </li>
+{% endmacro %}
+
+{% macro dropdownAnchorTitleGen(option) %}
+  <li>
+    <a class="dropdown-item nav-suboption title" href="{{ option.link }}">{{ option.name }}</a>
+  </li>
 {% endmacro %}

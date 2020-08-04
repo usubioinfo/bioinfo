@@ -5,12 +5,15 @@ nav.bs4 {
   border-bottom: 1px solid #dedede;
 }
 
-.bs4.nav-option {
+.nav-option {
   font-weight: 600;
   border-bottom: 4px solid $transparent;
   transition: $time-mid;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  margin-left: 11px;
+  margin-right: 9px;
 
   color: $color-text-main!important;
 
@@ -26,27 +29,39 @@ nav.bs4 {
   }
 }
 
-.bs4.current .nav-option {
+.current .nav-option {
   border-bottom: 4px solid $color-primary!important;
 }
 
-.bs4.nav-suboption {
-  font-weight: 500!important;
-  color: $color-text-main!important;
+.nav-suboption {
+  font-weight: 500;
+  color: $color-text-main;
   transition: $time-mid;
+  padding: 10px 12px!important;
 
   &:hover {
     background: $color-bg-gray!important;
     color: $color-primary!important;
   }
+
+  &.title {
+    font-weight: $font-weight-heavy;
+    color: $color-primary;
+  }
 }
 
-.bs4.nav-dropdown {
+.dropdown-menu {
+  border-radius: $border-radius!important;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.nav-dropdown {
   padding-top: 0!important;
   padding-bottom: 0!important;
 }
 
-.bs4 .dropdown-header {
+.dropdown-header {
   font-weight: $font-weight-heavy;
   cursor: pointer;
   padding-left: 0!important;

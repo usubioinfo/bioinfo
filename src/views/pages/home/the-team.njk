@@ -1,7 +1,7 @@
 <section class="sabbi-section section-meet_the_team">
-    <div class="container">
-        <div class="row mb_30 justify-content-center">
-            <div class="col-10 col-sm-9 col-md-6 col-lg-5 col-xl-4">
+    <div class="container mb-5">
+        <div class="row mb-5 justify-content-center">
+            <div class="col-10 col-sm-9 col-md-6 col-lg-4 col-xl-4">
                 <article class="sabbi-thumlinepost-card solitude-bg__x">
                     <figure class="sabbi-thumlinepost-card-figure">
                         <img alt="" class="img-responsive img-thumpost" style="width: 557px; height: 360px;" src="assets/img/profile/RK_2.jpg">
@@ -71,21 +71,23 @@
         </div>
         {% from "components/person-card.njk" import personCard %}
         <div class="row justify-content-center">
-            <div class="col-12 col-md-4 col-sm-6 col-lg-3">
-              {{ personCard("/image/raw/bioinfo/profile/2.jpg", "Rousselene B. Larson", "Bioinformatics Scientist") }}
-            </div>
-            <div class="col-12 col-md-4 col-sm-6 col-lg-3">
-              {{ personCard("/image/raw/bioinfo/profile/Kaige Zhang.jpg", "Kaige Zhang", "Research Assistant, PhD") }}
-            </div>
-            <div class="col-12 col-md-4 col-sm-6 col-lg-3">
-              {{ personCard("/image/raw/bioinfo/profile/loaiza orduz-cristian.jpg", "Cristian D. Loaiza", "MS Student | PSC") }}
-            </div>
-            <div class="col-12 col-md-4 col-sm-6 col-lg-3">
-              {{ personCard("/image/raw/bioinfo/profile/1.jpg", "Naveen Duhan", "PhD Student | PSC") }}
-            </div>
+          <div class="col-12 col-md-4 col-sm-6 col-lg-3">
+            {{ personCard("/image/raw/bioinfo/profile/2.jpg", "Rousselene B. Larson", "Bioinformatics Scientist") }}
+          </div>
+          <div class="col-12 col-md-4 col-sm-6 col-lg-3">
+            {{ personCard("/image/raw/bioinfo/profile/Kaige Zhang.jpg", "Kaige Zhang", "Research Assistant, PhD") }}
+          </div>
+          <div class="col-12 col-md-4 col-sm-6 col-lg-3">
+            {{ personCard("/image/raw/bioinfo/profile/loaiza orduz-cristian.jpg", "Cristian D. Loaiza", "MS Student | PSC") }}
+          </div>
+          <div class="col-12 col-md-4 col-sm-6 col-lg-3">
+            {{ personCard("/image/raw/bioinfo/profile/1.jpg", "Naveen Duhan", "PhD Student | PSC") }}
+          </div>
         </div>
-        <div class="action-wrap text-left-sm">
-          <a href="/people/our-team" class="kbl-link dull"><b>View all</b></a>
+        <div class="row">
+          <div class="col text-left-sm pl-sm-5">
+            <a href="/people/our-team" class="kbl-link dull"><b>View all</b></a>
+          </div>
         </div>
     </div>
 </section>

@@ -4,7 +4,7 @@
 
 {% from "./_navbar-small.njk" import navbarSmall %}
 
-{{ navbarSmall(activePage, activeSubpage) }}
+<!-- {{ navbarSmall(activePage, activeSubpage) }} -->
 
 <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-md bs4 d-none d-xl-block"
   style="background: #fff!important;">
@@ -34,6 +34,7 @@
           <div class="col-12 text-right">
             {% from "./_navbar-options.njk" import navOptions, calcDropdown, anchorGenBS4, toolAnchorGenBS4, genHeaderLink %}
 
+            <!--
             {% for option in navOptions %}
               <span class="bs4 col {{ calcDropdown(option.options)}} {{ currentRoute(option.name, activePage) }}">
                   {{ anchorGenBS4(option.name, option.options, option.link) }}
@@ -47,6 +48,24 @@
                   {% endif %}
               </span>
             {% endfor %}
+          -->
+
+            {% from "./_navbar-options.njk" import genHeaderAnchor, dropdownAnchorGen, dropdownAnchorTitleGen %}
+            {% for option in navOptions %}
+              <span class="col {{ calcDropdown(option.options) }} {{ currentRoute(option.name, activePage) }}">
+                {{ genHeaderAnchor(option) }}
+
+                {% if option.options %}
+                  <ul class="dropdown-menu nav-dropdown mt-2">
+                    {{ dropdownAnchorTitleGen(option) }}
+                    {% for suboption in option.options %}
+                      {{ dropdownAnchorGen(suboption) }}
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </span>
+            {% endfor %}
+
           </div>
         </section>
 
