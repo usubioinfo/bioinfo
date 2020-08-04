@@ -10,13 +10,8 @@
   {% from "components/img-header.njk" import imgHeader %}
   {{ imgHeader() }}
 
-  <!--
-  {% from "components/img-header2.njk" import imgHeader2 %}
-  {{ imgHeader2("People", "sabbi-page-header-classic sabbi-page-header-team page-header-lg") }}
-
   {% from "components/breadcrumb.njk" import breadcrumb %}
-  {{ breadcrumb([ {name: "Home", location: "/"}, {name: "People", location: ""} ]) }}
--->
+  {{ breadcrumb([{name: 'home', link: '/'}, {name: 'people', link: '/people'}]) }}
 
   <article class="container">
     {% include "./_new-rakesh.njk" %}

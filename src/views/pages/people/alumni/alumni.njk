@@ -10,6 +10,9 @@
   {% from "components/img-header.njk" import imgHeader %}
   {{ imgHeader() }}
 
+  {% from "components/breadcrumb.njk" import breadcrumb %}
+  {{ breadcrumb([{name: 'home', link: '/'}, {name: 'people', link: '/people'}, {name: 'alumni', link: '/people/alumni'}]) }}
+
 <article class="container mt-3">
 
   {% from "components/person-card.njk" import personCardModal %}

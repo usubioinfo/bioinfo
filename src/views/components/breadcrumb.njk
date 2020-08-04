@@ -1,12 +1,12 @@
 {% macro breadcrumb(links=[]) %}
   {% set lastIndex = links.length - 1 %}
   <div class="container-fluid mx-0 px-0">
-    <ol class="breadcrumb" style="padding-left: 300px!important;">
+    <ol class="breadcrumb" style="padding-left: 180px!important;">
       {% for link in links %}
         {% if loop.last %}
           <li class="breadcrumb-item active">{{ link.name }}</li>
         {% else %}
-          <li class="breadcrumb-item"><a href="{{ link.location }}">{{ link.name }}</a></li>
+          <li class="breadcrumb-item"><a href="{{ link.location }}" class="kbl-link">{{ link.name }}</a></li>
         {% endif %}
       {% endfor %}
     </ol>

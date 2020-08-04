@@ -10,23 +10,8 @@
   {% from "components/img-header.njk" import imgHeader %}
   {{ imgHeader() }}
 
-  <!--
-  <header class="kbl-header research sabbi-page-header page-header-lg">
-      <div class="page-header-content conternt-center">
-          <div class="header-title-block">
-              <h1 class="page-title">Research</h1>
-          </div>
-      </div>
-  </header>
-  <div class="auth-breadcrumb-wrap">
-      <div class="container">
-          <ol class="breadcrumb sabbi-breadcrumb list-unstyled list-inline">
-              <li><a href="/">Home</a></li>
-              <li class="active"><a href="#">Research Articles</a></li>
-          </ol>
-      </div>
-  </div>
--->
+  {% from "components/breadcrumb.njk" import breadcrumb %}
+  {{ breadcrumb([{name: 'home', link: '/'}, {name: 'research', link: '/research'}, {name: 'research articles', link: '/research/research-areas'}]) }}
 
   <article class="container mt-5">
     <div class="row justify-content-center">
