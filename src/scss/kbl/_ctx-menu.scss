@@ -1,0 +1,16 @@
+@import '../colors';
+@import '../globals';
+
+.kbl-ctx-menu {
+  position: absolute;
+  z-index: 1000;
+  display: none;
+
+  border-radius: $border-radius;
+  border: 1px solid $color-primary;
+  padding: 10px 10px;
+
+  &.active {
+    display: block;
+  }
+}

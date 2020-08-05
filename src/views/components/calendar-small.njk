@@ -1,4 +1,12 @@
+{% macro ctxMenu() %}
+  <article class="kbl-ctx-menu" id="ctx-menu">
+    <h4>Test</h4>
+    <h4>Test 2</h4>
+  </article>
+{%  endmacro %}
+
 {% macro calendarSmall() %}
+  {{ ctxMenu() }}
   <article class="container-fluid calendar" id="calendar">
     <div class="row my-3 justify-content-center">
       <section class="col-1 text-left">
@@ -19,4 +27,5 @@
     </div>
   </article>
   <script src="/assets/js/kbl/calendar-small.js"></script>
+  <script src="/assets/js/kbl/calendar-ctx-menu.js"></script>
 {% endmacro %}

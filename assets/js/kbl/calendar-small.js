@@ -44,6 +44,7 @@ for (let i=1; i <= daysInMonth(currentDate.getMonth(), currentDate.getFullYear()
 
   const newDateEl = document.createElement('DIV');
   newDateEl.classList.add('date');
+  newDateEl.setAttribute('data-id', `${i}-${currentDate.getMonth()}-${currentDate.getFullYear()}`);
   newDateEl.innerHTML = i;
   dateColEl.appendChild(newDateEl);
   dateRow.appendChild(dateColEl);
