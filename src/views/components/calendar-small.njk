@@ -1,0 +1,22 @@
+{% macro calendarSmall() %}
+  <article class="container-fluid calendar" id="calendar">
+    <div class="row my-3 justify-content-center">
+      <section class="col-1 text-left">
+        <i class="fas fa-chevron-left arrow-single"></i>
+      </section>
+      <section class="col-8 text-center">
+        <div id="monthName" class="month-title">
+
+        </div>
+      </section>
+      <section class="col-1 text-right">
+        <i class="fas fa-chevron-right arrow-single"></i>
+      </section>
+    </div>
+
+    <div class="row mb-4" id="weekDays">
+
+    </div>
+  </article>
+  <script src="/assets/js/kbl/calendar-small.js"></script>
+{% endmacro %}

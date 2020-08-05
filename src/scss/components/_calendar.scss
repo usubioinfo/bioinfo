@@ -1,0 +1,29 @@
+@import '../colors';
+@import '../globals';
+
+.calendar {
+  .month-title {
+    font-weight: $font-weight-heavy;
+    font-size: 180%;
+  }
+
+  .arrow-single {
+    font-size: 180%;
+  }
+
+  .weekday {
+    font-weight: $font-weight-medium;
+    font-size: 130%;
+  }
+
+  .date {
+    font-weight: $font-weight-medium;
+    cursor: pointer;
+    border-radius: $border-radius;
+    transition: $time-mid;
+
+    &:hover {
+      background: $color-primary-very-light;
+    }
+  }
+}

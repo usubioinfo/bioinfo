@@ -118,6 +118,17 @@
     </div>
   </article>
 
+  <div class="my-5 py-5">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-10">
+          {% from "components/calendar-small.njk" import calendarSmall %}
+          {{ calendarSmall() }}
+        </div>
+      </div>
+    </div>
+  </div>
+
   {% include "universal/_footer.njk" %}
   {% from "universal/_footer-scripts.njk" import scripts %}
   {{ scripts() }}
