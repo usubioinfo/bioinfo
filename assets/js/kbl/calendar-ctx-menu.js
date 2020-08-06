@@ -76,7 +76,6 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
   }
 
   function deactivateMenu() {
-    console.log('test');
     if (menuOn) {
       menuOn = false;
       ctxMenu.classList.remove(activeState);
