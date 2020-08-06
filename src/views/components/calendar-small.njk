@@ -1,7 +1,8 @@
 {% macro ctxMenu() %}
   <article class="kbl-ctx-menu" id="ctx-menu">
-    <h4>Test</h4>
-    <h4>Test 2</h4>
+    <div class="ctx-heading" id="ctx-heading"></div>
+    <div class="menu-item">Create Appointment</div>
+    <div class="menu-item negative">Remove Appointment</div>
   </article>
 {%  endmacro %}
 
@@ -10,7 +11,7 @@
   <article class="container-fluid calendar" id="calendar">
     <div class="row my-3 justify-content-center">
       <section class="col-1 text-left">
-        <i class="fas fa-chevron-left arrow-single"></i>
+        <i class="fas fa-chevron-left arrow-single" id="calArrowLeft"></i>
       </section>
       <section class="col-8 text-center">
         <div id="monthName" class="month-title">
@@ -18,7 +19,7 @@
         </div>
       </section>
       <section class="col-1 text-right">
-        <i class="fas fa-chevron-right arrow-single"></i>
+        <i class="fas fa-chevron-right arrow-single" id="calArrowRight"></i>
       </section>
     </div>
 

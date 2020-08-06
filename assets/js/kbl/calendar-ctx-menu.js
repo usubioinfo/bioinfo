@@ -1,9 +1,15 @@
+const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
+								'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
 (function() {
 
   "use strict";
 
   const dateItems = document.querySelectorAll('.calendar .date');
   const ctxMenu = document.querySelector('#ctx-menu');
+  let ctxMenuHeader = document.querySelector('#ctx-heading');
+  let headerText = '';
+
   let menuOn = false;
   const activeState = 'active';
 
@@ -47,6 +53,9 @@
     const el = e.srcElement || e.target;
 
     if (el.classList.contains(className)) {
+      const data = el.getAttribute('data-id').split('-');
+      headerText = `${MONTHS_SHORT[data[1]]} ${data[0]}`;
+      ctxMenuHeader.innerHTML = headerText;
       return el;
     } else {
       while (el === el.parentNode) {

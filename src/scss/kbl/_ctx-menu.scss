@@ -5,12 +5,35 @@
   position: absolute;
   z-index: 1000;
   display: none;
+  background: #fff;
 
   border-radius: $border-radius;
   border: 1px solid $color-primary;
-  padding: 10px 10px;
+  padding: 0;
+  overflow: hidden;
 
   &.active {
     display: block;
+  }
+
+  .ctx-heading {
+    text-align: center;
+    font-weight: $font-weight-heavy;
+    font-size: 110%;
+    padding: 8px 0;
+
+    border-bottom: 1px solid $color-border-gray;
+  }
+
+  .menu-item {
+    font-weight: $font-weight-medium;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: $time-mid;
+
+    &:hover {
+      background: $color-bg-gray;
+      color: $color-primary;
+    }
   }
 }

@@ -11,59 +11,104 @@ let calendar = document.getElementById('calendar');
 let currentDate = new Date();
 let firstOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
 
-let weekOffset = firstOfMonth.getDay();
-console.log()
+function generateCalendar() {
+  weekDaysEl = document.getElementById('weekDays');
 
-let monthEl = document.getElementById('monthName');
-monthEl.innerHTML = MONTHS[currentDate.getMonth()];
+  weekDays.forEach((day) => {
+  	dayEl = document.createElement('DIV');
+    dayEl.classList.add('col', 'weekday', 'text-center');
+    dayEl.innerHTML = day;
 
-weekDaysEl = document.getElementById('weekDays');
+    weekDaysEl.appendChild(dayEl);
+  });
 
-weekDays.forEach((day) => {
-	dayEl = document.createElement('DIV');
-  dayEl.classList.add('col', 'weekday', 'text-center');
-  dayEl.innerHTML = day;
+  generateDates();
+}
 
-  weekDaysEl.appendChild(dayEl);
+function generateDates() {
+  let monthEl = document.getElementById('monthName');
+  monthEl.innerHTML = MONTHS[currentDate.getMonth()];
+
+  let oldDateRows = document.querySelectorAll('#dateRow');
+  if (oldDateRows.length) {
+    oldDateRows.forEach((row) => {
+      row.parentNode.removeChild(row);
+    });
+  }
+
+  let weekOffset = firstOfMonth.getDay();
+  let weekIndex = weekOffset;
+
+  let dateRow = document.createElement('DIV');
+  dateRow.classList.add('row', 'my-3');
+  dateRow.setAttribute('id', 'dateRow');
+
+  for (let i=0; i < weekIndex; i++) {
+  	const newColEl = document.createElement('DIV');
+    newColEl.classList.add('col', 'px-5', 'text-center');
+    dateRow.appendChild(newColEl);
+  }
+
+  for (let i=1; i <= daysInMonth(currentDate.getMonth(), currentDate.getFullYear()); i++) {
+    const dateColEl = document.createElement('DIV');
+    dateColEl.classList.add('col', 'px-5', 'text-center');
+
+    const newDateEl = document.createElement('DIV');
+    newDateEl.classList.add('date');
+    newDateEl.setAttribute('data-id', `${i}-${currentDate.getMonth()}-${currentDate.getFullYear()}`);
+    newDateEl.innerHTML = i;
+    dateColEl.appendChild(newDateEl);
+    dateRow.appendChild(dateColEl);
+    weekIndex += 1;
+
+    if (weekIndex === 7) {
+    	calendar.appendChild(dateRow);
+      dateRow = document.createElement('DIV');
+  		dateRow.classList.add('row', 'my-3');
+      dateRow.setAttribute('id', 'dateRow');
+      weekIndex = 0;
+      continue;
+    }
+  }
+
+  for (let i=weekIndex; i < 7; i++) {
+  	const newColEl = document.createElement('DIV');
+    newColEl.classList.add('col', 'px-5', 'text-center');
+    dateRow.appendChild(newColEl);
+  }
+
+  calendar.appendChild(dateRow);
+}
+
+generateCalendar();
+
+const leftArrow = document.querySelector('#calArrowLeft');
+const rightArrow = document.querySelector('#calArrowRight');
+
+leftArrow.addEventListener('click', (e) => {
+  if (currentDate.getMonth() <= 0) {
+    const year = currentDate.getFullYear();
+    currentDate = new Date(year - 1, 11, 15); // date doesn't really matter
+  } else {
+    let month = currentDate.getMonth() - 1;
+    let year = currentDate.getFullYear();
+    currentDate = new Date(year, month, 15);
+  }
+
+  firstOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+  generateDates();
 });
 
-let weekIndex = weekOffset;
-let dateRow = document.createElement('DIV');
-dateRow.classList.add('row', 'my-3');
-
-for (let i=0; i < weekIndex; i++) {
-	console.log(i)
-	const newColEl = document.createElement('DIV');
-  newColEl.classList.add('col', 'px-5', 'text-center');
-  dateRow.appendChild(newColEl);
-}
-
-for (let i=1; i <= daysInMonth(currentDate.getMonth(), currentDate.getFullYear()); i++) {
-  const dateColEl = document.createElement('DIV');
-  dateColEl.classList.add('col', 'px-5', 'text-center');
-
-  const newDateEl = document.createElement('DIV');
-  newDateEl.classList.add('date');
-  newDateEl.setAttribute('data-id', `${i}-${currentDate.getMonth()}-${currentDate.getFullYear()}`);
-  newDateEl.innerHTML = i;
-  dateColEl.appendChild(newDateEl);
-  dateRow.appendChild(dateColEl);
-  weekIndex += 1;
-
-  if (weekIndex === 7) {
-  	calendar.appendChild(dateRow);
-    dateRow = document.createElement('DIV');
-		dateRow.classList.add('row', 'my-3');
-    weekIndex = 0;
-    continue;
+rightArrow.addEventListener('click', (e) => {
+  if (currentDate.getMonth() >= 11) {
+    const year = currentDate.getFullYear();
+    currentDate = new Date(year + 1, 0, 15);
+  } else {
+    let month = currentDate.getMonth() + 1;
+    let year = currentDate.getFullYear();
+    currentDate = new Date(year, month, 15);
   }
-}
 
-for (let i=weekIndex; i < 7; i++) {
-	console.log(i)
-	const newColEl = document.createElement('DIV');
-  newColEl.classList.add('col', 'px-5', 'text-center');
-  dateRow.appendChild(newColEl);
-}
-
-calendar.appendChild(dateRow);
+  firstOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+  generateDates();
+});

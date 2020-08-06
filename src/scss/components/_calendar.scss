@@ -9,6 +9,12 @@
 
   .arrow-single {
     font-size: 180%;
+    transition: $time-mid;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-primary;
+    }
   }
 
   .weekday {
@@ -22,7 +28,8 @@
     border-radius: $border-radius;
     transition: $time-mid;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background: $color-primary-very-light;
     }
   }
