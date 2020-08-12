@@ -111,7 +111,6 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
 			author: appointmentNameField.value,
 			description: appointmentDescField.value
 		};
-		console.log(appointment);
     sendNewAppointment(appointment);
   });
 
@@ -122,7 +121,9 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
 
 		axios.post('http://localhost:3100/appointments/create', appointment)
 			.then((res) => {
-				console.log(res)
+				console.log(res);
+				appointmentNameField.value = '';
+				appointmentDescField.value = '';
 			})
 			.catch((err) => {
 				console.log(err);

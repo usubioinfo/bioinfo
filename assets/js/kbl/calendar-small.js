@@ -45,13 +45,13 @@ function generateDates() {
 
   for (let i=0; i < weekIndex; i++) {
   	const newColEl = document.createElement('DIV');
-    newColEl.classList.add('col', 'px-5', 'text-center');
+    newColEl.classList.add('col', 'px-2', 'text-center');
     dateRow.appendChild(newColEl);
   }
 
   for (let i=1; i <= daysInMonth(currentDate.getMonth(), currentDate.getFullYear()); i++) {
     const dateColEl = document.createElement('DIV');
-    dateColEl.classList.add('col', 'px-5', 'text-center');
+    dateColEl.classList.add('col', 'px-2', 'text-center');
 
     const newDateEl = document.createElement('DIV');
     newDateEl.classList.add('date');
@@ -73,7 +73,7 @@ function generateDates() {
 
   for (let i=weekIndex; i < 7; i++) {
   	const newColEl = document.createElement('DIV');
-    newColEl.classList.add('col', 'px-5', 'text-center');
+    newColEl.classList.add('col', 'px-2', 'text-center');
     dateRow.appendChild(newColEl);
   }
 

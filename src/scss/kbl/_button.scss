@@ -56,6 +56,10 @@
   @include kbl-btn-solid($color-primary, #fff, $color-primary-dark);
 }
 
+.kbl-btn-2-solid {
+  @include kbl-btn-solid($color-secondary, #fff, $color-secondary-dark);
+}
+
 .kbl-btn-circle-solid {
   border-radius: 999px!important;
   cursor: pointer;

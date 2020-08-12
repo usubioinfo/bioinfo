@@ -8,15 +8,23 @@
 
 // $color-primary: #00a3ff;
 $color-primary: #b4132a;
+$color-secondary: #3b4961;
 
 // Shades
 $color-primary-very-dark: shade($color-primary, 45%);
 $color-primary-dark: shade($color-primary, 70%);
 
+$color-secondary-very-dark: shade($color-secondary, 45%);
+$color-secondary-dark: shade($color-secondary, 70%);
+
 // Tints
 $color-primary-light: tint($color-primary, 70%);
 $color-primary-very-light: tint($color-primary, 45%);
 $color-primary-bg: rgba($color-primary, .18);
+
+$color-secondary-light: tint($color-secondary, 70%);
+$color-secondary-very-light: tint($color-secondary, 45%);
+$color-secondary-bg: rgba($color-secondary, .18);
 
 $code-color: #ee316f;
 

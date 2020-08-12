@@ -26,7 +26,7 @@
           <a class="news-item col-12" href="/news/citsatdb">
             <div class="row pl-0">
               <div class="col-3 pl-0 my-auto">
-                <img src="/assets/img/events/IMG_20200113_151858.jpg" class="img-fluid">
+                <img src="{{ RaikouServer }}/image/aspect/bioinfo/events/IMG_20200113_151858.jpg?a=height&w=3&h=4" class="img-fluid">
               </div>
               <div class="col-9 pl-0 pt-3">
                 <h5 class="header">Naveen presents at International Plant Animal Genome Conference</h5>
@@ -48,7 +48,7 @@
                 </p>
               </div>
               <div class="col-3 pr-0 my-auto">
-                <img src="/assets/img/profile/shelby.jpg" class="img-fluid">
+                <img src="{{ RaikouServer }}/image/aspect/bioinfo/profile/shelby.jpg?a=height&w=6&h=6" class="img-fluid">
               </div>
             </div>
           </a>
@@ -65,7 +65,7 @@
           <a class="news-item col-12" href="/news/newdeephpi">
             <div class="row pl-0">
               <div class="col-3 pl-0 my-auto">
-                <img src="http://bioinfo.usu.edu/assets/img/events/PAG-2019/g2.jpg" class="img-fluid">
+                <img src="{{ RaikouServer }}/image/aspect/bioinfo/events/PAG-2019/g2.jpg?a=height&w=5&h=6" class="img-fluid">
               </div>
               <div class="col-9 pl-0 pt-3">
                 <h5 class="header">deepHPI is Online!</h5>
@@ -117,17 +117,6 @@
 
     </div>
   </article>
-
-  <div class="my-5 py-5">
-    <div class="container-fluid">
-      <div class="row justify-content-center">
-        <div class="col-10">
-          {% from "components/calendar-small.njk" import calendarSmall %}
-          {{ calendarSmall() }}
-        </div>
-      </div>
-    </div>
-  </div>
 
   {% include "universal/_footer.njk" %}
   {% from "universal/_footer-scripts.njk" import scripts %}
