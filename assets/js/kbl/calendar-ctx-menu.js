@@ -8,7 +8,9 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
   const dateItems = document.querySelectorAll('.calendar .date');
   const ctxMenu = document.querySelector('#ctx-menu');
   let ctxMenuHeader = document.querySelector('#ctx-heading');
+	let modalTitleEl = document.querySelector('#appointmentModalTitle');
   let headerText = '';
+	let currentSelectedDate = [];
 
   let menuOn = false;
   const activeState = 'active';
@@ -16,10 +18,6 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
   let menuPos;
   let menuX;
   let menuY;
-
-  dateItems.forEach((item) => {
-
-  });
 
   document.addEventListener('click', (e) => {
     if (clickInsideDate(e, 'date')) {
@@ -54,8 +52,10 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
 
     if (el.classList.contains(className)) {
       const data = el.getAttribute('data-id').split('-');
+			currentSelectedDate = data;
       headerText = `${MONTHS_SHORT[data[1]]} ${data[0]}`;
       ctxMenuHeader.innerHTML = headerText;
+			modalTitleEl.innerHTML = `${headerText}, ${data[2]}`;
       return el;
     } else {
       while (el === el.parentNode) {
@@ -97,5 +97,35 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
     }
 
     return {x: posX, y: posY};
+  }
+
+	// Set APT Stuff
+	const appointmentNameField = document.querySelector('#appointmentName');
+	const appointmentDescField = document.querySelector('#appointmentDesc');
+
+	const setAppointmentBtn = document.querySelector('#createAppointmentButton');
+  setAppointmentBtn.addEventListener('click', (e) => {
+		const date = currentSelectedDate;
+		const appointment = {
+			date: `${date[2]}-${date[1]}-${date[0]}`,
+			author: appointmentNameField.value,
+			description: appointmentDescField.value
+		};
+		console.log(appointment);
+    sendNewAppointment(appointment);
+  });
+
+  function sendNewAppointment(appointment) {
+    if (!appointment.author || !appointment.date || !appointment.description) {
+      return;
+    }
+
+		axios.post('http://localhost:3100/appointments/create', appointment)
+			.then((res) => {
+				console.log(res)
+			})
+			.catch((err) => {
+				console.log(err);
+			});
   }
 })();
