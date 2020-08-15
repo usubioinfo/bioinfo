@@ -29,7 +29,7 @@
     transition: $time-mid;
     border: 1px solid $transparent;
 
-    &.selected {
+    &.appointment {
       border-color: $color-primary;
       color: $color-primary;
 
@@ -39,8 +39,12 @@
       }
     }
 
-    &:hover:not(.selected),
-    &:focus:not(.selected) {
+    &.selected {
+      background: $color-primary!important;
+      color: #fff!important;
+    }
+
+    &:hover:not(.appointment) {
       background: $color-primary-very-light;
     }
   }

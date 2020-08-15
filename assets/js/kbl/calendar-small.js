@@ -18,7 +18,7 @@ function getAppointments(month) {
       console.log(res.data);
       res.data.payload.forEach((appointment) => {
         console.log(appointment)
-        dateElements[appointment.day - 1].classList.add('selected');
+        dateElements[appointment.day - 1].classList.add('appointment');
       });
     });
 }

@@ -20,6 +20,9 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
   let menuY;
 
   document.addEventListener('click', (e) => {
+		dateItems.forEach((el) => {
+			el.classList.remove('selected');
+		});
     if (clickInsideDate(e, 'date')) {
       e.preventDefault();
       activateMenu();
@@ -31,6 +34,9 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
 
   window.onkeyup = (e) => {
     if (e.keyCode === 27) {
+			dateItems.forEach((el) => {
+				el.classList.remove('selected');
+			});
       deactivateMenu();
     }
   };
@@ -51,6 +57,7 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
     const el = e.srcElement || e.target;
 
     if (el.classList.contains(className)) {
+			el.classList.add('selected');
       const data = el.getAttribute('data-id').split('-');
 			currentSelectedDate = data;
       headerText = `${MONTHS_SHORT[data[1]]} ${data[0]}`;
