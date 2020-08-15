@@ -6,10 +6,22 @@ const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
 								'August', 'September', 'October', 'November', 'December'];
 
 const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+let dateElements = [];
 
 let calendar = document.getElementById('calendar');
 let currentDate = new Date();
 let firstOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+
+function getAppointments(month) {
+  axios.get(`http://bioinfocore.usu.edu/api/appointments/month/${month}`)
+    .then((res) => {
+      console.log(res.data);
+      res.data.payload.forEach((appointment) => {
+        console.log(appointment)
+        dateElements[appointment.day - 1].classList.add('selected');
+      });
+    });
+}
 
 function generateCalendar() {
   weekDaysEl = document.getElementById('weekDays');
@@ -26,6 +38,7 @@ function generateCalendar() {
 }
 
 function generateDates() {
+  dateElements = [];
   let monthEl = document.getElementById('monthName');
   monthEl.innerHTML = MONTHS[currentDate.getMonth()];
 
@@ -58,6 +71,7 @@ function generateDates() {
     newDateEl.setAttribute('data-id', `${i}-${currentDate.getMonth()}-${currentDate.getFullYear()}`);
     newDateEl.innerHTML = i;
     dateColEl.appendChild(newDateEl);
+    dateElements.push(newDateEl);
     dateRow.appendChild(dateColEl);
     weekIndex += 1;
 
@@ -82,6 +96,8 @@ function generateDates() {
 
 generateCalendar();
 
+getAppointments(currentDate.getMonth() + 1);
+
 const leftArrow = document.querySelector('#calArrowLeft');
 const rightArrow = document.querySelector('#calArrowRight');
 
@@ -97,6 +113,7 @@ leftArrow.addEventListener('click', (e) => {
 
   firstOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
   generateDates();
+  getAppointments(currentDate.getMonth() + 1);
 });
 
 rightArrow.addEventListener('click', (e) => {
@@ -111,4 +128,5 @@ rightArrow.addEventListener('click', (e) => {
 
   firstOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
   generateDates();
+  getAppointments(currentDate.getMonth() + 1);
 });

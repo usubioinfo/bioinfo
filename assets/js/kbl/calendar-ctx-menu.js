@@ -119,7 +119,7 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
       return;
     }
 
-		axios.post('http://localhost:3100/appointments/create', appointment)
+		axios.post('http://bioinfocore.usu.edu/api/appointments/create', appointment)
 			.then((res) => {
 				console.log(res);
 				appointmentNameField.value = '';
