@@ -12,14 +12,19 @@ let calendar = document.getElementById('calendar');
 let currentDate = new Date();
 let firstOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
 
+let appointments = [];
+
 function getAppointments(month) {
   axios.get(`http://bioinfocore.usu.edu/api/appointments/month/${month}`)
     .then((res) => {
-      console.log(res.data);
-      res.data.payload.forEach((appointment) => {
-        console.log(appointment)
-        dateElements[appointment.day - 1].classList.add('appointment');
-      });
+      if (res.data.success) {
+        console.log(res.data);
+        appointments = res.data.payload;
+        res.data.payload.forEach((appointment) => {
+          console.log(appointment)
+          dateElements[appointment.day - 1].classList.add('appointment');
+        });
+      }
     });
 }
 

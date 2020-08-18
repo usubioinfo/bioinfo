@@ -3,12 +3,15 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
 
 (function() {
 
-  "use strict";
+  'use strict';
 
   const dateItems = document.querySelectorAll('.calendar .date');
   const ctxMenu = document.querySelector('#ctx-menu');
   let ctxMenuHeader = document.querySelector('#ctx-heading');
+	let apptHeader = document.querySelector('#appt-header');
+	let apptContainer = document.querySelector('#appt-container');
 	let modalTitleEl = document.querySelector('#appointmentModalTitle');
+
   let headerText = '';
 	let currentSelectedDate = [];
 
@@ -19,13 +22,22 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
   let menuX;
   let menuY;
 
+	let apptsForDay = [];
+
   document.addEventListener('click', (e) => {
-		dateItems.forEach((el) => {
+		const allDates = document.querySelectorAll('.calendar .date');
+		allDates.forEach((el) => {
 			el.classList.remove('selected');
 		});
     if (clickInsideDate(e, 'date')) {
       e.preventDefault();
       activateMenu();
+			apptContainer.innerHTML = '';
+			apptsForDay.forEach((appt) => {
+				let apptEl = document.createElement('DIV');
+				apptEl.innerHTML = appt.author;
+				apptContainer.appendChild(apptEl);
+			});
       positionMenu(e);
     } else {
       deactivateMenu();
@@ -34,7 +46,7 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
 
   window.onkeyup = (e) => {
     if (e.keyCode === 27) {
-			dateItems.forEach((el) => {
+			allDates.forEach((el) => {
 				el.classList.remove('selected');
 			});
       deactivateMenu();
@@ -43,13 +55,10 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
 
   function positionMenu(e) {
     menuPos = getClickPos(e);
-    console.log(menuPos);
     menuX = menuPos.x + 'px';
     menuY = menuPos.y + 'px';
 
-    console.log(menuX);
     ctxMenu.style.left = menuX;
-    console.log(ctxMenu.style.left);
     ctxMenu.style.top = menuY;
   }
 
@@ -63,6 +72,11 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
       headerText = `${MONTHS_SHORT[data[1]]} ${data[0]}`;
       ctxMenuHeader.innerHTML = headerText;
 			modalTitleEl.innerHTML = `${headerText}, ${data[2]}`;
+
+			apptsForDay = appointments.filter((appt) => {
+				return appt.day === parseInt(data[0]) && appt.month - 1 === parseInt(data[1]);
+			});
+			console.log(apptsForDay);
       return el;
     } else {
       while (el === el.parentNode) {

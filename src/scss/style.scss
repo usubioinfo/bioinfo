@@ -193,21 +193,23 @@ footer {
   height: 270px;
 }
 
+.hide {
+  display: hidden!important;
+}
+
+// Scrollbar stuff
 ::-webkit-scrollbar {
   width: 6px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: $color-primary;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: $color-primary-dark;
 }

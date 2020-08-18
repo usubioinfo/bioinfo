@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/suyash07/bioinformatics.git"
+    "url": "git+https://github.com/MusicDev33/bioinformatics.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/suyash07/bioinformatics/issues"
+    "url": "https://github.com/MusicDev33/bioinformatics/issues"
   },
-  "homepage": "https://github.com/suyash07/bioinformatics#readme",
+  "homepage": "https://github.com/MusicDev33/bioinformatics#readme",
   "dependencies": {
     "autoprefixer": "^9.7.6",
     "chokidar-cli": "^2.1.0",

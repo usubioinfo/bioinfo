@@ -21,6 +21,7 @@
     font-weight: $font-weight-heavy;
     font-size: 110%;
     padding: 8px 0;
+    color: $color-text-main;
 
     border-bottom: 1px solid $color-border-gray;
   }
@@ -35,5 +36,9 @@
       background: $color-bg-gray;
       color: $color-primary;
     }
+  }
+
+  .appt-container {
+    padding: 5px 15px;
   }
 }
