@@ -33,11 +33,18 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
       e.preventDefault();
       activateMenu();
 			apptContainer.innerHTML = '';
-			apptsForDay.forEach((appt) => {
-				let apptEl = document.createElement('DIV');
-				apptEl.innerHTML = appt.author;
-				apptContainer.appendChild(apptEl);
-			});
+			if (apptsForDay.length) {
+				apptHeader.classList.remove('d-none');
+				apptContainer.classList.remove('d-none');
+				apptsForDay.forEach((appt) => {
+					let apptEl = document.createElement('DIV');
+					apptEl.innerHTML = appt.author;
+					apptContainer.appendChild(apptEl);
+				});
+			} else {
+				apptHeader.classList.add('d-none');
+				apptContainer.classList.add('d-none');
+			}
       positionMenu(e);
     } else {
       deactivateMenu();
