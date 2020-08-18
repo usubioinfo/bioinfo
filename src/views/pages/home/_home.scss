@@ -1,11 +1,8 @@
-@import '../../../scss/colors';
-@import '../../../scss/globals';
-
 .research-fact {
   background-image: url('/assets/img/brands/brand_bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: $border-radius;
+  border-radius: var(--border-radius);
   color: #fff;
 
   .fact-value {
@@ -16,21 +13,21 @@
 .home-news-item {
   .hn-header {
     font-size: 107%!important;
-    font-weight: $font-weight-heavy;
-    color: $color-text-main!important;
-    transition: $time-mid;
+    font-weight: var(--font-weight-heavy);
+    color: var(--color-text-main)!important;
+    transition: var(--time-mid);
 
     &.shrink {
       line-height: 103%!important;
     }
 
     &:hover {
-      color: $color-primary!important;
+      color: var(--color-primary)!important;
     }
   }
 
   .hn-date {
-    color: $color-text-soft!important;
+    color: var(--color-text-soft)!important;
     font-style: italic;
   }
 }

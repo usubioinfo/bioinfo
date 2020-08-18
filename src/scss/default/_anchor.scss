@@ -1,5 +1,4 @@
 @import '../globals';
-@import '../colors';
 
 $elements: div, h1, h2, h3, h4, h5, h6, span, p;
 
@@ -14,8 +13,8 @@ a {
 }
 
 a.kbl-link {
-  color: $color-primary!important;
-  border-bottom: 1px solid rgba(#fff, 0)!important;
+  color: var(--color-primary);
+  border-bottom: 1px solid transparent!important;
   text-decoration: none!important;
   transition: $time-fast;
 
@@ -24,23 +23,23 @@ a.kbl-link {
   }
 
   &.dull {
-    color: $color-text-main!important;
+    color: var(--color-text-main)!important;
   }
 
   &:hover:not(:focus) {
-    border-color: $color-primary!important;
-    color: $color-primary!important;
+    border-color: var(--color-primary)!important;
+    color: var(--color-primary)!important;
     text-decoration: none!important;
   }
 
   &:hover {
-    border-color: $color-primary!important;
+    border-color: var(--color-primary)!important;
     text-decoration: none!important;
   }
 
   &:focus {
-    color: $color-primary-dark!important;
-    border-color: $color-primary-dark;
+    color: var(--color-primary-dark)!important;
+    border-color: var(--color-primary-dark);
     text-decoration: none!important;
   }
 }

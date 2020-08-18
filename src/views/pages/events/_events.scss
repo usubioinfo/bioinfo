@@ -1,14 +1,11 @@
-@import '../../../scss/colors';
-@import '../../../scss/globals';
-
 .event-details {
-  color: $color-text-soft!important;
+  color: var(--color-text-soft)!important;
   font-size: 105%!important;
 }
 
 .event-desc {
   margin-top: 10px;
-  color: $color-text-main;
+  color: var(--color-text-main);
 }
 
 .event-thumbnail {

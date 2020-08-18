@@ -1,10 +1,9 @@
-@import '../colors';
 @import '../globals';
 
 $card-width: 250px;
 
 .kbl-research-card {
-  background: $color-bg-gray;
+  background: var(--color-bg-gray);
   border-radius: $border-radius;
   word-wrap: break-word;
   width: $card-width;
@@ -16,14 +15,14 @@ $card-width: 250px;
   .card-title {
     font-weight: $font-weight-heavy;
     font-size: 110%;
-    color: $color-text-main;
+    color: var(--color-text-main);
     line-height: normal;
   }
 
   .card-subtitle {
     font-weight: $font-weight-medium;
     font-size: 95%;
-    color: $color-text-soft;
+    color: var(--color-text-soft);
   }
 
   &.select {
@@ -31,7 +30,7 @@ $card-width: 250px;
     transition: $time-mid;
 
     &:hover {
-      background: $color-primary-bg;
+      background: var(--color-primary-bg);
     }
   }
 
@@ -42,7 +41,7 @@ $card-width: 250px;
   .img-tool {
     flex-basis: 120px;
     overflow-y: hidden;
-    border-bottom: 1px solid $color-border-gray;
+    border-bottom: 1px solid var(--color-border-gray);
     transition: $time-mid;
   }
 }
@@ -61,17 +60,17 @@ $card-width: 250px;
 
   &.tool {
     transition: $time-mid;
-    border: 1px solid $color-border-gray;
+    border: 1px solid var(--color-border-gray);
 
     &:hover {
-      border-color: $color-primary-very-light;
+      border-color: var(--color-primary-very-light);
 
       .card-title {
-        color: $color-primary;
+        color: var(--color-primary);
       }
 
       .img-tool {
-        border-color: $color-primary-very-light;
+        border-color: var(--color-primary-very-light);
       }
     }
   }
@@ -82,7 +81,7 @@ $card-width: 250px;
 }
 
 .modal-subtitle {
-  color: $color-text-soft;
+  color: var(--color-text-soft);
 }
 
 // Flex test
@@ -108,28 +107,28 @@ $card-width: 250px;
   .text {
     font-weight: $font-weight-medium;
     cursor: pointer;
-    border-bottom: 1px solid $transparent;
+    border-bottom: 1px solid transparent;
     transition: $time-mid;
-    color: $color-text-main;
-    background: $transparent!important;
+    color: var(--color-text-main);
+    background: transparent!important;
 
     &:hover {
-      color: $color-primary;
-      border-color: $color-primary;
+      color: var(--color-primary);
+      border-color: var(--color-primary);
     }
   }
 
   .read-text {
     font-weight: $font-weight-medium;
     cursor: pointer;
-    border-bottom: 1px solid $transparent;
+    border-bottom: 1px solid transparent;
     transition: $time-mid;
-    color: $color-text-main;
-    background: $transparent!important;
+    color: var(--color-text-main);
+    background: transparent!important;
 
     &:hover {
-      color: $color-primary;
-      border-color: $color-primary;
+      color: var(--color-primary);
+      border-color: var(--color-primary);
     }
   }
 }

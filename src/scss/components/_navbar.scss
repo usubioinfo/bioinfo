@@ -7,7 +7,7 @@ nav.bs4 {
 
 .nav-option {
   font-weight: 600;
-  border-bottom: 4px solid $transparent;
+  border-bottom: 4px solid var(--transparent);
   transition: $time-mid;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
@@ -15,22 +15,22 @@ nav.bs4 {
   margin-left: 11px;
   margin-right: 9px;
 
-  color: $color-text-main!important;
+  color: var(--color-text-main)!important;
 
   font-size: 100%;
   padding-bottom: 12px;
 
   &:hover {
-    border-bottom: 4px solid $color-primary-bg!important;
+    border-bottom: 4px solid var(--color-primary-bg)!important;
   }
 
   & a {
-    color: $color-text-main;
+    color: var(--color-text-main);
   }
 }
 
 .current .nav-option {
-  border-bottom: 4px solid $color-primary!important;
+  border-bottom: 4px solid var(--color-primary)!important;
 }
 
 .nav-suboption {
@@ -40,13 +40,13 @@ nav.bs4 {
   padding: 10px 12px!important;
 
   &:hover {
-    background: $color-bg-gray!important;
-    color: $color-primary!important;
+    background: var(--color-bg-gray)!important;
+    color: var(--color-primary)!important;
   }
 
   &.title {
     font-weight: $font-weight-heavy;
-    color: $color-primary;
+    color: var(--color-primary);
   }
 }
 
@@ -65,11 +65,11 @@ nav.bs4 {
   font-weight: $font-weight-heavy;
   cursor: pointer;
   padding-left: 0!important;
-  color: $color-primary!important;
+  color: var(--color-primary)!important;
   font-size: inherit!important;
 }
 
 .dropdown-item:active {
-  background: $color-bg-gray!important;
-  background-color: $color-bg-gray!important;
+  background: var(--color-bg-gray)!important;
+  background-color: var(--color-bg-gray)!important;
 }

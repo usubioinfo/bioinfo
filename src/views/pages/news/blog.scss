@@ -1,20 +1,20 @@
 @import '../../../scss/colors';
 
 p.blog {
-  $padding: 10px;
+  --padding: 10px;
 
-  padding: $padding 15px;
+  padding: var(--padding) 15px;
 
   font-size: 18px;
   line-height: 34px;
-  color: $color-text-main;
+  color: var(--color-text-main);
 }
 
 h1.blog {
-  $padding: 30px;
-  padding-top: $padding;
-  padding-bottom: $padding;
-  color: $color-text-main;
+  --padding: 30px;
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+  color: var(--color-text-main);
 }
 
 .container-fluid.blog {

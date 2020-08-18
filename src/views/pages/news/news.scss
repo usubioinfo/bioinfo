@@ -1,12 +1,9 @@
-@import '../../../scss/colors';
-@import '../../../scss/globals';
-
 h5.header {
-  color: $color-text-main!important;
+  color: var(--color-text-main);
 }
 
 .col-header {
-  color: $color-text-main!important;
+  color: var(--color-text-main);
 }
 
 .news-item-container {
@@ -14,9 +11,9 @@ h5.header {
 }
 
 .news-item {
-  border: 1px solid $color-border-gray;
-  border-radius: $btn-radius;
-  transition: $time-mid;
+  border: 1px solid var(--color-border-gray);
+  border-radius: var(--btn-radius);
+  transition: var(--time-mid);
   cursor: pointer;
   background: #fff!important;
 
@@ -24,7 +21,7 @@ h5.header {
     background: #eee!important;
 
     .header {
-      color: $color-primary!important;
+      color: var(--color-primary)!important;
     }
 
     .desc {
@@ -35,7 +32,7 @@ h5.header {
   .header {
     font-size: 130%;
     font-weight: 700;
-    transition: $time-mid;
+    transition: var(--time-mid);
   }
 
   .desc {
@@ -43,10 +40,10 @@ h5.header {
     font-weight: 400;
     color: #909090;
     margin-top: 10px;
-    transition: $time-mid;
+    transition: var(--time-mid);
   }
 
   img {
-    border-radius: $btn-radius!important;
+    border-radius: var(--btn-radius)!important;
   }
 }

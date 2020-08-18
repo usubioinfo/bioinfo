@@ -1,9 +1,8 @@
 @import '../globals';
-@import '../colors';
 
 .kbl-ul {
   list-style-type: circle;
-  color: $color-text-main!important;
+  color: var(--color-text-main)!important;
 
   li {
     padding: 5px 2px!important;

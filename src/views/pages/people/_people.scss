@@ -1,53 +1,50 @@
-@import '../../../scss/colors';
-@import '../../../scss/globals';
-
 .rakesh-header {
-  color: $color-text-main!important;
+  color: var(--color-text-main);
 }
 
 .workplace-header {
-  color: $color-text-soft!important;
+  color: var(--color-text-soft);
 }
 
 .workplace-desc {
-  font-weight: $font-weight-medium!important;
+  font-weight: var(--font-weight-medium);
   font-size: 110%!important;
-  color: $color-text-main!important;
+  color: var(--color-text-main);
 }
 
 .biography {
-  color: $color-text-main!important;
+  color: var(--color-text-main);
 }
 
 .bio-header {
-  color: $color-text-main!important;
+  color: var(--color-text-main);
 }
 
 .bio-desc {
-  color: $color-text-soft!important;
-  font-weight: $font-weight-medium!important;
+  color: var(--color-text-soft);
+  font-weight: var(--font-weight-medium)!important;
 }
 
 .contact-title {
-  color: $color-text-main!important;
+  color: var(--color-text-main)!important;
 
   .contact-desc {
-    color: $color-text-soft!important;
-    font-weight: $font-weight-medium;
+    color: var(--color-text-soft)!important;
+    font-weight: var(--font-weight-medium);
   }
 }
 
 .appt-date {
   font-size: 120%;
-  font-weight: $font-weight-medium;
+  font-weight: var(--font-weight-medium);
 }
 
 .appt-desc {
   font-size: 100%;
-  font-weight: $font-weight-medium;
+  font-weight: var(--font-weight-medium);
 }
 
 .award-desc {
-  font-weight: $font-weight-medium;
+  font-weight: var(--font-weight-medium);
   font-size: 95%;
 }
