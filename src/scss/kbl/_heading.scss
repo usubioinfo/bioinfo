@@ -1,10 +1,7 @@
-@import '../colors';
-@import '../globals';
-
 .kbl-heading {
-  color: $color-text-main;
+  color: var(--color-text-main);
 
   &.dark {
-    color: $color-text-hard;
+    color: var(--color-text-hard);
   }
 }

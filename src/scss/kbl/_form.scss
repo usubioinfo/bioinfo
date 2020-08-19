@@ -1,9 +1,6 @@
-@import '../colors';
-@import '../globals';
-
 @mixin kbl-form-base {
-  border-radius: $border-radius;
-  transition: $time-slow;
+  border-radius: var(--border-radius);
+  transition: var(--time-slow);
   box-shadow: none;
   letter-spacing: 1px;
   font-weight: 500;
@@ -17,14 +14,14 @@
 @mixin kbl-form {
   @include kbl-form-base;
 
-  border: 1px solid $color-border-gray;
+  border: 1px solid var(--color-border-gray);
 
   &:hover:not(:focus) {
-    border-color: $color-primary-very-light!important;
+    border-color: var(--color-primary-very-light)!important;
   }
 
   &:focus {
-    border-color: $color-primary;
+    border-color: var(--color-primary);
   }
 }
 

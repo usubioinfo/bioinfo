@@ -1,10 +1,7 @@
-@import '../colors';
-@import '../globals';
-
 .kbl-text {
-  color: $color-text-hard!important;
+  color: var(--color-text-hard)!important;
 
   &.soft {
-    color: $color-text-soft!important;
+    color: var(--color-text-soft)!important;
   }
 }

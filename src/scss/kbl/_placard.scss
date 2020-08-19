@@ -1,8 +1,5 @@
-@import '../colors';
-@import '../globals';
-
 .kbl-placard-1 {
-  border-radius: $border-radius;
-  background: $color-primary;
-  
+  border-radius: var(--border-radius);
+  background: var(--color-primary);
+
 }

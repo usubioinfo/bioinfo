@@ -1,7 +1,4 @@
-@import '../colors';
-@import '../globals';
-
 .kbl-header-icon {
-  color: $color-primary;
+  color: var(--color-primary);
   font-size: 320%;
 }

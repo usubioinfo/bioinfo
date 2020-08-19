@@ -1,38 +1,35 @@
-@import '../colors';
-@import '../globals';
-
 $card-width: 220px;
 
 .kbl-person-card {
-  background: $color-bg-gray;
-  border-radius: $border-radius;
+  background: var(--color-bg-gray);
+  border-radius: var(--border-radius);
   word-wrap: break-word;
   width: $card-width;
 
   .card-title {
-    font-weight: $font-weight-heavy;
+    font-weight: var(--font-weight-heavy);
     font-size: 110%;
-    color: $color-text-main;
+    color: var(--color-text-main);
   }
 
   .card-subtitle {
-    font-weight: $font-weight-medium;
+    font-weight: var(--font-weight-medium);
     font-size: 95%;
-    color: $color-text-soft;
+    color: var(--color-text-soft);
   }
 
   &.select {
     cursor: pointer;
-    transition: $time-mid;
+    transition: var(--time-mid);
 
     &:hover {
-      background: $color-primary-bg;
+      background: var(--color-primary-bg);
     }
   }
 }
 
 .kbl-person-card-container {
-  border-radius: $border-radius;
+  border-radius: var(--border-radius);
   overflow: hidden;
   width: $card-width;
 }
@@ -42,5 +39,5 @@ $card-width: 220px;
 }
 
 .modal-subtitle {
-  color: $color-text-soft;
+  color: var(--color-text-soft);
 }

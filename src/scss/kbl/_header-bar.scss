@@ -1,7 +1,4 @@
-@import '../colors';
-@import '../globals';
-
 .kbl-header-bar {
-  background: $color-bg-gray;
-  border-radius: $border-radius;
+  background: var(--color-bg-gray);
+  border-radius: var(--border-radius);
 }

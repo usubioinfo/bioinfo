@@ -1,8 +1,5 @@
-@import '../colors';
-@import '../globals';
-
 .kbl-grey-card {
-  border-radius: $border-radius;
-  background: $color-bg-gray;
+  border-radius: var(--border-radius);
+  background: var(--color-bg-gray);
   padding: 10px 15px;
 }
