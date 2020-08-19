@@ -2,16 +2,16 @@
 @import '../globals';
 
 .kbl-article-link {
-  transition: $time-mid;
-  border: 1px solid $color-primary-very-light;
-  border-radius: $border-radius;
+  transition: var(--time-mid);
+  border: 1px solid var(--color-primary-very-light);
+  border-radius: var(--border-radius);
   cursor: pointer;
 
   &:hover {
-    border-color: $color-primary;
+    border-color: var(--color-primary);
 
     .link-icon, .title {
-      color: $color-primary;
+      color: var(--color-primary);
     }
   }
 }
@@ -22,8 +22,8 @@
 
 .kbl-article-link {
   .link-icon, .title {
-    transition: $time-fast;
-    color: $color-text-main;
+    transition: var(--time-fast);
+    color: var(--color-text-main);
   }
 }
 
@@ -33,5 +33,5 @@
 
 .kbl-article-link .title {
   font-size: 110%!important;
-  font-weight: $font-weight-medium!important;
+  font-weight: var(--font-weight-medium)!important;
 }

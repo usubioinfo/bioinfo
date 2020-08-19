@@ -1,14 +1,12 @@
-@import '../globals';
-
 .calendar {
   .month-title {
-    font-weight: $font-weight-heavy;
+    font-weight: var(--font-weight-heavy);
     font-size: 180%;
   }
 
   .arrow-single {
     font-size: 180%;
-    transition: $time-mid;
+    transition: var(--time-mid);
     cursor: pointer;
 
     &:hover {
@@ -17,17 +15,17 @@
   }
 
   .weekday {
-    font-weight: $font-weight-medium;
+    font-weight: var(--font-weight-medium);
     font-size: 130%;
   }
 
   .date {
-    font-weight: $font-weight-medium;
+    font-weight: var(--font-weight-medium);
     cursor: pointer;
-    border-radius: $border-radius;
-    transition: $time-mid;
+    border-radius: var(--border-radius);
+    transition: var(--time-mid);
     // Accessing variables this way is dumb.
-    border: 1px solid var(--transparent);
+    border: 1px solid transparent;
 
     &.appointment {
       border-color: var(--color-primary);

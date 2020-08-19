@@ -1,11 +1,8 @@
-@import '../colors';
-@import '../globals';
-
 @mixin kbl-button {
   font-weight: 600!important;
   cursor: pointer;
-  transition: $time-mid!important;
-  border-radius: $btn-radius!important;
+  transition: var(--time-mid)!important;
+  border-radius: var(--btn-radius)!important;
   font-family: 'Montserrat', sans-serif!important;
   padding: 7px 12px!important;
   text-decoration: none;
@@ -49,31 +46,31 @@
 }
 
 .kbl-btn-1 {
-  @include kbl-btn-outline($color-primary, $color-primary);
+  @include kbl-btn-outline(var(--color-primary), var(--color-primary));
 }
 
 .kbl-btn-1-solid {
-  @include kbl-btn-solid($color-primary, #fff, $color-primary-dark);
+  @include kbl-btn-solid(var(--color-primary), #fff, var(--color-primary-dark));
 }
 
 .kbl-btn-2-solid {
-  @include kbl-btn-solid($color-secondary, #fff, $color-secondary-dark);
+  @include kbl-btn-solid(var(--color-secondary), #fff, var(--color-secondary-dark));
 }
 
 .kbl-btn-circle-solid {
   border-radius: 999px!important;
   cursor: pointer;
   color: #fff!important;
-  background: $color-primary!important;
-  transition: $time-mid!important;
+  background: var(--color-primary)!important;
+  transition: var(--time-mid)!important;
 
   &.disabled {
     pointer-events: none!important;
-    background: $color-btn-gray!important;
+    background: var(--color-btn-gray)!important;
   }
 
   &:hover {
-    background: $color-primary-dark!important;
+    background: var(--color-primary-dark)!important;
   }
 
   &:focus {

@@ -1,7 +1,5 @@
-@import '../globals';
-
 .kbl-conf-card {
-  border-radius: $border-radius;
+  border-radius: var(--border-radius);
   background: #fff;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   overflow: hidden;
@@ -24,12 +22,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 150%;
-    font-weight: $font-weight-heavy;
+    font-weight: var(--font-weight-heavy);
 
     background: var(--color-bg-main);
     width: 80%;
     text-align: center;
-    border-radius: $border-radius;
+    border-radius: var(--border-radius);
     border: 1px solid var(--color-border-gray);
     color: var(--color-text-main);
   }

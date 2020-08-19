@@ -1,14 +1,11 @@
-@import '../colors';
-@import '../globals';
-
 nav.bs4 {
   border-bottom: 1px solid #dedede;
 }
 
 .nav-option {
   font-weight: 600;
-  border-bottom: 4px solid var(--transparent);
-  transition: $time-mid;
+  border-bottom: 4px solid transparent;
+  transition: var(--time-mid);
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
@@ -35,8 +32,8 @@ nav.bs4 {
 
 .nav-suboption {
   font-weight: 500;
-  color: $color-text-main;
-  transition: $time-mid;
+  color: var(--color-text-main);
+  transition: var(--time-mid);
   padding: 10px 12px!important;
 
   &:hover {
@@ -45,13 +42,13 @@ nav.bs4 {
   }
 
   &.title {
-    font-weight: $font-weight-heavy;
+    font-weight: var(--font-weight-heavy);
     color: var(--color-primary);
   }
 }
 
 .dropdown-menu {
-  border-radius: $border-radius!important;
+  border-radius: var(--border-radius)!important;
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -62,7 +59,7 @@ nav.bs4 {
 }
 
 .dropdown-header {
-  font-weight: $font-weight-heavy;
+  font-weight: var(--font-weight-heavy);
   cursor: pointer;
   padding-left: 0!important;
   color: var(--color-primary)!important;

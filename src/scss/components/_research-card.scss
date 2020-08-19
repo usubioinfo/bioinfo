@@ -1,10 +1,8 @@
-@import '../globals';
-
 $card-width: 250px;
 
 .kbl-research-card {
   background: var(--color-bg-gray);
-  border-radius: $border-radius;
+  border-radius: var(--border-radius);
   word-wrap: break-word;
   width: $card-width;
 
@@ -13,21 +11,21 @@ $card-width: 250px;
   flex-basis: 250px;
 
   .card-title {
-    font-weight: $font-weight-heavy;
+    font-weight: var(--font-weight-heavy);
     font-size: 110%;
     color: var(--color-text-main);
     line-height: normal;
   }
 
   .card-subtitle {
-    font-weight: $font-weight-medium;
+    font-weight: var(--font-weight-medium);
     font-size: 95%;
     color: var(--color-text-soft);
   }
 
   &.select {
     cursor: pointer;
-    transition: $time-mid;
+    transition: var(--time-mid);
 
     &:hover {
       background: var(--color-primary-bg);
@@ -42,12 +40,12 @@ $card-width: 250px;
     flex-basis: 120px;
     overflow-y: hidden;
     border-bottom: 1px solid var(--color-border-gray);
-    transition: $time-mid;
+    transition: var(--time-mid);
   }
 }
 
 .kbl-research-card-container {
-  border-radius: $border-radius;
+  border-radius: var(--border-radius);
   overflow: hidden;
   width: $card-width;
 
@@ -55,11 +53,11 @@ $card-width: 250px;
   align-items: stretch;
 
   .card-title {
-    transition: $time-mid;
+    transition: var(--time-mid);
   }
 
   &.tool {
-    transition: $time-mid;
+    transition: var(--time-mid);
     border: 1px solid var(--color-border-gray);
 
     &:hover {
@@ -105,10 +103,10 @@ $card-width: 250px;
   margin-top: auto;
 
   .text {
-    font-weight: $font-weight-medium;
+    font-weight: var(--font-weight-medium);
     cursor: pointer;
     border-bottom: 1px solid transparent;
-    transition: $time-mid;
+    transition: var(--time-mid);
     color: var(--color-text-main);
     background: transparent!important;
 
@@ -119,10 +117,10 @@ $card-width: 250px;
   }
 
   .read-text {
-    font-weight: $font-weight-medium;
+    font-weight: var(--font-weight-medium);
     cursor: pointer;
     border-bottom: 1px solid transparent;
-    transition: $time-mid;
+    transition: var(--time-mid);
     color: var(--color-text-main);
     background: transparent!important;
 

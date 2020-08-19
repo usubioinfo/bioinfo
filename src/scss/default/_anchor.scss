@@ -1,5 +1,3 @@
-@import '../globals';
-
 $elements: div, h1, h2, h3, h4, h5, h6, span, p;
 
 a {
@@ -16,10 +14,10 @@ a.kbl-link {
   color: var(--color-primary);
   border-bottom: 1px solid transparent!important;
   text-decoration: none!important;
-  transition: $time-fast;
+  transition: var(--time-fast);
 
   &.thicc {
-    font-weight: $font-weight-heavy!important;
+    font-weight: var(--font-weight-heavy)!important;
   }
 
   &.dull {
