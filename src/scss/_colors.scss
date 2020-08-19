@@ -6,41 +6,46 @@
   @return mix($color, black, $percentage);
 }
 
-// $color-primary: #00a3ff;
 $color-primary: #b4132a;
 $color-secondary: #3b4961;
 
-// Shades
-$color-primary-very-dark: shade($color-primary, 45%);
-$color-primary-dark: shade($color-primary, 70%);
+:root {
+  // I hate the syntax for CSS variables. It's ugly. SO UGLY!!!
 
-$color-secondary-very-dark: shade($color-secondary, 45%);
-$color-secondary-dark: shade($color-secondary, 70%);
+  --color-primary: #{$color-primary};
+  --color-secondary: #{$color-secondary};
 
-// Tints
-$color-primary-light: tint($color-primary, 70%);
-$color-primary-very-light: tint($color-primary, 45%);
-$color-primary-bg: rgba($color-primary, .18);
+  // Shades
+  --color-primary-very-dark: #{shade($color-primary, 45%)};
+  --color-primary-dark: #{shade($color-primary, 70%)};
 
-$color-secondary-light: tint($color-secondary, 70%);
-$color-secondary-very-light: tint($color-secondary, 45%);
-$color-secondary-bg: rgba($color-secondary, .18);
+  --color-secondary-very-dark: #{shade($color-secondary, 45%)};
+  --color-secondary-dark: #{shade($color-secondary, 70%)};
 
-$code-color: #ee316f;
+  // Tints
+  --color-primary-light: #{tint($color-primary, 70%)};
+  --color-primary-very-light: #{tint($color-primary, 45%)};
+  --color-primary-bg: #{rgba($color-primary, .18)};
 
-$color-border-gray: #d1d1d1;
+  --color-secondary-light: #{tint($color-secondary, 70%)};
+  --color-secondary-very-light: #{tint($color-secondary, 45%)};
+  --color-secondary-bg: #{rgba($color-secondary, .18)};
 
-$color-bg-gray: #f2f2f2;
+  --code-color: #ee316f;
 
-$color-bg-main: #f7f7f7;
+  --color-border-gray: #d1d1d1;
 
-$transparent: rgba(#fff, 0);
-$color-text-hard: #212121;
-$color-text-main: #2a2a2a;
-$color-text-soft: #6f6f6f;
+  --color-bg-gray: #f2f2f2;
 
-$color-btn-gray: #c4c4c4;
+  --color-bg-main: #f7f7f7;
 
+  --transparent: rgba(#fff, 0);
+  --color-text-hard: #212121;
+  --color-text-main: #2a2a2a;
+  --color-text-soft: #6f6f6f;
+
+  --color-btn-gray: #c4c4c4;
+}
 
 // Logos
 $color-google: #4285F4;
