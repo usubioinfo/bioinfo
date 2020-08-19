@@ -1,6 +1,3 @@
-@import '../colors';
-@import '../globals';
-
 .mass-pad-y {
   padding-top: 250px;
   padding-bottom: 250px;
@@ -11,10 +8,10 @@
 }
 
 a.error-section {
-  color: $color-text-main;
+  color: var(--color-text-main);
   cursor: pointer;
 
   &:hover {
-    color: $color-text-main;
+    color: var(--color-text-main);
   }
 }

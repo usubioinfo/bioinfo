@@ -1,6 +1,4 @@
-@import './colors';
 @import './new-colors';
-@import './globals';
 @import './new-globals';
 
 @import './export-kbl';
@@ -13,7 +11,7 @@
 @import '../views/pages/people/people';
 
 body {
-  color: $color-text-main;
+  color: var(--color-text-main);
   overflow-x: hidden;
 }
 
@@ -26,27 +24,27 @@ body {
 }
 
 .kbl-top {
-  margin-top: $navbar-height!important;
+  margin-top: var(--navbar-height)!important;
   padding-left: 0!important;
   padding-right: 0!important;
-  background: $color-bg-gray;
+  background: var(--color-bg-gray);
 }
 
 .nav-margin {
-  margin-top: $navbar-height!important;
+  margin-top: var(--navbar-height)!important;
 }
 
 .header-icon-wrapper {
   h1, h2, h3, h4, h5, h6, p {
-    color: $color-text-main!important;
+    color: var(--color-text-main)!important;
   }
 }
 
 .kbl-container {
-  border-radius: $border-radius;
+  border-radius: var(--border-radius);
   overflow: hidden;
-  border: 1px solid $color-border-gray;
-  transition: $time-mid;
+  border: 1px solid var(--color-border-gray);
+  transition: var(--time-mid);
 
   &.flex {
     display: flex;
@@ -54,30 +52,30 @@ body {
   }
 
   .article-header {
-    transition: $time-mid;
+    transition: var(--time-mid);
   }
 
   .article-desc {
-    font-weight: $font-weight-medium;
-    color: $color-text-soft;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-soft);
   }
 
   &.interactive:hover {
-    background: $color-bg-gray;
+    background: var(--color-bg-gray);
     cursor: pointer;
 
     .article-header {
-      color: $color-primary!important;
+      color: var(--color-primary)!important;
     }
   }
 }
 
 ::selection {
-  background: $color-primary-light;
+  background: var(--color-primary-light);
   color: #fff;
 }
 ::-moz-selection {
-  background: $color-primary-light;
+  background: var(--color-primary-light);
   color: #fff;
 }
 
@@ -91,11 +89,11 @@ body {
 }
 
 i.ion-ios-paper-outline {
-  color: $color-primary!important;
+  color: var(--color-primary)!important;
 }
 
 .pub-item.with-icon .elem-wrapper i {
-  border-color: $color-primary!important;
+  border-color: var(--color-primary)!important;
 }
 
 .carousel-control-prev-icon {
@@ -107,14 +105,14 @@ i.ion-ios-paper-outline {
 }
 
 .gray-bg {
-  background: $color-bg-gray!important;
-  border-radius: $border-radius;
+  background: var(--color-bg-gray)!important;
+  border-radius: var(--border-radius);
   overflow: hidden;
 }
 
 // Get of this!
 .remarkable {
-  font-weight: $font-weight-heavy;
+  font-weight: var(--font-weight-heavy);
   font-size: 125%!important;
 }
 
@@ -138,13 +136,13 @@ i.ion-ios-paper-outline {
 
     &.soft {
       font-style: italic!important;
-      color: $color-text-soft!important;
+      color: var(--color-text-soft)!important;
     }
   }
 }
 
 footer {
-  background: $color-bg-gray;
+  background: var(--color-bg-gray);
 }
 
 .footer-bottom-text {
@@ -152,22 +150,22 @@ footer {
 }
 
 .footer-link {
-  color: $color-text-main!important;
-  transition: $time-mid;
+  color: var(--color-text-main)!important;
+  transition: var(--time-mid);
 
   &:hover {
-    color: $color-primary!important;
+    color: var(--color-primary)!important;
   }
 
   &.thicc {
-    font-weight: $font-weight-medium!important;
+    font-weight: var(--font-weight-medium)!important;
   }
 }
 
 @each $name, $color in $logo-map {
   a.kbl-icon-#{$name} {
     color: tint($color, 75%)!important;
-    transition: $time-mid;
+    transition: var(--time-mid);
     font-size: 150%!important;
     margin-right: 5px;
 
@@ -178,12 +176,12 @@ footer {
 }
 
 .modal-arrow-select {
-  color: $color-text-main!important;
-  transition: $time-mid;
+  color: var(--color-text-main)!important;
+  transition: var(--time-mid);
   cursor: pointer;
 
   &:hover {
-    color: $color-primary!important;
+    color: var(--color-primary)!important;
   }
 }
 
@@ -209,9 +207,9 @@ footer {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $color-primary;
+  background: var(--color-primary);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: $color-primary-dark;
+  background: var(--color-primary-dark);
 }
