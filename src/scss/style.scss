@@ -225,6 +225,11 @@ footer {
   display: hidden!important;
 }
 
+.img-round {
+  border-radius: var(--border-radius)!important;
+  overflow: hidden!important;
+}
+
 // Scrollbar stuff
 ::-webkit-scrollbar {
   width: 6px;
