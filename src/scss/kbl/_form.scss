@@ -1,14 +1,9 @@
+@import '../mixins/shadow';
+
 @mixin kbl-form-base {
   border-radius: var(--border-radius);
-  transition: var(--time-slow);
-  box-shadow: none;
-  letter-spacing: 1px;
   font-weight: 500;
   margin: 10px 0;
-
-  &:focus {
-    box-shadow: none;
-  }
 }
 
 @mixin kbl-form {
@@ -17,7 +12,7 @@
   border: 1px solid var(--color-border-gray);
 
   &:hover:not(:focus) {
-    border-color: var(--color-primary-very-light)!important;
+    border-color: var(--color-border-dark-gray)!important;
   }
 
   &:focus {
@@ -33,4 +28,20 @@ input.kbl-form {
 textarea.kbl-form {
   @include kbl-form;
   padding: 9px 10px!important;
+}
+
+input.time-form {
+  border-radius: 0!important;
+  border: none!important;
+  border-bottom: 2px var(--color-primary) solid!important;
+  max-width: 50px;
+  font-size: 16px;
+  font-weight: var(--font-weight-heavy);
+  text-align: center;
+
+  &:focus {
+    border-radius: var(--border-radius)!important;
+    border-color: var(--color-primary-very-light)!important;
+    @include shadow-old(1);
+  }
 }

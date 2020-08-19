@@ -1,0 +1,9 @@
+input, textarea {
+  box-shadow: none!important;
+  letter-spacing: 1px;
+  transition: var(--time-slow)!important;
+
+  &:focus {
+    box-shadow: none!important;
+  }
+}
