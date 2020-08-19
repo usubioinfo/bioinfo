@@ -1,19 +1,19 @@
 .kbl-date-selector {
-  color: var(--color-text-main)!important;
+  color: var(--color-text-main);
   cursor: pointer;
   transition: var(--time-fast);
   border-radius: var(--border-radius);
   font-weight: var(--font-weight-medium);
   font-size: 110%;
-  padding: 6px 13px!important;
+  padding: 6px 13px;
 
   &:hover {
-    background: var(--color-primary-light)!important;
-    color: #fff!important;
+    background: var(--color-primary-light);
+    color: #fff;
   }
 
   &.active {
-    background: var(--color-primary)!important;
-    color: #fff!important;
+    background: var(--color-primary);
+    color: #fff;
   }
 }
