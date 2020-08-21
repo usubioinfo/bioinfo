@@ -130,6 +130,7 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
 	// Set APT Stuff
 	const appointmentNameField = document.querySelector('#appointmentName');
 	const appointmentDescField = document.querySelector('#appointmentDesc');
+	const appointmentEmailField = document.querySelector('#appointmentEmail');
 
 	const setAppointmentBtn = document.querySelector('#createAppointmentButton');
   setAppointmentBtn.addEventListener('click', (e) => {
@@ -137,6 +138,7 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
 		const appointment = {
 			date: `${date[2]}-${date[1]}-${date[0]}`,
 			author: appointmentNameField.value,
+			email: appointmentEmailField.value,
 			description: appointmentDescField.value
 		};
     sendNewAppointment(appointment);
@@ -152,6 +154,7 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
 				console.log(res);
 				appointmentNameField.value = '';
 				appointmentDescField.value = '';
+				appointmentEmailField.value = '';
 			})
 			.catch((err) => {
 				console.log(err);
