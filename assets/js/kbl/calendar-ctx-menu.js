@@ -127,10 +127,81 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
     return {x: posX, y: posY};
   }
 
+	function minuteValueToField(value) {
+		if (value.toString().length === 1) {
+			return `0${value}`;
+		} else {
+			return value.toString();
+		}
+	}
+
+	function hourValueToField(value) {
+		if (value.toString().length === 1) {
+			return `0${value}`;
+		} else {
+			return value.toString();
+		}
+	}
+
+	function changeHour(hourChange) {
+		let newHour = hourValue;
+		newHour += hourChange;
+		if (newHour > 12) {
+			newHour = 1;
+		}
+
+		if (newHour < 1) {
+			newHour = 12;
+		}
+
+		return newHour;
+	}
+
+	function changeMinute(minuteChange) {
+		let newMinute = minuteValue;
+		newMinute += minuteChange;
+		if (newMinute > 59) {
+			newMinute = 0;
+		}
+
+		if (newMinute < 0) {
+			newMinute = 59;
+		}
+
+		return newMinute;
+	}
+
 	// Set APT Stuff
 	const appointmentNameField = document.querySelector('#appointmentName');
 	const appointmentDescField = document.querySelector('#appointmentDesc');
 	const appointmentEmailField = document.querySelector('#appointmentEmail');
+
+	const minuteForm = document.querySelector('#minuteForm');
+	const hourForm = document.querySelector('#hourForm');
+
+	const hourIncrement = document.querySelector('#hourIncrement').addEventListener('click', () => {
+		hourValue = changeHour(1);
+		hourForm.value = hourValueToField(hourValue);
+	});
+	const hourDecrement = document.querySelector('#hourDecrement').addEventListener('click', () => {
+		hourValue = changeHour(-1);
+		hourForm.value = hourValueToField(hourValue);
+	});
+	const minuteIncrement = document.querySelector('#minuteIncrement').addEventListener('click', () => {
+		minuteValue = changeMinute(1);
+		minuteForm.value = minuteValueToField(minuteValue);
+	});
+	const minuteDecrement = document.querySelector('#minuteDecrement').addEventListener('click', () => {
+		minuteValue = changeMinute(-1);
+		minuteForm.value = minuteValueToField(minuteValue);
+	});
+
+	let hourValue = 12;
+	let minuteValue = 0;
+
+	hourForm.value = hourValueToField(hourValue);
+	minuteForm.value = minuteValueToField(minuteValue);
+
 
 	const setAppointmentBtn = document.querySelector('#createAppointmentButton');
   setAppointmentBtn.addEventListener('click', (e) => {

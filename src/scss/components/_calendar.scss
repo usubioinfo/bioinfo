@@ -57,3 +57,19 @@
     color: var(--color-primary);
   }
 }
+
+.meridiem-label {
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: var(--time-mid);
+  border-radius: var(--border-radius);
+
+  &:hover:not(.selected) {
+    background: var(--color-primary-very-light);
+  }
+
+  &.selected {
+    background: var(--color-primary);
+    color: #fff;
+  }
+}

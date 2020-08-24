@@ -57,15 +57,23 @@
                     Time:
                   </div>
                   <div class="col-auto text-center">
-                    <i class="fas fa-angle-up time-arrow"></i>
-                    <input class="form-control time-form" placeholder="00">
-                    <i class="fas fa-angle-down time-arrow"></i>
+                    <i class="fas fa-angle-up time-arrow" id="hourIncrement"></i>
+                    <input class="form-control time-form" placeholder="12" id="hourForm">
+                    <i class="fas fa-angle-down time-arrow" id="hourDecrement"></i>
                   </div>
 
                   <div class="col-auto text-center">
-                    <i class="fas fa-angle-up time-arrow"></i>
-                    <input class="form-control time-form" placeholder="12">
-                    <i class="fas fa-angle-down time-arrow"></i>
+                    <i class="fas fa-angle-up time-arrow" id="minuteIncrement"></i>
+                    <input class="form-control time-form" placeholder="00" id="minuteForm">
+                    <i class="fas fa-angle-down time-arrow" id="minuteDecrement"></i>
+                  </div>
+
+                  <div class="col-auto text-center my-auto">
+                    <span id="amLabel" class="meridiem-label selected p-2">AM</span>
+                  </div>
+
+                  <div class="col-auto text-center my-auto">
+                    <span id="pmLabel" class="meridiem-label p-2">PM</span>
                   </div>
                 </div>
               </div>
