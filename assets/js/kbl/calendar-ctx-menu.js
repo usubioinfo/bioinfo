@@ -207,6 +207,7 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
   setAppointmentBtn.addEventListener('click', (e) => {
 		const date = currentSelectedDate;
 		const appointment = {
+			// year, month, date
 			date: `${date[2]}-${date[1]}-${date[0]}`,
 			author: appointmentNameField.value,
 			email: appointmentEmailField.value,
@@ -226,6 +227,18 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
 				appointmentNameField.value = '';
 				appointmentDescField.value = '';
 				appointmentEmailField.value = '';
+				hourValue = 12;
+				minuteValue = 0;
+				hourForm.value = hourValueToField(hourValue);
+				minuteForm.value = minuteValueToField(minuteValue);
+				console.log(appointment.date);
+
+				dateElements[appointment.date.split('-')[2] - 1].classList.add('appointment');
+				const newAppt = appointment;
+				newAppt['day'] = parseInt(appointment.date.split('-')[2]);
+				newAppt['month'] = parseInt(appointment.date.split('-')[1]) + 1;
+				delete newAppt.email;
+				appointments.push(newAppt);
 			})
 			.catch((err) => {
 				console.log(err);
