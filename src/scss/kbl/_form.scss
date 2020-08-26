@@ -38,6 +38,7 @@ input.time-form {
   font-size: 16px;
   font-weight: var(--font-weight-heavy);
   text-align: center;
+  border-radius: var(--border-radius)!important;
 
   &:focus {
     border-radius: var(--border-radius)!important;

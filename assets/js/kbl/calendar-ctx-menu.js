@@ -179,6 +179,27 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
 	const minuteForm = document.querySelector('#minuteForm');
 	const hourForm = document.querySelector('#hourForm');
 
+	const amLabel = document.querySelector('#amLabel');
+	const pmLabel = document.querySelector('#pmLabel');
+
+	let meridiem = 'am';
+
+	amLabel.addEventListener('click', () => {
+		pmLabel.classList.remove('selected');
+		// Prevent duplicates classes being added
+		amLabel.classList.remove('selected');
+		amLabel.classList.add('selected');
+		meridiem = 'am';
+	});
+
+	pmLabel.addEventListener('click', () => {
+		amLabel.classList.remove('selected');
+		// Prevent duplicates classes being added (again)
+		pmLabel.classList.remove('selected');
+		pmLabel.classList.add('selected');
+		meridiem = 'pm';
+	});
+
 	const hourIncrement = document.querySelector('#hourIncrement').addEventListener('click', () => {
 		hourValue = changeHour(1);
 		hourForm.value = hourValueToField(hourValue);
