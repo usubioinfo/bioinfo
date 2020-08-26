@@ -24,6 +24,34 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
 
 	let apptsForDay = [];
 
+	function toRegularHour(hour) {
+	  if (hour === 0) {
+	    return '12-am';
+	  }
+
+	  if (hour < 12 && hour !== 0) {
+	    return `${hour}-am`;
+	  }
+
+	  if (hour === 12) {
+	    return '12-pm';
+	  }
+
+	  if (hour > 12) {
+	    return `${hour -12}-pm`;
+	  }
+	}
+
+	function getMinuteString(minute) {
+		let minuteString = minute.toString();
+
+		if (minuteString.length === 1) {
+			return `0${minuteString}`;
+		}
+
+		return minuteString;
+	}
+
   document.addEventListener('click', (e) => {
 		const allDates = document.querySelectorAll('.calendar .date');
 		allDates.forEach((el) => {
@@ -38,7 +66,8 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
 				apptContainer.classList.remove('d-none');
 				apptsForDay.forEach((appt) => {
 					let apptEl = document.createElement('DIV');
-					apptEl.innerHTML = appt.author;
+					const newHourMeridiem = toRegularHour(appt.hour).split('-');
+					apptEl.innerHTML = `${newHourMeridiem[0]}:${getMinuteString(appt.minute)} ${newHourMeridiem[1]} ${appt.author}`;
 					apptContainer.appendChild(apptEl);
 				});
 			} else {
@@ -230,6 +259,7 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
 		const appointment = {
 			// year, month, date
 			date: `${date[2]}-${date[1]}-${date[0]}`,
+			time: `${hourValue}-${minuteValue}-${meridiem}`,
 			author: appointmentNameField.value,
 			email: appointmentEmailField.value,
 			description: appointmentDescField.value
@@ -242,7 +272,10 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
       return;
     }
 
-		axios.post('http://bioinfocore.usu.edu/api/appointments/create', appointment)
+		const apiUrlProd = 'http://bioinfocore.usu.edu/api';
+	  const apiUrlLocal = 'http://localhost:3100';
+
+		axios.post(`${apiUrlProd}/appointments/create`, appointment)
 			.then((res) => {
 				console.log(res);
 				appointmentNameField.value = '';

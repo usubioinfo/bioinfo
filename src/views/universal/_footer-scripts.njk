@@ -19,7 +19,7 @@ $('#videoModal').on('hidden.bs.modal', () => {
     $("#videoModal iframe").attr("src", $("#videoModal iframe").attr("src"));
 });
 
-// BS4 Stuff
+// BS5 Stuff
 $('#homePageBS4Carousel').on('slide.bs.carousel', (e) => {
 
   const $e = $(e.relatedTarget);
@@ -41,7 +41,11 @@ $('#homePageBS4Carousel').on('slide.bs.carousel', (e) => {
   }
 });
 
-
+// Init Toasts
+var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+var toastList = toastElList.map(function (toastEl) {
+  return new bootstrap.Toast(toastEl, {});
+});
 </script>
 {% if customJS %}
 <script>
