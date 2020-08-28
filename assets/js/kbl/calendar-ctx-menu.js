@@ -67,7 +67,7 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
 				apptsForDay.forEach((appt) => {
 					let apptEl = document.createElement('DIV');
 					const newHourMeridiem = toRegularHour(appt.hour).split('-');
-					apptEl.innerHTML = `${newHourMeridiem[0]}:${getMinuteString(appt.minute)} ${newHourMeridiem[1]} ${appt.author}`;
+					apptEl.innerHTML = `${newHourMeridiem[0]}:${getMinuteString(appt.minute)} ${newHourMeridiem[1]} - ${appt.author}`;
 					apptContainer.appendChild(apptEl);
 				});
 			} else {
@@ -200,6 +200,22 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
 		return newMinute;
 	}
 
+	function absoluteHour(hour, meridiem) {
+		if (meridiem === 'am') {
+			if (hour === 12) {
+				return 0;
+			}
+
+			return hour;
+		} else if (meridiem === 'pm') {
+			if (hour === 12) {
+				return hour;
+			}
+
+			return 12 + hour;
+		}
+	}
+
 	// Set APT Stuff
 	const appointmentNameField = document.querySelector('#appointmentName');
 	const appointmentDescField = document.querySelector('#appointmentDesc');
@@ -281,17 +297,21 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
 				appointmentNameField.value = '';
 				appointmentDescField.value = '';
 				appointmentEmailField.value = '';
-				hourValue = 12;
-				minuteValue = 0;
-				hourForm.value = hourValueToField(hourValue);
-				minuteForm.value = minuteValueToField(minuteValue);
 				console.log(appointment.date);
 
 				dateElements[appointment.date.split('-')[2] - 1].classList.add('appointment');
 				const newAppt = appointment;
 				newAppt['day'] = parseInt(appointment.date.split('-')[2]);
 				newAppt['month'] = parseInt(appointment.date.split('-')[1]) + 1;
+				newAppt['hour'] = absoluteHour(hourValue, meridiem);
+				newAppt['minute'] = minuteValue;
 				delete newAppt.email;
+
+				hourValue = 12;
+				minuteValue = 0;
+				hourForm.value = hourValueToField(hourValue);
+				minuteForm.value = minuteValueToField(minuteValue);
+
 				appointments.push(newAppt);
 			})
 			.catch((err) => {
