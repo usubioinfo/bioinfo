@@ -46,4 +46,10 @@ h5.header {
   img {
     border-radius: var(--btn-radius)!important;
   }
+
+  .date {
+    font-size: 105%;
+    color: var(--color-text-soft);
+    font-weight: var(--font-weight-medium);
+  }
 }
