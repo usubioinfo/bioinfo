@@ -20,10 +20,8 @@ function getAppointments(month) {
   axios.get(`${apiUrlProd}/appointments/month/${month}`)
     .then((res) => {
       if (res.data.success) {
-        console.log(res.data);
         appointments = res.data.payload;
         res.data.payload.forEach((appointment) => {
-          console.log(appointment)
           dateElements[appointment.day - 1].classList.add('appointment');
         });
       }

@@ -112,7 +112,6 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
 			apptsForDay = appointments.filter((appt) => {
 				return appt.day === parseInt(data[0]) && appt.month - 1 === parseInt(data[1]);
 			});
-			console.log(apptsForDay);
       return el;
     } else {
       while (el === el.parentNode) {
@@ -293,11 +292,9 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
 
 		axios.post(`${apiUrlProd}/appointments/create`, appointment)
 			.then((res) => {
-				console.log(res);
 				appointmentNameField.value = '';
 				appointmentDescField.value = '';
 				appointmentEmailField.value = '';
-				console.log(appointment.date);
 
 				dateElements[appointment.date.split('-')[2] - 1].classList.add('appointment');
 				const newAppt = appointment;
