@@ -14,125 +14,125 @@
   {{ breadcrumb([{name: 'home', link: '/'}, {name: 'events', link: '/events'}]) }}
 
   {% from "components/event-link.njk" import eventLink %}
-  <section>
-      <div class="container">
-        {% from './_functions.njk' import selector, activeCheck %}
-        <section class="row justify-content-center my-5">
-          {{ selector("2020") }}
-          {{ selector("2019") }}
-          {{ selector("2018") }}
-          {{ selector("2013") }}
-        </section>
-        <section class="{{ activeCheck('2020') }}" id="20">
-          <h4 class="kbl-heading text-center">2020</h4>
-          <div class="row justify-content-center">
-            <div class="col-sm-6">
-              {% set pag2020 = {
-                  link: '/event/pag2020',
-                  title: 'Plant & Animal Genome Conference',
-                  location: '500 Hotel Circle N, San Diego, CA',
-                  date: 'Jan 11-15, 2020',
-                  img: '/image/raw/bioinfo/events/IMG_20200113_151858.jpg'
-                }
-              %}
-              {{ eventLink(pag2020) }}
-            </div>
+  <article>
+    <div class="container">
+      {% from './_functions.njk' import selector, activeCheck %}
+      <section class="row justify-content-center my-5">
+        {{ selector("2020") }}
+        {{ selector("2019") }}
+        {{ selector("2018") }}
+        {{ selector("2013") }}
+      </section>
+      <section class="{{ activeCheck('2020') }}" id="20">
+        <h4 class="kbl-heading text-center">2020</h4>
+        <div class="row justify-content-center">
+          <div class="col-sm-6">
+            {% set pag2020 = {
+                link: '/event/pag2020',
+                title: 'Plant & Animal Genome Conference',
+                location: '500 Hotel Circle N, San Diego, CA',
+                date: 'Jan 11-15, 2020',
+                img: '/image/raw/bioinfo/events/IMG_20200113_151858.jpg'
+              }
+            %}
+            {{ eventLink(pag2020) }}
           </div>
-        </section>
-        <section class="{{ activeCheck('2019') }}" id="19">
-          <h4 class="kbl-heading text-center">2019</h4>
-          <div class="row">
-            <div class="col-sm-6">
-              {% set pag = {
-                  link: '/event/pag',
-                  title: 'Plant & Animal Genome Conference',
-                  location: '500 Hotel Circle N, San Diego, CA',
-                  date: 'Jan 12-16, 2019',
-                  img: '/image/raw/bioinfo/events/PAG-2019/g2.jpg'
-                }
-              %}
-              {{ eventLink(pag) }}
-            </div>
-            <div class="col-sm-6">
-              {% set psc = {
-                  link: '/event/psc',
-                  title: 'PSC Showcase',
-                  location: '4820 Old Main Hill, Logan, UT',
-                  date: 'Mar 23, 2019',
-                  img: '/image/raw/bioinfo/events/PSCshowcase_2019/d791cf15-ac89-4759-97d8-239827926698.JPG'
-                }
-              %}
-              {{ eventLink(psc) }}
-            </div>
-            <div class="col-sm-6">
-              {% set cricket = {
-                  link: '/event/cricket',
-                  title: 'Cricket in Utah',
-                  location: '6252 W 6200 S, Kearns, UT',
-                  date: 'Jul 13, 2019',
-                  img: '/image/raw/bioinfo/events/Cricket_2019/7d2e764e.JPG'
-                }
-              %}
-              {{ eventLink(cricket) }}
-            </div>
-            <div class="col-sm-6">
-              {% set winter = {
-                  link: '/event/winter',
-                  title: 'Utah State University Winter',
-                  location: '4700 Old Main Hill, Logan, UT',
-                  date: 'Dec 1, 2019',
-                  img: '/image/raw/bioinfo/events/USU_winter/IMG_1201.JPG'
-                }
-              %}
-              {{ eventLink(winter) }}
-            </div>
+        </div>
+      </section>
+      <section class="{{ activeCheck('2019') }}" id="19">
+        <h4 class="kbl-heading text-center">2019</h4>
+        <div class="row">
+          <div class="col-sm-6">
+            {% set pag = {
+                link: '/event/pag',
+                title: 'Plant & Animal Genome Conference',
+                location: '500 Hotel Circle N, San Diego, CA',
+                date: 'Jan 12-16, 2019',
+                img: '/image/raw/bioinfo/events/PAG-2019/g2.jpg?'
+              }
+            %}
+            {{ eventLink(pag) }}
           </div>
-        </section>
-        <section class="{{ activeCheck('2018') }}" id="18">
-          <h4 class="kbl-heading text-center">2018</h4>
-          <div class="row">
-            <div class="col-sm-6">
-              {% set rocky = {
-                  link: '/event/rocky',
-                  title: 'Rocky Bioinformatics Conference',
-                  location: '130 Wood Road, Snowmass Village, CO',
-                  date: 'Dec 5-7, 2018',
-                  img: '/image/raw/bioinfo/events/Rocky_2018/IMG_1335.JPG'
-                }
-              %}
-              {{ eventLink(rocky) }}
-            </div>
-            <div class="col-sm-6">
-              {% set hsing = {
-                  link: '/event/hsing',
-                  title: 'Visit to National Chung Hsing University',
-                  location: '145 Xingda Road, S District, Taichung City, Taiwan',
-                  date: 'Mar 2-9, 2018',
-                  img: '/image/raw/bioinfo/events/NCHU-2018/IMG_5118.JPG'
-                }
-              %}
-              {{ eventLink(hsing) }}
-            </div>
+          <div class="col-sm-6">
+            {% set psc = {
+                link: '/event/psc',
+                title: 'PSC Showcase',
+                location: '4820 Old Main Hill, Logan, UT',
+                date: 'Mar 23, 2019',
+                img: '/image/raw/bioinfo/events/PSCshowcase_2019/d791cf15-ac89-4759-97d8-239827926698.JPG'
+              }
+            %}
+            {{ eventLink(psc) }}
           </div>
-        </section>
-        <section class="{{ activeCheck('2013') }}" id="13">
-          <h4 class="kbl-heading text-center">2013</h4>
-          <div class="row">
-            <div class="col-sm-6">
-              {% set osucup = {
-                  link: '/event/osucup',
-                  title: 'Won President\'s Cup at OSU',
-                  location: '246 Noble Research Center, Stillwater, OK',
-                  date: 'Dec 10, 2013',
-                  img: '/image/raw/bioinfo/events/osupres/11310703416_5d39f89a49.png'
-                }
-              %}
-              {{ eventLink(osucup) }}
-            </div>
+          <div class="col-sm-6">
+            {% set cricket = {
+                link: '/event/cricket',
+                title: 'Cricket in Utah',
+                location: '6252 W 6200 S, Kearns, UT',
+                date: 'Jul 13, 2019',
+                img: '/image/raw/bioinfo/events/Cricket_2019/7d2e764e.JPG'
+              }
+            %}
+            {{ eventLink(cricket) }}
           </div>
-        </section>
-      </div>
-  </section>
+          <div class="col-sm-6">
+            {% set winter = {
+                link: '/event/winter',
+                title: 'Utah State University Winter',
+                location: '4700 Old Main Hill, Logan, UT',
+                date: 'Dec 1, 2019',
+                img: '/image/raw/bioinfo/events/USU_winter/IMG_1201.JPG'
+              }
+            %}
+            {{ eventLink(winter) }}
+          </div>
+        </div>
+      </section>
+      <section class="{{ activeCheck('2018') }}" id="18">
+        <h4 class="kbl-heading text-center">2018</h4>
+        <div class="row">
+          <div class="col-sm-6">
+            {% set rocky = {
+                link: '/event/rocky',
+                title: 'Rocky Bioinformatics Conference',
+                location: '130 Wood Road, Snowmass Village, CO',
+                date: 'Dec 5-7, 2018',
+                img: '/image/raw/bioinfo/events/Rocky_2018/IMG_1335.JPG?ro=180'
+              }
+            %}
+            {{ eventLink(rocky) }}
+          </div>
+          <div class="col-sm-6">
+            {% set hsing = {
+                link: '/event/hsing',
+                title: 'Visit to National Chung Hsing University',
+                location: '145 Xingda Road, S District, Taichung City, Taiwan',
+                date: 'Mar 2-9, 2018',
+                img: '/image/raw/bioinfo/events/NCHU-2018/IMG_5118.JPG'
+              }
+            %}
+            {{ eventLink(hsing) }}
+          </div>
+        </div>
+      </section>
+      <section class="{{ activeCheck('2013') }}" id="13">
+        <h4 class="kbl-heading text-center">2013</h4>
+        <div class="row">
+          <div class="col-sm-6">
+            {% set osucup = {
+                link: '/event/osucup',
+                title: 'Won President\'s Cup at OSU',
+                location: '246 Noble Research Center, Stillwater, OK',
+                date: 'Dec 10, 2013',
+                img: '/image/raw/bioinfo/events/osupres/11310703416_5d39f89a49.png'
+              }
+            %}
+            {{ eventLink(osucup) }}
+          </div>
+        </div>
+      </section>
+    </div>
+  </article>
 
   {% include "universal/_footer.njk" %}
   {% from "universal/_footer-scripts.njk" import scripts %}
