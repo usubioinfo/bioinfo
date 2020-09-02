@@ -1,0 +1,22 @@
+{% macro eventLink(event) %}
+  <article class="container-fluid kbl-event-link">
+    <a href="{{ event.link }}">
+      <div class="img-container">
+        <img class="img-fluid" src="{{ RaikouServer }}{{ event.img }}">
+      </div>
+      <h4 class="kbl-heading">
+        {{ event.title }}
+      </h4>
+    </a>
+    <div class="row">
+      <section class="col-auto kbl-text soft">
+        <i class="fas fa-map-marker-alt mr-2"></i>
+        <span class="text">{{ event.location }}</span>
+      </section>
+      <section class="col-auto kbl-text soft">
+        <i class="far fa-calendar mr-2"></i>
+        <span class="text">{{ event.date }}</span>
+      </section>
+    </div>
+  </article>
+{% endmacro %}
