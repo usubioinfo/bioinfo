@@ -14,28 +14,24 @@
   {% from "components/breadcrumb.njk" import breadcrumb %}
   {{ breadcrumb([{name: 'home', link: '/'}, {name: 'research', link: '/research'}]) }}
 
-  <main class="sabbi-page-wrap">
+  <main>
       <div class="container">
-          <section class="page-appellation">
-              <div class="row">
-                  <div class="col-sm-5 col-md-4">
-                      <div class="page_piky-title">
-                          <h2 class="page-title font-md lil-line kbl-heading">
-                            Dr. Kaundal's research: <i>information to inference</i> in OMICS data science
-                          </h2>
-                      </div>
-                  </div>
-                  <div class="col-sm-7 col-md-7 col-md-offset-1">
-                      <p class="page_piky-text kbl-text">
-                        Biological data is accumulating faster than people’s capacity to analyze them. Our research interests and goals revolve
-                        around mitigating this issue in the context of “<i>information to inference</i>” scope. At USU, Dr. Kaundal has developed an <b>independent</b> and <b>collaborative</b>
-                        research program in bioinformatics, primarily focusing on computational mining of large multi-dimensional -<i>omics</i> datasets, and computational modeling using
-                        supervised (Machine Learning) and unsupervised (Bayesian-based) learning. Our group is actively developing novel tools and software to apply the gained knowledge
-                        towards organismal improvement. Research in KAABiL laboratory generally falls under the following major program objectives:
-                      </p>
-                  </div>
-              </div>
-          </section>
+        <div class="row my-5">
+            <div class="col-sm-5 col-md-4">
+              <h2 class="kbl-heading">
+                Dr. Kaundal's research: <i>information to inference</i> in OMICS data science
+              </h2>
+            </div>
+            <div class="col-sm-7 col-md-7">
+                <p class="kbl-text">
+                  Biological data is accumulating faster than people’s capacity to analyze them. Our research interests and goals revolve
+                  around mitigating this issue in the context of “<i>information to inference</i>” scope. At USU, Dr. Kaundal has developed an <b>independent</b> and <b>collaborative</b>
+                  research program in bioinformatics, primarily focusing on computational mining of large multi-dimensional -<i>omics</i> datasets, and computational modeling using
+                  supervised (Machine Learning) and unsupervised (Bayesian-based) learning. Our group is actively developing novel tools and software to apply the gained knowledge
+                  towards organismal improvement. Research in KAABiL laboratory generally falls under the following major program objectives:
+                </p>
+            </div>
+        </div>
           <section class="container-fluid">
             <div class="row home-info-block-first">
               {% include 'pages/home/_multi-carousel-new.njk' %}
