@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-task:scss-compile": "node-sass-chokidar --source-map true src/scss/ -o assets/kbl-css",
+    "build-task:scss-compile": "node-sass-chokidar --source-map true --output-style compressed src/scss/ -o assets/kbl-css",
     "build-task:autoprefixer": "postcss assets/kbl-css/*.css --use autoprefixer -d assets/kbl-css",
     "sass:build": "npm-run-all -p build-task:*",
     "sass:watch": "chokidar 'src/**/*.scss' -c 'npm run sass:build'",
@@ -39,9 +39,9 @@
     "nunjucks": "^3.2.2",
     "nunjucks-setasync": "^1.0.4",
     "path": "^0.12.7",
-    "postcss-cli": "^7.1.1",
+    "postcss-cli": "^7.1.2",
     "sass": "^1.26.10",
-    "ts-node": "^8.10.2",
-    "typescript": "^3.9.7"
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
   }
 }
