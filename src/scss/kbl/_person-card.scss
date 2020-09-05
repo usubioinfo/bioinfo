@@ -32,6 +32,14 @@ $card-width: 220px;
   border-radius: var(--border-radius);
   overflow: hidden;
   width: $card-width;
+
+  &.auto {
+    width: auto!important;
+
+    .kbl-person-card {
+      width: auto!important;
+    }
+  }
 }
 
 .modal-img {
