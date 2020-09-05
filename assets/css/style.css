@@ -33,41 +33,6 @@ email:hello@authlab.io;
 /* --------------------------------
 Reused Components
 -------------------------------- */
-/* align item */
-.pos-y_center {
-  position: relative;
-  width: 100%;
-  top: 50%;
-  bottom: auto;
-  transform: translateY(-50%); }
-
-/* text */
-.section-push-bottom {
-  background: #fff;
-  position: relative;
-  top: 65px;
-  margin-top: -65px; }
-
-.stage_image {
-  background-image: url(http://lorempixel.com/people/1200/1000); }
-
-.stage_color {
-  background-color: #257ab8; }
-
-/* padding box */
-
-.bg_mask {
-  position: relative; }
-  .bg_mask:before {
-    content: '';
-    position: absolute;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    opacity: .72; }
-  .bg_mask > div {
-    position: relative; }
 
 .arrow-bg {
   position: relative; }
@@ -131,119 +96,6 @@ Reused Components
     left: 0;
     top: .49em;
     border-radius: 100%; }
-
-/* orphan style */
-.site-hm-button {
-  margin-top: 35px; }
-
-.video-play {
-  position: relative;
-  display: block; }
-  .video-play:before {
-    content: '';
-    background-image: url(../img/icon/vid_play.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-color: rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%; }
-
-/* text */
-
-.page_piky-title .page-title {
-  font-size: 18.01px;
-  font-size: 2.00071rem; }
-
-@media (max-width: 767px) {
-  .page_piky-title .page-title {
-    font-size: 22.01px;
-    font-size: 1.57214rem; } }
-
-/* various line */
-.lil-line {
-  position: relative; }
-  .lil-line:before {
-    content: '';
-    position: absolute;
-    width: 40px;
-    height: 2px;
-    left: 0;
-    bottom: -5px;
-    background: #d30015; }
-
-/* breadcrumb */
-.auth-breadcrumb-wrap {
-  background-color: #EDF2F6; }
-
-/* Process Block */
-.process-block {
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-  .process-block-item {
-    border: 1px solid #004fff;
-    border-radius: 100%;
-    width: 150px;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 35px; }
-  @media (max-width: 767px) {
-    .process-block {
-      display: block; }
-    .process-block .process-block-item {
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 35px; }
-      .process-block .process-block-item.arrow-bg:after {
-        content: '';
-        position: absolute;
-        right: 0%;
-        width: 100%;
-        height: 15px;
-        background-image: url(../img/icon/arrow_bg.png);
-        background-repeat: no-repeat;
-        top: 135%;
-        transform: translateY(0%) rotate(90deg); } }
-
-/* sabbi-thumlinepost-card */
-.sabbi-thumlinepost-card {
-  overflow: hidden;
-  border-radius: 4px; }
-  .sabbi-thumlinepost-card .entry-title {
-    margin-left: 25px;
-    margin-right: 25px; }
-  .sabbi-thumlinepost-card h3.entry-title {
-    font-size: 16px;
-    font-size: 1.14286rem; }
-  .sabbi-thumlinepost-card-figure img {
-    width: 100%; }
-  .sabbi-thumlinepost-card .sabbi-thumlinepost-card-meta {
-    margin: 0 25px;
-    padding-bottom: 30px; }
-  .sabbi-thumlinepost-card-meta .meta-title {
-    font-weight: 800; }
-  .sabbi-thumlinepost-card .btn-action {
-    font-weight: 800;
-    text-transform: uppercase;
-    font-size: 12px; }
-
-.card-video {
-  position: relative; }
-  .card-video > .sabbi-thumlinepost-card-figure > figcaption {
-    color: #fff;
-    position: absolute;
-    top: 15px;
-    left: 25px; }
-
-.savis-list {
-  margin-bottom: 20px;
-  margin-top: 20px; }
-  .widget .savis-list {
-    margin-top: 30px; }
 
 /* slider navigation */
 
@@ -346,10 +198,6 @@ Reused Components
 .seq-content .btn-link {
   display: inline-block; }
 
-.page-journal {
-  margin-top: -20px;
-}
-
 @media only screen and (min-width: 600px) {
   .seq {
     position: relative;
@@ -362,32 +210,6 @@ Reused Components
   .seq.seq-active .seq-content {
     width: 635px;
     max-width: 100%; } }
-
-.page-conf_talk{
-  margin-top: -20px;
-}
-
-.page-conf_talk .sabbi-page-header-classic {
-  background-image: url(../img/header/conf_talk.jpg); }
-
-.sabbi-breadcrumb {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  background: transparent; }
-
-.ripepage-peak {
-  margin-top: 55px;
-  margin-bottom: 55px; }
-
-/* page appellation */
-.page-appellation {
-  margin-top: 50px;
-  margin-bottom: 50px; }
-
-@media (max-width: 767px) {
-  .page-appellation {
-    margin-bottom: 30px;
-    margin-top: 20px; } }
 
 /* --------------------------------
  Publicaton
@@ -555,7 +377,6 @@ Reused Components
 
 .pub-item.with-icon .elem-wrapper i {
   background-color: transparent;
-  color: #D30015;
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -567,9 +388,6 @@ Reused Components
   line-height: 55px;
   display: block;
   transition: all .25s ease; }
-
-a.link-with-icon i.fa {
-  margin-right: 5px; }
 
 .slc_des {
   color: #666666;
@@ -595,249 +413,9 @@ a.link-with-icon i.fa {
 .pub-item .description p {
   line-height: 18px; }
 
-.oli {
-  font-family: ol-icon-set !important;
-  speak: none;
-  font-weight: 400;
-  font-variant: normal;
-  font-style: normal;
-  text-transform: none;
-  line-height: inherit;
-  box-sizing: initial; }
-
-.oli-literature:before {
-  content: "\e95e"; }
-
-.oli-user_male_circle:before {
-  content: "\e92b"; }
-
 /* --------------------------------
  Site Page & Section
 -------------------------------- */
-
-/* events Page */
-.stage_events_post .site-title-meta {
-  color: #141414;
-  font-family: "AvenirNext-Medium";
-  font-size: 20px;
-  font-size: 1.42857rem;
-  margin: 28px auto 38px;
-  text-align: center;
-  width: 95%; }
-
-.events-post .btn-action {
-  border-width: 2px;
-  border-color: #a5a6a8;
-  color: #7e7e7e;
-  font-family: "AvenirNext-Medium"; }
-  .events-post .btn-action:hover {
-    background-color: #e6e6e7; }
-
-.sabbi-post-wrap {
-  overflow: hidden; }
-  .sabbi-post-wrap .sabbi-post-item {
-    float: left;
-    width: 50%;
-    min-width: 280px;
-    padding: 2px;
-    margin: 24px auto;
-    text-align: center; }
-    @media (max-width: 695px) {
-      .sabbi-post-wrap .sabbi-post-item {
-        float: none;
-        width: 95%; } }
-  .sabbi-post-wrap .sabbi-post-title {
-    color: #000;
-    font-family: "AvenirNext-Medium";
-    font-size: 24px;
-    font-size: 1.71429rem; }
-  .sabbi-post-wrap .sabbi-post-span {
-    color: #000406;
-    font-family: "AvenirNextCondensed-DemiBold";
-    font-size: 15px;
-    font-size: 1.07143rem;
-    opacity: .55;
-    text-transform: uppercase; }
-
-/* video card */
-.sabbi-thumlinepost-card.card-video {
-  padding-bottom: 25px; }
-  .sabbi-thumlinepost-card.card-video .entry-text {
-    margin-left: 25px; }
-
-.card-video .entry-title a {
-  color: #000; }
-  .card-video .entry-title a:hover {
-    color: #D30015; }
-
-@media (max-width: 767px) {
-  .sabbi-thumlinepost-card {
-    max-width: 450px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 25px; } }
-
-.sabbi-section, .section-brand_quickfact {
-
-  margin-top: 25px;
-  margin-bottom: 40px; }
-
-.selected_pulication-wrap .stage-title {
-  font-size: 16px;
-  font-size: 1.14286rem; }
-
-/* Moudle */
-.icon-card {
-  margin-bottom: 30px; }
-  .icon-card .icon-card-limn > i {
-    color: #D30015;
-    font-size: 92px;
-    font-size: 6.57143rem;
-    line-height: 0; }
-  .icon-card .card-title {
-    font-size: 13px;
-    font-size: 0.92857rem; }
-
-/* page section */
-/* section style*/
-.home-info-block-first .sabbi-thumlinepost-card {
-  margin-top: 15px; }
-
-@media (max-width: 991px) {
-  .home-info-block-first .sabbi-thumlinepost-card {
-    margin-top: 30px; } }
-
-.stage-halfbol {
-  background-image: url(../img/USU_ag.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  margin-bottom: 0; }
-  .stage-halfbol .stage-halfbol_content {
-    background: #fff;
-    margin-top: 55px;
-    margin-bottom: 55px;
-    padding: 45px;
-    border-radius: 4px; }
-
-@media (max-width: 767px) {
-  .stage-halfbol_content .stage-title {
-    font-size: 22px;
-    font-size: 1.57143rem; } }
-
-.selected_pulication-wrap {
-  margin-top: 25px;
-  padding-bottom: 25px;
-  border-bottom: 1px solid #e9ebed; }
-  .selected_pulication-wrap .entry-meta {
-    margin-top: 45px;
-    margin-bottom: 65px; }
-
-@media (max-width: 767px) {
-  .selected_pulication-wrap {
-    margin-top: 0px; }
-    .selected_pulication-wrap .entry-meta {
-      margin-top: 15px;
-      margin-bottom: 65px; } }
-
-.section-meet_the_team {
-  margin-top: 55px;
-  margin-bottom: 60px; }
-
-.bio__holder {
-  margin-top: 55px;
-  margin-bottom: 55px; }
-  .bio__holder .profile-glimps {
-    margin-top: 0; }
-
-.profile-glimps {
-  padding: 15px 0 25px 15px;
-  margin-top: 15px; }
-  .profile-glimps .stage-title {
-    font-size: 16px; }
-
-.text-foc-md {
-  color: #666666;
-  font-size: 16px;
-  font-size: 1.14286rem;
-  font-weight: 600;
-  margin-bottom: 0; }
-
-.stage-content-biog {
-  margin-top: 30px;
-  margin-bottom: 10px; }
-
-/* card design */
-.icon-card {
-  background-color: #EDF2F6;
-  padding: 35px 20px;
-  border-radius: 4px; }
-
-/* .section-meet_the_team {
-	.action-wrap {
-		margin-top: 15px;
-	}
-} */
-@media (max-width: 767px) {
-  .section-meet_the_team .action-wrap {
-    text-align: center; }
-  .section-meet_the_team .sabbi-thumlinepost-card .action-wrap {
-    text-align: left; }
-  .profile-card {
-    max-width: 350px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 25px; }
-    .profile-card .img-responsive {
-      width: 100%; } }
-
-/* Rashmore profile page */
-.pull-up-240 {
-  position: relative;
-  top: -125px;
-  margin-bottom: -125px; }
-
-.sp-blank-20 {
-  margin-top: 30px; }
-
-/* page-professor */
-.gimps-title {
-  margin-bottom: 15px; }
-
-.appoint-timeline-holder {
-  margin-top: 75px; }
-
-.sabbi-page-header {
-  margin-top: 75px; }
-
-.page-professor .profile-glimps {
-  padding-left: 0; }
-
-@media (max-width: 500px) {
-  .awards-list > li {
-    float: none;
-    width: 95%; } }
-
-/* page-conf_talk */
-.btn_pdf_wrap {
-  text-align: right; }
-
-@media (max-width: 767px) {
-  .btn_pdf_wrap {
-    text-align: left; } }
-
-/* page-events */
-.page-events .pagination_wraper {
-  text-align: right; }
-
-@media (max-width: 767px) {
-  .page-events .pagination_wraper {
-    text-align: center; } }
-
-/* stage_events_post */
-* {
-  box-sizing: border-box;
-}
 
 .zoom {
   transition: transform .2s;
@@ -848,65 +426,6 @@ a.link-with-icon i.fa {
   -webkit-transform: scale(1.05); /* Safari 3-8 */
   transform: scale(1.05);
 }
-
-.title-card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
-  transition: 0.3s;
-}
-
-.stage_events_post {
-  margin-top: 45px; }
-  .events_post-sagment .sagment-title {
-    text-align: center;
-    font-size: 22px;
-     }
-  .sabbi-events-item {
-    margin-bottom: 35px;
-    margin-top: 5px; }
-    .sabbi-events-item .sabbi-events-title {
-      color: white;
-      font-size: 20px;
-      font-weight: 700; }
-    @media (max-width: 767px) {
-      .sabbi-events-item .sabbi-events-title {
-        font-size: 20px;
-        font-size: 1.42857rem; } }
-    .sabbi-events-item .events-item-meta {
-      color: #666666;
-      overflow: hidden; }
-      .sabbi-events-item .events-item-meta .events-loc {
-        display: inline-block;
-        padding-right: 25px; }
-        .sabbi-events-item .events-item-meta .events-loc > i {
-          font-size: 16px;
-          font-size: 1.14286rem;
-          margin-right: 10px; }
-      .sabbi-events-item .events-item-meta .events-date {
-        min-width: 170px;
-        display: inline-block; }
-        .sabbi-events-item .events-item-meta .events-date > i {
-          margin-right: 10px;
-          font-size: 16px;
-          font-size: 1.14286rem; }
-  .events-item-media-scoup figure {
-    margin-bottom: 30px; }
-
-.events-item-meta-text {
-  margin-top: 10px;
-  margin-bottom: 25px; }
-
-.events-item-media .sagment-title {
-  margin-bottom: 18px; }
-
-@media (max-width: 767px) {
-  .events_post-sagment .sagment-title {
-    text-align: center;
-    margin-bottom: 20px; }
-  .sabbi-events-item {
-    max-width: 550px;
-    margin-left: auto;
-    margin-right: auto; } }
-
   /*species slider*/
 
 #species{

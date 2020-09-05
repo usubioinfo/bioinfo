@@ -230,6 +230,53 @@ footer {
   overflow: hidden!important;
 }
 
+.video-play {
+  position: relative;
+  display: block; }
+  .video-play:before {
+    content: '';
+    background-image: url(../img/icon/vid_play.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%; }
+
+.center-y {
+  position: relative!important;
+  width: 100%!important;
+  top: 50%!important;
+  bottom: auto!important;
+  transform: translateY(-50%)!important;
+}
+
+.home-info-block-first .sabbi-thumlinepost-card {
+  margin-top: 15px; }
+
+@media (max-width: 991px) {
+  .home-info-block-first .sabbi-thumlinepost-card {
+    margin-top: 30px; } }
+
+.stage-halfbol {
+  background-image: url(../img/USU_ag.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 0; }
+  .stage-halfbol .stage-halfbol_content {
+    background: #fff;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    padding: 45px;
+    border-radius: 4px; }
+
+@media (max-width: 767px) {
+  .stage-halfbol_content .stage-title {
+    font-size: 22px;
+    font-size: 1.57143rem; } }
+
 // Scrollbar stuff
 ::-webkit-scrollbar {
   width: 6px;
