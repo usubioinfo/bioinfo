@@ -1,6 +1,10 @@
 .kbl-heading {
   color: var(--color-text-main);
 
+  &.soft {
+    color: var(--color-text-soft);
+  }
+
   &.dark {
     color: var(--color-text-hard);
   }

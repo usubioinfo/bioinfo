@@ -1,11 +1,13 @@
 .calendar {
+  $month-font-size: 150%;
+
   .month-title {
     font-weight: var(--font-weight-heavy);
-    font-size: 180%;
+    font-size: $month-font-size - 10%;
   }
 
   .arrow-single {
-    font-size: 180%;
+    font-size: $month-font-size;
     transition: var(--time-mid);
     cursor: pointer;
 
@@ -24,8 +26,11 @@
     cursor: pointer;
     border-radius: var(--border-radius);
     transition: var(--time-mid);
-    // Accessing variables this way is dumb.
     border: 1px solid transparent;
+
+    &.today {
+      color: var(--color-primary);
+    }
 
     &.appointment {
       border-color: var(--color-primary);
@@ -44,6 +49,7 @@
 
     &:hover:not(.appointment) {
       background: var(--color-primary-very-light);
+      color: var(--color-text-main);
     }
   }
 }

@@ -9,6 +9,10 @@ const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 let dateElements = [];
 
 let calendar = document.getElementById('calendar');
+
+// Today
+let today = new Date();
+
 let currentDate = new Date();
 let firstOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
 
@@ -73,6 +77,10 @@ function generateDates() {
 
     const newDateEl = document.createElement('DIV');
     newDateEl.classList.add('date');
+    if (currentDate.getMonth() === today.getMonth() && currentDate.getFullYear() === today.getFullYear() && i === today.getDate()) {
+      newDateEl.classList.add('font-weight-bold');
+      newDateEl.classList.add('today');
+    }
     newDateEl.setAttribute('data-id', `${i}-${currentDate.getMonth()}-${currentDate.getFullYear()}`);
     newDateEl.innerHTML = i;
     dateColEl.appendChild(newDateEl);
