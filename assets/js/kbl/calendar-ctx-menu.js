@@ -189,11 +189,11 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
 		let newMinute = minuteValue;
 		newMinute += minuteChange;
 		if (newMinute > 59) {
-			newMinute = 0;
+			newMinute -= 60;
 		}
 
 		if (newMinute < 0) {
-			newMinute = 59;
+			newMinute += 60;
 		}
 
 		return newMinute;
@@ -253,11 +253,11 @@ const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
 		hourForm.value = hourValueToField(hourValue);
 	});
 	const minuteIncrement = document.querySelector('#minuteIncrement').addEventListener('click', () => {
-		minuteValue = changeMinute(1);
+		minuteValue = changeMinute(15);
 		minuteForm.value = minuteValueToField(minuteValue);
 	});
 	const minuteDecrement = document.querySelector('#minuteDecrement').addEventListener('click', () => {
-		minuteValue = changeMinute(-1);
+		minuteValue = changeMinute(-15);
 		minuteForm.value = minuteValueToField(minuteValue);
 	});
 
