@@ -13,7 +13,7 @@
         <h3 class="kbl-heading pb-4 text-center">Run the Website Locally</h3>
 
         <p class="kbl-text text-thicc">
-          To get the website on your machine, first find a place you want to put it on your computer, and then run<br>
+          To get the website on your machine, first find a folder in which you want to put it on your computer, and then run<br>
           <code>git clone git@github.com:MusicDev33/bioinformatics.git</code><br>
           Once you've cloned the repository, go into the 'bioinformatics' folder that was created and type
           <code>npm install</code>. This will install all the NPM packages in that folder.<br>
@@ -31,18 +31,23 @@
         </p>
 
         <p class="kbl-text text-thicc">
-          When you've made changes that you're satisfied with, you can use Ctrl+C to quit one of the processes running in one of
-          the terminals, use <code>git add -A</code> to stage all of your changes, and
+          When you've made changes that you're satisfied with, you can use <code>Ctrl+C</code> to quit one of the processes running in one of
+          the terminals. Use <code>git add -A</code> to stage all of your changes, and
           <code>git commit -m "Your message here"</code> commit your changes. To push your changes
-          to the server, use <code>git push -u origin master</code> and now your changes are on the GitHub server!
+          to the server, use <code>git push -u origin master</code>. Now your changes are on the GitHub server!
+          Also, be specific in your commit messages, as that allows other developers to see what exactly within the code.
         </p>
 
         <p class="kbl-text text-thicc">
           Of course, the GitHub server is not <b>our</b> server. To add these changes to our server, log into the Guru cluster.
           We use an internal tool called 'Boxidizer' to update our sites, which is prefixed with <code>bxz</code>.
           Use the command<br>
-          <code>bxz update bioinformatics</code> and you're an authorized user, then all changes from the GitHub server will be
-          carried over to the HPC.
+          <code>bxz update bioinformatics</code><br>
+          and if you're an authorized user, all changes from the GitHub server will be
+          carried over to the HPC. To make sure changes actually occur after Boxidizer is finished, hit <code>Ctrl+R</code>
+          to refresh this page and make sure the changes actually happened. If the website looks buggy, run <br>
+          <code>bxz update bioinformatics</code><br>
+          again, this is a weird bug with Boxidizer.
         </p>
       </div>
     </div>

@@ -2,4 +2,7 @@ code {
   font-size: 87.5%;
   word-wrap: break-word;
   color: var(--code-color)!important;
+  padding: 2px;
+  border-radius: 4px;
+  border: 1px solid var(--color-secondary-bg);
 }
