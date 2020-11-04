@@ -76,7 +76,7 @@ app.get('/publications', (req, res, next) => {
   if (req.query.range) {
     nunEnv.addGlobal(`routerYearRange`, req.query.range);
   } else {
-    nunEnv.addGlobal(`routerYearRange`, '2017-2019');
+    nunEnv.addGlobal(`routerYearRange`, '2020');
   }
 
   res.render(__dirname + `/views/pages/publications/publications.njk`, (err, html) => {
@@ -89,7 +89,7 @@ app.get('/publications/conferences', (req, res, next) => {
   if (req.query.range) {
     nunEnv.addGlobal(`routerYearRange`, req.query.range);
   } else {
-    nunEnv.addGlobal(`routerYearRange`, '2017-2019');
+    nunEnv.addGlobal(`routerYearRange`, '2020');
   }
 
   res.render(__dirname + `/views/pages/publications/conferences/conferences.njk`, (err, html) => {

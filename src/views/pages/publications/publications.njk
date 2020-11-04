@@ -19,12 +19,18 @@
 
 <article class="container pt-5 pb-3">
   <section class="row justify-content-center">
+    {{ selector("2020") }}
     {{ selector("2017-2019") }}
     {{ selector("2014-2016") }}
     {{ selector("2011-2013") }}
     {{ selector("2008-2010") }}
     {{ selector("2005-2007") }}
   </section>
+</article>
+
+<!-- Add content below -->
+<article class="container {{ activeCheck('2020') }}">
+
 </article>
 
 <article class="container {{ activeCheck('2017-2019') }}">
