@@ -1,4 +1,4 @@
-{% macro selector(btnString) %}
+{% macro selector(btnString, routerEventsYearRange) %}
   {% if btnString === routerEventsYearRange %}
     <div class="col-auto">
       <a href="/events?range={{ btnString }}" class="kbl-date-selector active">{{ btnString }}</a>
@@ -10,7 +10,7 @@
   {% endif %}
 {% endmacro %}
 
-{% macro activeCheck(yearString) %}
+{% macro activeCheck(yearString, routerEventsYearRange) %}
   {% if yearString === routerEventsYearRange %}
 
   {% else %}

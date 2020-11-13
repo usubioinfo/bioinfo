@@ -73,39 +73,37 @@ app.get('/favicon.ico', (req, res, next) => {
 })
 
 app.get('/publications', (req, res, next) => {
+  let routerYearRange = '2020';
+
   if (req.query.range) {
-    nunEnv.addGlobal(`routerYearRange`, req.query.range);
-  } else {
-    nunEnv.addGlobal(`routerYearRange`, '2020');
+    routerYearRange = req.query.range;
   }
 
-  res.render(__dirname + `/views/pages/publications/publications.njk`, (err, html) => {
+  res.render(__dirname + `/views/pages/publications/publications.njk`, {routerYearRange}, (err, html) => {
     if (err) return next(err);
     res.send(html);
   });
 });
 
 app.get('/publications/conferences', (req, res, next) => {
+  let routerYearRange = '2020';
   if (req.query.range) {
-    nunEnv.addGlobal(`routerYearRange`, req.query.range);
-  } else {
-    nunEnv.addGlobal(`routerYearRange`, '2020');
+    routerYearRange = req.query.range;
   }
 
-  res.render(__dirname + `/views/pages/publications/conferences/conferences.njk`, (err, html) => {
+  res.render(__dirname + `/views/pages/publications/conferences/conferences.njk`, {routerYearRange}, (err, html) => {
     if (err) return next(err);
     res.send(html);
   });
 });
 
 app.get('/events', (req, res, next) => {
+  let routerEventsYearRange = '2020';
   if (req.query.range) {
-    nunEnv.addGlobal(`routerEventsYearRange`, req.query.range);
-  } else {
-    nunEnv.addGlobal(`routerEventsYearRange`, '2020');
+    routerEventsYearRange = req.query.range;
   }
 
-  res.render(__dirname + `/views/pages/events/events.njk`, (err, html) => {
+  res.render(__dirname + `/views/pages/events/events.njk`, {routerEventsYearRange}, (err, html) => {
     if (err) return next(err);
     res.send(html);
   });

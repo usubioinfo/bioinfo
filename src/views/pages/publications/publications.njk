@@ -19,21 +19,21 @@
 
 <article class="container pt-5 pb-3">
   <section class="row justify-content-center">
-    {{ selector("2020") }}
-    {{ selector("2017-2019") }}
-    {{ selector("2014-2016") }}
-    {{ selector("2011-2013") }}
-    {{ selector("2008-2010") }}
-    {{ selector("2005-2007") }}
+    {{ selector("2020", routerYearRange) }}
+    {{ selector("2017-2019", routerYearRange) }}
+    {{ selector("2014-2016", routerYearRange) }}
+    {{ selector("2011-2013", routerYearRange) }}
+    {{ selector("2008-2010", routerYearRange) }}
+    {{ selector("2005-2007", routerYearRange) }}
   </section>
 </article>
 
 <!-- Add content below -->
-<article class="container {{ activeCheck('2020') }}">
+<article class="container {{ activeCheck('2020', routerYearRange) }}">
 
 </article>
 
-<article class="container {{ activeCheck('2017-2019') }}">
+<article class="container {{ activeCheck('2017-2019', routerYearRange) }}">
   <section class="py-4">
     <h3 class="kbl-heading text-center">2019</h3>
     {% for article in pub2019 %}
@@ -49,7 +49,7 @@
   </section>
 </article>
 
-<article class="container {{ activeCheck('2014-2016') }}">
+<article class="container {{ activeCheck('2014-2016', routerYearRange) }}">
   <section class="py-4">
     <h3 class="kbl-heading text-center">2016</h3>
     {% for article in pub2016 %}
@@ -65,7 +65,7 @@
   </section>
 </article>
 
-<article class="container {{ activeCheck('2011-2013') }}">
+<article class="container {{ activeCheck('2011-2013', routerYearRange) }}">
   <section class="py-4">
     <h3 class="kbl-heading text-center">2013</h3>
     {% for article in pub2013 %}
@@ -88,7 +88,7 @@
   </section>
 </article>
 
-<article class="container {{ activeCheck('2008-2010') }}">
+<article class="container {{ activeCheck('2008-2010', routerYearRange) }}">
   <section class="py-4">
     <h3 class="kbl-heading text-center">2010</h3>
     {% for article in pub2010 %}
@@ -104,7 +104,7 @@
   </section>
 </article>
 
-<article class="container {{ activeCheck('2005-2007') }}">
+<article class="container {{ activeCheck('2005-2007', routerYearRange) }}">
   <section class="py-4">
     <h3 class="kbl-heading text-center">2007</h3>
     {% for article in pub2007 %}

@@ -18,12 +18,12 @@
     <div class="container">
       {% from './_functions.njk' import selector, activeCheck %}
       <section class="row justify-content-center my-5">
-        {{ selector("2020") }}
-        {{ selector("2019") }}
-        {{ selector("2018") }}
-        {{ selector("2013") }}
+        {{ selector("2020", routerEventsYearRange) }}
+        {{ selector("2019", routerEventsYearRange) }}
+        {{ selector("2018", routerEventsYearRange) }}
+        {{ selector("2013", routerEventsYearRange) }}
       </section>
-      <section class="{{ activeCheck('2020') }}" id="20">
+      <section class="{{ activeCheck('2020', routerEventsYearRange) }}" id="20">
         <h4 class="kbl-heading text-center">2020</h4>
         <div class="row justify-content-center">
           <div class="col-sm-6">
@@ -39,7 +39,7 @@
           </div>
         </div>
       </section>
-      <section class="{{ activeCheck('2019') }}" id="19">
+      <section class="{{ activeCheck('2019', routerEventsYearRange) }}" id="19">
         <h4 class="kbl-heading text-center">2019</h4>
         <div class="row">
           <div class="col-sm-6">
@@ -88,7 +88,7 @@
           </div>
         </div>
       </section>
-      <section class="{{ activeCheck('2018') }}" id="18">
+      <section class="{{ activeCheck('2018', routerEventsYearRange) }}" id="18">
         <h4 class="kbl-heading text-center">2018</h4>
         <div class="row">
           <div class="col-sm-6">
@@ -115,7 +115,7 @@
           </div>
         </div>
       </section>
-      <section class="{{ activeCheck('2013') }}" id="13">
+      <section class="{{ activeCheck('2013', routerEventsYearRange) }}" id="13">
         <h4 class="kbl-heading text-center">2013</h4>
         <div class="row">
           <div class="col-sm-6">

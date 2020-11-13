@@ -13,7 +13,7 @@
   {% from "components/breadcrumb.njk" import breadcrumb %}
   {{ breadcrumb([{name: 'home', link: '/'}, {name: 'publications', link: '/publications'}, {name: 'conferences', link: '/publications/conferences'}]) }}
 
-  {% from './_functions.njk' import selector, activeCheck %}
+  {% from './_functions.njk' import selector %}
   {% from 'components/conf-card.njk' import confCard %}
   {% from './dates/17-19.njk' import pub2019, pub2018, pub2017 %}
   {% from './dates/14-16.njk' import pub2016, pub2015, pub2014 %}
@@ -51,12 +51,12 @@
     </section>
 
     <section class="row justify-content-center py-5">
-      {{ selector("2020") }}
-      {{ selector("2017-2019") }}
-      {{ selector("2014-2016") }}
-      {{ selector("2011-2013") }}
-      {{ selector("2008-2010") }}
-      {{ selector("2002-2004") }}
+      {{ selector("2020", routerYearRange) }}
+      {{ selector("2017-2019", routerYearRange) }}
+      {{ selector("2014-2016", routerYearRange) }}
+      {{ selector("2011-2013", routerYearRange) }}
+      {{ selector("2008-2010", routerYearRange) }}
+      {{ selector("2002-2004", routerYearRange) }}
     </section>
   </article>
 
