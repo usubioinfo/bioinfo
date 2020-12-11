@@ -1,4 +1,4 @@
-FROM node:12
+FROM node:15
 WORKDIR	~/apps/bioinformatics
 COPY package*.json ./
 
