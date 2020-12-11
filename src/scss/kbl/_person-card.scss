@@ -5,6 +5,8 @@ $card-width: 220px;
   border-radius: var(--border-radius);
   word-wrap: break-word;
   width: $card-width;
+  overflow: hidden;
+  border: 1px solid transparent;
 
   .card-title {
     font-weight: var(--font-weight-heavy);
@@ -23,13 +25,12 @@ $card-width: 220px;
     transition: var(--time-mid);
 
     &:hover {
-      background: var(--color-primary-bg);
+      border-color: var(--color-primary-light);
     }
   }
 }
 
 .kbl-person-card-container {
-  border-radius: var(--border-radius);
   overflow: hidden;
   width: $card-width;
 
@@ -39,6 +40,11 @@ $card-width: 220px;
     .kbl-person-card {
       width: auto!important;
     }
+  }
+
+  .social-card {
+    background: var(--color-bg-gray);
+    border-radius: var(--border-radius);
   }
 }
 
