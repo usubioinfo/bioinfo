@@ -11,4 +11,18 @@
       border-color: var(--color-primary-light);
     }
   }
+
+  .infotainer {
+    transition: var(--time-mid);
+    background: var(--color-bg-gray);
+    border-radius: var(--border-radius);
+  }
+
+  &:hover .infotainer {
+    background: var(--color-border-dark-gray);
+  }
+}
+
+.kbl-event-link:hover .infotainer {
+  background: var(--color-bg-soft-gray);
 }
