@@ -277,6 +277,17 @@ footer {
     font-size: 22px;
     font-size: 1.57143rem; } }
 
+// For the Bootstrap Modal Footer
+.modal-pre-email {
+  color: var(--color-text-main);
+  font-weight: var(--font-weight-heavy);
+}
+
+.modal-email {
+  color: var(--color-text-main);
+  font-weight: var(--font-weight-medium);
+}
+
 // Scrollbar stuff
 ::-webkit-scrollbar {
   width: 6px;

@@ -63,9 +63,11 @@
   <article class="container">
     {% for confSet in conferences %}
       {% if routerYearRange === confSet.range %}
-        <section class="row my-5">
+        <section class="row mt-5 mb-2">
           <div class="col-12 text-center">
-            <h1 class="kbl-heading">{{ confSet.year }}</h1>
+            <div class="kbl-header-bar py-2">
+              <h1 class="kbl-heading">{{ confSet.year }}</h1>
+            </div>
           </div>
         </section>
         <section class="row">

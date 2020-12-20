@@ -47,8 +47,8 @@
             <h4 class="modal-title" style="flex-basis: 100%;">{{ person.name }}</h4>
             <h6 class="modal-subtitle" style="flex-basis: 100%;">{{ person.subtitle }}</h6>
           </div>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="kbl-close" data-dismiss="modal" aria-label="Close">
+            <i class="fas fa-times"></i>
           </button>
         </section>
         <section class="modal-body">
@@ -64,7 +64,7 @@
           </div>
         </section>
         <section class="modal-footer" style="justify-content: start;">
-          <span>{{ person.email }}</span>
+          <span class="modal-pre-email">Email: </span><span class="modal-email">{{ person.email }}</span>
         </section>
       </div>
     </div>
