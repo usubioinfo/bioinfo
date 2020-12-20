@@ -13,7 +13,14 @@
     </section>
 
     <section class="col-3">
-      <span class="kbl-text">DOI: <a class="kbl-link" href="{{ article.doiLink }}">{{ article.doiTitle }}</a></span>
+      <span class="kbl-text">
+        DOI:
+        {% if article.doiTitle.length %}
+          <a class="kbl-link" target="_blank" href="{{ article.doiLink }}">
+            {{ article.doiTitle }}<sup> <i class="fas fa-external-link-alt"></i></sup>
+          </a>
+        {% endif %}
+      </span>
     </section>
   </article>
 {% endmacro %}
