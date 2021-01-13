@@ -1,0 +1,14 @@
+{% macro toolCard(tool) %}
+  <a href="{{ tool.link }}">
+    <article class="kbl-research-card-container tool mx-auto">
+      <div class="kbl-research-card">
+        <section class="img-tool">
+          <img src="{{ tool.img }}">
+        </section>
+        <section class="px-3 flex-text-wrapper pt-2">
+          <div class="card-title">{{ tool.title }}</div>
+        </section>
+      </div>
+    </article>
+  </a>
+{% endmacro %}
