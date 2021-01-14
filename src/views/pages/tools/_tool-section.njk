@@ -16,19 +16,27 @@
 {% endmacro %}
 
 {% macro toolSection(title, tools=[], id="default") %}
-  <div class="row my-5" id="{{ id }}">
+  <article class="row">
     <div class="col-12">
-      <div class="kbl-header-bar text-center py-2">
-        <h4 class="kbl-heading my-auto">{{ title }}</h4>
-      </div>
-    </div>
-  </div>
+      <section class="row my-4" id="{{ id }}">
+        <div class="col-12">
+          <div class="text-center">
+            <h4 class="kbl-heading my-auto">{{ title }}</h4>
+          </div>
+        </div>
+      </section>
 
-  <div class="row">
-    {% for tool in tools %}
-      <div class="col-3 h-100">
-        {{ toolCard(tool) }}
-      </div>
-    {% endfor %}
-  </div>
+      <section class="row mb-3 justify-content-center">
+        <div class="col-10 col-sm-12 tool-card-section py-2">
+          <div class="row">
+            {% for tool in tools %}
+              <div class="col-12 col-sm-6 col-lg-4 col-xl-3 py-3">
+                {{ toolCard(tool) }}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+    </div>
+  </article>
 {% endmacro %}

@@ -3,6 +3,7 @@
   transition: all 0.4s cubic-bezier(.25,.8,.25,1);
   border-radius: var(--border-radius);
   overflow: hidden;
+  background: white;
 
   a {
     display: flex;
@@ -33,4 +34,9 @@
 
 .tool-card-container {
   overflow: visible;
+}
+
+.tool-card-section {
+  background: var(--color-bg-gray);
+  border-radius: var(--border-radius);
 }
