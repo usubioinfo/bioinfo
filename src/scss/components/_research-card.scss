@@ -8,7 +8,6 @@ $card-width: 250px;
 
   display: flex;
   flex-direction: column;
-  flex-basis: 250px;
 
   .card-title {
     font-weight: var(--font-weight-heavy);
@@ -33,7 +32,7 @@ $card-width: 250px;
   }
 
   .img-wrapper {
-    flex-basis: 200px;
+    flex-basis: 270px;
   }
 
   .img-tool {

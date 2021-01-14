@@ -1,4 +1,6 @@
-{% macro toolCard(tool) %}
+{% from "components/tool-card.njk" import toolCard %}
+
+{% macro toolTest(tool) %}
   <a href="{{ tool.link }}">
     <article class="kbl-research-card-container tool mx-auto">
       <div class="kbl-research-card">

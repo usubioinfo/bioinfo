@@ -1,14 +1,33 @@
 {% macro toolCard(tool) %}
-  <a href="{{ tool.link }}">
-    <article class="kbl-research-card-container tool mx-auto">
-      <div class="kbl-research-card">
-        <section class="img-tool">
+  <section class="px-4">
+    <div class="kbl-tool-card">
+      <a href="{{ tool.link }}">
+        <section class="thumb">
           <img src="{{ tool.img }}">
         </section>
-        <section class="px-3 flex-text-wrapper pt-2">
-          <div class="card-title">{{ tool.title }}</div>
+        <section class="px-3 py-2 title">
+          <div>{{ tool.title }}</div>
         </section>
-      </div>
-    </article>
-  </a>
+      </a>
+    </div>
+  </section>
+{% endmacro %}
+
+{% macro toolCardOld(tool) %}
+  <section class="px-4">
+    <div class="kbl-tool-card">
+      <a href="{{ tool.link }}">
+        <article class="kbl-research-card-container tool mx-auto">
+          <div class="kbl-research-card">
+            <section class="img-tool">
+              <img src="{{ tool.img }}">
+            </section>
+            <section class="px-3 flex-text-wrapper pt-2">
+              <div class="card-title">{{ tool.title }}</div>
+            </section>
+          </div>
+        </article>
+      </a>
+    </div>
+  </section>
 {% endmacro %}
