@@ -23,6 +23,10 @@
 .mob-nav-link {
   color: var(--color-primary-very-light);
 
+  &:focus {
+    color: var(--color-primary);
+  }
+
   &.active {
     color: var(--color-primary);
   }
