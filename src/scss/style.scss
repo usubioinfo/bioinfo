@@ -15,7 +15,9 @@ ul, ol {
 
 img {
   max-width: 100%; }
-
+html {
+  overflow-x: hidden;
+}
 body {
   color: var(--color-text-main);
   overflow-x: hidden;
