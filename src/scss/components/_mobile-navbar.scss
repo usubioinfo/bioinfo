@@ -1,0 +1,35 @@
+.mobile-nav-wrapper {
+  bottom: 0;
+  position: fixed;
+  height: var(--mobile-nav-height);
+  width: 100%;
+}
+
+.mobile-nav {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-radius: var(--border-radius);
+  height: 100%!important;
+  background: white;
+
+  .icon-container {
+    line-height: 1px;
+  }
+}
+
+.mob-nav-icon {
+  font-size: 200%;
+}
+
+.mob-nav-link {
+  color: var(--color-primary-very-light);
+
+  &.active {
+    color: var(--color-primary);
+  }
+}
+
+.mob-nav-icon-text {
+  font-size: 90%;
+  line-height: 14px;
+  vertical-align: top;
+}

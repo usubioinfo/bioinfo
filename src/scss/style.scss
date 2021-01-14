@@ -37,6 +37,10 @@ body {
   }
 }
 
+.bottom-section {
+  margin-bottom: var(--mobile-nav-height);
+}
+
 .kbl-top {
   margin-top: var(--navbar-height)!important;
   padding-left: 0!important;
