@@ -28,6 +28,10 @@
     color: var(--color-primary-light);
   }
 
+  &:active {
+    color: var(--color-primary-light);
+  }
+
   &.active {
     color: var(--color-primary);
   }
