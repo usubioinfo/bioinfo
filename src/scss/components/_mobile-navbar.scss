@@ -3,6 +3,7 @@
   position: fixed;
   height: var(--mobile-nav-height);
   width: 100%;
+  margin-bottom: calc(.5rem + env(safe-area-inset-bottom));
 }
 
 .mobile-nav {
