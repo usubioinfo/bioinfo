@@ -22,18 +22,18 @@
 }
 
 .mob-nav-link {
-  color: var(--color-primary-very-light);
+  color: var(--color-primary-very-light)!important;
 
   &:focus {
-    color: var(--color-primary-light);
+    color: var(--color-primary-light)!important;
   }
 
   &:active {
-    color: var(--color-primary-light);
+    color: var(--color-primary-light)!important;
   }
 
   &.active {
-    color: var(--color-primary);
+    color: var(--color-primary)!important;
   }
 }
 
