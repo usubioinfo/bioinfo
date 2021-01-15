@@ -6,27 +6,27 @@
   <article class="container-fluid">
     <section class="row w-100 mb-1">
 
-      <div class="col-sm-5 d-none d-sm-block pl-5">
+      <div class="col-sm-5 d-none d-sm-block ps-5">
         <a class="navbar-brand d-inline" href="/">
           <img src="/assets/img/kbllogo.png">
         </a>
       </div>
 
       <div class="col-12 col-sm-7 text-sm-right text-center px-0 my-auto">
-        <button class="navbar-toggler d-inline d-sm-none ml-3" type="button" data-toggle="collapse" data-target="#hiddenNav">
+        <button class="navbar-toggler d-inline d-sm-none ms-3" type="button" data-bs-toggle="collapse" data-target="#hiddenNav">
           <span class="navbar-toggler-icon"></span>
         </button>
         <a class="kbl-btn-1" target="_blank" rel="noopener noreferrer" href="http://bioinfo.usu.edu/covidTracker/">
             Covid 19 Tracker
         </a>
-        <a class="kbl-btn-1 ml-2" href="/contact">
+        <a class="kbl-btn-1 ms-2" href="/contact">
             Contact
         </a>
       </div>
 
       <div class="col-12 mt-auto d-none d-md-block">
         <section class="row">
-          <div class="col-12 text-right">
+          <div class="col-12 text-end">
             {% from "./_navbar-options.njk" import navOptions, calcDropdown, anchorGenBS4, toolAnchorGenBS4, genHeaderLink %}
 
             {% for option in navOptions %}
@@ -51,7 +51,7 @@
         <div class="col-12 mt-auto">
           {% for option in navOptions %}
             <section class="row py-1">
-              <span class="bs4 col ml-2 {{ calcDropdown(option.options)}} {{ currentRoute(option.name, activePage) }}">
+              <span class="bs4 col ms-2 {{ calcDropdown(option.options)}} {{ currentRoute(option.name, activePage) }}">
                   {{ anchorGenBS4Small(option.name, option.options, option.link) }}
                   {% if option.options %}
                   <div class="dropdown-menu bs4 nav-dropdown mt-2">
@@ -69,7 +69,7 @@
 
     </section>
 
-    <button class="navbar-toggler d-none d-sm-block d-md-none" type="button" data-toggle="collapse" data-target="#hiddenNav">
+    <button class="navbar-toggler d-none d-sm-block d-md-none" type="button" data-bs-toggle="collapse" data-target="#hiddenNav">
       <span class="navbar-toggler-icon"></span>
     </button>
   </article>

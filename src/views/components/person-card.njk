@@ -16,10 +16,10 @@
 
 {% macro personCardModal(person) %}
   <div class="kbl-person-card-container mb-3">
-    <div class="kbl-person-card select text-left" data-toggle="modal" data-target="#{{ person.modifier }}Modal">
+    <div class="kbl-person-card select text-start" data-bs-toggle="modal" data-target="#{{ person.modifier }}Modal">
       <figure class="mb-0">
         <img class="w-100 mb-2" style="height: 250px;" src="{{ RaikouServer }}{{ person.img }}">
-        <figcaption class="pb-2 text-left px-3">
+        <figcaption class="pb-2 text-start px-3">
           <div class="title-wrapper">
             <div class="card-title mb-0">{{ person.name }}</div>
             <div class="card-subtitle">{{ person.subtitle }}</div>
@@ -30,7 +30,7 @@
 
     {% if person.social.length %}
       <div class="social-card mt-2 pt-1">
-        <span class="kbl-social-wrapper text-left">
+        <span class="kbl-social-wrapper text-start">
           {% for media in person.social %}
             {{ socialSet(media) }}
           {% endfor %}
@@ -43,7 +43,7 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <section class="modal-header">
-          <div class="container-fluid text-left">
+          <div class="container-fluid text-start">
             <h4 class="modal-title" style="flex-basis: 100%;">{{ person.name }}</h4>
             <h6 class="modal-subtitle" style="flex-basis: 100%;">{{ person.subtitle }}</h6>
           </div>
@@ -57,7 +57,7 @@
               <div class="col-4">
                 <img class="w-100 mb-2 modal-img" style="height: 250px;" src="{{ RaikouServer }}{{ person.img }}">
               </div>
-              <p class="col-8 text-left">
+              <p class="col-8 text-start">
                 {{ person.bio }}
               </p>
             </div>

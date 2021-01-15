@@ -65,7 +65,7 @@
 
 {% macro anchorGenBS4(name, array, link) %}
   {% if array.length %}
-    <a class="dropdown-toggle bs4 nav-option" data-toggle="dropdown" data-hover="dropdown" href="#" title="{{ name }}" data-animations="zoomIn">
+    <a class="dropdown-toggle bs4 nav-option" data-bs-toggle="dropdown" data-hover="dropdown" href="#" title="{{ name }}" data-animations="zoomIn">
       {{ name }} <span class="caret"></span>
     </a>
   {% else %}
@@ -75,7 +75,7 @@
 
 {% macro anchorGenBS4Small(name, array, link) %}
   {% if array.length %}
-    <a class="dropdown-toggle bs4 nav-option pb-0" data-toggle="dropdown" data-hover="dropdown" href="{{ link }}" title="{{ name }}" data-animations="zoomIn">
+    <a class="dropdown-toggle bs4 nav-option pb-0" data-bs-toggle="dropdown" data-hover="dropdown" href="{{ link }}" title="{{ name }}" data-animations="zoomIn">
       {{ name }} <span class="caret"></span>
     </a>
   {% else %}
@@ -95,7 +95,7 @@
 
 {% macro genHeaderAnchor(option) %}
   {% if option.options.length %}
-    <a class="dropdown-toggle nav-option" data-toggle="dropdown" href="#" title="{{ option.name }}" id="dropdownMenuLink" data-offset="40, 20">
+    <a class="dropdown-toggle nav-option" data-bs-toggle="dropdown" href="#" title="{{ option.name }}" id="dropdownMenuLink" data-offset="40, 20">
       {{ option.name }}
     </a>
   {% else %}
