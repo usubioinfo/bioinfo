@@ -52,19 +52,35 @@ app.use(cors());
 // Images can be retrieved with http://url/biotec/image/:imagename
 require('./rsc-routes')(app);
 
+let routeDict = {
+  home: 'home',
+  research: 'research',
+  people: 'people',
+  publications: 'research',
+  tools: 'tools',
+  events: 'news',
+  news: 'news'
+}
 
 // Pages
 app.get(baseUrl, (req, res) => {
-  res.render(__dirname + '/views/pages/home/home.njk');
+  let data = {
+    activeRoute: routeDict['home']
+  }
+
+  res.render(__dirname + '/views/pages/home/home.njk', data, (err, html) => {
+    if (err) return next(err);
+    res.send(html);
+  });
 });
 
 app.get('/assets/header-img', (req, res, next) => {
   const date = new Date();
   if (date.getMonth() <= 1 || date.getMonth() >= 10) {
     return res.sendFile(`${assetPath}/kbl-img/usuwinter.jpeg`);
-  } else {
-    return res.sendFile(`${assetPath}/kbl-img/ususpring6.jpg`);
   }
+
+  return res.sendFile(`${assetPath}/kbl-img/ususpring6.jpg`);
 });
 
 // Default browser behaviour fix
@@ -79,7 +95,12 @@ app.get('/publications', (req, res, next) => {
     routerYearRange = req.query.range;
   }
 
-  res.render(__dirname + `/views/pages/publications/publications.njk`, {routerYearRange}, (err, html) => {
+  let data = {
+    routerYearRange,
+    activeRoute: routeDict['publications']
+  };
+
+  res.render(__dirname + `/views/pages/publications/publications.njk`, data, (err, html) => {
     if (err) return next(err);
     res.send(html);
   });
@@ -91,7 +112,12 @@ app.get('/publications/conferences', (req, res, next) => {
     routerYearRange = req.query.range;
   }
 
-  res.render(__dirname + `/views/pages/publications/conferences/conferences.njk`, {routerYearRange}, (err, html) => {
+  let data = {
+    routerYearRange,
+    activeRoute: routeDict['publications']
+  };
+
+  res.render(__dirname + `/views/pages/publications/conferences/conferences.njk`, data, (err, html) => {
     if (err) return next(err);
     res.send(html);
   });
@@ -103,60 +129,43 @@ app.get('/events', (req, res, next) => {
     routerEventsYearRange = req.query.range;
   }
 
-  res.render(__dirname + `/views/pages/events/events.njk`, {routerEventsYearRange}, (err, html) => {
+  let data = {
+    routerEventsYearRange,
+    activeRoute: routeDict['events']
+  };
+
+  res.render(__dirname + `/views/pages/events/events.njk`, data, (err, html) => {
     if (err) return next(err);
     res.send(html);
   });
 });
 
 app.get('/:topLevelPage', (req, res, next) => {
-  res.render(__dirname + `/views/pages/${req.params.topLevelPage}/${req.params.topLevelPage}.njk`, (err, html) => {
+  let data = {activeRoute: routeDict[req.params.topLevelPage]};
+
+  res.render(__dirname + `/views/pages/${req.params.topLevelPage}/${req.params.topLevelPage}.njk`, data, (err, html) => {
     if (err) return next(err);
     res.send(html);
   });
 });
 
 app.get('/:topLevelPage/:midLevelPage', (req, res, next) => {
-  res.render(__dirname + `/views/pages/${req.params.topLevelPage}/${req.params.midLevelPage}/${req.params.midLevelPage}.njk`, (err, html) => {
+  let data = {activeRoute: routeDict[req.params.topLevelPage]};
+
+  res.render(__dirname + `/views/pages/${req.params.topLevelPage}/${req.params.midLevelPage}/${req.params.midLevelPage}.njk`, data, (err, html) => {
     if (err) return next(err);
     res.send(html);
   });
 });
 
-/*
-app.get(baseUrl, (req, res) => {
-  res.render(__dirname + '/views/pages/index/index.njk');
-});
-
-app.get(baseUrl + 'faq', (req, res) => {
-  res.render(__dirname + '/views/pages/faq/faq.njk');
-});
-
-app.get(baseUrl + 'contact', (req, res) => {
-  res.render(__dirname + '/views/pages/contact/contact.njk');
-});
-
-// SERVICES
-app.get(baseUrl + 'services/', (req, res) => {
-  res.render(__dirname + '/views/services/services.njk');
-});
-
-app.get(baseUrl + 'services/:servicename', (req, res) => {
-  const serviceString = `/views/services/${req.params.servicename}/${req.params.servicename}.njk`;
-  res.render(__dirname + serviceString);
-});
-
-//RESOURCES
-app.get(baseUrl + 'resources/:rscname', (req, res) => {
-  const rscString = `/views/resources/${req.params.rscname}/${req.params.rscname}.njk`;
-  res.render(__dirname + rscString);
-});
-*/
-
 // Handle 404s
 app.use((err, req, res, next) => {
   console.log(err);
-  res.render(__dirname + '/views/pages/err/404/404.njk');
+  let data = {activeRoute: '404'};
+  res.render(__dirname + '/views/pages/err/404/404.njk', data, (err, html) => {
+    if (err) console.log(err);
+    res.send(html);
+  });
 });
 
 app.listen(port, () => {

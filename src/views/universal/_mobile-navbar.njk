@@ -1,8 +1,10 @@
+{% from 'universal/navbar-active-route.njk' import mobileActiveRoute %}
+
 <nav class="mobile-nav-wrapper px-3 py-2 d-lg-none mb-2">
   <article class="mobile-nav">
     <div class="row h-100 pt-2 px-3">
       <section class="col text-center my-auto">
-        <a href="/home" class="mob-nav-link">
+        <a href="/home" class="mob-nav-link {{ mobileActiveRoute(activeRoute, 'home') }}">
           <div class="icon-container">
             <i class="fas fa-home mob-nav-icon"></i>
           </div>
@@ -11,7 +13,7 @@
       </section>
 
       <section class="col text-center my-auto">
-        <a href="/home" class="mob-nav-link">
+        <a href="/research" class="mob-nav-link {{ mobileActiveRoute(activeRoute, 'research') }}">
           <div class="icon-container">
             <i class="fas fa-flask mob-nav-icon"></i>
           </div>
@@ -20,7 +22,7 @@
       </section>
 
       <section class="col text-center my-auto">
-        <a href="/home" class="mob-nav-link">
+        <a href="/people" class="mob-nav-link {{ mobileActiveRoute(activeRoute, 'people') }}">
           <div class="icon-container">
             <i class="fas fa-users mob-nav-icon"></i>
           </div>
@@ -29,7 +31,7 @@
       </section>
 
       <section class="col text-center my-auto">
-        <a href="/home" class="mob-nav-link">
+        <a href="/tools" class="mob-nav-link {{ mobileActiveRoute(activeRoute, 'tools') }}">
           <div class="icon-container">
             <i class="fas fa-hammer mob-nav-icon"></i>
           </div>
@@ -38,7 +40,7 @@
       </section>
 
       <section class="col text-center my-auto">
-        <a href="/home" class="mob-nav-link">
+        <a href="/news" class="mob-nav-link {{ mobileActiveRoute(activeRoute, 'news') }}">
           <div class="icon-container">
             <i class="fas fa-newspaper mob-nav-icon"></i>
           </div>

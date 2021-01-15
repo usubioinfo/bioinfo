@@ -16,3 +16,9 @@
     current
   {% endif %}
 {% endmacro %}
+
+{% macro mobileActiveRoute(route, compareString) %}
+  {% if route === compareString %}
+    active
+  {% endif %}
+{% endmacro %}
