@@ -1,5 +1,11 @@
-nav.bs4 {
+.navbar {
+  background: white!important;
   border-bottom: 1px solid #dedede;
+  height: var(--navbar-height);
+}
+
+.nav-spacer {
+  margin-bottom: var(--navbar-height);
 }
 
 .nav-option {
