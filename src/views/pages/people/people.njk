@@ -13,7 +13,7 @@
   {% from "components/breadcrumb.njk" import breadcrumb %}
   {{ breadcrumb([{name: 'home', link: '/'}, {name: 'people', link: '/people'}]) }}
 
-  <article class="container">
+  <article class="container-fluid">
     {% include "./_new-rakesh.njk" %}
 
     {% from "components/person-card.njk" import personCardModal %}
@@ -27,9 +27,9 @@
       </div>
     </div>
 
-    <div class="row mt-3">
+    <div class="row mt-3 justify-content-center justify-content-md-start">
       {% for person in bioinfoStaff %}
-        <div class="col-md-3 col-sm-6 text-center">
+        <div class="col-md-3 col-sm-6 col-6 text-center">
           {{ personCardModal(person) }}
         </div>
       {% endfor %}
@@ -43,9 +43,9 @@
       </div>
     </div>
 
-    <div class="row mt-3">
+    <div class="row mt-3 justify-content-center justify-content-md-start">
       {% for person in gradStudents %}
-        <div class="col-md-3 col-sm-6  text-center">
+        <div class="col-md-3 col-sm-6 col-6 text-center">
           {{ personCardModal(person) }}
         </div>
       {% endfor %}
@@ -59,9 +59,9 @@
       </div>
     </div>
 
-    <div class="row mt-3">
+    <div class="row mt-3 justify-content-center justify-content-md-start">
       {% for person in undergradStudents %}
-        <div class="col-md-3 col-sm-6  text-center">
+        <div class="col-md-3 col-sm-6 col-6 text-center">
           {{ personCardModal(person) }}
         </div>
       {% endfor %}
@@ -75,9 +75,9 @@
       </div>
     </div>
 
-    <div class="row mt-3">
+    <div class="row mt-3 justify-content-center justify-content-md-start">
       {% for person in alumni %}
-        <div class="col-md-3 col-sm-6  text-center">
+        <div class="col-md-3 col-sm-6 col-6 text-center">
           {{ personCardModal(person) }}
         </div>
       {% endfor %}
