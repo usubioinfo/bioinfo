@@ -5,11 +5,33 @@
 {{ header() }}
 
 <body>
-    <header class="sabbi-site-head">
-        {% from "universal/_navbar.njk" import navbar %}
-        {{ navbar("Home") }}
-        {% include "./_head-carousel.njk" %}
-    </header><!-- /.sabbi-site-head -->
+    {% from "universal/_navbar.njk" import navbar %}
+    {{ navbar("Home") }}
+    <div class="d-none d-md-block">
+      {% include "./_head-carousel.njk" %}
+    </div>
+    <section class="container-fluid d-block d-md-none">
+      <div class="row justify-content-center my-3">
+        <div class="col-11 text-center">
+          <h3>Welcome to the KAABiL group!</h3>
+          <p class="intro">
+            We bring together biology, computer science, engineering, and other related disciplines
+            to train the next generation of data scientists
+          </p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-12 text-center">
+          <a class="kbl-btn-1-solid" target="_blank" rel="noopener noreferrer" href="http://bioinfo.usu.edu/covidTracker/">
+            Covid 19 Tracker
+          </a>
+          <a class="kbl-btn-1-solid ms-2" href="/contact">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
 
     <article class="container mt-5 px-5">
       <section class="row home-info-block-first">
