@@ -89,7 +89,7 @@ app.get('/favicon.ico', (req, res, next) => {
 })
 
 app.get('/publications', (req, res, next) => {
-  let routerYearRange = '2020';
+  let routerYearRange = '2020-2021';
 
   if (req.query.range) {
     routerYearRange = req.query.range;
@@ -107,7 +107,7 @@ app.get('/publications', (req, res, next) => {
 });
 
 app.get('/publications/conferences', (req, res, next) => {
-  let routerYearRange = '2020';
+  let routerYearRange = '2020-2021';
   if (req.query.range) {
     routerYearRange = req.query.range;
   }
@@ -124,7 +124,7 @@ app.get('/publications/conferences', (req, res, next) => {
 });
 
 app.get('/events', (req, res, next) => {
-  let routerEventsYearRange = '2020';
+  let routerEventsYearRange = '2020-2021';
   if (req.query.range) {
     routerEventsYearRange = req.query.range;
   }
