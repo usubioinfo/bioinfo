@@ -1,9 +1,9 @@
-$card-width: 250px;
+$card-width: 260px;
 
 .kbl-research-card {
   background: var(--color-bg-gray);
   border-radius: var(--border-radius);
-  word-wrap: break-word;
+  word-wrap: break-word!important;
   width: $card-width;
 
   display: flex;
@@ -32,7 +32,7 @@ $card-width: 250px;
   }
 
   .img-wrapper {
-    flex-basis: 270px;
+    flex-basis: 210px;
   }
 
   .img-tool {
