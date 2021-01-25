@@ -18,13 +18,14 @@
   margin-left: 11px;
   margin-right: 9px;
 
-  color: var(--color-text-main)!important;
+  color: var(--color-text-main);
 
   font-size: 100%;
   padding-bottom: 12px;
 
   &:hover {
     border-bottom: 4px solid var(--color-primary-bg)!important;
+    color: var(--color-primary);
   }
 
   & a {
