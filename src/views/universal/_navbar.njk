@@ -36,7 +36,6 @@
 
                 {% if option.options %}
                   <ul class="dropdown-menu nav-dropdown mt-2">
-                    {{ dropdownAnchorTitleGen(option) }}
                     {% for suboption in option.options %}
                       {{ dropdownAnchorGen(suboption) }}
                     {% endfor %}
