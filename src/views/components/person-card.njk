@@ -16,7 +16,7 @@
 
 {% macro personCardModal(person) %}
   <div class="kbl-person-card-container mb-3">
-    <div class="kbl-person-card select text-start" data-bs-toggle="modal" data-target="#{{ person.modifier }}Modal">
+    <div class="kbl-person-card select text-start" data-bs-toggle="modal" data-bs-target="#{{ person.modifier }}Modal">
       <figure class="mb-0">
         <img class="w-100 mb-2" style="height: 250px;" src="{{ RaikouServer }}{{ person.img }}">
         <figcaption class="pb-2 text-start px-3">
@@ -47,7 +47,7 @@
             <h4 class="modal-title" style="flex-basis: 100%;">{{ person.name }}</h4>
             <h6 class="modal-subtitle" style="flex-basis: 100%;">{{ person.subtitle }}</h6>
           </div>
-          <button type="button" class="kbl-close" data-dismiss="modal" aria-label="Close">
+          <button type="button" class="kbl-close" data-bs-dismiss="modal" aria-label="Close">
             <i class="fas fa-times"></i>
           </button>
         </section>
