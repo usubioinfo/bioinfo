@@ -40,6 +40,20 @@ $('#homePageBS4Carousel').on('slide.bs.carousel', (e) => {
   }
 });
 
+$('a.dropdown-toggle.nav-option').hover(function() {
+  console.log('test')
+  $(this).siblings('.nav-dropdown').addClass('d-block');
+}, function() {
+  $(this).siblings('.nav-dropdown').removeClass('d-block');
+});
+
+$('.nav-dropdown').hover(function() {
+  console.log('test')
+  $(this).addClass('d-block');
+}, function() {
+  $(this).removeClass('d-block');
+});
+
 // Init Toasts
 var toastElList = [].slice.call(document.querySelectorAll('.toast'))
 var toastList = toastElList.map(function (toastEl) {

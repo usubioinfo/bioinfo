@@ -59,9 +59,20 @@
   overflow-y: hidden;
 }
 
+@keyframes invis {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
 .nav-dropdown {
+  transform-origin: top;
   padding-top: 0!important;
   padding-bottom: 0!important;
+  transition: var(--time-mid);
+
+  &.d-block {
+    animation-name: invis;
+    animation-duration: var(--time-fast);
+  }
 }
 
 .dropdown-header {

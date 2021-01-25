@@ -3,7 +3,8 @@
 {% set research = {
   name: "Research",
   options: [
-    {name: "Research Areas", link: "/research/research-areas"}
+    {name: "Research Areas", link: "/research/research-areas"},
+    {name: "Editorials", link: "/research/editorials"}
   ],
   link: "/research"
   }
@@ -95,7 +96,7 @@
 
 {% macro genHeaderAnchor(option) %}
   {% if option.options.length %}
-    <a class="dropdown-toggle nav-option" data-bs-toggle="dropdown" href="#" title="{{ option.name }}" id="dropdownMenuLink" data-offset="40, 20">
+    <a class="dropdown-toggle nav-option" href="{{ option.link }}" title="{{ option.name }}" id="dropdownMenu{{ option.name }}" data-offset="40, 20">
       {{ option.name }}
     </a>
   {% else %}
