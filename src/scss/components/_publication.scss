@@ -1,0 +1,12 @@
+.publication .authors {
+  color: var(--color-text-soft);
+  transition: var(--time-mid);
+  border-radius: var(--border-radius);
+
+  padding: 2px 8px;
+
+  &:hover {
+    color: var(--color-text-hard);
+    background: var(--color-bg-gray);
+  }
+}
