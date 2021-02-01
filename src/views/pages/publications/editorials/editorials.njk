@@ -1,0 +1,30 @@
+{% extends "pages/template.njk" %}
+{% from "universal/_header.njk" import header %}
+
+{% block header %}
+  {{ header() }}
+  {% from "universal/_navbar.njk" import navbar %}
+  {{ navbar("Publications") }}
+
+  {% from "components/img-header.njk" import imgHeader %}
+  {{ imgHeader() }}
+
+  {% from "components/breadcrumb.njk" import breadcrumb %}
+  {{ breadcrumb([{name: 'home', link: '/'}, {name: 'publications', link: '/publications'}, {name: 'conferences', link: '/publications/editorials'}]) }}
+{% endblock %}
+
+{% from "components/publication.njk" import publication %}
+{% from "./_data.njk" import editorials %}
+
+{% block content %}
+  <article class="container">
+    <section class="pt-2 pb-4">
+      <div class="kbl-header-bar py-2 text-center mb-4">
+        <h4 class="kbl-heading my-auto">Editorials</h4>
+      </div>
+      {% for article in editorials %}
+        {{ publication(article) }}
+      {% endfor %}
+    </section>
+  </article>
+{% endblock %}
