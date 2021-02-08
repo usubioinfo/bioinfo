@@ -15,6 +15,7 @@
 
   {% from './_functions.njk' import selector %}
   {% from 'components/conf-card.njk' import confCard %}
+  {% from './dates/20-21.njk' import pub2020 %}
   {% from './dates/17-19.njk' import pub2019, pub2018, pub2017 %}
   {% from './dates/14-16.njk' import pub2016, pub2015, pub2014 %}
   {% from './dates/11-13.njk' import pub2013, pub2012 %}
@@ -22,8 +23,7 @@
   {% from './dates/02-04.njk' import pub2004, pub2002 %}
 
   {% set conferences = [
-    {range: '2020-2021', conf: [], year: '2021'},
-    {range: '2020-2021', conf: [], year: '2020'},
+    {range: '2020-2021', conf: pub2020, year: '2020'},
     {range: '2017-2019', conf: pub2019, year: '2019'},
     {range: '2017-2019', conf: pub2018, year: '2018'},
     {range: '2017-2019', conf: pub2017, year: '2017'},
