@@ -36,3 +36,40 @@ p.intro {
   color: var(--color-text-soft);
   font-weight: var(--font-weight-medium);
 }
+
+.carousel-btn {
+
+  .fa-arrow {
+    &-right, &-left {
+      color: white;
+    }
+  }
+
+  &:not(.disabled) {
+    cursor: pointer;
+
+    .fa-circle {
+      transition: var(--time-mid);
+      cursor: pointer;
+      color: var(--color-primary);
+    }
+
+    &:hover .fa-circle {
+      color: var(--color-primary-dark);
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+
+    .fa-circle {
+      transition: var(--time-mid);
+      color: var(--color-btn-gray);
+    }
+  }
+}
+
+.carousel-btn.disabled {
+  pointer-events: none;
+
+}
