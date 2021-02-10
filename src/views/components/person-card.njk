@@ -15,8 +15,8 @@
 {% endmacro %}
 
 {% macro personCardModal(person) %}
-  <div class="kbl-person-card-container mb-3">
-    <div class="kbl-person-card select text-start" data-bs-toggle="modal" data-bs-target="#{{ person.modifier }}Modal">
+  <div class="kbl-person-card-container mb-3 mx-auto">
+    <div class="kbl-person-card select text-center" data-bs-toggle="modal" data-bs-target="#{{ person.modifier }}Modal">
       <figure class="mb-0">
         <img class="w-100 mb-2" style="height: 250px;" src="{{ RaikouServer }}{{ person.img }}">
         <figcaption class="pb-2 text-start px-3">

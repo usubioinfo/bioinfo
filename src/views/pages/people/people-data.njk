@@ -89,6 +89,18 @@
   }
 %}
 
+{% set david = {
+    name: "David Guevara",
+    subtitle: "PhD",
+    modifier: "Guevara",
+    type: "Graduate",
+    bio: "n/a",
+    email: "n/a",
+    img: "/image/raw/bioinfo/profile/profile_pic.jpeg",
+    social: []
+  }
+%}
+
 {% set matt = {
     name: "Matthew Lister",
     subtitle: "HPC Administrator | CS",
@@ -109,6 +121,18 @@
     bio: "Shelby is a Biochemistry major who aspires to go into software engineering. He has worked with mobile apps, websites (including the front and back end), and desktop applications. He is a percussionist in his spare time.",
     email: "itsme@shelbymccowan.com",
     img: "/image/raw/bioinfo/profile/shelby.jpg",
+    social: []
+  }
+%}
+
+{% set kolton = {
+    name: "Kolton Hauck",
+    subtitle: "BSc | Bioengineering",
+    modifier: "Hauck",
+    type: "Undergraduate",
+    bio: "n/a",
+    email: "none",
+    img: "/image/raw/bioinfo/profile/profile_pic.jpeg",
     social: []
   }
 %}
@@ -181,6 +205,6 @@
 {% set staff = [naveen, shelby, raghav, roussie] %}
 
 {% set bioinfoStaff = [roussie] %}
-{% set gradStudents = [naveen, raghav] %}
-{% set undergradStudents = [shelby] %}
+{% set gradStudents = [naveen, raghav, david] %}
+{% set undergradStudents = [shelby, kolton] %}
 {% set alumni = [caleb, cristian, kaige, matt, nikhil, raul, suyash, udarika] %}
