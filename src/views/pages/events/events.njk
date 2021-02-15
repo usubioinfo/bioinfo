@@ -18,11 +18,17 @@
     <div class="container">
       {% from './_functions.njk' import selector, activeCheck %}
       <section class="row justify-content-center my-5">
+        {{ selector("2021", routerEventsYearRange) }}
         {{ selector("2020", routerEventsYearRange) }}
         {{ selector("2019", routerEventsYearRange) }}
         {{ selector("2018", routerEventsYearRange) }}
         {{ selector("2013", routerEventsYearRange) }}
       </section>
+
+      <section class="{{ activeCheck('2021', routerEventsYearRange) }}" id="21">
+        <h4 class="kbl-heading text-center">2021</h4>
+      </section>
+
       <section class="{{ activeCheck('2020', routerEventsYearRange) }}" id="20">
         <h4 class="kbl-heading text-center">2020</h4>
         <div class="row justify-content-center">

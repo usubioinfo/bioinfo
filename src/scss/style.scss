@@ -275,7 +275,7 @@ footer {
     margin-top: 55px;
     margin-bottom: 55px;
     padding: 45px;
-    border-radius: 4px; }
+    border-radius: var(--border-radius); }
 
 @media (max-width: 767px) {
   .stage-halfbol_content .stage-title {

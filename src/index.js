@@ -124,7 +124,7 @@ app.get('/publications/conferences', (req, res, next) => {
 });
 
 app.get('/events', (req, res, next) => {
-  let routerEventsYearRange = '2020-2021';
+  let routerEventsYearRange = '2021';
   if (req.query.range) {
     routerEventsYearRange = req.query.range;
   }
