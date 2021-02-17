@@ -24,8 +24,8 @@
           </div>
           <div class="row">
             {% for pic in event.media %}
-              <img class="col-12 col-sm-6 col-md-4 my-3 event-thumbnail" style="cursor: pointer;"
-                data-bs-toggle="modal" data-target="#modal{{ loop.index0 }}" src="{{ pic }}">
+              <img class="col-12 col-sm-6 col-md-4 my-3 event-thumbnail"
+                data-bs-toggle="modal" data-bs-target="#modal{{ loop.index0 }}" src="{{ pic }}">
 
               <div class="modal fade" id="modal{{ loop.index0 }}" tabindex="-1">
                 <div class="modal-dialog">

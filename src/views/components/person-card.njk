@@ -82,5 +82,7 @@
     <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="kbl-icon-{{ social.type }} correct-fa align-middle"><i class="ai ai-researchgate-square"></i></a>
   {% elif social.type === "website" %}
     <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="kbl-icon-kbl correct-fa align-middle"><i class="fas fa-laptop"></i></a>
+  {% elif social.type === "soundcloud" %}
+  <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="kbl-icon-{{ social.type }} correct-fa align-middle"><i class="fab fa-soundcloud"></i></a>
   {% endif %}
 {% endmacro %}
