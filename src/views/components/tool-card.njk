@@ -6,7 +6,12 @@
           <img src="{{ tool.img }}">
         </section>
         <section class="px-3 py-2 title">
-          <div>{{ tool.title }}</div>
+          <div class="w-100">
+            <span>{{ tool.title }}</span>
+            <span id="{{ tool.title }}" class="uptime float-end my-auto">
+              <i class="fas fa-circle"></i>
+            </span>
+          </div>
         </section>
       </a>
     </div>
