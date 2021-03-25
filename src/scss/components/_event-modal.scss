@@ -1,0 +1,33 @@
+.event-modal .modal-img {
+
+}
+
+.modal-btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .modal-btn {
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &.disabled {
+      pointer-events: none;
+      color: var(--color-btn-gray);
+    }
+
+    &:hover:not(.disabled) {
+      color: var(--color-primary);
+    }
+  }
+}
+
+.event-modal-container {
+  background: transparent;
+
+  .event-modal-img {
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border-dark-gray);
+  }
+}
