@@ -14,6 +14,8 @@
   const modalImgs = [...document.getElementsByClassName('event-thumbnail')].map((el, index) => {
     el.addEventListener('click', () => {
       selectedIndex = index;
+      console.log(selectedIndex);
+      modalImg.setAttribute('src', modalImgs[selectedIndex]);
     });
 
     return el.getAttribute('src');

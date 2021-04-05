@@ -26,13 +26,13 @@
             {% for pic in event.media %}
               <section class="col-12 col-sm-6 col-md-4 my-3 ">
                 <img class="event-thumbnail" style="cursor: pointer;"
-                  data-bs-toggle="modal" data-bs-target="#modal{{ loop.index0 }}" src="{{ pic }}">
+                  data-bs-toggle="modal" data-bs-target="#modal1" src="{{ pic }}">
               </section>
-
-              {% from "components/event-modal.njk" import EventModal %}
-
-              {{ EventModal(loop.index0, pic) }}
             {% endfor %}
+
+            {% from "components/event-modal.njk" import EventModal %}
+
+            {{ EventModal(1, event.media[0]) }}
           </section>
         </div>
       </div>
