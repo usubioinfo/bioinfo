@@ -15,8 +15,9 @@
     <section class="col-3">
       <span class="kbl-text">
         {% if article.link.length %}
+          DOI:
           <a class="kbl-link" target="_blank" href="{{ article.link }}">
-            <b>Visit<sup> <i class="fas fa-external-link-alt"></i></sup></b>
+             {{ article.link }}
           </a>
         {% endif %}
       </span>
