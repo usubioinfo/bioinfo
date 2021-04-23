@@ -63,7 +63,7 @@ let routeDict = {
 }
 
 // Pages
-app.get(baseUrl, (req, res) => {
+app.get(baseUrl, (req, res, next) => {
   let data = {
     activeRoute: routeDict['home']
   }
