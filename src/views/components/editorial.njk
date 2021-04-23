@@ -1,0 +1,26 @@
+{% macro editorial(article) %}
+  <article class="row py-2 publication">
+    <section class="col-3">
+      <p class="authors">
+        {{ article.authors | safe }}
+      </p>
+    </section>
+
+    <section class="col-6">
+      <p class="kbl-text">
+        {{ article.content | safe }}
+      <p>
+    </section>
+
+    <section class="col-3">
+      <span class="kbl-text">
+        {% if article.link.length %}
+          DOI:
+          <a class="kbl-link" target="_blank" href="{{ article.link }}">
+             {{ article.link }}
+          </a>
+        {% endif %}
+      </span>
+    </section>
+  </article>
+{% endmacro %}

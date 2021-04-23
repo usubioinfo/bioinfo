@@ -50,6 +50,13 @@ $card-width: 220px;
 
 .modal-img {
   width: 210px;
+  border-radius: var(--border-radius);
+  border: 1px solid transparent;
+  transition: var(--time-mid);
+
+  &:hover {
+    border-color: var(--color-border-gray);
+  }
 }
 
 .modal-subtitle {

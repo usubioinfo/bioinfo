@@ -40,3 +40,16 @@
   background: var(--color-bg-gray);
   border-radius: var(--border-radius);
 }
+
+.uptime {
+  font-size: 50%;
+  color: #bbb;
+
+  &.up {
+    color: #13b462;
+  }
+
+  &.down {
+    color: #bd4c4c;
+  }
+}

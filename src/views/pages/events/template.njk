@@ -9,48 +9,39 @@
     {% from "universal/_navbar.njk" import navbar %}
     {{ navbar("Events") }}
 
-    <div class="container blog" style="margin-top: 103px;">
+    <article class="container blog" style="margin-top: 103px;">
       <div class="row justify-content-center">
         <div class="col-6 text-center">
           <h1 class="text-center blog">{{ title }}</h1>
-          <img class="img-fluid col-12 p-0" src="{{ event.img }}">
-          <div class="text-start event-details mt-2">
-            <span class="me-4"><i class="ion-location me-2"></i>{{ event.location }}</span>
-            <span><i class="ion-calendar me-3"></i>{{ event.date }}</span>
-          </div>
-          <div class="text-start">
+          <img class="img-fluid col-12 p-0 event-img" src="{{ event.img }}">
+          <section class="text-start event-details mt-2">
+            <span class="me-4 kbl-text-soft"><i class="ion-location me-2"></i>{{ event.location }}</span>
+            <span class="kbl-text-soft"><i class="ion-calendar me-3"></i>{{ event.date }}</span>
+          </section>
+          <section class="text-start">
             {% include (file) %}
             <h3 class="kbl-heading pt-4">From Media</h3>
-          </div>
-          <div class="row">
+          </section>
+          <section class="row">
             {% for pic in event.media %}
-              <img class="col-12 col-sm-6 col-md-4 my-3 event-thumbnail" style="cursor: pointer;"
-                data-bs-toggle="modal" data-target="#modal{{ loop.index0 }}" src="{{ pic }}">
-
-              <div class="modal fade" id="modal{{ loop.index0 }}" tabindex="-1">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-body">
-                      <section class="container-fluid">
-                        <div class="row no-gutters">
-                          <div class="col-12">
-                            <img class="img-fluid" src="{{ pic }}"/>
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <section class="col-12 col-sm-6 col-md-4 my-3 ">
+                <img class="event-thumbnail" style="cursor: pointer;"
+                  data-bs-toggle="modal" data-bs-target="#modal1" src="{{ pic }}">
+              </section>
             {% endfor %}
-          </div>
+
+            {% from "components/event-modal.njk" import EventModal %}
+
+            {{ EventModal(1, event.media[0]) }}
+          </section>
         </div>
       </div>
-    </div>
+    </article>
 
     {% include "universal/_footer.njk" %}
     {% from "universal/_footer-scripts.njk" import scripts %}
     {{ scripts() }}
+    <script src="assets/js/kbl/events-ss.js"></script>
   </body>
 </html>
 {% endmacro %}

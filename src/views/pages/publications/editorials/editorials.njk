@@ -13,7 +13,7 @@
   {{ breadcrumb([{name: 'home', link: '/'}, {name: 'publications', link: '/publications'}, {name: 'conferences', link: '/publications/editorials'}]) }}
 {% endblock %}
 
-{% from "components/publication.njk" import publication %}
+{% from "components/editorial.njk" import editorial %}
 {% from "./_data.njk" import editorials %}
 
 {% block content %}
@@ -23,7 +23,7 @@
         <h4 class="kbl-heading my-auto">Editorials</h4>
       </div>
       {% for article in editorials %}
-        {{ publication(article) }}
+        {{ editorial(article) }}
       {% endfor %}
     </section>
   </article>

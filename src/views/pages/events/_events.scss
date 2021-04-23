@@ -1,0 +1,13 @@
+.event-img {
+  border-radius: var(--border-radius);
+}
+
+.event-thumbnail {
+  border-radius: var(--border-radius);
+  border: solid 1px transparent;
+  transition: var(--time-mid);
+
+  &:hover {
+    border-color: var(--color-primary-light);
+  }
+}
