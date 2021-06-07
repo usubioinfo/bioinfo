@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "setsid sh -c 'npm run dev-scss & npm run dev-js' &",
     "build-task:scss-compile": "node-sass-chokidar --source-map true --output-style compressed src/scss/ -o assets/kbl-css",
     "build-task:autoprefixer": "postcss assets/kbl-css/*.css --use autoprefixer -d assets/kbl-css",
     "sass:build": "npm-run-all -p build-task:*",
