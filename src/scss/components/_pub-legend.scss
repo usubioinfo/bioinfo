@@ -1,0 +1,27 @@
+.pub-legend-container {
+  color: transparent;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover:not(.selected) {
+    color: var(--color-primary-bg);
+  }
+
+  &.selected {
+    color: var(--color-primary-very-light);
+
+    .pub-legend-icon {
+      color: var(--color-primary-dark);
+    }
+  }
+
+  .pub-legend-icon {
+    font-size: 120%;
+    color: var(--color-primary);
+  }
+}
+
+.pub-text {
+  font-size: 110%;
+  font-weight: 600;
+}
