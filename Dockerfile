@@ -3,6 +3,7 @@ WORKDIR	~/apps/bioinformatics
 COPY package*.json ./
 
 RUN npm	install
+RUN npm audit fix
 
 COPY . .
 
