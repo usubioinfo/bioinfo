@@ -2,7 +2,7 @@
   const pubButtons = [...document.getElementsByClassName('pub-legend-container')];
   const pubTextEl = document.getElementsByClassName('pub-text')[0];
 
-  let selectedText = 'none';
+  pubButtons[0].classList.add('selected');
 
   let textDict = {
     'none': '',
@@ -11,6 +11,9 @@
     'caret': 'Indicates contributions by students of a collaborator mentored by me'
   }
 
+  let selectedText = 'dollar';
+  pubTextEl.textContent = textDict[selectedText];
+
   for (let button of pubButtons) {
     button.addEventListener('click', (e) => {
       for (let button2 of pubButtons) {
@@ -18,7 +21,9 @@
       }
 
       button.classList.add('selected');
-      pubTextEl.textContent = textDict[button.id];
+      selectedText = button.id;
+
+      pubTextEl.textContent = textDict[selectedText];
     });
   }
 })()

@@ -4,14 +4,14 @@
   cursor: pointer;
 
   &:hover:not(.selected) {
-    color: var(--color-primary-bg);
+    color: var(--color-secondary-bg);
   }
 
   &.selected {
-    color: var(--color-primary-very-light);
+    color: var(--color-primary-bg);
 
     .pub-legend-icon {
-      color: var(--color-primary-dark);
+      color: var(--color-primary);
     }
   }
 
