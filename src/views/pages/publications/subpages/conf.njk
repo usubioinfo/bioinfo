@@ -1,0 +1,91 @@
+{% from 'components/conf-card.njk' import confCard %}
+{% from './dates/20-21.njk' import pub2020 %}
+{% from './dates/17-19.njk' import pub2019, pub2018, pub2017 %}
+{% from './dates/14-16.njk' import pub2016, pub2015, pub2014 %}
+{% from './dates/11-13.njk' import pub2013, pub2012 %}
+{% from './dates/08-10.njk' import pub2008, pub2009, pub2010 %}
+{% from './dates/02-04.njk' import pub2004, pub2002 %}
+
+<!-- I'm sorry :( I'll fix this later (I'm not going to fix this) -->
+{% set conferences = [
+  {
+    range: '2020-2021',
+    confs: [
+      {range: '2020-2021', conf: pub2020, year: '2020'}
+    ]
+  },
+  {
+    range: '2017-2019',
+    confs: [
+      {range: '2017-2019', conf: pub2019, year: '2019'},
+      {range: '2017-2019', conf: pub2018, year: '2018'},
+      {range: '2017-2019', conf: pub2017, year: '2017'}
+    ]
+  },
+  {
+    range: '2014-2016',
+    confs: [
+      {range: '2014-2016', conf: pub2016, year: '2016'},
+      {range: '2014-2016', conf: pub2015, year: '2015'},
+      {range: '2014-2016', conf: pub2014, year: '2014'}
+    ]
+  },
+  {
+    range: '2011-2013',
+    confs: [
+      {range: '2011-2013', conf: pub2013, year: '2013'},
+      {range: '2011-2013', conf: pub2012, year: '2012'}
+    ]
+  },
+  {
+    range: '2008-2010',
+    confs: [
+      {range: '2008-2010', conf: pub2010, year: '2010'},
+      {range: '2008-2010', conf: pub2009, year: '2009'},
+      {range: '2008-2010', conf: pub2008, year: '2008'}
+    ]
+  },
+  {
+    range: '2002-2004',
+    confs: [
+      {range: '2002-2004', conf: pub2004, year: '2004'},
+      {range: '2002-2004', conf: pub2002, year: '2002'}
+    ]
+  }
+]
+%}
+
+<article class="container">
+
+  <section class="row justify-content-center py-5">
+    {{ confSelector("2020-2021") }}
+    {{ confSelector("2017-2019") }}
+    {{ confSelector("2014-2016") }}
+    {{ confSelector("2011-2013") }}
+    {{ confSelector("2008-2010") }}
+    {{ confSelector("2002-2004") }}
+  </section>
+</article>
+
+<article class="container">
+  {% for confGroup in conferences %}
+    <div id="conf-{{ confGroup.range.split('-')[0] }}" class="conf-group d-none">
+      {% for confSet in confGroup.confs %}
+        <section class="row mt-5 mb-2">
+          <div class="col-12 text-center">
+            <div class="kbl-header-bar py-2">
+              <h1 class="kbl-heading">{{ confSet.year }}</h1>
+            </div>
+          </div>
+        </section>
+        <section class="row">
+          {% for conference in confSet.conf %}
+            <div class="col-12">
+              {{ confCard(conference) }}
+            </div>
+          {% endfor %}
+        </section>
+      {% endfor %}
+    </div>
+  {% endfor %}
+</article>

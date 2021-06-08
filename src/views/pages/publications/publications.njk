@@ -15,26 +15,12 @@
 
   {% from "components/publication.njk" import publication %}
   {% from "./_data.njk" import pub2021, pub2020, pub2019, pub2018, pub2016, pub2014, pub2013, pub2012, pub2011, pub2010, pub2009, pub2007, pub2006, pub2005 %}
-  {% from './_functions.njk' import selector, activeCheck, pubSelector %}
+  {% from './_functions.njk' import selector, activeCheck, pubSelector, confSelector %}
 
   <article class="container-fluid px-5 mt-5">
     <div class="container mb-4">
 
     </div>
-
-    <section class="row px-5">
-      <div class="col-3"></div>
-      <div class="col-9 text-center">
-        <div class="row justify-content-center">
-          {{ pubSelector("2020-2021") }}
-          {{ pubSelector("2017-2019") }}
-          {{ pubSelector("2014-2016") }}
-          {{ pubSelector("2011-2013") }}
-          {{ pubSelector("2008-2010") }}
-          {{ pubSelector("2005-2007") }}
-        </div>
-      </div>
-    </section>
 
     <section class="row px-5">
       <div class="col-3">
@@ -43,143 +29,12 @@
         {{ pubLegend() }}
       </div>
 
-      <div class="col-9">
-        <article class="pub-group" id="pub-2020">
-          <section class="py-4">
-            <div class="kbl-header-bar py-2 text-center mb-2">
-              <h4 class="kbl-heading my-auto">2021</h4>
-            </div>
-            {% for article in pub2021 %}
-              {{ publication(article) }}
-            {% endfor %}
-          </section>
-          <section class="py-4">
-            <div class="kbl-header-bar py-2 text-center mb-2">
-              <h4 class="kbl-heading my-auto">2020</h4>
-            </div>
-            {% for article in pub2020 %}
-              {{ publication(article) }}
-            {% endfor %}
-          </section>
-        </article>
+      <div class="col-9 d-none" id="pub-column">
+        {% include './subpages/pubs.njk' %}
+      </div>
 
-        <article class="pub-group d-none"  id="pub-2017">
-          <section class="py-4">
-            <div class="kbl-header-bar py-2 text-center mb-2">
-              <h4 class="kbl-heading my-auto">2019</h4>
-            </div>
-            {% for article in pub2019 %}
-              {{ publication(article) }}
-            {% endfor %}
-          </section>
-
-          <section class="py-4">
-            <div class="kbl-header-bar py-2 text-center mb-2">
-              <h4 class="kbl-heading my-auto">2018</h4>
-            </div>
-            {% for article in pub2018 %}
-              {{ publication(article) }}
-            {% endfor %}
-          </section>
-        </article>
-
-        <article class="pub-group d-none"  id="pub-2014">
-          <section class="py-4">
-            <div class="kbl-header-bar py-2 text-center mb-2">
-              <h4 class="kbl-heading my-auto">2016</h4>
-            </div>
-            {% for article in pub2016 %}
-              {{ publication(article) }}
-            {% endfor %}
-          </section>
-
-          <section class="py-4">
-            <div class="kbl-header-bar py-2 text-center mb-2">
-              <h4 class="kbl-heading my-auto">2014</h4>
-            </div>
-            {% for article in pub2014 %}
-              {{ publication(article) }}
-            {% endfor %}
-          </section>
-        </article>
-
-        <article class="pub-group d-none"  id="pub-2011">
-          <section class="py-4">
-            <div class="kbl-header-bar py-2 text-center mb-2">
-              <h4 class="kbl-heading my-auto">2013</h4>
-            </div>
-            {% for article in pub2013 %}
-              {{ publication(article) }}
-            {% endfor %}
-          </section>
-
-          <section class="py-4">
-            <div class="kbl-header-bar py-2 text-center mb-2">
-              <h4 class="kbl-heading my-auto">2012</h4>
-            </div>
-            {% for article in pub2012 %}
-              {{ publication(article) }}
-            {% endfor %}
-          </section>
-
-          <section class="py-4">
-            <div class="kbl-header-bar py-2 text-center mb-2">
-              <h4 class="kbl-heading my-auto">2011</h4>
-            </div>
-            {% for article in pub2011 %}
-              {{ publication(article) }}
-            {% endfor %}
-          </section>
-        </article>
-
-        <article class="pub-group d-none"  id="pub-2008">
-          <section class="py-4">
-            <div class="kbl-header-bar py-2 text-center mb-2">
-              <h4 class="kbl-heading my-auto">2010</h4>
-            </div>
-            {% for article in pub2010 %}
-              {{ publication(article) }}
-            {% endfor %}
-          </section>
-
-          <section class="py-4">
-            <div class="kbl-header-bar py-2 text-center mb-2">
-              <h4 class="kbl-heading my-auto">2009</h4>
-            </div>
-            {% for article in pub2009 %}
-              {{ publication(article) }}
-            {% endfor %}
-          </section>
-        </article>
-
-        <article class="pub-group d-none"  id="pub-2005">
-          <section class="py-4">
-            <div class="kbl-header-bar py-2 text-center mb-2">
-              <h4 class="kbl-heading my-auto">2007</h4>
-            </div>
-            {% for article in pub2007 %}
-              {{ publication(article) }}
-            {% endfor %}
-          </section>
-
-          <section class="py-4">
-            <div class="kbl-header-bar py-2 text-center mb-2">
-              <h4 class="kbl-heading my-auto">2006</h4>
-            </div>
-            {% for article in pub2006 %}
-              {{ publication(article) }}
-            {% endfor %}
-          </section>
-
-          <section class="py-4">
-            <div class="kbl-header-bar py-2 text-center mb-2">
-              <h4 class="kbl-heading my-auto">2005</h4>
-            </div>
-            {% for article in pub2005 %}
-              {{ publication(article) }}
-            {% endfor %}
-          </section>
-        </article>
+      <div class="col-9" id="conf-column">
+        {% include './subpages/conf.njk' %}
       </div>
 
 

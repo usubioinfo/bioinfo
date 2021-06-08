@@ -10,6 +10,12 @@
   </div>
 {% endmacro %}
 
+{% macro confSelector(btnString) %}
+  <div class="col-auto">
+    <button class="kbl-date-selector conf" id="{{ btnString.split('-')[0] }}">{{ btnString }}</button>
+  </div>
+{% endmacro %}
+
 {% macro activeCheck(yearString, routerYearRange) %}
   {% if yearString === routerYearRange %}
 
