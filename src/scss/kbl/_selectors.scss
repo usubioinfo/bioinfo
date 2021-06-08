@@ -5,7 +5,13 @@
   border-radius: var(--border-radius);
   font-weight: var(--font-weight-medium);
   font-size: 110%;
-  padding: 6px 13px;
+  padding: 3px 13px;
+  border: none;
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
 
   &:hover {
     background: var(--color-primary-light);

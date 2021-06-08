@@ -15,21 +15,28 @@
 
   {% from "components/publication.njk" import publication %}
   {% from "./_data.njk" import pub2021, pub2020, pub2019, pub2018, pub2016, pub2014, pub2013, pub2012, pub2011, pub2010, pub2009, pub2007, pub2006, pub2005 %}
-  {% from './_functions.njk' import selector, activeCheck %}
+  {% from './_functions.njk' import selector, activeCheck, pubSelector %}
 
   <article class="container-fluid px-5 mt-5">
     <div class="container mb-4">
-      <section class="row justify-content-center">
-        {{ selector("2020-2021", routerYearRange) }}
-        {{ selector("2017-2019", routerYearRange) }}
-        {{ selector("2014-2016", routerYearRange) }}
-        {{ selector("2011-2013", routerYearRange) }}
-        {{ selector("2008-2010", routerYearRange) }}
-        {{ selector("2005-2007", routerYearRange) }}
-      </section>
+
     </div>
 
-    <section class="row justify-content-end px-5">
+    <section class="row px-5">
+      <div class="col-3"></div>
+      <div class="col-9 text-center">
+        <div class="row justify-content-center">
+          {{ pubSelector("2020-2021") }}
+          {{ pubSelector("2017-2019") }}
+          {{ pubSelector("2014-2016") }}
+          {{ pubSelector("2011-2013") }}
+          {{ pubSelector("2008-2010") }}
+          {{ pubSelector("2005-2007") }}
+        </div>
+      </div>
+    </section>
+
+    <section class="row px-5">
       <div class="col-3">
         {% from "components/pub-legend.njk" import pubLegend %}
 
@@ -37,7 +44,7 @@
       </div>
 
       <div class="col-9">
-        <article class="{{ activeCheck('2020-2021', routerYearRange) }}">
+        <article class="pub-group" id="pub-2020">
           <section class="py-4">
             <div class="kbl-header-bar py-2 text-center mb-2">
               <h4 class="kbl-heading my-auto">2021</h4>
@@ -56,7 +63,7 @@
           </section>
         </article>
 
-        <article class="{{ activeCheck('2017-2019', routerYearRange) }}">
+        <article class="pub-group d-none"  id="pub-2017">
           <section class="py-4">
             <div class="kbl-header-bar py-2 text-center mb-2">
               <h4 class="kbl-heading my-auto">2019</h4>
@@ -76,7 +83,7 @@
           </section>
         </article>
 
-        <article class="{{ activeCheck('2014-2016', routerYearRange) }}">
+        <article class="pub-group d-none"  id="pub-2014">
           <section class="py-4">
             <div class="kbl-header-bar py-2 text-center mb-2">
               <h4 class="kbl-heading my-auto">2016</h4>
@@ -96,7 +103,7 @@
           </section>
         </article>
 
-        <article class="{{ activeCheck('2011-2013', routerYearRange) }}">
+        <article class="pub-group d-none"  id="pub-2011">
           <section class="py-4">
             <div class="kbl-header-bar py-2 text-center mb-2">
               <h4 class="kbl-heading my-auto">2013</h4>
@@ -125,7 +132,7 @@
           </section>
         </article>
 
-        <article class="{{ activeCheck('2008-2010', routerYearRange) }}">
+        <article class="pub-group d-none"  id="pub-2008">
           <section class="py-4">
             <div class="kbl-header-bar py-2 text-center mb-2">
               <h4 class="kbl-heading my-auto">2010</h4>
@@ -145,7 +152,7 @@
           </section>
         </article>
 
-        <article class="{{ activeCheck('2005-2007', routerYearRange) }}">
+        <article class="pub-group d-none"  id="pub-2005">
           <section class="py-4">
             <div class="kbl-header-bar py-2 text-center mb-2">
               <h4 class="kbl-heading my-auto">2007</h4>
@@ -183,6 +190,7 @@
   {% from "universal/_footer-scripts.njk" import scripts %}
   {{ scripts() }}
   <script src="/assets/js/kbl/pub-legend.js"></script>
+  <script src="/assets/js/kbl/publications.js"></script>
 </body>
 
 </html>

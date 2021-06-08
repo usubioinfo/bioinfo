@@ -1,13 +1,13 @@
-{% macro selector(btnString, routerYearRange) %}
-  {% if btnString === routerYearRange %}
-    <div class="col-auto">
-      <a href="/publications?range={{ btnString }}" class="kbl-date-selector active">{{ btnString }}</a>
-    </div>
-  {% else %}
-    <div class="col-auto">
-      <a href="/publications?range={{ btnString }}" class="kbl-date-selector">{{ btnString }}</a>
-    </div>
-  {% endif %}
+{% macro selector(btnString, test) %}
+  <div class="col-auto">
+    <button class="kbl-date-selector">{{ btnString }}</button>
+  </div>
+{% endmacro %}
+
+{% macro pubSelector(btnString) %}
+  <div class="col-auto">
+    <button class="kbl-date-selector pub" id="{{ btnString.split('-')[0] }}">{{ btnString }}</button>
+  </div>
 {% endmacro %}
 
 {% macro activeCheck(yearString, routerYearRange) %}
