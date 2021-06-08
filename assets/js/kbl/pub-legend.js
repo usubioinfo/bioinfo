@@ -7,8 +7,10 @@
   let textDict = {
     'none': '',
     'dollar': 'Denotes equal contributions',
-    'asterisk': 'Indicates the corresponding author. Italic font indicates contribution by bioinformatics staff member supervised by me',
-    'caret': 'Indicates contributions by students of a collaborator mentored by me'
+    'asterisk': 'Indicates the corresponding author',
+    'caret': 'Indicates contributions by students of a collaborator mentored by Dr. Rakesh Kaundal',
+    'underline': 'Contribution by undergraduate student',
+    'italic': 'Contribution by undergraduate student mentored by Dr. Rakesh Kaundal'
   }
 
   let selectedText = 'dollar';

@@ -17,19 +17,7 @@
   {% from "./_data.njk" import pub2021, pub2020, pub2019, pub2018, pub2016, pub2014, pub2013, pub2012, pub2011, pub2010, pub2009, pub2007, pub2006, pub2005 %}
   {% from './_functions.njk' import selector, activeCheck %}
 
-  <div class="container px-4">
-    <section class="row pt-5">
-      <div class="col-12 kbl-text d-none">
-        <li><b>*</b> indicates the corresponding author, italic font indicates contribution by bioinformatics staff member supervised by me</li>
-        <li><b><u>underlined font</u></b> indicates contribution by an undergraduate student mentored</li>
-        <li><b><u><em>underlined italic font</em></u></b> indicates contribution by a graduate student mentored by me.</li>
-        <li><b>$</b> denotes equal contributions</li>
-        <li><b>^</b> indicates contributions by students of a collaborator mentored by me</li>
-      </div>
-    </section>
-  </div>
-
-  <article class="container-fluid px-5">
+  <article class="container-fluid px-5 mt-5">
     <div class="container mb-4">
       <section class="row justify-content-center">
         {{ selector("2020-2021", routerYearRange) }}
