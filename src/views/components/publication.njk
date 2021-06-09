@@ -1,5 +1,5 @@
 {% macro publication(article) %}
-  <article class="row py-2 publication">
+  <article class="row py-2 publication d-none d-lg-flex">
     <section class="col-3">
       <p class="authors">
         {{ article.authors | safe }}
@@ -23,4 +23,47 @@
       </span>
     </section>
   </article>
+
+  <article class="row justify-content-center py-4 d-lg-none">
+    <div class="col-11 col-sm-8">
+      <div class="row justify-content-center publication-mob kbl-card">
+
+        <section class="col px-3 py-1">
+          <p class="kbl-text">
+            {{ article.content | safe }}
+          <p>
+        </section>
+
+      </div>
+    </div>
+  </article>
+{% endmacro %}
+
+{% macro publicationMobile(article) %}
+<article class="row py-2">
+  <div class="publication-mob card">
+    <section class="col-3">
+      <p class="authors">
+        {{ article.authors | safe }}
+      </p>
+    </section>
+
+    <section class="col-6">
+      <p class="kbl-text">
+        {{ article.content | safe }}
+      <p>
+    </section>
+
+    <section class="col-3">
+      <span class="kbl-text">
+        DOI:
+        {% if article.doiTitle.length %}
+          <a class="kbl-link" target="_blank" href="{{ article.doiLink }}">
+            {{ article.doiTitle }}<sup> <i class="fas fa-external-link-alt"></i></sup>
+          </a>
+        {% endif %}
+      </span>
+    </section>
+  </div>
+</article>
 {% endmacro %}

@@ -26,6 +26,7 @@ $color-secondary: #3b4961;
   --color-primary-light: #{tint($color-primary, 70%)};
   --color-primary-very-light: #{tint($color-primary, 45%)};
   --color-primary-bg: #{rgba($color-primary, .18)};
+  --color-primary-bg-light: #{rgba($color-primary, .09)};
 
   --color-secondary-light: #{tint($color-secondary, 70%)};
   --color-secondary-very-light: #{tint($color-secondary, 45%)};

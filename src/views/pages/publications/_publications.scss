@@ -32,3 +32,12 @@
     z-index: -1000;
   }
 }
+
+@media (max-width: 0px) {
+  .pub-container {
+    border-radius: var(--border-radius);
+    background: var(--color-primary-bg-light);
+  }
+}
+
+// Cards for mobile
