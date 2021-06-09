@@ -17,19 +17,10 @@
   {% from "./_data.njk" import pub2021, pub2020, pub2019, pub2018, pub2016, pub2014, pub2013, pub2012, pub2011, pub2010, pub2009, pub2007, pub2006, pub2005 %}
   {% from './_functions.njk' import selector, activeCheck, pubSelector, confSelector %}
 
-  <article class="container-fluid px-5 mt-5">
-    <div class="container mb-4">
+  <article class="container-fluid px-lg-5 px-2 mt-5">
 
-    </div>
-
-    <div class="row justify-content-center my-4">
-      <div class="col-6 text-center">
-
-      </div>
-    </div>
-
-    <section class="row px-5">
-      <div class="col-3 h-100">
+    <section class="row px-lg-5 px-3">
+      <div class="col-3 d-none d-lg-block h-100">
         <div class="position-relative">
           <div class="sticky-top">
             {% from "components/pub-legend.njk" import pubLegend %}
@@ -39,7 +30,7 @@
         </div>
       </div>
 
-      <div class="col-9 overflow-hidden">
+      <div class="col-12 col-lg-9 overflow-hidden">
         <section class="kbl-tab-selector text-center mb-5" id="pub-selector">
           <span class="tab-select-option" id="pub">Publications</span>
           <span class="tab-select-option" id="conf">Conferences</span>

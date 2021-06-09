@@ -5,13 +5,13 @@
 {% endmacro %}
 
 {% macro pubSelector(btnString) %}
-  <div class="col-auto">
+  <div class="col-auto py-2">
     <button class="kbl-date-selector pub" id="pub-btn-{{ btnString.split('-')[0] }}">{{ btnString }}</button>
   </div>
 {% endmacro %}
 
 {% macro confSelector(btnString) %}
-  <div class="col-auto">
+  <div class="col-auto py-2">
     <button class="kbl-date-selector conf" id="conf-btn-{{ btnString.split('-')[0] }}">{{ btnString }}</button>
   </div>
 {% endmacro %}
