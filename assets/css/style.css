@@ -34,45 +34,6 @@ email:hello@authlab.io;
 Reused Components
 -------------------------------- */
 
-.arrow-bg {
-  position: relative; }
-  .arrow-bg:after {
-    content: '';
-    position: absolute;
-    right: -70%;
-    width: 86%;
-    height: 15px;
-    background-image: url(../img/icon/arrow_bg.png);
-    background-repeat: no-repeat;
-    top: 50%;
-    transform: translateY(-50%); }
-
-.arrow-bg-lg {
-  position: relative; }
-  .arrow-bg-lg:after {
-    content: '';
-    position: absolute;
-    bottom: -9%;
-    left: 0;
-    width: 100%;
-    height: 110px;
-    background-image: url(../img/icon/arrow_bg_lgx.png);
-    background-repeat: no-repeat;
-    background-position: center bottom; }
-
-.arrow-bg-bottom {
-  position: relative; }
-  .arrow-bg-bottom:after {
-    content: '';
-    position: absolute;
-    bottom: -45px;
-    left: 0;
-    width: 100%;
-    height: 110px;
-    background-image: url(../img/icon/arrow_bg_bottom.png);
-    background-repeat: no-repeat;
-    background-position: center bottom; }
-
 @media (max-width: 767px) {
   .arrow-bg-lg:after {
     bottom: -29px;
@@ -366,71 +327,10 @@ Reused Components
       margin-bottom: 75px;
       text-align: left; } }
 
-.pub-item .elem-wrapper {
-  float: left; }
-
-.pub-item .title {
-  font-size: 14px;
-  font-size: 1rem;
-  margin-bottom: 5px;
-  font-weight: 500; }
-
-.pub-item.with-icon .elem-wrapper i {
-  background-color: transparent;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  font-size: 30px;
-  font-size: 2.14286rem;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid #D30015;
-  line-height: 55px;
-  display: block;
-  transition: all .25s ease; }
-
-.slc_des {
-  color: #666666;
-  font-style: italic;
-  font-size: 14px;
-  font-size: 1rem;
-  margin-bottom: 10px; }
-
-.pub-item .description {
-  font-family: "Montserrat";
-  font-weight: 400;
-  font-size: 14px;
-  font-size: 1rem;
-  margin-bottom: 5px;
-  padding-left: 1px; }
-  .pub-item .description .link-with-icon {
-    color: #000000; }
-    .pub-item .description .link-with-icon i {
-      font-size: 16px;
-      font-size: 1.14286rem;
-      margin-right: 10px; }
-
-.pub-item .description p {
-  line-height: 18px; }
-
 /* --------------------------------
  Site Page & Section
 -------------------------------- */
-
-.zoom {
-  transition: transform .2s;
-}
-
-.zoom:hover {
-  -ms-transform: scale(1.05); /* IE 9 */
-  -webkit-transform: scale(1.05); /* Safari 3-8 */
-  transform: scale(1.05);
-}
   /*species slider*/
-
-#species{
-  background-color: #FAFAFA;
-}
 .species-slider .owl-carousel .owl-item img{
   width: auto;
   display: inline-block;

@@ -1,0 +1,39 @@
+.pub-item .elem-wrapper {
+  float: left; }
+
+.pub-item .title {
+  font-size: 14px;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  font-weight: 500; }
+
+.pub-item.with-icon .elem-wrapper i {
+  background-color: transparent;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  font-size: 30px;
+  font-size: 2.14286rem;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #D30015;
+  line-height: 55px;
+  display: block;
+  transition: all .25s ease; }
+
+.pub-item .description {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  padding-left: 1px; }
+  .pub-item .description .link-with-icon {
+    color: #000000; }
+    .pub-item .description .link-with-icon i {
+      font-size: 16px;
+      font-size: 1.14286rem;
+      margin-right: 10px; }
+
+.pub-item .description p {
+  line-height: 18px; }
