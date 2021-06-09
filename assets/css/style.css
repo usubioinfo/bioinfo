@@ -34,30 +34,6 @@ email:hello@authlab.io;
 Reused Components
 -------------------------------- */
 
-@media (max-width: 767px) {
-  .arrow-bg-lg:after {
-    bottom: -29px;
-    height: 60px; } }
-
-@media (max-width: 550px) {
-  .arrow-bg-lg:after {
-    opacity: 0; } }
-
-/* list style */
-.list-style-round_item > li {
-  margin-bottom: 10px;
-  position: relative;
-  padding-left: 1.4em; }
-  .list-style-round_item > li:before {
-    content: '';
-    width: .7em;
-    height: .7em;
-    background: #e5eaee;
-    position: absolute;
-    left: 0;
-    top: .49em;
-    border-radius: 100%; }
-
 /* slider navigation */
 
 .sec-navigate-wrap {
