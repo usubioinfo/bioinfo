@@ -20,8 +20,8 @@
 
 .sub-column {
   opacity: 1;
-  transition: var(--time-slow);
-  transition: height var(--time-slow) ease-out, opacity var(--time-slow) ease-out;
+  transition: var(--time-fast);
+  transition: height var(--time-fast) ease-out, opacity var(--time-fast) ease-out;
   height: auto;
 
   &.off {

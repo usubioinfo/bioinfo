@@ -33,7 +33,7 @@
     border-bottom: solid 3px transparent;
     transition: var(--time-mid);
     cursor: pointer;
-    color: var(--color-text-soft);
+    color: var(--color-text-ghost);
     border-top-right-radius: var(--border-radius);
     border-top-left-radius: var(--border-radius);
 
@@ -41,6 +41,7 @@
     margin: 0 5px;
 
     &:hover:not(.selected) {
+      color: var(--color-text-soft);
       border-color: var(--color-primary-very-light);
     }
 
