@@ -15,7 +15,7 @@
   confGroups[0].classList.remove('d-none');
   subColumns[0].classList.remove('off');
 
-  document.body.classList.add('overflow-hidden');
+  // document.body.classList.add('overflow-hidden');
 
   for (let pubButton of pubDateButtons) {
     pubButton.addEventListener('click', (e) => {

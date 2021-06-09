@@ -28,11 +28,15 @@
       </div>
     </div>
 
-    <section class="row px-5 overflow-hidden">
-      <div class="col-3">
-        {% from "components/pub-legend.njk" import pubLegend %}
+    <section class="row px-5">
+      <div class="col-3 h-100">
+        <div class="position-relative">
+          <div class="sticky-top">
+            {% from "components/pub-legend.njk" import pubLegend %}
 
-        {{ pubLegend() }}
+            {{ pubLegend() }}
+          </div>
+        </div>
       </div>
 
       <div class="col-9 overflow-hidden">
