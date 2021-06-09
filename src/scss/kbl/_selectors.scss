@@ -23,3 +23,30 @@
     color: #fff;
   }
 }
+
+.kbl-tab-selector {
+  transition: var(--time-fast);
+  font-weight: var(--font-weight-medium);
+  font-size: 150%;
+
+  .tab-select-option {
+    border-bottom: solid 3px transparent;
+    transition: var(--time-mid);
+    cursor: pointer;
+    color: var(--color-text-soft);
+    border-top-right-radius: var(--border-radius);
+    border-top-left-radius: var(--border-radius);
+
+    padding: 3px 9px;
+    margin: 0 5px;
+
+    &:hover:not(.selected) {
+      border-color: var(--color-primary-very-light);
+    }
+
+    &.selected {
+      border-color: var(--color-primary);
+      color: var(--color-text-main);
+    }
+  }
+}

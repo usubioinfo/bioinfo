@@ -17,3 +17,16 @@
     color: #fff!important;
   }
 }
+
+.sub-column {
+  opacity: 1;
+  transition: var(--time-slow);
+  transition: height var(--time-slow) ease-out, opacity var(--time-slow) ease-out;
+  height: auto;
+
+  &.off {
+    opacity: 0;
+    height: 0;
+    position: absolute;
+  }
+}
