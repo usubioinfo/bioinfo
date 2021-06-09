@@ -28,7 +28,7 @@
       }
 
       pubButton.classList.add('active');
-      document.getElementById(`pub-${pubButton.id}`).classList.remove('d-none');
+      document.getElementById(`pub-${pubButton.id.split('-')[2]}`).classList.remove('d-none');
     });
   }
 
@@ -38,12 +38,14 @@
         button.classList.remove('active');
       }
 
+      console.log('click')
+
       for (let group of confGroups) {
         group.classList.add('d-none');
       }
 
       confButton.classList.add('active');
-      document.getElementById(`conf-${confButton.id}`).classList.remove('d-none');
+      document.getElementById(`conf-${confButton.id.split('-')[2]}`).classList.remove('d-none');
     });
   }
 

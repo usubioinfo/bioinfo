@@ -7,14 +7,14 @@
   font-size: 110%;
   padding: 6px 13px!important;
 
-  &:hover {
-    background: var(--color-primary-light)!important;
-    color: #fff!important;
+  &:hover:not(.active) {
+    background: var(--color-primary-light);
+    color: #fff;
   }
 
   &.active {
-    background: var(--color-primary)!important;
-    color: #fff!important;
+    background: var(--color-primary);
+    color: #fff;
   }
 }
 
@@ -23,10 +23,12 @@
   transition: var(--time-fast);
   transition: height var(--time-fast) ease-out, opacity var(--time-fast) ease-out;
   height: auto;
+  z-index: 1000;
 
   &.off {
     opacity: 0;
     height: 0;
     position: absolute;
+    z-index: -1000;
   }
 }
