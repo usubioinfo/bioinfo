@@ -1,10 +1,7 @@
 const cors = require('cors');
 const express = require('express');
-const fs = require('fs');
-const https = require('https');
 const path = require('path');
 const nunjucks = require('nunjucks');
-const sass = require('node-sass-middleware');
 const SetAsyncExtension = require('nunjucks-setasync');
 const rateLimit = require('express-rate-limit');
 
@@ -36,16 +33,6 @@ nunEnv.addGlobal(`RaikouServer`, 'http://bioinfocore.usu.edu/raikou');
 
 
 nunEnv.addExtension('SetAsyncExtension', new SetAsyncExtension());
-
-app.use(baseUrl + 'scss', sass({
-    /* Options */
-    src: path.join(__dirname, 'scss'),
-    includePaths: ['scss', 'views'],
-    dest: path.join(__dirname, '/../public/css'),
-    debug: true,
-    outputStyle: 'compressed',
-    prefix:  '/css'  // Where prefix is at <link rel="stylesheets" href="prefix/style.css"/>
-}));
 
 app.use(cors());
 
