@@ -1,7 +1,7 @@
 {% macro articleLink(article) %}
   <a href="{{ article.link }}">
     <div class="kbl-container flex interactive h-100">
-      <img class="img-fluid" src="{{ article.img }}" />
+      <img class="img-fluid" src="{{ RaikouServer }}{{ article.img }}" />
       <div class="flex-text-wrapper h-100 pt-2 px-3 pb-0">
         <h5 class="kbl-heading article-header pb-1">{{ article.title }}</h5>
         <p class="article-desc mt-auto">{{ article.subtitle }}</p>

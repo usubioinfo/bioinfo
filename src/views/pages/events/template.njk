@@ -13,7 +13,7 @@
       <div class="row justify-content-center">
         <div class="col-6 text-center">
           <h1 class="text-center blog">{{ title }}</h1>
-          <img class="img-fluid col-12 p-0 event-img" src="{{ event.img }}">
+          <img class="img-fluid col-12 p-0 event-img" src="{{ RaikouServer }}{{ event.img }}">
           <section class="text-start event-details mt-2">
             <span class="me-4 kbl-text-soft"><i class="ion-location me-2"></i>{{ event.location }}</span>
             <span class="kbl-text-soft"><i class="ion-calendar me-3"></i>{{ event.date }}</span>
@@ -26,7 +26,7 @@
             {% for pic in event.media %}
               <section class="col-12 col-sm-6 col-md-4 my-3 ">
                 <img class="event-thumbnail" style="cursor: pointer;"
-                  data-bs-toggle="modal" data-bs-target="#modal1" src="{{ pic }}">
+                  data-bs-toggle="modal" data-bs-target="#modal1" src="{{ RaikouServer }}{{ pic }}">
               </section>
             {% endfor %}
 
