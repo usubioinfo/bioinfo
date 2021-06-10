@@ -30,10 +30,4 @@ jQuery(document).ready(function($) {
 			var mySequence = sequence(sequenceElement, options);
 		}
 	})();
-
-
-	$(document).on('click', '[data-toggle="lightbox"]', function(event) {
-	    event.preventDefault();
-	    $(this).ekkoLightbox();
-	});
 });
