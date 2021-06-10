@@ -1,5 +1,5 @@
-{% macro imgHeader(img="/assets/header-img") %}
+{% macro imgHeader(img="http://bioinfocore.usu.edu/raikou/header-img") %}
   <section class="container-fluid px-0">
-    <img class="kbl-header-img" src="{{ img }}"/>
+    <img class="kbl-header-img" src="{{ RaikouServer }}/header-img"/>
   </section>
 {% endmacro %}
