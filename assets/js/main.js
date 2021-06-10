@@ -9,26 +9,6 @@ email:hello@authlab.io;
 jQuery(document).ready(function($) {
 	"use strict";
 
-	var sequenceElement_single = document.getElementById("sequence-single");
-
-	// Place your Sequence options here to override defaults
-	// See: http://sequencejs.com/documentation/#options
-	var options = {
-	  startingStepAnimatesIn: true,
-	  autoPlay: false,
-	  /* Make this the same as the animateCanvasDuration */
-	  phaseThreshold: 250,
-	  preloader: false,
-	  reverseWhenNavigatingBackwards: false,
-	  fadeStepWhenSkipped: false,
-	  navigationSkip: true
-	}
-	if($(sequenceElement_single).length) {
-		var mySequence_single = sequence(sequenceElement_single, options);
-	}
-	// Launch Sequence on the element, and with the options we specified above
-
-
 	(function(){
 		var sequenceElement = document.getElementById("sequence");
 		//console.log(sequenceElement)
@@ -44,6 +24,10 @@ jQuery(document).ready(function($) {
 		  reverseWhenNavigatingBackwards: true,
 		  keyNavigation: true,
 		  fadeStepWhenSkipped: false
+		}
+		if($(sequenceElement).length) {
+		// Launch Sequence on the element, and with the options we specified above
+			var mySequence = sequence(sequenceElement, options);
 		}
 	})();
 
