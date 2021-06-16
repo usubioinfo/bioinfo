@@ -12,7 +12,7 @@
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <!-- To stop videos playing after modal is closed -->
 <script>
-$('#videoModal').on('hidden.bs.modal', () => {
+$('#videoModal').on('hidden.bs.modal', (e) => {
     $("#videoModal iframe").attr("src", $("#videoModal iframe").attr("src"));
 });
 

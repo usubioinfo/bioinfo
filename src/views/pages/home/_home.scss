@@ -74,3 +74,28 @@ p.intro {
   pointer-events: none;
 
 }
+
+.video:hover .yt-logo {
+  color: rgba(255,0,0, 0.99);
+}
+
+.video {
+  cursor: pointer;
+}
+
+.yt-logo {
+  transition: 0.4s;
+  position: absolute;
+  color: rgba(65,65,65,.84);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &:hover {
+
+  }
+}
+
+.contain-vid {
+  overflow: hidden;
+}
