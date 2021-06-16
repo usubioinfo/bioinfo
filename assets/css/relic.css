@@ -4,10 +4,6 @@
   background-repeat: no-repeat;
 }
 
-.kbl-header.research {
-  background-image: url(/assets/img/events_slide.jpg)!important;
-}
-
 .pub-item .elem-wrapper {
   float: left; }
 
@@ -118,9 +114,9 @@
   .sec-navigate-wrap .seq-next {
     float: right;
     margin-right: 45px;
-    background-image: url(../img/icon/arrow-right.png); }
+    background-image: url(http://bioinfocore.usu.edu/raikou/image/bioinfo/icon/arrow-right.png); }
   .sec-navigate-wrap .seq-prev {
-    background-image: url(../img/icon/arrow-left.png);
+    background-image: url(http://bioinfocore.usu.edu/raikou/image/bioinfo/icon/arrow-left.png);
     float: left;
     margin-left: 45px; }
 
