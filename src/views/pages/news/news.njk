@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 {% from "universal/_header.njk" import header %}
-{{ header() }}
+{{ header(true) }}
 
 <body>
   {% from "universal/_navbar.njk" import navbar %}
@@ -14,7 +14,7 @@
   {{ breadcrumb([{name: 'home', link: '/'}, {name: 'news', link: '/news'}]) }}
 
   <article class="container-fluid pb-5 pt-1 my-5">
-    <div class="row justify-content-center">
+    <div class="row">
 
       <!-- News - General -->
       <article class="col-11 col-md">
