@@ -1,9 +1,5 @@
 {% extends "pages/template.njk" %}
 
-{% block header %}
-  {{ header(true) }}
-{% endblock %}
-
 {% block navbar %}
   {% from "universal/_navbar.njk" import navbar %}
   {{ navbar("Home") }}
@@ -172,8 +168,4 @@
     {% include "./paper.njk" %}
   </div>
   {% include "./the-team.njk" %}
-{% endblock %}
-
-{% block scripts %}
-  {{ scripts(true, true) }}
 {% endblock %}
