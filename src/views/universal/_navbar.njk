@@ -25,24 +25,80 @@
           </div>
         </section>
 
-        <section class="row">
+        <section class="row justify-content-end">
+          <div class="col-6 text-end">
+            <section class="row justify-content-end">
+
+              {% from "./_navbar-options.njk" import navOptions, calcDropdown, anchorGenBS4, toolAnchorGenBS4, genHeaderLink %}
+
+              {% from "./_navbar-options.njk" import genHeaderAnchor, dropdownAnchorGen, dropdownAnchorTitleGen %}
+              {% for option in navOptions %}
+                <span class="col px-0 {{ calcDropdown(option.options) }} {{ currentRoute(option.name, activePage) }}">
+                  {{ genHeaderAnchor(option) }}
+
+                  {% if option.options %}
+                    <ul class="dropdown-menu nav-dropdown mt-2">
+                      {% for suboption in option.options %}
+                        {{ dropdownAnchorGen(suboption) }}
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                </span>
+              {% endfor %}
+            </section>
+          </div>
+        </section>
+
+      </div>
+
+    </section>
+  </article>
+</nav>
+<div class="nav-spacer d-none d-lg-block"></div>
+{% endmacro %}
+
+{% macro newNav() %}
+<nav class="navbar navbar-expand-md fixed-top shadow-md d-none d-lg-block">
+  <article class="container-fluid px-3">
+    <section class="row px-5 w-100 mb-1">
+
+      <div class="col-3 ps-5">
+        <a class="navbar-brand d-inline" href="/">
+          <img src="{{ RaikouServer }}/image/bioinfo/kbllogo.png">
+        </a>
+      </div>
+
+      <div class="col-9 mt-auto pe-5">
+
+        <section class="row pb-4">
           <div class="col-12 text-end">
-            {% from "./_navbar-options.njk" import navOptions, calcDropdown, anchorGenBS4, toolAnchorGenBS4, genHeaderLink %}
+            <a class="kbl-btn-1" target="_blank" rel="noopener noreferrer" href="http://bioinfo.usu.edu/covidTracker/">
+                Covid 19 Tracker
+            </a>
+            <a class="kbl-btn-1 ms-2" href="/contact">
+                Contact
+            </a>
+          </div>
+        </section>
 
-            {% from "./_navbar-options.njk" import genHeaderAnchor, dropdownAnchorGen, dropdownAnchorTitleGen %}
-            {% for option in navOptions %}
-              <span class="col {{ calcDropdown(option.options) }} {{ currentRoute(option.name, activePage) }}">
-                {{ genHeaderAnchor(option) }}
+        <section class="row">
+          <div class="col-12 text-end position-relative">
+            <div class="row justify-content-end">
+              <div class="col-1">
+                <div class="dropdown">
+                  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown link
+                  </a>
 
-                {% if option.options %}
-                  <ul class="dropdown-menu nav-dropdown mt-2">
-                    {% for suboption in option.options %}
-                      {{ dropdownAnchorGen(suboption) }}
-                    {% endfor %}
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
                   </ul>
-                {% endif %}
-              </span>
-            {% endfor %}
+                </div>
+              </div>
+
+            </div>
 
           </div>
         </section>

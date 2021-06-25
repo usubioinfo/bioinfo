@@ -19,7 +19,10 @@
     {% endblock %}
 
     {% include "universal/_footer.njk" %}
-    {{ scripts() }}
+
+    {% block scripts %}
+      {{ scripts() }}
+    {% endblock %}
   </body>
 
 </html>
