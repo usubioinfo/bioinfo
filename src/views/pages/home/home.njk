@@ -1,178 +1,171 @@
-<!DOCTYPE html>
-{% set bs4 = true %}
-<html class="no-js" lang="en">
-{% from "universal/_header.njk" import header %}
-{{ header() }}
+{% extends "pages/template.njk" %}
 
-<body>
-    {% from "universal/_navbar.njk" import navbar %}
-    {{ navbar("Home") }}
-    <div class="d-none d-md-block">
-      {% include "./_head-carousel.njk" %}
+{% block navbar %}
+  {% from "universal/_navbar.njk" import navbar %}
+  {{ navbar("Home") }}
+{% endblock %}
+
+{% block content %}
+  <div class="d-none d-md-block">
+    {% include "./_head-carousel.njk" %}
+  </div>
+  <section class="container-fluid d-block d-md-none">
+    <div class="row justify-content-center my-3">
+      <div class="col-11 text-center">
+        <h3>Welcome to the KAABiL group!</h3>
+        <p class="intro">
+          We bring together biology, computer science, engineering, and other related disciplines
+          to train the next generation of data scientists
+        </p>
+      </div>
     </div>
-    <section class="container-fluid d-block d-md-none">
-      <div class="row justify-content-center my-3">
-        <div class="col-11 text-center">
-          <h3>Welcome to the KAABiL group!</h3>
-          <p class="intro">
-            We bring together biology, computer science, engineering, and other related disciplines
-            to train the next generation of data scientists
-          </p>
-        </div>
-      </div>
 
-      <div class="row justify-content-center">
-        <div class="col-12 text-center">
-          <a class="kbl-btn-1-solid" target="_blank" rel="noopener noreferrer" href="http://bioinfo.usu.edu/covidTracker/">
-            Covid 19 Tracker
-          </a>
-          <a class="kbl-btn-1-solid ms-2" href="/contact">
-            Contact Us
-          </a>
-        </div>
+    <div class="row justify-content-center">
+      <div class="col-12 text-center">
+        <a class="kbl-btn-1-solid" target="_blank" rel="noopener noreferrer" href="http://bioinfo.usu.edu/covidTracker/">
+          Covid 19 Tracker
+        </a>
+        <a class="kbl-btn-1-solid ms-2" href="/contact">
+          Contact Us
+        </a>
       </div>
+    </div>
+  </section>
+
+  <article class="container mt-5 px-5">
+    <section class="row home-info-block-first">
+      {% include "./_multi-carousel-new.njk" %}
     </section>
 
-    <article class="container mt-5 px-5">
-      <section class="row home-info-block-first">
-        {% include "./_multi-carousel-new.njk" %}
+    <section class="row mt-5 justify-content-center">
+      <section class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-0">
+        <div class="h-100 gray-bg py-3 px-4 flex-col">
+          <h5 class="kbl-heading pb-2">Latest News:</h5>
+
+          <section class="home-news-item py-3">
+            <a class="hn-header shrink d-inline-block" href="http://bioinfo.usu.edu/covidTracker/">COVID-19 tracker built by KAABiL is online</a>
+            <div class="hn-date">April 10, 2020</div>
+          </section>
+
+          <section class="home-news-item py-3">
+            <a class="hn-header shrink d-inline-block" href="/events">Host-pathogen interaction paper accepted in Briefings in Bioinformatics</a>
+            <div class="hn-date">Nov 20, 2019</div>
+          </section>
+
+          <section class="home-news-item py-3">
+            <a class="hn-header shrink d-inline-block" href="/events">Plant-mSubP subcellular localization tool accepted for publication in AoB Plants</a>
+            <div class="hn-date">Oct 8, 2019</div>
+          </section>
+
+          <h6 class="kbl-heading pt-3 mt-auto">
+            <a class="kbl-link dull" href="/news">View All</a>
+          </h6>
+        </div>
       </section>
 
-      <section class="row mt-5 justify-content-center">
-        <section class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-0">
-          <div class="h-100 gray-bg py-3 px-4 flex-col">
-            <h5 class="kbl-heading pb-2">Latest News:</h5>
+      <section class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-0 d-lg-none">
+        <div class="h-100 gray-bg py-3 px-4 flex-col">
+          <h5 class="kbl-heading pb-2">Latest Events:</h5>
 
-            <section class="home-news-item py-3">
-              <a class="hn-header shrink d-inline-block" href="http://bioinfo.usu.edu/covidTracker/">COVID-19 tracker built by KAABiL is online</a>
-              <div class="hn-date">April 10, 2020</div>
-            </section>
+          <section class="home-news-item py-2">
+            <a class="hn-header" href="/events/winter">Utah State University Winter</a>
+            <div class="hn-date">December 1, 2019</div>
+          </section>
 
-            <section class="home-news-item py-3">
-              <a class="hn-header shrink d-inline-block" href="/events">Host-pathogen interaction paper accepted in Briefings in Bioinformatics</a>
-              <div class="hn-date">Nov 20, 2019</div>
-            </section>
+          <section class="home-news-item py-2">
+            <a class="hn-header" href="/events/cricket">Cricket in Utah</a>
+            <div class="hn-date">July 13, 2019</div>
+          </section>
 
-            <section class="home-news-item py-3">
-              <a class="hn-header shrink d-inline-block" href="/events">Plant-mSubP subcellular localization tool accepted for publication in AoB Plants</a>
-              <div class="hn-date">Oct 8, 2019</div>
-            </section>
+          <section class="home-news-item py-2">
+            <a class="hn-header" href="/events/psc">PSC Showcase</a>
+            <div class="hn-date">March 23, 2019</div>
+          </section>
 
-            <h6 class="kbl-heading pt-3 mt-auto">
-              <a class="kbl-link dull" href="/news">View All</a>
-            </h6>
-          </div>
-        </section>
+          <section class="home-news-item py-2">
+            <a class="hn-header" href="/pag">Plant Animal Genome Conference</a>
+            <div class="hn-date">Jan 12, 2019</div>
+          </section>
 
-        <section class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-0 d-lg-none">
-          <div class="h-100 gray-bg py-3 px-4 flex-col">
-            <h5 class="kbl-heading pb-2">Latest Events:</h5>
-
-            <section class="home-news-item py-2">
-              <a class="hn-header" href="/events/winter">Utah State University Winter</a>
-              <div class="hn-date">December 1, 2019</div>
-            </section>
-
-            <section class="home-news-item py-2">
-              <a class="hn-header" href="/events/cricket">Cricket in Utah</a>
-              <div class="hn-date">July 13, 2019</div>
-            </section>
-
-            <section class="home-news-item py-2">
-              <a class="hn-header" href="/events/psc">PSC Showcase</a>
-              <div class="hn-date">March 23, 2019</div>
-            </section>
-
-            <section class="home-news-item py-2">
-              <a class="hn-header" href="/pag">Plant Animal Genome Conference</a>
-              <div class="hn-date">Jan 12, 2019</div>
-            </section>
-
-            <h6 class="kbl-heading pt-3 mt-auto">
-              <a class="kbl-link dull" href="/events">View All</a>
-            </h6>
-          </div>
-        </section>
-
-        <section class="col-12 col-sm-8 col-md-6 col-lg-4 mb-3 mb-lg-0">
-          <div class="h-100 gray-bg">
-            <section class="mb-3 position-relative video" data-bs-toggle="modal" data-bs-target="#videoModal">
-              <i class="fab fa-youtube fa-5x yt-logo"></i>
-              <img src="{{ RaikouServer }}/image/raw/bioinfo/rs_usu_winter.jpg?w=742&h=432" class="img-fluid">
-            </section>
-            <div class="modal fade" id="videoModal" tabindex="-1">
-              {% include "./video-modal.njk" %}
-            </div>
-            <section class="px-4">
-              <div class="kbl-heading text-center remarkable">Dr. Kaundal's Remarkable Journey</div>
-              <p class="kbl-text text-center">
-                Our research has appeared in high-impact journals including <i>Briefings in Bioinformatics</i>,
-                <i>Plant Physiology</i>, <i>Proteomics</i>, <i>AoB Plants</i>, and many more
-              </p>
-            </section>
-          </div>
-        </section>
-
-        <section class="col-12 col-md-10 col-lg-4 mb-3 mb-lg-0 d-none d-lg-block">
-          <div class="h-100 gray-bg py-3 px-4 flex-col">
-            <h5 class="kbl-heading pb-2">Latest Events:</h5>
-
-            <section class="home-news-item py-2">
-              <a class="hn-header" href="/events/winter">Utah State University Winter</a>
-              <div class="hn-date">December 1, 2019</div>
-            </section>
-
-            <section class="home-news-item py-2">
-              <a class="hn-header" href="/events/cricket">Cricket in Utah</a>
-              <div class="hn-date">July 13, 2019</div>
-            </section>
-
-            <section class="home-news-item py-2">
-              <a class="hn-header" href="/events/psc">PSC Showcase</a>
-              <div class="hn-date">March 23, 2019</div>
-            </section>
-
-            <section class="home-news-item py-2">
-              <a class="hn-header" href="/pag">Plant Animal Genome Conference</a>
-              <div class="hn-date">Jan 12, 2019</div>
-            </section>
-
-            <h6 class="kbl-heading pt-3 mt-auto">
-              <a class="kbl-link dull" href="/events">View All</a>
-            </h6>
-          </div>
-        </section>
+          <h6 class="kbl-heading pt-3 mt-auto">
+            <a class="kbl-link dull" href="/events">View All</a>
+          </h6>
+        </div>
       </section>
-    </article>
 
-    <div class="container mt-5 px-5 mb-3">
-      <div class="research-fact">
-        <div class="row py-5">
-          <div class="col-4 text-center">
-            <h2>20</h2>
-            <h6>JOURNAL ARTICLES</h6>
+      <section class="col-12 col-sm-8 col-md-6 col-lg-4 mb-3 mb-lg-0">
+        <div class="h-100 gray-bg">
+          <section class="mb-3 position-relative video" data-bs-toggle="modal" data-bs-target="#videoModal">
+            <i class="fab fa-youtube fa-5x yt-logo"></i>
+            <img src="{{ RaikouServer }}/image/raw/bioinfo/rs_usu_winter.jpg?w=742&h=432" class="img-fluid">
+          </section>
+          <div class="modal fade" id="videoModal" tabindex="-1">
+            {% include "./video-modal.njk" %}
           </div>
+          <section class="px-4">
+            <div class="kbl-heading text-center remarkable">Dr. Kaundal's Remarkable Journey</div>
+            <p class="kbl-text text-center">
+              Our research has appeared in high-impact journals including <i>Briefings in Bioinformatics</i>,
+              <i>Plant Physiology</i>, <i>Proteomics</i>, <i>AoB Plants</i>, and many more
+            </p>
+          </section>
+        </div>
+      </section>
 
-          <div class="col-4 text-center">
-            <h2>$1,524,048</h2>
-            <h6>GRANTS RECEIVED</h6>
-          </div>
+      <section class="col-12 col-md-10 col-lg-4 mb-3 mb-lg-0 d-none d-lg-block">
+        <div class="h-100 gray-bg py-3 px-4 flex-col">
+          <h5 class="kbl-heading pb-2">Latest Events:</h5>
 
-          <div class="col-4 text-center">
-            <h2>7</h2>
-            <h6>RESEARCH MEMBERS</h6>
-          </div>
+          <section class="home-news-item py-2">
+            <a class="hn-header" href="/events/winter">Utah State University Winter</a>
+            <div class="hn-date">December 1, 2019</div>
+          </section>
+
+          <section class="home-news-item py-2">
+            <a class="hn-header" href="/events/cricket">Cricket in Utah</a>
+            <div class="hn-date">July 13, 2019</div>
+          </section>
+
+          <section class="home-news-item py-2">
+            <a class="hn-header" href="/events/psc">PSC Showcase</a>
+            <div class="hn-date">March 23, 2019</div>
+          </section>
+
+          <section class="home-news-item py-2">
+            <a class="hn-header" href="/pag">Plant Animal Genome Conference</a>
+            <div class="hn-date">Jan 12, 2019</div>
+          </section>
+
+          <h6 class="kbl-heading pt-3 mt-auto">
+            <a class="kbl-link dull" href="/events">View All</a>
+          </h6>
+        </div>
+      </section>
+    </section>
+  </article>
+
+  <div class="container mt-5 px-5 mb-3">
+    <div class="research-fact">
+      <div class="row py-5">
+        <div class="col-4 text-center">
+          <h2>20</h2>
+          <h6>JOURNAL ARTICLES</h6>
+        </div>
+
+        <div class="col-4 text-center">
+          <h2>$1,524,048</h2>
+          <h6>GRANTS RECEIVED</h6>
+        </div>
+
+        <div class="col-4 text-center">
+          <h2>7</h2>
+          <h6>RESEARCH MEMBERS</h6>
         </div>
       </div>
     </div>
-    <div class="d-none d-md-block">
-      {% include "./paper.njk" %}
-    </div>
-    {% include "./the-team.njk" %}
-
-    {% include "universal/_footer.njk" %}
-    {% from "universal/_footer-scripts.njk" import scripts %}
-    {{ scripts() }}
-</body>
-
-</html>
+  </div>
+  <div class="d-none d-md-block">
+    {% include "./paper.njk" %}
+  </div>
+  {% include "./the-team.njk" %}
+{% endblock %}
