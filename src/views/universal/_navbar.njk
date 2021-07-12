@@ -26,14 +26,14 @@
         </section>
 
         <section class="row justify-content-end">
-          <div class="col-6 text-end">
+          <div class="col-6 col-lg-11 col-xl-9 text-end">
             <section class="row justify-content-end">
 
               {% from "./_navbar-options.njk" import navOptions, calcDropdown, anchorGenBS4, toolAnchorGenBS4, genHeaderLink %}
 
               {% from "./_navbar-options.njk" import genHeaderAnchor, dropdownAnchorGen, dropdownAnchorTitleGen %}
               {% for option in navOptions %}
-                <span class="col px-0 {{ calcDropdown(option.options) }} {{ currentRoute(option.name, activePage) }}">
+                <span class="col-auto px-0 {{ calcDropdown(option.options) }} {{ currentRoute(option.name, activePage) }}">
                   {{ genHeaderAnchor(option) }}
 
                   {% if option.options %}
