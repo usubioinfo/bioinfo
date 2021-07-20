@@ -1,8 +1,23 @@
 (() => {
   document.getElementById('send').addEventListener('click', e => {
-    axios.post('http://bioinfocore.usu.edu/api/email/send')
-      .then(res => {
 
+    const name = document.getElementById('formName').value;
+    const email = document.getElementById('formEmail').value;
+    const phone = document.getElementById('formPhone').value;
+    const message = document.getElementById('formMessage').value;
+
+    const messageBody = message + '\n\n' + 'Contact me back at ' + email + ' or ' + phone;
+
+    const body = {
+      password: 'rkU56a%e$',
+      subjectLine: `Bioinfo Contact Request from ${name}`,
+      recipient: 'itsme@shelbymccowan.com',
+      messageBody: messageBody
+    }
+
+    axios.post('http://bioinfocore.usu.edu/api/email/send', body)
+      .then(res => {
+        console.log(res);
       })
   })
 })();
