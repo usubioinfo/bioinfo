@@ -151,7 +151,7 @@ app.use((err, req, res, next) => {
   let data = {activeRoute: '404'};
   res.render(__dirname + '/views/pages/err/404/404.njk', data, (err, html) => {
     if (err) console.log(err);
-    res.send(html);
+    res.status(404).send(html);
   });
 });
 
