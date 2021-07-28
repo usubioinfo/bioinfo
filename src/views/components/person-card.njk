@@ -42,30 +42,34 @@
   <div class="modal fade" id="{{ person.modifier }}Modal" tabindex="-1">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        <section class="modal-header">
-          <div class="container-fluid text-start">
-            <h4 class="modal-title" style="flex-basis: 100%;">{{ person.name }}</h4>
-            <h6 class="modal-subtitle" style="flex-basis: 100%;">{{ person.subtitle }}</h6>
-          </div>
-          <button type="button" class="kbl-close" data-bs-dismiss="modal" aria-label="Close">
-            <i class="fas fa-times"></i>
-          </button>
-        </section>
-        <section class="modal-body">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-4">
-                <img class="w-100 mb-2 modal-img" style="height: 250px;" src="{{ RaikouServer }}{{ person.img }}">
-              </div>
-              <p class="col-8 text-start">
-                {{ person.bio }}
-              </p>
+        <div class="container-fluid px-4">
+          <section class="row mt-3">
+            <div class="col text-start">
+              <h4 class="modal-title">{{ person.name }}</h4>
+              <h6 class="modal-subtitle">{{ person.subtitle }}</h6>
             </div>
-          </div>
-        </section>
-        <section class="modal-footer" style="justify-content: start;">
-          <span class="modal-pre-email">Email: </span><span class="modal-email">{{ person.email }}</span>
-        </section>
+            <div class="col-1">
+              <button type="button" class="kbl-close" data-bs-dismiss="modal" aria-label="Close">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+          </section>
+
+          <section class="row mt-3">
+            <div class="col-4">
+              <img class="w-100 mb-2 modal-img" style="height: 250px;" src="{{ RaikouServer }}{{ person.img }}">
+            </div>
+            <p class="col-8 text-start">
+              {{ person.bio }}
+            </p>
+          </section>
+
+          <section class="row mb-3 mt-2">
+            <div class="col text-start">
+              <span class="modal-pre-email">Email: </span><span class="modal-email">{{ person.email }}</span>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
   </div>
