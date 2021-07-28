@@ -20,7 +20,14 @@
   }
 %}
 
-{% set publications = { name: "Publications", options: [], link: "/publications" } %}
+{% set publications = {
+  name: "Publications",
+  options: [
+    {name: "Papers", link: "/publications?content=pub"},
+    {name: "Conferences", link: "/publications?content=conf"},
+    {name: "Editorials", link: "/publications?content=edit"}
+  ],
+  link: "/publications" } %}
 
 {% set tools = {
   name: "Tools",

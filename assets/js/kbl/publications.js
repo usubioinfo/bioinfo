@@ -8,12 +8,10 @@
   const pubGroups = [...document.getElementsByClassName('pub-group')];
   const confGroups = [...document.getElementsByClassName('conf-group')];
 
-  tabSelectButtons[0].classList.add('selected');
   pubDateButtons[0].classList.add('active');
   confDateButtons[0].classList.add('active');
 
   confGroups[0].classList.remove('d-none');
-  subColumns[0].classList.remove('off');
 
   // document.body.classList.add('overflow-hidden');
 
@@ -38,8 +36,6 @@
         button.classList.remove('active');
       }
 
-      console.log('click')
-
       for (let group of confGroups) {
         group.classList.add('d-none');
       }
@@ -59,11 +55,9 @@
         column.classList.add('off');
       }
 
-      console.log(`${tabButton.id}-column`);
-
       const col = document.getElementById(`${tabButton.id}-column`);
       col.classList.remove('off');
-      console.log(col.classList);
+
       tabButton.classList.add('selected');
     });
   }

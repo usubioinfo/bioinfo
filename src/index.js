@@ -76,15 +76,15 @@ app.get('/favicon.ico', (req, res, next) => {
 })
 
 app.get('/publications', (req, res, next) => {
-  let routerYearRange = '2020-2021';
+  let content = 'pub';
 
-  if (req.query.range) {
-    routerYearRange = req.query.range;
+  if (req.query.content) {
+    content = req.query.content;
   }
 
   let data = {
-    routerYearRange,
-    activeRoute: routeDict['publications']
+    activeRoute: routeDict['publications'],
+    content
   };
 
   res.render(__dirname + `/views/pages/publications/publications.njk`, data, (err, html) => {
