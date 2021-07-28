@@ -1,3 +1,5 @@
+$mobile-nav-radius: 9px;
+
 .mobile-nav-wrapper {
   bottom: 0;
   position: fixed;
@@ -8,7 +10,7 @@
 
 .mobile-nav {
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  border-radius: var(--border-radius);
+  border-radius: $mobile-nav-radius;
   height: 100%!important;
   background: white;
 
@@ -39,6 +41,6 @@
 
 .mob-nav-icon-text {
   font-size: 90%;
-  line-height: 14px;
+  line-height: 10px;
   vertical-align: top;
 }
