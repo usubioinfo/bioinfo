@@ -19,22 +19,30 @@
 
   <article class="container-fluid px-lg-5 px-2 mt-5">
 
-    <section class="row px-lg-5 px-3">
-      <div class="col-3 d-none d-lg-block h-100">
-        <div class="position-relative">
-          <div class="sticky-top">
-            {% from "components/pub-legend.njk" import pubLegend %}
-
-            {{ pubLegend() }}
-          </div>
-        </div>
-      </div>
+    <section class="row px-lg-5 px-3 justify-content-center">
+      
 
       <div class="col-12 col-lg-9 overflow-hidden">
-        <section class="kbl-tab-selector text-center mb-5" id="pub-selector">
-          <span class="tab-select-option {% if (content == 'pub') %}selected{% endif %}" id="pub">Papers</span>
-          <span class="tab-select-option {% if (content == 'conf') %}selected{% endif %}" id="conf">Conferences</span>
-          <span class="tab-select-option {% if (content == 'edit') %}selected{% endif %}" id="edit">Editorials</span>
+        <section class="row justify-content-center">
+          <div class="col-3">
+            <div class="sticky-top">
+              {% from "components/pub-legend.njk" import pubLegend %}
+              <div class="kbl-card py-2 px-3">
+                {{ pubLegend() }}
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="row justify-content-center mt-3">
+          <div class="col-6">
+            <section class="kbl-card mb-5 py-3">
+              <div class="kbl-tab-selector text-center" id="pub-selector">
+                <span class="tab-select-option {% if (content == 'pub') %}selected{% endif %}" id="pub">Papers</span>
+                <span class="tab-select-option {% if (content == 'conf') %}selected{% endif %}" id="conf">Conferences</span>
+                <span class="tab-select-option {% if (content == 'edit') %}selected{% endif %}" id="edit">Editorials</span>
+              </div>
+            </section>
+          </div>
         </section>
 
         <div class="position-relative">
