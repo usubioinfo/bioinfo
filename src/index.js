@@ -43,7 +43,7 @@ let routeDict = {
   home: 'home',
   research: 'research',
   people: 'people',
-  publications: 'research',
+  publications: 'publications',
   tools: 'tools',
   events: 'news',
   news: 'news'
