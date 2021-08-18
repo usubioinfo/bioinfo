@@ -13,7 +13,7 @@
   {% from "components/breadcrumb.njk" import breadcrumb %}
   {{ breadcrumb([{name: 'home', link: '/'}, {name: 'news', link: '/news'}]) }}
 
-  <article class="container-fluid pb-5 pt-1 my-5">
+  <article class="container-fluid px-5 pb-5 pt-1 my-5">
     <div class="row">
 
       <!-- News - General -->
@@ -138,25 +138,6 @@
                 <span class="date">March 26, 2020</span>
                 <h5 class="header">COVID-19 Stats Tracker</h5>
               </div>
-            </div>
-          </a>
-        </section>
-      </article>
-
-      <!-- Blog -->
-      <article class="col-11 col-md-3">
-        <section class="text-center col-header mb-1 mb-md-4 mt-4 mt-md-0" style="font-size: 140%;">
-          <b>Blog</b>
-        </section>
-
-        <section class="row news-item-container">
-          <a class="news-item col-12" href="/news/newblog">
-            <img src="{{ RaikouServer }}/image/bioinfo/blog.png" alt="...">
-            <div class="caption">
-              <h5 class="header">New Blog</h5>
-              <p class="desc">
-                KAABiL has a blog that we might write to one day.
-              </p>
             </div>
           </a>
         </section>
