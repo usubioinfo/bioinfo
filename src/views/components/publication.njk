@@ -25,43 +25,47 @@
 
   <article class="row justify-content-center py-4 d-lg-none">
     <div class="col-11 col-sm-8">
-      <div class="row justify-content-center publication-mob kbl-card">
+      <a class="d-block" href="{{ article.doiLink }}" target="_blank" rel="noreferrer noopener">
+        <div class="row justify-content-center publication-mob kbl-card">
 
-        <section class="col px-3 py-1">
-          <p class="kbl-text">
-            {{ article.content | safe }}
-          <p>
-        </section>
+          <section class="col px-3 py-1">
+            <p class="kbl-text">
+              {{ article.content | safe }}
+            <p>
+          </section>
 
-      </div>
+        </div>
+      </a>
     </div>
   </article>
 {% endmacro %}
 
 {% macro publicationMobile(article) %}
 <article class="row py-2">
-  <div class="publication-mob card">
-    <section class="col-3">
-      <p class="authors">
-        {{ article.authors | safe }}
-      </p>
-    </section>
+  <a class="d-block" href="{{ article.doiLink }}">
+    <div class="publication-mob card">
+      <section class="col-3">
+        <p class="authors">
+          {{ article.authors | safe }}
+        </p>
+      </section>
 
-    <section class="col-6">
-      <p class="kbl-text">
-        {{ article.content | safe }}
-      <p>
-    </section>
+      <section class="col-6">
+        <p class="kbl-text">
+          {{ article.content | safe }}
+        <p>
+      </section>
 
-    <section class="col-3">
-      <span class="kbl-text">
-        {% if article.doiTitle.length %}
-          <a class="kbl-link" target="_blank" href="{{ article.doiLink }}">
-            {{ article.doiTitle }}<sup> <i class="fas fa-external-link-alt"></i></sup>
-          </a>
-        {% endif %}
-      </span>
-    </section>
-  </div>
+      <section class="col-3">
+        <span class="kbl-text">
+          {% if article.doiTitle.length %}
+            <a class="kbl-link" target="_blank" href="{{ article.doiLink }}">
+              {{ article.doiTitle }}<sup> <i class="fas fa-external-link-alt"></i></sup>
+            </a>
+          {% endif %}
+        </span>
+      </section>
+    </div>
+  </a>
 </article>
 {% endmacro %}
