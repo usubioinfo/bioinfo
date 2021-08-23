@@ -1,5 +1,13 @@
+.col-header-text {
+  background: var(--color-primary-light);
+  color: white;
+  padding: 7px 25px;
+  border-radius: var(--border-radius);
+}
+
 h5.header {
   color: var(--color-text-main);
+  font-size: 100%!important;
 }
 
 .col-header {
@@ -37,7 +45,7 @@ h5.header {
   }
 
   .desc {
-    font-size: 100%;
+    font-size: 98%;
     font-weight: 400;
     color: #909090;
     margin-top: 10px;
