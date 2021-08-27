@@ -40,17 +40,17 @@
           To use GitHub, you'll first want to
           <a class="kbl-link" href="https://github.com/join" target="_blank" rel="noopener noreferrer">create an account</a>.
           After you've created an account, open a terminal on your computer. Keep in mind these instructions are for Mac/Linux users.
-          In the terminal, type in <code>cat ~/.ssh/id_rsa.pub</code><br>
-          If you get an error, that just means you haven't created an RSA key yet. To create a key, type in
-          <code>ssh-keygen -t rsa -C "your_email@example.com"</code><br>
+          In the terminal, type in <code>cat ~/.ssh/id_ed25519.pub</code><br>
+          If you get an error, that just means you haven't created a key yet. To create a key, type in
+          <code>ssh-keygen -t ed25519 -C "your_email@example.com"</code><br>
           Use the email you signed up to GitHub with. Just hit <code>Enter</code> through the prompts,
           the defaults are okay.
         </p>
 
         <p class="kbl-text text-thicc text-start">
-          Now that you've created a key, use <code>cat ~/.ssh/id_rsa.pub</code> again. Copy the output of the command,
+          Now that you've created a key, use <code>cat ~/.ssh/id_ed25519.pub</code> again. Copy the output of the command,
           it should look like this:<br>
-          <code>ssh-rsa *long string of characters* your_username@some_workstation</code><br>
+          <code>ssh-ed25519 *long string of characters* name@email.com</code><br>
         </p>
 
         <p class="kbl-text text-thicc text-start">
@@ -67,7 +67,7 @@
 
         <p class="kbl-text text-thicc text-start">
           The last part of the setup is pretty easy. In a local terminal, type in<br>
-          <code>git config --global user.name "YOUR GITHUB NAME"</code><br>
+          <code>git config --global user.name "YOUR GITHUB USERNAME"</code><br>
           then<br>
           <code>git config --global user.email "YOUR_GITHUB_EMAIL@example.com"</code><br><br>
           Make sure these are the credentials you used for your GitHub account.
