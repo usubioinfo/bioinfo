@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/MusicDev33/bioinformatics#readme",
   "dependencies": {
-    "autoprefixer": "^10.3.1",
+    "autoprefixer": "^10.3.3",
     "chokidar-cli": "^3.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
@@ -42,6 +42,6 @@
     "path": "^0.12.7",
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1",
-    "sass": "^1.37.5"
+    "sass": "^1.38.1"
   }
 }
