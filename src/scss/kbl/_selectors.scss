@@ -34,8 +34,6 @@
     transition: var(--time-mid);
     cursor: pointer;
     color: var(--color-text-ghost);
-    border-top-right-radius: var(--border-radius);
-    border-top-left-radius: var(--border-radius);
 
     padding: 3px 9px;
     margin: 0 5px;
@@ -48,6 +46,24 @@
     &.selected {
       border-color: var(--color-primary);
       color: var(--color-text-main);
+    }
+  }
+}
+
+.kbl-tab-selector-mobile {
+  transition: var(--time-fast);
+  font-weight: var(--font-weight-medium);
+
+  .tab-select-option {
+    transition: var(--time-mid);
+    color: var(--color-text-ghost);
+
+    .select-icon {
+      font-size: 220%;
+    }
+
+    &.selected {
+      color: var(--color-primary);
     }
   }
 }

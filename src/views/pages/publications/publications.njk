@@ -24,17 +24,42 @@
 
       <div class="col-12 col-lg-9 overflow-hidden">
         <section class="row justify-content-center mt-3 mb-4">
-          <div class="col-6">
-            <div class="kbl-tab-selector text-center" id="pub-selector">
+          <div class="col-12 col-md-7 col-lg-8">
+            <div class="kbl-tab-selector text-center d-none d-md-block" id="pub-selector">
               <span class="tab-select-option {% if (content == 'pub') %}selected{% endif %}" id="pub">Papers</span>
               <span class="tab-select-option {% if (content == 'conf') %}selected{% endif %}" id="conf">Conferences</span>
               <span class="tab-select-option {% if (content == 'edit') %}selected{% endif %}" id="edit">Editorials</span>
+            </div>
+
+            <div class="kbl-tab-selector-mobile d-md-none px-0">
+              <div class="row">
+                <section class="col text-center">
+                  <div class="tab-select-option {% if (content == 'pub') %}selected{% endif %}" id="pub">
+                    <i class="far fa-file-alt select-icon"></i>
+                    <div>Papers</div>
+                  </div>
+                </section>
+
+                <section class="col text-center">
+                  <div class="tab-select-option {% if (content == 'conf') %}selected{% endif %}" id="conf">
+                    <i class="fas fa-users select-icon"></i>
+                    <div class="text">Conferences</div>
+                  </div>
+                </section>
+
+                <section class="col text-center">
+                  <div class="tab-select-option {% if (content == 'edit') %}selected{% endif %}" id="edit">
+                    <i class="far fa-newspaper select-icon"></i>
+                    <div>Editorials</div>
+                  </div>
+                </section>
               </div>
+            </div>
           </div>
         </section>
 
         <section class="row justify-content-center mb-3">
-          <div class="col-4">
+          <div class="col-12 col-sm-8 col-md-6 col-lg-8 col-xl-6 col-xxl-5">
             <div class="sticky-top pt-2">
               {% from "components/pub-legend.njk" import pubLegend %}
               <div class="kbl-card py-2 px-3">
