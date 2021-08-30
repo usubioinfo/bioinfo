@@ -1,5 +1,5 @@
 {% macro editorial(article) %}
-  <article class="row py-2 publication">
+  <article class="row py-2 publication d-none d-lg-flex">
     <section class="col-3">
       <p class="authors">
         {{ article.authors | safe }}
@@ -21,5 +21,21 @@
         {% endif %}
       </span>
     </section>
+  </article>
+
+  <article class="row justify-content-center py-4 d-lg-none">
+    <div class="col-11 col-md-9">
+      <a class="d-block" href="{{ article.link }}" target="_blank" rel="noreferrer noopener">
+        <div class="row justify-content-center publication-mob kbl-card">
+
+          <section class="col px-3 py-1">
+            <p class="kbl-text">
+              {{ article.content | safe }}
+            <p>
+          </section>
+
+        </div>
+      </a>
+    </div>
   </article>
 {% endmacro %}
