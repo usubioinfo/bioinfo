@@ -124,9 +124,16 @@
   }
 %}
 
+{% set weconet = {
+    img: "/image/bioinfo/tools/wheat1.jpg",
+    title: "WeCoNET",
+    link: "http://bioinfo.usu.edu/weconet/"
+  }
+%}
+
 {% set hpi = [predhpi, apinet, deepHPI, huco] %}
 {% set clpt = [plantmSubp, atSubP, rslPredP, plPred] %}
-{% set dbs = [greeningDB, citSATdb, legumeSSRdb, ranchSAT, alfaNet] %}
+{% set dbs = [greeningDB, citSATdb, legumeSSRdb, ranchSAT, alfaNet, weconet] %}
 {% set bioenergy = [lacSubPred, ligPred] %}
 {% set metagenomics = [necMiner] %}
 {% set misc = [rbPred] %}
