@@ -28,11 +28,11 @@
   },
   "homepage": "https://github.com/MusicDev33/bioinformatics#readme",
   "dependencies": {
-    "autoprefixer": "^10.3.3",
+    "autoprefixer": "^10.3.7",
     "chokidar-cli": "^3.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "express-rate-limit": "^5.3.0",
+    "express-rate-limit": "^5.4.1",
     "feather-icons": "^4.28.0",
     "https": "^1.0.0",
     "node-sass": "^6.0.1",
@@ -40,8 +40,8 @@
     "nunjucks": "^3.2.3",
     "nunjucks-setasync": "^1.0.4",
     "path": "^0.12.7",
-    "postcss": "^8.3.6",
-    "postcss-cli": "^8.3.1",
-    "sass": "^1.38.1"
+    "postcss": "^8.3.9",
+    "postcss-cli": "^9.0.1",
+    "sass": "^1.42.1"
   }
 }
