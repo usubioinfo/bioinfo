@@ -9,8 +9,8 @@
     'dollar': 'Denotes equal contributions',
     'asterisk': 'Corresponding author',
     'caret': 'Student of a collaborator mentored by Dr. Kaundal',
-    'underline': 'Undergraduate student',
-    'italic': 'Undergraduate student mentored by Dr. Kaundal'
+    'underline': 'Graduate student',
+    'italic': 'Undergraduate student'
   }
 
   let selectedText = 'dollar';
