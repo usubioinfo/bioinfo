@@ -27,8 +27,19 @@
 
       <section class="{{ activeCheck('2021', routerEventsYearRange) }}" id="21">
         <h4 class="kbl-heading text-center">2021</h4>
-
-        <h5 class="text-center kbl-heading soft mt-5">No events due to COVID</h5>
+        <div class="row justify-content-center">
+          <div class="col-sm-6">
+            {% set pag2020 = {
+                link: '/events/trisocietyslc',
+                title: '2021 ASA, CSSA, SSSA International Annual Meeting',
+                location: 'Salt Palace Convention Center, Salt Lake City, UT',
+                date: 'Nov 7-10, 2021',
+                img: '/image/raw/bioinfo/events/trisociety/1.jpg'
+              }
+            %}
+            {{ eventLink(pag2020) }}
+          </div>
+        </div>
       </section>
 
       <section class="{{ activeCheck('2020', routerEventsYearRange) }}" id="20">

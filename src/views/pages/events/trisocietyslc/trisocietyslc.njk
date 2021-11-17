@@ -1,0 +1,21 @@
+{% from "pages/events/template.njk" import eventPage %}
+
+{% set event = {
+    img: '/image/bioinfo/events/trisociety/1.jpg',
+    location: 'Salt Palace Convention Center, Salt Lake City, UT',
+    date: 'Nov 7-10, 2021',
+    media: [
+      '/image/bioinfo/events/trisociety/1.jpg',
+      '/image/bioinfo/events/trisociety/2.jpg',
+      '/image/bioinfo/events/trisociety/IMG_7755.jpeg',
+      '/image/bioinfo/events/trisociety/IMG_7756.jpeg',
+      '/image/bioinfo/events/trisociety/IMG_7776.jpeg',
+      '/image/bioinfo/events/trisociety/IMG_7804.jpeg',
+      '/image/bioinfo/events/trisociety/IMG_7828.jpeg',
+      '/image/bioinfo/events/trisociety/IMG_7839.jpeg',
+      '/image/bioinfo/events/trisociety/IMG_7844.jpeg'
+    ]
+  }
+%}
+
+{{ eventPage("2021 ASA, CSSA, SSSA International Annual Meeting", "trisocietyslc", event) }}
