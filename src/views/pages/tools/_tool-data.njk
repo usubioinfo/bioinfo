@@ -138,9 +138,16 @@
   }
 %}
 
+{% set trustdb = {
+    img: "/image/bioinfo/tools/wheat1.jpg",
+    title: "TrustDB",
+    link: "http://bioinfo.usu.edu/trustdb/"
+  }
+%}
+
 {% set hpi = [predhpi, apinet, deepHPI, huco, malivhu] %}
 {% set clpt = [plantmSubp, atSubP, rslPredP, plPred] %}
-{% set dbs = [greeningDB, citSATdb, legumeSSRdb, ranchSAT, alfaNet, weconet] %}
+{% set dbs = [greeningDB, citSATdb, legumeSSRdb, ranchSAT, alfaNet, weconet, trustdb] %}
 {% set bioenergy = [lacSubPred, ligPred] %}
 {% set metagenomics = [necMiner] %}
 {% set misc = [rbPred] %}
