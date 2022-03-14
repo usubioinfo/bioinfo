@@ -14,15 +14,17 @@
 
         <p class="kbl-text text-thicc">
           To get the website on your machine, first find a folder in which you want to put it on your computer, and then run<br>
-          <code>git clone git@github.com:MusicDev33/bioinformatics.git</code><br>
-          Once you've cloned the repository, go into the 'bioinformatics' folder that was created and type
-          <code>npm install</code>. This will install all the NPM packages in that folder.<br>
-          You don't have to run it this time, but everytime you want to edit the website, you'll want to run <br>
-          <code>npm run update</code> to get all the new changes.
+          <code>git clone git@github.com:usubioinfo/bioinfo.git</code><br>
+	  Once you've cloned the repository, go into the 'bioinfo' folder that was created and type <br>
+	  <code>npm install</code>. This will install all the NPM packages in that folder.
+          You don't have to run it this time, but everytime you want to edit the website, you'll want to run
+          <code>npm run update</code> to get all the new changes. Also before you run the site, you'll also want the 
+	  token package to be installed. You can install it with <code>npm install token</code> and globally with <br> 
+	  <code>npm install -g token</code>.
         </p>
 
         <p class="kbl-text text-thicc">
-          To run the website locally, all you need to do is type <code>npm start</code> in a terminal in the 'bioinformatics' folder. 
+          To run the website locally, all you need to do is type <code>npm start</code> in a terminal in the 'bioinfo' folder. 
           Now you can open your browser to
           <code>http://localhost:3000</code>
           (or <a href="http://localhost:3000" target="_blank" rel="noopener noreferrer" class="kbl-link">click here</a>)
@@ -42,11 +44,11 @@
           Of course, the GitHub server is not <b>our</b> server. To add these changes to our server, log into the Guru cluster.
           We use an internal tool called 'Boxidizer' to update our sites, which is prefixed with <code>bxz</code>.
           Use the command<br>
-          <code>bxz update bioinformatics</code><br>
+          <code>bxz update bioinfo</code><br>
           and if you're an authorized user, all changes from the GitHub server will be
           carried over to the HPC. To make sure changes actually occur after Boxidizer is finished, hit <code>Ctrl+R</code>
           to refresh this page and make sure the changes actually happened. If the website looks buggy, run <br>
-          <code>bxz update bioinformatics</code><br>
+          <code>bxz update bioinfo</code><br>
           This is a weird bug with Boxidizer.
         </p>
       </div>
