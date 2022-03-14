@@ -8,5 +8,5 @@ To start the project in dev mode, run `npm start`. This will start two processes
 
 Anytime you edit a file, the correct process will do what it needs to do and then restart.
 
-If the website isn't working, then you might not have created the .env file. You'll need to create a file called `.env` in the 
+If the website isn't working, then you might not have created the env.njk file. You'll need to create a file called `env.njk` in the 
 `src/views` folder, and then you'll want to copy `{% set baseUrl = "http://localhost:3000/" %}` into that file.
