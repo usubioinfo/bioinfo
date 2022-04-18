@@ -1,5 +1,5 @@
 <div class="row justify-content-center">
-  {{ pubSelector("2020-2021") }}
+  {{ pubSelector("2020-2022") }}
   {{ pubSelector("2017-2019") }}
   {{ pubSelector("2014-2016") }}
   {{ pubSelector("2011-2013") }}
@@ -8,6 +8,16 @@
 </div>
 
 <article class="pub-group" id="pub-2020">
+  <section class="py-4">
+    <div class="kbl-header-bar py-2 text-center mb-2">
+      <h4 class="kbl-heading my-auto">2022</h4>
+    </div>
+    <div class="pub-container">
+      {% for article in pub2022 %}
+        {{ publication(article) }}
+      {% endfor %}
+    </div>
+  </section>
   <section class="py-4">
     <div class="kbl-header-bar py-2 text-center mb-2">
       <h4 class="kbl-heading my-auto">2021</h4>

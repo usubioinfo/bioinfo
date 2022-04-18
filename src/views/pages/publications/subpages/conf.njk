@@ -1,5 +1,5 @@
 {% from 'components/conf-card.njk' import confCard %}
-{% from './dates/20-21.njk' import pub2020 %}
+{% from './dates/20-22.njk' import pub2022, pub2021, pub2020 %}
 {% from './dates/17-19.njk' import pub2019, pub2018, pub2017 %}
 {% from './dates/14-16.njk' import pub2016, pub2015, pub2014 %}
 {% from './dates/11-13.njk' import pub2013, pub2012 %}
@@ -9,9 +9,11 @@
 <!-- I'm sorry :( I'll fix this later (I'm not going to fix this) -->
 {% set conferences = [
   {
-    range: '2020-2021',
+    range: '2020-2022',
     confs: [
-      {range: '2020-2021', conf: pub2020, year: '2020'}
+      {range: '2020-2022', conf: pub2022, year: '2022'},
+      {range: '2020-2022', conf: pub2021, year: '2021'},
+      {range: '2020-2022', conf: pub2020, year: '2020'}
     ]
   },
   {
@@ -58,7 +60,7 @@
 <article class="container">
 
   <section class="row justify-content-center">
-    {{ confSelector("2020-2021") }}
+    {{ confSelector("2020-2022") }}
     {{ confSelector("2017-2019") }}
     {{ confSelector("2014-2016") }}
     {{ confSelector("2011-2013") }}
