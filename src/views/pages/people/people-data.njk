@@ -112,6 +112,22 @@
   }
 %}
 
+
+
+{% set colin = {
+    name: "Colin Bernhardt",
+    subtitle: "HPC Administrator | BSc Computer Engineering",
+    modifier: "Colin",
+    type: "Undergraduate",
+    bio: "Colin is the systems administrator for the High-Performance Computer that is in the Bioinformatics Lab. In his spare time, he likes to work on designing a Robotic Autonomous Vehicle with the AVC team. He is a passionate Linux user and loves to program. He is currently studying computer engineering at Utah State University.",
+    email: "a02308059@usu.edu",
+    img: "/image/raw/bioinfo/profile/colin.jpg",
+    social: [
+      {type: 'github', link: 'https://github.com/papaSneetch/'}
+    ]
+  }
+%}
+
 {% set shelby = {
     name: "Shelby McCowan",
     subtitle: "HPC Administrator | BSc Biochemistry",
@@ -224,5 +240,5 @@
 
 {% set bioinfoStaff = [roussie] %}
 {% set gradStudents = [naveen, raghav, david] %}
-{% set undergradStudents = [shelby, kolton, andrew] %}
+{% set undergradStudents = [colin, kolton, andrew] %}
 {% set alumni = [shelby, caleb, cristian, kaige, matt, nikhil, raul, suyash, udarika] %}
