@@ -2,8 +2,10 @@
   <section class="kbl-conf-card my-3">
     <div class="row no-gutters">
       <div class="col-auto position-relative">
-        <div class="year-banner">{{ conference.year }}</div>
-        <div class="year-banner date">{{ conference.date }}</div>
+        <div class="year-banner">{{ conference.date }}</div>
+{% if conference.type != '' %}
+        <div class="year-banner date">{{ conference.type }}</div>
+{% endif %}
         <img class="conf-card-img"
           src="{{ RaikouServer }}/image/aspect/bioinfo/conf.jpg?a=width&w=1&h=1"/>
       </div>
