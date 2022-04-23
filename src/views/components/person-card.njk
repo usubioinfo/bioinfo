@@ -5,8 +5,8 @@
         <img class="w-100 mb-2" style="height: 250px;" src="{{  RaikouServer }}{{ img }}">
         <figcaption class="pb-2">
           <div clas="title-wrapper">
-            <div class="card-title px-3 mb-0">{{ name }}</div>
-            <div class="card-subtitle px-3">{{ subtitle }}</div>
+            <div class="card-title px-3 mb-0 justify-content-center">{{ name }}</div>
+            <div class="card-subtitle px-3 justify-content-center">{{ subtitle }}</div>
           </div>
         </figcaption>
       </figure>
@@ -21,22 +21,19 @@
         <img class="w-100 mb-2" style="height: 250px;" src="{{ RaikouServer }}{{ person.img }}">
         <figcaption class="pb-2 text-start px-3">
           <div class="title-wrapper">
-            <div class="card-title mb-0">{{ person.name }}</div>
-            <div class="card-subtitle">{{ person.subtitle }}</div>
+            <div class="card-title mb-0 text-center">{{ person.name }}</div>
+            <div class="card-subtitle text-center">{{ person.subtitle }}</div>
+            {% if person.social.length %}
+              <span class="kbl-social-wrapper text-start align-middle">
+                {% for media in person.social %}
+                  {{ socialSet(media) }}
+                {% endfor %}
+              </span>
+            {% endif %}
           </div>
         </figcaption>
       </figure>
     </div>
-
-    {% if person.social.length %}
-      <div class="social-card mt-2 pt-1">
-        <span class="kbl-social-wrapper text-start">
-          {% for media in person.social %}
-            {{ socialSet(media) }}
-          {% endfor %}
-        </span>
-      </div>
-    {% endif %}
   </div>
 
   <div class="modal fade" id="{{ person.modifier }}Modal" tabindex="-1">

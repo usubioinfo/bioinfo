@@ -1,3 +1,6 @@
+{% from "components/home-paper.njk" import paperWrapper %}
+{% from "pages/publications/_data.njk" import pub2022 %}
+
 <div class="container py-4 px-5">
   <div class="row justify-content-center">
       <div class="col-12 col-md-10 col-lg-5 pt-5">
@@ -27,68 +30,11 @@
       </div>
       <aside class="col-12 col-lg-7 px-5">
           <div class="paper_cut">
-              <div class="pub-item with-icon">
-                  <div class="elem-wrapper">
-                      <i class="ion-ios-paper-outline"></i>
-                  </div>
-                  <div class="content-wrapper">
-                      <h3 class="title mb_0">Loaiza CD, Duhan N, Lister M, and Kaundal R<sup>*</sup>.</h3>
-                      <div class="slc_des">
-                          <div class="authr">In silico prediction of host-pathogen protein
-                              interactions in melioidosis pathogen Burkholderia pseudomallei and human
-                              reveals novel virulence factors
-                              and their targets</div>
-                      </div>
-                      <div class="description">
-                          <a class="link-with-icon" href="http://dx.doi.org/10.1093/bib/bbz162"
-                              target="_blank"><i class="ion-ios-browsers-outline"></i></a><i>Briefings in
-                              Bioinformatics</i> <b>2019</b>, DOI: 10.1093/bib/bbz162
-                          <!-- <i style="font-style: normal;" class="pull-right"> PMCID:<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6826667/" target="_blank"> PMC6826667</a></i> -->
-                      </div>
-                  </div>
-              </div>
-              <div class="pub-item with-icon">
-                  <div class="elem-wrapper">
-                      <i class="ion-ios-paper-outline"></i>
-                  </div>
-                  <div class="content-wrapper">
-                      <h3 class="title mb_0">Sharma B, Batz TA, Kaundal R, Kramer EM, Sanders UR, Mellano
-                          VJ, Duhan N, Larson RB.</h3>
-                      <!-- <i style="color: #666666; font-size: 14px; font-style: normal; padding-left: 260px;" >Year: 2019</i>  -->
-                      <div class="slc_des">
-                          <div class="authr">Developmental and Molecular Changes Underlying the
-                              Vernalization-Induced Transition to Flowering in Aquilegia coerulea (James)
-                          </div>
-                      </div>
-                      <div class="description">
-                          <a class="link-with-icon"
-                              href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6826667/"
-                              target="_blank"><i class="ion-ios-browsers-outline"></i></a><i>Genes
-                          </i><b>2019</b>, 10(10): 734
-                          <!-- <i style="font-style: normal;" class="pull-right"> PMCID:<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6826667/" target="_blank"> PMC6826667</a></i> -->
-                      </div>
-                  </div>
-              </div>
-              <div class="pub-item with-icon">
-                  <div class="elem-wrapper">
-                      <i class="ion-ios-paper-outline"></i>
-                  </div>
-                  <div class="content-wrapper">
-                      <h3 class="title mb_0">Sahu SS, Loaiza CD, and Kaundal R<sup>*</sup>.</h3>
-                      <div class="slc_des">
-                          <div class="authr">Plant-mSubP: a computational framework for the
-                              prediction of single- and multi-target protein subcellular localization
-                              using integrated machine learning
-                              approaches</div>
-                      </div>
-                      <div class="description">
-                          <a class="link-with-icon" href="https://doi.org/10.1093/aobpla/plz068"
-                              target="_blank"><i class="ion-ios-browsers-outline"></i></a><i>AoB
-                              Plants</i> <b>2019</b>, DOI: 10.1093/aobpla/plz068
-                          <!-- <em>PMCID:</em><a href="https://link.springer.com/article/10.1007%2Fs10142-017-0581-9"  target="_blank">29280022</a> -->
-                      </div>
-                  </div>
-              </div>
+            {% for paper in pub2022 %}
+                {% if (loop.index <= 3) %}
+                    {{ paperWrapper(paper) }}
+                {% endif %}
+            {% endfor %}
           </div><!-- /.paper_cut -->
       </aside>
   </div>

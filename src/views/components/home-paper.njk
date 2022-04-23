@@ -1,0 +1,19 @@
+{% macro paperWrapper(paper) %}
+<div class="pub-item with-icon">
+    <div class="elem-wrapper">
+        <i class="ion-ios-paper-outline"></i>
+    </div>
+    <div class="content-wrapper">
+        <h3 class="title mb_0">{{paper.authors | safe}}<sup>*</sup>.</h3>
+        <div class="slc_des">
+            <div class="authr">{{paper.content | safe}}
+            </div>
+        </div>
+        <div class="description">
+            <a class="link-with-icon" href={{paper.doiLink | safe}}
+            target="_blank"><i class="ion-ios-browsers-outline"></i></a>{{paper.doiTitle}}
+            <!-- <i style="font-style: normal;" class="pull-right"> PMCID:<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6826667/" target="_blank"> PMC6826667</a></i> -->
+        </div>
+    </div>
+</div>
+{% endmacro %}
