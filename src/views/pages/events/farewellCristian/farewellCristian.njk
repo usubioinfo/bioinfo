@@ -1,0 +1,21 @@
+{% from "pages/events/template.njk" import eventPage %}
+
+{% set event = {
+    img: '/image/bioinfo/events/farewellCristian/IMG_3702.JPG',
+    location: '4700 Old Main Hill Logan, UT 84322',
+    date: 'July 1, 2020',
+    media: [
+    '/image/bioinfo/events/farewellCristian/IMG_3700.JPG',
+    '/image/bioinfo/events/farewellCristian/IMG_3703.JPG',
+    '/image/bioinfo/events/farewellCristian/IMG_3699.JPG',
+    '/image/bioinfo/events/farewellCristian/IMG_3696.JPG',
+    '/image/bioinfo/events/farewellCristian/IMG_3694.JPG',
+    '/image/bioinfo/events/farewellCristian/IMG_3697.JPG',
+    '/image/bioinfo/events/farewellCristian/IMG_3691.JPG',
+    '/image/bioinfo/events/farewellCristian/IMG_3693.JPG',
+    '/image/bioinfo/events/farewellCristian/IMG_3698.JPG'
+    ]
+  }
+%}
+
+{{ eventPage("Cristian\'s Farewell", "farewellCristian", event) }}

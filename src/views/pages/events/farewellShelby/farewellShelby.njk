@@ -1,0 +1,30 @@
+{% from "pages/events/template.njk" import eventPage %}
+
+{% set event = {
+    img: '/image/bioinfo/events/farewellShelby/IMG_6824.JPG',
+    location: '4700 Old Main Hill Logan, UT 84322',
+    date: 'Nov 29, 2021',
+    media: [
+    '/image/bioinfo/events/farewellShelby/IMG_6839.JPG',
+    '/image/bioinfo/events/farewellShelby/IMG_6838.JPG',
+    '/image/bioinfo/events/farewellShelby/IMG_6840.JPG',
+    '/image/bioinfo/events/farewellShelby/IMG_6835.JPG',
+    '/image/bioinfo/events/farewellShelby/IMG_6836.JPG',
+    '/image/bioinfo/events/farewellShelby/IMG_6837.JPG',
+    '/image/bioinfo/events/farewellShelby/IMG_6834.JPG',
+    '/image/bioinfo/events/farewellShelby/IMG_6827.JPG',
+    '/image/bioinfo/events/farewellShelby/IMG_6825.JPG',
+    '/image/bioinfo/events/farewellShelby/IMG_6833.JPG',
+    '/image/bioinfo/events/farewellShelby/IMG_6830.JPG',
+    '/image/bioinfo/events/farewellShelby/IMG_6826.JPG',
+    '/image/bioinfo/events/farewellShelby/IMG_6828.JPG',
+    '/image/bioinfo/events/farewellShelby/IMG_6823.JPG',
+    '/image/bioinfo/events/farewellShelby/IMG_6820.JPG',
+    '/image/bioinfo/events/farewellShelby/IMG_6819.JPG',
+    '/image/bioinfo/events/farewellShelby/IMG_6822.JPG',
+    '/image/bioinfo/events/farewellShelby/IMG_6821.JPG'
+    ]
+  }
+%}
+
+{{ eventPage("Shelby\'s Farewell", "farewellShelby", event) }}
