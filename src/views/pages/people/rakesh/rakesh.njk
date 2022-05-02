@@ -7,8 +7,8 @@
   {% from "universal/_navbar.njk" import navbar %}
   {{ navbar("People", "Dr. Rakesh Kaundal") }}
 
-  {% from "components/img-header.njk" import imgHeader %}
-  {{ imgHeader() }}
+  {% from "components/img-header.njk" import imgHeaderSplit %}
+  {{ imgHeaderSplit() }}
 
   {% from "components/breadcrumb.njk" import breadcrumb %}
   {{ breadcrumb([{name: 'Home', link: '/'}, {name: 'People', link: '/people'}, {name: 'Rakesh', link: '/people/rakesh'}]) }}
