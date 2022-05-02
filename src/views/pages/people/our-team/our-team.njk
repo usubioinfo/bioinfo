@@ -7,11 +7,11 @@
   {% from "universal/_navbar.njk" import navbar %}
   {{ navbar("People", "Our Team") }}
 
-  {% from "components/img-header.njk" import imgHeader %}
-  {{ imgHeader() }}
+  {% from "components/img-header.njk" import imgHeaderSplit %}
+  {{ imgHeaderSplit() }}
 
   {% from "components/breadcrumb.njk" import breadcrumb %}
-  {{ breadcrumb([{name: 'home', link: '/'}, {name: 'people', link: '/people'}, {name: 'our team', link: '/people/our-team'}]) }}
+  {{ breadcrumb([{name: 'Home', link: '/'}, {name: 'People', link: '/people'}, {name: 'Our Team', link: '/people/our-team'}]) }}
 
   <article class="container">
     {% include "../_new-rakesh.njk" %}

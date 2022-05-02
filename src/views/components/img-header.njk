@@ -1,5 +1,18 @@
-{% macro imgHeader(img="http://bioinfocore.usu.edu/raikou/header-img") %}
+{% macro imgHeader(img="header-img") %}
   <section class="container-fluid px-0">
-    <img class="kbl-header-img" src="{{ RaikouServer }}/header-img"/>
+    <img class="kbl-header-img" src="{{ RaikouServer }}/{{img}}"/>
+  </section>
+{% endmacro %}
+
+{% macro imgHeaderSplit(img1="header-img", img2="/image/bioinfo/peoplePageTeam.jpg") %}
+  <section class="container-fluid px-0">
+    <div class="row g-0">
+      <div class="col">
+        <img class="kbl-header-img" src="{{ RaikouServer }}/{{img1}}"/>
+      </div>
+      <div class="col d-none d-md-block">
+        <img class="kbl-header-img" src="{{ RaikouServer }}/{{img2}}"/>
+      </div>
+    </div>
   </section>
 {% endmacro %}

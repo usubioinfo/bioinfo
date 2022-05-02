@@ -7,9 +7,11 @@
 
   const slideButtons = [...document.getElementsByClassName('modal-btn')];
   const modalImg = document.getElementById('modal-img');
+  const modal1 = $(document.getElementById('modal1'));
 
-  const leftBtn = slideButtons[0];
-  const rightBtn = slideButtons[1];
+  const closeBtn = slideButtons[0];
+  const leftBtn = slideButtons[1];
+  const rightBtn = slideButtons[2];
 
   const modalImgs = [...document.getElementsByClassName('event-thumbnail')].map((el, index) => {
     el.addEventListener('click', () => {
@@ -42,8 +44,9 @@
     modalImg.setAttribute('src', modalImgs[selectedIndex]);
   });
 
-
-
+  closeBtn.addEventListener('click', () => {
+    modal1.modal('hide');
+  });
 
   console.log(modalImgs);
   console.log('test')
