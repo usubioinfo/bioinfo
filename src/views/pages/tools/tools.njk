@@ -23,25 +23,29 @@
 <article class="container">
 <div class = "row justify-content-center">
 <div class="col-12 mb-4">
-	<a href="tools#hpi" class="btn btn-md btn-block btn-primary  my-1">Host-Pathogen Interaction Prediction Tools</a>
-	<a href="tools#cellularloc" class="btn btn-md btn-block btn-danger  my-1">Cellular Localization Prediction Tools</a>
-	<a href="tools#metagenomics" class="btn btn-md btn-block btn-success my-1 ">Metagenomics</a>
-	<a href="tools#db" class="btn btn-md btn-block btn-info my-1">Databases</a>
-	<a href="tools#bionrg" class="btn btn-md btn-block btn-secondary my-1 ">Bioenergy</a>
-	<a href="tools#misc" class="btn btn-md btn-block btn-warning my-1">Miscellaneous</a>
+	<a href="tools#hpi" class="btn btn-md btn-block btn-outline-primary  my-1">Host-Pathogen Interaction Prediction Tools</a>
+	<a href="tools#cellularloc" class="btn btn-md btn-block btn-outline-danger  my-1">Cellular Localization Prediction Tools</a>
+	<a href="tools#metagenomics" class="btn btn-md btn-block btn-outline-success my-1 ">Metagenomics</a>
+	<a href="tools#db" class="btn btn-md btn-block btn-outline-info my-1">Databases</a>
+	<a href="tools#bionrg" class="btn btn-md btn-block btn-outline-secondary my-1 ">Bioenergy</a>
+  <a href="tools#ngsPack" class="btn btn-md btn-block btn-outline-warning my-1">NGS Packages</a>
+  <a href="tools#descriptors" class="btn btn-md btn-block btn-outline-info my-1">Descriptors</a>
+	<a href="tools#misc" class="btn btn-md btn-block btn-outline-dark my-1">Miscellaneous</a>
 </div>
 </div>
 </article>
 
 <article class="container">
     {% from "./_tool-section.njk" import toolSection %}
-    {% from "./_tool-data.njk" import hpi, clpt, metagenomics, dbs, bioenergy, misc %}
+    {% from "./_tool-data.njk" import hpi, clpt, metagenomics, dbs, bioenergy, ngsPackages, descriptors, misc %}
 
     {{ toolSection("Host-Pathogen Interaction Prediction Tools", hpi, "hpi") }}
     {{ toolSection("Cellular Localization Prediction Tools", clpt, "cellularloc") }}
     {{ toolSection("Metagenomics", metagenomics, "metagenomics") }}
     {{ toolSection("Databases", dbs, "db") }}
     {{ toolSection("Bioenergy", bioenergy, "bionrg") }}
+    {{ toolSection("NGS Packages", ngsPackages, "ngsPack") }}
+    {{ toolSection("Descriptors", descriptors, "descriptors") }}
     {{ toolSection("Miscellaneous", misc, "misc") }}
   </article>
 
