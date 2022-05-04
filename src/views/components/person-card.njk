@@ -24,11 +24,13 @@
             <div class="card-title mb-0 text-center">{{ person.name }}</div>
             <div class="card-subtitle text-center">{{ person.subtitle }}</div>
             {% if person.social.length %}
-              <span class="kbl-social-wrapper text-start align-middle">
+            <div class="row justify-content-center">
                 {% for media in person.social %}
+                  <div class="col-auto gx-1">
                   {{ socialSet(media) }}
+                  </div>
                 {% endfor %}
-              </span>
+              </div>
             {% endif %}
           </div>
         </figcaption>
