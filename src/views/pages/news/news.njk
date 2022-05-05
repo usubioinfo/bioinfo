@@ -13,6 +13,9 @@
   {% from "components/breadcrumb.njk" import breadcrumb %}
   {{ breadcrumb([{name: 'Home', link: '/'}, {name: 'News', link: '/news'}]) }}
 
+  {% from "./data.njk" import general, science, media %}
+  {% from "components/news-card.njk" import mediaCard, leftNewsCard, rightNewsCard %}
+
   <article class="container-fluid px-5 pb-5 pt-1 my-5">
     <div class="row">
 
@@ -21,116 +24,16 @@
         <section class="text-center col-header mb-1 mb-md-4">
           <b class="col-header-text">General</b>
         </section>
-
-        <section class="row news-item-container justify-content-center">
-          <a class="news-item col-11" href="/news/newadmin1" target="_blank">
-            <div class="row ps-0">
-              <div class="col ps-0 my-auto">
-                <img src="{{ RaikouServer }}/image/aspect/people/ajouffray/profile.jpg?a=height&w=6&h=6" class="img-fluid">
-              </div>
-              <div class="col-10 pt-1">
-                <span class="date"><i class="far fa-calendar-alt"></i> May 25, 2021</span>
-                <h5 class="header mb-0">New Undergrad Student Joined: Andrew Jouffray</h5>
-                <div class="desc mt-0">
-                  Andrew is a computer science student and software developer. He currently works on developing a method to create datasets for deep learning image 
-                  recognition tasks, enabling robots to generate their own training data.
-                </div>
-              </div>
-            </div>
-          </a>
-        </section>
-
-        <section class="row news-item-container justify-content-center">
-          <a class="news-item col-11" href="https://www.usu.edu/today/story/students-receive-grants-to-conduct-impactful-undergraduate-research" target="_blank">
-            <div class="row ps-0">
-              <div class="col-10 pt-1">
-                <span class="date"><i class="far fa-calendar-alt"></i> May 24, 2021</span>
-                <h5 class="header mb-0">Kolton Receives URCO Grant</h5>
-                <div class="desc mt-0">
-                  Student researcher Kolton Hauck is mentored by Rakesh Kaundal, assistant professor of bioinformatics in the PSC department, 
-                  and investigates protein-protein interactions (PPIs) that are necessary for the SARS-CoV-2 virus to gain access to host cells, 
-                  replicate and proliferate.
-                </div>
-              </div>
-              <div class="col pe-0 my-auto">
-                <img src="{{ RaikouServer }}/image/aspect/bioinfo/news/koltonurco.jpg?a=height&w=1&h=1&c=l" class="img-fluid">
-              </div>
-            </div>
-          </a>
-        </section>
-
-        <section class="row news-item-container justify-content-center">
-          <a class="news-item col-11" href="/news/newadmin1" target="_blank">
-            <div class="row ps-0">
-              <div class="col ps-0 my-auto">
-                <img src="{{ RaikouServer }}/image/aspect/bioinfo/profile/david.jpg?a=height&w=6&h=6" class="img-fluid">
-              </div>
-              <div class="col-10 pt-1">
-                <span class="date"><i class="far fa-calendar-alt"></i> Mar 3, 2021</span>
-                <h5 class="header mb-0">New PhD Student: David</h5>
-                <div class="desc mt-0">
-                  David is a CS PhD student from Colombia. He worked full-time as a full-stack software developer for 6 years while finishing his 
-                  bachelor's degree in Software and Computer Engineering and got a MSc. degree in Computational Biology.
-                </div>
-              </div>
-            </div>
-          </a>
-        </section>
-
-        <section class="row news-item-container justify-content-center">
-          <a class="news-item col-11" href="/news/newadmin1" target="_blank">
-            <div class="row ps-0">
-              <div class="col-10 pt-1">
-                <span class="date"><i class="far fa-calendar-alt"></i> Feb 3, 2021</span>
-                <h5 class="header mb-0">New Undergrad Student Joined: Kolton Hauck</h5>
-                <div class="desc mt-0">
-                  Kolton is a Biological Engineering major and is working on a minor in Computer Science. He wants to use computers to solve modern-day 
-                  biological problems.
-                  He enjoys eating, sleeping and working out.
-                </div>
-              </div>
-              <div class="col pe-0 my-auto">
-                <img src="{{ RaikouServer }}/image/aspect/bioinfo/profile/khauck.jpg?a=height&w=6&h=6" class="img-fluid">
-              </div>
-            </div>
-          </a>
-        </section>
-
-        <section class="row news-item-container justify-content-center">
-          <a class="news-item col-11" href="/news/citsatdb" target="_blank">
-            <div class="row ps-0">
-              <div class="col ps-0 my-auto">
-                <img src="{{ RaikouServer }}/image/aspect/bioinfo/events/IMG_20200113_151858.jpg?a=height&w=1&h=1" class="img-fluid">
-              </div>
-              <div class="col-10 ps-0 pt-1">
-                <span class="date"><i class="far fa-calendar-alt"></i> Jan 11-15, 2020</span>
-                <h5 class="header mb-0">Naveen presents at International Plant Animal Genome Conference</h5>
-                <div class="desc mt-0">
-                  Naveen Duhan, a PhD student from our lab, attended the International Plant Animal Genome Conference in San Diego. He 
-                  presented a poster on citSatdb and Greeningdb, and presented an oral talk on citSatdb.
-                </div>
-              </div>
-            </div>
-          </a>
-        </section>
-
-        <section class="row news-item-container justify-content-center">
-          <a class="news-item col-11" href="/news/newadmin1" target="_blank">
-            <div class="row ps-0">
-              <div class="col-10 pt-1">
-                <span class="date"><i class="far fa-calendar-alt"></i> Mar 21, 2020</span>
-                <h5 class="header mb-0">New HPC Admin: Shelby McCowan</h5>
-                <div class="desc mt-0">
-                  Shelby is a Biochemistry major who aspires to go into software engineering. He has worked with mobile apps, websites 
-                  (including the front and back end), and desktop applications. He is a percussionist in his spare time.
-                </div>
-              </div>
-              <div class="col pe-0 my-auto">
-                <img src="{{ RaikouServer }}/image/aspect/bioinfo/profile/shelby.jpg?a=height&w=6&h=6" class="img-fluid">
-              </div>
-            </div>
-          </a>
-        </section>
+        {% set rightEl = false %}
+        {% for newsEl in general %}
+          {% if rightEl %}
+            {{rightNewsCard(newsEl)}}
+            {% set rightEl = false %}
+          {% else %}
+            {{leftNewsCard(newsEl)}}
+            {% set rightEl = true %}
+          {% endif %}
+        {% endfor %}
       </article>
 
       <!-- News - Science -->
@@ -138,121 +41,25 @@
         <section class="text-center col-header mb-1 mb-md-4 mt-4 mt-md-0">
           <b class="col-header-text">Science</b>
         </section>
-
-        <section class="row news-item-container justify-content-center">
-          <a class="news-item col-11" href="http://bioinfo.usu.edu/alfanet/" target="_blank">
-            <div class="row ps-0">
-              <div class="col ps-0 my-auto">
-                <img src="{{ RaikouServer }}/image/aspect/bioinfo/tools/alfalfa_logo.png?a=height&w=1&h=1" class="img-fluid">
-              </div>
-              <div class="col-10 ps-0 pt-1">
-                <span class="date"><i class="far fa-calendar-alt"></i> Jul 1, 2021</span>
-                <h5 class="header mb-0">alfaNET: A new host-pathogen interactome tool is now online</h5>
-                <div class="desc mt-0">
-                  alfaNET is a database implemented to provide host-pathogen interactome information to aid the development of molecular-based strategies to mitigate bacterial blight impact in Alfalfa.
-                </div>
-              </div>
-            </div>
-          </a>
-        </section>
-
-        <section class="row news-item-container justify-content-center">
-          <a class="news-item col-11" href="/news/newdeephpi" target="_blank">
-            <div class="row">
-              <div class="col-10 ps-2 pt-1">
-                <span class="date"><i class="far fa-calendar-alt"></i> Dec 1, 2019</span>
-                <h5 class="header mb-0">deepHPI: A host-pathogen interactome tool</h5>
-                <div class="desc mt-0">
-                  Models to predict HPI were generated by the combination of features and machine learning methods. The best models from this 
-                  benchmark were implement in the DeepHPI webserver
-                </div>
-              </div>
-              <div class="col pe-0 my-auto">
-                <img src="{{ RaikouServer }}/image/aspect/bioinfo/events/PAG-2019/g2.jpg?a=height&w=6&h=6" class="img-fluid">
-              </div>
-            </div>
-          </a>
-        </section>
-
-        <section class="row news-item-container justify-content-center">
-          <a class="news-item col-11" href="/news/covidtracker" target="_blank">
-            <div class="row ps-0">
-              <div class="col ps-0 my-auto">
-                <img src="https://intermountainhealthcare.org/-/media/coronavirus-covid-19.jpg?la=en&h=286&w=300&mw=300&hash=CE04AC2D6DB0A5068DBB7D0CCEF7636A1C66C738"
-                  class="img-fluid">
-              </div>
-              <div class="col-10 ps-0 pt-1">
-                <span class="date"><i class="far fa-calendar-alt"></i> March 26, 2020</span>
-                <h5 class="header mb-0">COVID-19 Stats Tracker</h5>
-                <div class="desc mt-0">
-                  KAABiL now has a COVID tracker! You can use our dashboard to see COVID stats around the world. Stay safe!
-                </div>
-              </div>
-            </div>
-          </a>
-        </section>
+        {% set rightEl = false %}
+        {% for sciEl in science %}
+          {% if rightEl %}
+            {{rightNewsCard(sciEl)}}
+            {% set rightEl = false %}
+          {% else %}
+            {{leftNewsCard(sciEl)}}
+            {% set rightEl = true %}
+          {% endif %}
+        {% endfor %}
       </article>
 
       <article class="col-11 col-md-3">
         <section class="text-center col-header mb-1 mb-md-4 mt-4 mt-md-0">
           <b class="col-header-text">Media</b>
         </section>
-
-        <section class="row news-item-container justify-content-center">
-          <a class="news-item col-11" href="https://www.usu.edu/today/story/first-international-heroes-night-to-celebrate-international-faculty" target="_blank">
-            <div class="row ps-0">
-              <div class="col px-2 pt-1">
-                <span class="date"><i class="far fa-calendar-alt"></i> November 4, 2021</span>
-                <h5 class="header mb-0">USU Today - First International Heroes Night</h5>
-                <div class="desc mt-0">
-                  Dr. Rakesh Kaundal has been selected for the 2021 International Faculty Recognition Award. 
-                </div>
-              </div>
-            </div>
-          </a>
-        </section>
-
-        <section class="row news-item-container justify-content-center">
-          <a class="news-item col-11" href="https://www.usu.edu/today/story/nih-funds-usu-researchers-work-on-fathers-nutrition-and-childrens-health" target="_blank">
-            <div class="row ps-0">
-              <div class="col px-2 pt-1">
-                <span class="date"><i class="far fa-calendar-alt"></i> August 9, 2021</span>
-                <h5 class="header mb-0">USU Today - NIH Funds USU Researchers' Work on Fathers' Nutrition and Children's Health</h5>
-                <div class="desc mt-0">
-                  Dr. Kaundal is a Co-PI on a $1.56M research grant from the NIH. 
-                </div>
-              </div>
-            </div>
-          </a>
-        </section>
-
-        <section class="row news-item-container justify-content-center">
-          <a class="news-item col-11" href="https://www.usu.edu/today/story/data-scientists-uncovering-genes-that-protect-alfalfa-against-salinity-stress" target="_blank">
-            <div class="row ps-0">
-              <div class="col px-2 pt-1">
-                <span class="date"><i class="far fa-calendar-alt"></i> April 6, 2021</span>
-                <h5 class="header mb-0">USU Today - Uncovering Genes that Protect Alfalfa against Salinity Stress</h5>
-                <div class="desc mt-0">
-                  Salt stress is an example of big data bringing immense benefits to plant science.
-                </div>
-              </div>
-            </div>
-          </a>
-        </section>
-
-        <section class="row news-item-container justify-content-center">
-          <a class="news-item col-11" href="https://www.usu.edu/today/story/students-receive-grants-to-conduct-impactful-undergraduate-research" target="_blank">
-            <div class="row ps-0">
-              <div class="col px-2 pt-1">
-                <span class="date"><i class="far fa-calendar-alt"></i> March 24, 2021</span>
-                <h5 class="header mb-0">USU Today - Students Receive Grants to Conduct Undergraduate Research</h5>
-                <div class="desc mt-0">
-                  Kolton Hauck is using big data to investigate diverse strands of SARS-CoV-2 virus.
-                </div>
-              </div>
-            </div>
-          </a>
-        </section>
+        {% for mediaEl in media %}
+          {{mediaCard(mediaEl)}}
+        {% endfor %}
       </article>
 
     </div>

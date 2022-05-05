@@ -1,0 +1,53 @@
+{% macro mediaCard (media) %}
+        <section class="row news-item-container justify-content-center">
+          <a class="news-item col-11" href="{{media.link}}" target="_blank">
+            <div class="row ps-0">
+              <div class="col px-2 pt-1">
+                <span class="date"><i class="far fa-calendar-alt"></i> {{media.date}}</span>
+                <h5 class="header mb-0">{{media.title}}</h5>
+                <div class="desc mt-0">
+                  {{media.desc}}
+                </div>
+              </div>
+            </div>
+          </a>
+        </section>
+{% endmacro %}
+
+{% macro leftNewsCard (news) %}
+    <section class="row news-item-container justify-content-center">
+          <a class="news-item col-11" href="{{news.link}}" target="_blank">
+            <div class="row ps-0">
+              <div class="col ps-0 my-auto">
+                <img src="{{news.img}}" class="img-fluid">
+              </div>
+              <div class="col-10 pt-1">
+                <span class="date"><i class="far fa-calendar-alt"></i> {{news.date}}</span>
+                <h5 class="header mb-0">{{news.title}}</h5>
+                <div class="desc mt-0">
+                    {{news.desc}}
+                </div>
+              </div>
+            </div>
+          </a>
+        </section>
+{% endmacro %}
+
+{% macro rightNewsCard (news) %}
+    <section class="row news-item-container justify-content-center">
+          <a class="news-item col-11" href="{{news.link}}" target="_blank">
+            <div class="row ps-0">
+              <div class="col-10 pt-1">
+                <span class="date"><i class="far fa-calendar-alt"></i> {{news.date}}</span>
+                <h5 class="header mb-0">{{news.title}}</h5>
+                <div class="desc mt-0">
+                    {{news.desc}}
+                </div>
+              </div>
+              <div class="col pe-0 my-auto">
+                <img src="{{news.img}}" class="img-fluid">
+              </div>
+            </div>
+          </a>
+        </section>
+{% endmacro %}
