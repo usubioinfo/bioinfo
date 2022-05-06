@@ -1,0 +1,32 @@
+{% from "pages/events/template.njk" import eventPage %}
+
+{% set event = {
+    img: '/image/raw/bioinfo/events/koltonCapitolHill/DSC04533.jpg',
+    location: 'Capitol Hill, Salt Lake City, UT',
+    date: 'Feb 8, 2022',
+    media: [
+      '/image/raw/bioinfo/events/koltonCapitolHill/DSC04912.jpg',
+      '/image/raw/bioinfo/events/koltonCapitolHill/DSC04921.jpg',
+      '/image/raw/bioinfo/events/koltonCapitolHill/DSC04913.jpg',
+      '/image/raw/bioinfo/events/koltonCapitolHill/DSC04922.jpg',
+      '/image/raw/bioinfo/events/koltonCapitolHill/DSC04926.jpg',
+      '/image/raw/bioinfo/events/koltonCapitolHill/DSC04440.jpg',
+      '/image/raw/bioinfo/events/koltonCapitolHill/DSC04415.jpg',
+      '/image/raw/bioinfo/events/koltonCapitolHill/DSC04798.jpg',
+      '/image/raw/bioinfo/events/koltonCapitolHill/DSC04799.jpg',
+      '/image/raw/bioinfo/events/koltonCapitolHill/DSC04930.jpg',
+      '/image/raw/bioinfo/events/koltonCapitolHill/DSC04533.jpg',
+      '/image/raw/bioinfo/events/koltonCapitolHill/DSC04802.jpg',
+      '/image/raw/bioinfo/events/koltonCapitolHill/DSC04792.jpg',
+      '/image/raw/bioinfo/events/koltonCapitolHill/DSC04916.jpg',
+      '/image/raw/bioinfo/events/koltonCapitolHill/DSC04971.jpg',
+      '/image/raw/bioinfo/events/koltonCapitolHill/DSC04970.jpg',
+      '/image/raw/bioinfo/events/koltonCapitolHill/DSC04929.jpg',
+      '/image/raw/bioinfo/events/koltonCapitolHill/DSC04526.jpg',
+      '/image/raw/bioinfo/events/koltonCapitolHill/DSC04945.jpg',
+      '/image/raw/bioinfo/events/koltonCapitolHill/DSC04924.jpg'
+    ]
+  }
+%}
+
+{{ eventPage("Kolton Presents at Reasearch on Capitol Hill", "koltonCapitolHill", event) }}

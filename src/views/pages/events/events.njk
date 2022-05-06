@@ -18,11 +18,29 @@
     <div class="container">
       {% from './_functions.njk' import selector, activeCheck %}
       <section class="row justify-content-center my-5">
+        {{ selector("2022", routerEventsYearRange) }}
         {{ selector("2021", routerEventsYearRange) }}
         {{ selector("2020", routerEventsYearRange) }}
         {{ selector("2019", routerEventsYearRange) }}
         {{ selector("2018", routerEventsYearRange) }}
         {{ selector("2013", routerEventsYearRange) }}
+      </section>
+
+      <section class="{{ activeCheck('2022', routerEventsYearRange) }}" id="22">
+        <h4 class="kbl-heading text-center">2022</h4>
+        <div class="row justify-content-center">
+          <div class="col-sm-6">
+            {% set koltonCapitolHill = {
+                link: '/events/koltonCapitolHill',
+                title: 'Kolton Presents at Reasearch on Capitol Hill',
+                location: 'Capitol Hill, Salt Lake City, UT',
+                date: 'Feb 8, 2022',
+                img: '/image/raw/bioinfo/events/koltonCapitolHill/DSC04533.jpg'
+              }
+            %}
+            {{ eventLink(koltonCapitolHill) }}
+          </div>
+        </div>
       </section>
 
       <section class="{{ activeCheck('2021', routerEventsYearRange) }}" id="21">
