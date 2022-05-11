@@ -8,7 +8,7 @@
   {{ navbar("News") }}
 
   {% from "components/img-header.njk" import imgHeader %}
-  {{ imgHeader() }}
+  {{ imgHeader(headerTitle="News") }}
 
   {% from "components/breadcrumb.njk" import breadcrumb %}
   {{ breadcrumb([{name: 'Home', link: '/'}, {name: 'News', link: '/news'}]) }}

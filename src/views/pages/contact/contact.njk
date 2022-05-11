@@ -8,7 +8,7 @@
   {{ navbar("Contact") }}
 
   {% from "components/img-header.njk" import imgHeader %}
-  {{ imgHeader() }}
+  {{ imgHeader(headerTitle="Contact") }}
 
   {% from "components/breadcrumb.njk" import breadcrumb %}
   {{ breadcrumb([{name: 'Home', link: '/'}, {name: 'Contact', link: '/contact'}]) }}
