@@ -41,54 +41,19 @@
       <section class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-0">
         <div class="h-100 gray-bg py-3 px-4 flex-col">
           <h5 class="kbl-heading pb-2">Latest News:</h5>
-
-          <section class="home-news-item py-3">
-            <a class="hn-header shrink d-inline-block" href="http://bioinfo.usu.edu/covidTracker/">COVID-19 tracker built by KAABiL is online</a>
-            <div class="hn-date">April 10, 2020</div>
-          </section>
-
-          <section class="home-news-item py-3">
-            <a class="hn-header shrink d-inline-block" href="/events">Host-pathogen interaction paper accepted in Briefings in Bioinformatics</a>
-            <div class="hn-date">Nov 20, 2019</div>
-          </section>
-
-          <section class="home-news-item py-3">
-            <a class="hn-header shrink d-inline-block" href="/events">Plant-mSubP subcellular localization tool accepted for publication in AoB Plants</a>
-            <div class="hn-date">Oct 8, 2019</div>
-          </section>
+          
+          {% from "pages/news/data.njk" import latest %}
+          {% for news in latest %}
+            {% if (loop.index <= 3) %}
+              <section class="home-news-item py-3">
+                <a class="hn-header shrink d-inline-block" href="{{news.link}}">{{news.title}}</a>
+                <div class="hn-date">{{news.date}}</div>
+              </section>
+            {% endif %}
+          {% endfor %}
 
           <h6 class="kbl-heading pt-3 mt-auto">
             <a class="kbl-link dull" href="/news">View All</a>
-          </h6>
-        </div>
-      </section>
-
-      <section class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-0 d-lg-none">
-        <div class="h-100 gray-bg py-3 px-4 flex-col">
-          <h5 class="kbl-heading pb-2">Latest Events:</h5>
-
-          <section class="home-news-item py-2">
-            <a class="hn-header" href="/events/winter">Utah State University Winter</a>
-            <div class="hn-date">December 1, 2019</div>
-          </section>
-
-          <section class="home-news-item py-2">
-            <a class="hn-header" href="/events/cricket">Cricket in Utah</a>
-            <div class="hn-date">July 13, 2019</div>
-          </section>
-
-          <section class="home-news-item py-2">
-            <a class="hn-header" href="/events/psc">PSC Showcase</a>
-            <div class="hn-date">March 23, 2019</div>
-          </section>
-
-          <section class="home-news-item py-2">
-            <a class="hn-header" href="/pag">Plant Animal Genome Conference</a>
-            <div class="hn-date">Jan 12, 2019</div>
-          </section>
-
-          <h6 class="kbl-heading pt-3 mt-auto">
-            <a class="kbl-link dull" href="/events">View All</a>
           </h6>
         </div>
       </section>
@@ -115,27 +80,16 @@
       <section class="col-12 col-md-10 col-lg-4 mb-3 mb-lg-0 d-none d-lg-block">
         <div class="h-100 gray-bg py-3 px-4 flex-col">
           <h5 class="kbl-heading pb-2">Latest Events:</h5>
-
-          <section class="home-news-item py-2">
-            <a class="hn-header" href="/events/winter">Utah State University Winter</a>
-            <div class="hn-date">December 1, 2019</div>
-          </section>
-
-          <section class="home-news-item py-2">
-            <a class="hn-header" href="/events/cricket">Cricket in Utah</a>
-            <div class="hn-date">July 13, 2019</div>
-          </section>
-
-          <section class="home-news-item py-2">
-            <a class="hn-header" href="/events/psc">PSC Showcase</a>
-            <div class="hn-date">March 23, 2019</div>
-          </section>
-
-          <section class="home-news-item py-2">
-            <a class="hn-header" href="/pag">Plant Animal Genome Conference</a>
-            <div class="hn-date">Jan 12, 2019</div>
-          </section>
-
+          {% from "pages/events/events.njk" import latest %}
+          {% for event in latest %}
+            {% if (loop.index <= 4) %}
+              <section class="home-news-item py-2">
+                <a class="hn-header" href="{{event.link}}">{{event.title}}</a>
+                <div class="hn-date">{{event.date}}</div>
+              </section>
+            {% endif %}
+          {% endfor %}
+          
           <h6 class="kbl-heading pt-3 mt-auto">
             <a class="kbl-link dull" href="/events">View All</a>
           </h6>
