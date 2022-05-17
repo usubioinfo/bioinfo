@@ -30,14 +30,14 @@
   <a href="tools#ngsPack" class="btn btn-md btn-block btn-outline-warning my-1">NGS Packages</a>
   <a href="tools#descriptors" class="btn btn-md btn-block btn-outline-info my-1">Descriptors</a>
 	<a href="tools#bionrg" class="btn btn-md btn-block btn-outline-secondary my-1 ">Bioenergy</a>
-	<a href="tools#misc" class="btn btn-md btn-block btn-outline-dark my-1">Miscellaneous</a>
+	<a href="tools#disease" class="btn btn-md btn-block btn-outline-dark my-1">Disease Forecasting</a>
 </div>
 </div>
 </article>
 
 <article class="container">
     {% from "./_tool-section.njk" import toolSection %}
-    {% from "./_tool-data.njk" import hpi, clpt, metagenomics, dbs, bioenergy, ngsPackages, descriptors, misc %}
+    {% from "./_tool-data.njk" import hpi, clpt, metagenomics, dbs, bioenergy, ngsPackages, descriptors, disease %}
 
     {{ toolSection("Host-Pathogen Interaction Prediction Tools", hpi, "hpi") }}
     {{ toolSection("Cellular Localization Prediction Tools", clpt, "cellularloc") }}
@@ -46,7 +46,7 @@
     {{ toolSection("NGS Packages", ngsPackages, "ngsPack") }}
     {{ toolSection("Descriptors", descriptors, "descriptors") }}
     {{ toolSection("Bioenergy", bioenergy, "bionrg") }}
-    {{ toolSection("Miscellaneous", misc, "misc") }}
+    {{ toolSection("Disease Forecasting", disease, "disease") }}
   </article>
 
   {% include "universal/_footer.njk" %}
