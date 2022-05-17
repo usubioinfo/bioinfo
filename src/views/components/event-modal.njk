@@ -1,24 +1,24 @@
 {% macro EventModal(id, picture) %}
 <article class="modal fade" id="modal{{ id }}" tabindex="-1">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
     <div class="modal-content event-modal-container">
       <section class="container-fluid py-4">
         <div class="row no-gutters justify-content-end">
           <div class="col-auto">
             <div class="modal-btn-container h-100">
-              <i class="fas fa-times-circle fa-2x modal-btn"></i>
+              <i class="fas fa-times-circle fa-3x modal-btn"></i>
           </div>
         </div>
         <div class="row no-gutters">
-          <div class="col-auto">
+          <div class="col-1">
             <div class="modal-btn-container h-100">
               <i class="fas fa-arrow-circle-left fa-3x modal-btn"></i>
             </div>
           </div>
-          <div class="col">
+          <div class="col-10">
             <img class="img-fluid event-modal-img" id="modal-img" src="{{ picture }}"/>
           </div>
-          <div class="col-auto">
+          <div class="col-1">
             <div class="modal-btn-container h-100">
               <i class="fas fa-arrow-circle-right fa-3x modal-btn"></i>
             </div>

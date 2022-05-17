@@ -1,5 +1,6 @@
 (() => {
     var seqEl = document.getElementById("sequence1");
+    var researchSlider = document.getElementById("MultiCarousel");
     var options = {
         autoPlay: true,
         autoPlayInterval: 5000,
