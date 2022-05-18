@@ -15,14 +15,29 @@
 
 {% macro imgHeaderSplit(img1="header-img", img2="/image/bioinfo/peoplePageTeam.jpg",headerTitle="KAABiL Lab") %}
   <section class="container-fluid px-0">
-    <div class="row g-0">
-      <div class="col-6">
+    <div class="d-none d-md-block">
+      <div class="row g-0">
+        <div class="col-6">
+          <img class="kbl-header-img" src="{{ RaikouServer }}/{{img1}}"/>
+          <h1 class="text-center imgHeaderTitleSplit imgHeaderGen">
+            {{headerTitle}}
+          </h1>
+        </div>
+        <div class="col-6">
+          <img class="kbl-header-img" src="{{ RaikouServer }}/{{img2}}"/>
+        </div>
+      </div>
+    </div>
+    <div class="d-md-none">
+      <div class="row g-0">
+      <div class="col">
         <img class="kbl-header-img" src="{{ RaikouServer }}/{{img1}}"/>
+              <h1 class="text-center imgHeaderTitle imgHeaderGen">
+              {{headerTitle}}
+              </h1>
+        </div>
       </div>
-      <div class="col-6 d-none d-md-block">
-        <img class="kbl-header-img" src="{{ RaikouServer }}/{{img2}}"/>
-        </h1>
-      </div>
+    </div>
     </div>
   </section>
 {% endmacro %}

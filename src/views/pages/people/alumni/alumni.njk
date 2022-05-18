@@ -8,7 +8,7 @@
   {{ navbar("People", "Alumni") }}
 
   {% from "components/img-header.njk" import imgHeaderSplit %}
-  {{ imgHeaderSplit() }}
+  {{ imgHeaderSplit(headerTitle="Alumni") }}
 
   {% from "components/breadcrumb.njk" import breadcrumb %}
   {{ breadcrumb([{name: 'Home', link: '/'}, {name: 'People', link: '/people'}, {name: 'Alumni', link: '/people/alumni'}]) }}
