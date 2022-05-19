@@ -17,13 +17,13 @@
   {% from "./_data.njk" import pub2022,pub2021, pub2020, pub2019, pub2018, pub2016, pub2014, pub2013, pub2010, pub2009, pub2007, pub2006, pub2005 %}
   {% from './_functions.njk' import selector, activeCheck, pubSelector, confSelector %}
 
-  <article class="container-fluid px-lg-5 px-2 mt-5">
+  <article class="container-fluid px-lg-5 px-2">
 
     <section class="row px-lg-5 px-3 justify-content-center">
       
 
       <div class="col-12 col-lg-9 overflow-hidden">
-        <section class="row justify-content-center mt-3 mb-4">
+        <section class="row justify-content-center mb-4">
           <div class="col-12 col-md-7 col-lg-8">
             <div class="kbl-tab-selector text-center d-none d-md-block" id="pub-selector">
               <span class="tab-select-option {% if (content == 'pub') %}selected{% endif %}" id="pub">Papers</span>

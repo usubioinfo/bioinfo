@@ -19,17 +19,14 @@ h5.header {
   padding: 4px 15px;
 }
 
-.news-item {
+@mixin news-item {
   border: 1px solid var(--color-border-gray);
   border-radius: var(--btn-radius);
   transition: var(--time-mid);
   cursor: pointer;
-  background: #fff!important;
   margin-bottom: 10px;
 
   &:hover {
-    background: #eee!important;
-
     .header {
       color: var(--color-primary)!important;
     }
@@ -38,7 +35,6 @@ h5.header {
       color: #838383;
     }
   }
-
   .header {
     font-size: 130%;
     font-weight: 700;
@@ -61,5 +57,26 @@ h5.header {
     font-size: 105%;
     color: var(--color-text-soft);
     font-weight: var(--font-weight-medium);
+  }
+}
+
+
+.news-itemFirst {
+  @include news-item();
+  background: #fff!important;
+  margin-bottom: 10px;
+
+  &:hover {
+    background: #D3D3D3!important;
+  }
+}
+
+.news-itemSecond {
+  @include news-item();
+  background: #eee!important;
+  margin-bottom: 10px;
+
+  &:hover {
+    background: #D3D3D3!important;
   }
 }
