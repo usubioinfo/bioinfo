@@ -30,6 +30,17 @@
         <h4 class="kbl-heading text-center">2022</h4>
         <div class="row justify-content-center">
           <div class="col-sm-6">
+            {% set bigDataConf2022 = {
+                link: '/events/bigDataConf2022',
+                title: 'Dr. Kaundal and Lab Members Presented at the Statistics Bigdata Conference',
+                location: 'Utah State University, Logan, UT',
+                date: 'May 16-19, 2022',
+                img: '/image/bioinfo/events/bigDataConf2022/PXL_20220518_191935611.MP.jpg'
+              }
+            %}
+            {{ eventLink(bigDataConf2022) }}
+          </div>
+          <div class="col-sm-6">
             {% set koltonCapitolHill = {
                 link: '/events/koltonCapitolHill',
                 title: 'Kolton Presents at Reasearch on Capitol Hill',
