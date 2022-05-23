@@ -18,6 +18,10 @@
     axios.post('http://bioinfocore.usu.edu/api/email/send', body)
       .then(res => {
         console.log(res);
+        document.getElementById('formName').value = '';
+        document.getElementById('formEmail').value = '';
+        document.getElementById('formPhone').value = '';
+        document.getElementById('formMessage').value = '';
       })
   })
 })();
