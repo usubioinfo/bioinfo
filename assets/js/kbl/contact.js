@@ -11,7 +11,7 @@
     const body = {
       password: 'rkU56a%e$',
       subjectLine: `Bioinfo Contact Request from ${name}`,
-      recipient: 'itsme@shelbymccowan.com',
+      recipient: 'a02308059@usu.edu',
       messageBody: messageBody
     }
 
