@@ -39,14 +39,12 @@ $('#homePageBS4Carousel').on('slide.bs.carousel', (e) => {
 });
 
 $('a.dropdown-toggle.nav-option').hover(function() {
-  console.log('test')
   $(this).siblings('.dropdown-menu').addClass('show');
 }, function() {
   $(this).siblings('.dropdown-menu').removeClass('show');
 });
 
 $('.nav-dropdown').hover(function() {
-  console.log('test')
   $(this).addClass('d-block');
 }, function() {
   $(this).removeClass('d-block');
@@ -110,8 +108,10 @@ $(document).ready(function(){
 
                  $('.leftLst, .rightLst').click(function () {
                      var condition = $(this).hasClass("leftLst");
+                     //Moves left if left button is pushed.
                      if (condition)
                          click(0, this);
+                    //Moves right if right button is pushed.
                      else
                          click(1, this)
                  });
@@ -164,7 +164,7 @@ $(document).ready(function(){
                              $(this).outerWidth(itemWidth);
                          });
 
-                         $(".leftLst").addClass("disabled");
+                         $(".leftLst").removeClass("disabled");
                          $(".rightLst").removeClass("disabled");
 
                      });
@@ -172,32 +172,40 @@ $(document).ready(function(){
 
 
                  //this function used to move the items
+                 // e is 0 when the left button is pushed, 1 when the right button is pushed.
+                 //el will be # followed by the parent id (Usually #MultiCarousel1).
+                 //s will be the data-slide of the parent. (Usually just 1.)
                  function ResCarousel(e, el, s) {
                      var leftBtn = ('.leftLst');
                      var rightBtn = ('.rightLst');
                      var translateXval = '';
+                     //itemsDiv is often just .MultiCarousel-inner.
+
                      var divStyle = $(el + ' ' + itemsDiv).css('transform');
                      var values = divStyle.match(/-?[\d\.]+/g);
+                     //divStyle will be a matrix of 6 elements.
+                     //values breaks divStyle up into an array.
                      var xds = Math.abs(values[4]);
+                     // e is 0 when the left button is pushed.
+                     var itemsCondition = $(el).find(itemsDiv).width() - $(el).width();
                      if (e == 0) {
                          translateXval = parseInt(xds) - parseInt(itemWidth * s);
                          $(el + ' ' + rightBtn).removeClass("disabled");
-
-                         if (translateXval <= itemWidth / 2) {
-                             translateXval = 0;
-                             $(el + ' ' + leftBtn).addClass("disabled");
+                        
+                         if (translateXval < -itemWidth / 2) {
+                             translateXval = itemsCondition;
                          }
                      }
+                     // e is 1 when the right button is pushed.
                      else if (e == 1) {
-                         var itemsCondition = $(el).find(itemsDiv).width() - $(el).width();
                          translateXval = parseInt(xds) + parseInt(itemWidth * s);
                          $(el + ' ' + leftBtn).removeClass("disabled");
 
-                         if (translateXval >= itemsCondition - itemWidth / 2) {
-                             translateXval = itemsCondition;
-                             $(el + ' ' + rightBtn).addClass("disabled");
+                         if (translateXval > itemsCondition + itemWidth / 2) {
+                             translateXval = 0;
                          }
                      }
+                     //Preforms the transform in the css.
                      $(el + ' ' + itemsDiv).css('transform', 'translateX(' + -translateXval + 'px)');
                  }
 
@@ -207,6 +215,12 @@ $(document).ready(function(){
                      var slide = $(Parent).attr("data-slide");
                      ResCarousel(ell, Parent, slide);
                  }
+
+                var sliderInterval = setInterval(() => {
+                    var Parent = "#MultiCarousel1";
+                    var slide = $(Parent).attr("data-slide");
+                    ResCarousel(1, Parent, slide);
+                },4000);
 
              });
 
