@@ -29,6 +29,17 @@
       <section class="{{ activeCheck('2022', routerEventsYearRange) }}" id="22">
         <h4 class="kbl-heading text-center">2022</h4>
         <div class="row justify-content-center">
+            <div class="col-sm-6">
+            {% set ritcheyScience = {
+                link: '/events/ritcheyScience',
+                title: 'High school student from the lab won award(s)',
+                location: 'ISEF 2022, Georgia, Atlanta',
+                date: 'May 07-13, 2022',
+                img: '/image/bioinfo/events/ritcheyScience/20220510-3.jpg'
+              }
+            %}
+            {{ eventLink(ritcheyScience) }}
+          </div>
           <div class="col-sm-6">
             {% set bigDataConf2022 = {
                 link: '/events/bigDataConf2022',

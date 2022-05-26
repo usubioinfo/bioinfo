@@ -1,0 +1,17 @@
+{% from "pages/events/template.njk" import eventPage %}
+
+{% set event = {
+    img: '/image/bioinfo/events/ritcheyScience/20220510-3.jpg',
+    location: 'ISEF 2022, Georgia, Atlanta',
+    date: 'May 07-13, 2022',
+    media: [
+    '/image/bioinfo/events/ritcheyScience/20220510-3.jpg',
+    '/image/bioinfo/events/ritcheyScience/20220510-2.jpg',
+    '/image/bioinfo/events/ritcheyScience/20220511-2.jpeg',
+    '/image/bioinfo/events/ritcheyScience/20220508-4.jpg',
+    '/image/bioinfo/events/ritcheyScience/20220510-5.jpeg'
+    ]
+  }
+%}
+
+{{ eventPage("High school student from the lab won award(s)", "ritcheyScience", event) }}
