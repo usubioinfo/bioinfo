@@ -3,7 +3,7 @@
     var researchSlider = document.getElementById("MultiCarousel");
     var options = {
         autoPlay: true,
-        autoPlayInterval: 5000,
+        autoPlayInterval: 8000,
         autoPlayPauseOnHover: false
     }
 
