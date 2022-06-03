@@ -145,6 +145,13 @@
   }
 %}
 
+{% set tritikbdb = {
+    img: "/image/bioinfo/tools/tritikbdb.png",
+    title: "TritiKBdb",
+    link: "http://bioinfo.usu.edu/tritikbdb"
+  }
+%}
+
 {% set HuCoVarIA= {
     img: "/image/bioinfo/tools/hucovaria.jpg",
     title: "HuCoVarIA",
@@ -169,7 +176,7 @@
 
 {% set hpi = [predhpi, apinet, deepHPI, huco, malivhu, HuCoVarIA] %}
 {% set clpt = [plantmSubp, atSubP, rslPredP, plPred] %}
-{% set dbs = [greeningDB, citSATdb, legumeSSRdb, ranchSAT, alfaNet, weconet, trustdb] %}
+{% set dbs = [greeningDB, citSATdb, legumeSSRdb, ranchSAT, alfaNet, weconet, trustdb, tritikbdb] %}
 {% set bioenergy = [lacSubPred, ligPred] %}
 {% set metagenomics = [necMiner] %}
 {% set ngsPackages = [pySeqRNA] %}
