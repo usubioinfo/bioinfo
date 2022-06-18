@@ -9,12 +9,15 @@
     {% from "universal/_navbar.njk" import navbar %}
     {{ navbar("Events") }}
 
-    <article class="container blog" style="margin-top: 103px;">
+  {% from "components/breadcrumb.njk" import breadcrumb %}
+  {{ breadcrumb([{name: 'Home', link: '/'}, {name: 'Events', link: '/events'},{name: fileName, link: '/events/' + fileName}], 0) }}
+
+    <article class="container blog">
       <div class="row justify-content-center">
         <div class="col-12 text-center">
           <h1 class="text-center blog">{{ title }}</h1>
           <img class="img-fluid col-12 col-md-10 col-lg-8 p-0 event-img" src="{{ RaikouServer }}{{ event.img }}">
-          <section class="text-start event-details mt-2">
+          <section class="text-start event-details mt-2 text-center">
             <span class="me-4 kbl-text-soft"><i class="ion-location me-2"></i>{{ event.location }}</span>
             <span class="kbl-text-soft"><i class="ion-calendar me-3"></i>{{ event.date }}</span>
           </section>
