@@ -21,10 +21,10 @@
     </div>
   </article>
 <article class="container">
-<div class = "row justify-content-center">
-<div class="col-12 mb-4">
-	<a href="tools#hpi" class="btn btn-md btn-block btn-outline-primary  my-1">Host-Pathogen Interaction Prediction Tools</a>
-	<a href="tools#cellularloc" class="btn btn-md btn-block btn-outline-danger  my-1">Cellular Localization Prediction Tools</a>
+<div class = "row justify-content-center text-center">
+<div class="col-12 mb-4" style="margin:auto">
+	<a href="tools#hpi" class="btn btn-md btn-block btn-outline-primary  my-1">Host-Pathogen Interactions</a>
+	<a href="tools#cellularloc" class="btn btn-md btn-block btn-outline-danger  my-1">Subcellular Localization Prediction</a>
   <a href="tools#db" class="btn btn-md btn-block btn-outline-info my-1">Databases</a>
 	<a href="tools#metagenomics" class="btn btn-md btn-block btn-outline-success my-1 ">Metagenomics</a>
   <a href="tools#ngsPack" class="btn btn-md btn-block btn-outline-warning my-1">NGS Packages</a>
@@ -40,7 +40,7 @@
     {% from "./_tool-data.njk" import hpi, clpt, metagenomics, dbs, bioenergy, ngsPackages, descriptors, disease %}
 
     {{ toolSection("Host-Pathogen Interactions", hpi, "hpi") }}
-    {{ toolSection("Subcellular Localization Predictions", clpt, "cellularloc") }}
+    {{ toolSection("Subcellular Localization Prediction", clpt, "cellularloc") }}
     {{ toolSection("Databases", dbs, "db") }}
     {{ toolSection("Metagenomics", metagenomics, "metagenomics") }}
     {{ toolSection("NGS Packages", ngsPackages, "ngsPack") }}
