@@ -24,3 +24,33 @@
   </body>
 </html>
 {% endmacro %}
+
+{% macro newNewsPage(title='DEFAULT', fileName='', img='') %}
+{% set file = "pages/news/" + fileName + "/content.njk" %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  {% from "universal/_header.njk" import header %}
+  {{ header() }}
+
+  <body>
+    {% from "universal/_navbar.njk" import navbar %}
+    {{ navbar("News") }}
+
+    <div class="container-fluid blog" style="margin-top: 103px;">
+      <div class="row justify-content-center">
+        <h1 class="text-center blog">{{ title }}</h1>
+        <div class="col-xl-3 col-md-4 col-sm-5 col-6">
+          <img class="mt-4 rounded" style="display: block; max-width: 100%; height: 30vh; float:right" src="{{img}}">
+          </div>
+        <div class="col-6">
+          {% include (file) %}
+        </div>
+      </div>
+    </div>
+
+    {% include "universal/_footer.njk" %}
+    {% from "universal/_footer-scripts.njk" import scripts %}
+    {{ scripts() }}
+  </body>
+</html>
+{% endmacro %}
