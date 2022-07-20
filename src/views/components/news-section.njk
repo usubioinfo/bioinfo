@@ -1,0 +1,154 @@
+{% from "components/news-card.njk" import leftMediaCard, rightMediaCard, leftNewsCard, rightNewsCard %}
+
+{% macro  newsSection (section,sectionTag,generalIndex=1,scienceIndex=1,mediaIndex=1) %}
+    {% if sectionTag == "General"%}
+        {% set index = generalIndex %}
+    {% endif %}
+    {% if sectionTag == "Science"%}
+        {% set index = scienceIndex %}
+    {% endif %}
+      <article class="col-11 col-md">
+        <section class="text-center col-header mb-1 mb-md-4">
+          <b class="col-header-text">{{sectionTag}}</b>
+        </section>
+{% set numberOfPages = (((section.length / 10) + 2) | int) %}
+{% set generalIndexTmp = (generalIndex | int) %}
+{% set scienceIndexTmp = (scienceIndex | int) %}
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" 
+      {% if sectionTag == "General"%}
+        {% if generalIndex <= 1%}
+            {% set generalIndex = (numberOfPages)%}
+        {% endif %}
+        href="news?General={{generalIndex-1}}&Science={{scienceIndex}}&Media={{mediaIndex}}"
+      {% endif %}
+      {% if sectionTag == "Science"%}
+        {% if scienceIndex <= 1%}
+            {% set scienceIndex = (numberOfPages)%}
+        {% endif %}
+        href="news?General={{generalIndex}}&Science={{scienceIndex-1}}&Media={{mediaIndex}}"
+      {% endif %} aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    {% set generalIndex = (generalIndexTmp | int) %}
+    {% set scienceIndex = (scienceIndexTmp | int) %}
+    {% for i in range(1,numberOfPages) %}
+    {% if i==index %}
+        <li class="page-item active">
+    {% else %}
+        <li class="page-item">
+    {% endif %}
+    <a class="page-link"       
+      {% if sectionTag == "General"%}
+        href="news?General={{i}}&Science={{scienceIndex}}&Media={{mediaIndex}}"
+      {% endif %}
+      {% if sectionTag == "Science"%}
+        href="news?General={{generalIndex}}&Science={{i}}&Media={{mediaIndex}}"
+      {% endif %} >{{i}}</a></li>
+    {% endfor %}
+    <li class="page-item">
+      <a class="page-link"       
+      {% if sectionTag == "General" %}
+        {% if generalIndex >= (numberOfPages -1) %}
+            {% set generalIndex = 0 %}
+        {% endif %}
+        href="news?General={{((generalIndex+1) | int)}}&Science={{scienceIndex}}&Media={{mediaIndex}}"
+      {% endif %}
+      {% if sectionTag == "Science"%}
+        {% if scienceIndex >= (numberOfPages -1)%}
+            {% set scienceIndex = 0 %}
+        {% endif %}
+        href="news?General={{generalIndex}}&Science={{((scienceIndex+1) | int)}}&Media={{mediaIndex}}"
+      {% endif %} aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+        {% set rightEl = false %}
+        {% for i in range((index-1)*10,index*10) %}
+            {%if i < section.length%}
+                {% if rightEl %}
+                    {{rightNewsCard(section[i])}}
+                    {% set rightEl = false %}
+                {% else %}
+                    {{leftNewsCard(section[i])}}
+                    {% set rightEl = true %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+      </article>
+{% endmacro %}
+
+
+{% macro  newsSectionMedia (section,sectionTag="Media",generalIndex=1,scienceIndex=1,mediaIndex=1) %}
+    {% if sectionTag == "Media"%}
+        {% set index = mediaIndex %}
+    {% endif %}
+      <article class="col-11 col-md">
+        <section class="text-center col-header mb-1 mb-md-4">
+          <b class="col-header-text">{{sectionTag}}</b>
+        </section>
+{% set numberOfPages = (((section.length / 10) + 2) | int) %}
+{% set mediaIndexTmp = (mediaIndex | int) %}
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" 
+      {% if sectionTag == "Media"%}
+        {% if mediaIndex <= 1%}
+            {% set mediaIndex = (numberOfPages)%}
+        {% endif %}
+        href="news?General={{generalIndex}}&Science={{scienceIndex}}&Media={{mediaIndex-1}}"
+      {% endif %}
+    aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    {% set mediaIndex = (mediaIndexTmp | int) %}
+    {% for i in range(1,numberOfPages) %}
+    {% if i==index %}
+        <li class="page-item active">
+    {% else %}
+        <li class="page-item">
+    {% endif %}
+    <a class="page-link"       
+      {% if sectionTag == "Media"%}
+        href="news?General={{generalIndex}}&Science={{scienceIndex}}&Media={{i}}"
+      {% endif %} >{{i}}</a></li>
+    {% endfor %}
+    <li class="page-item">
+      <a class="page-link"       
+      {% if sectionTag == "Media" %}
+        {% if mediaIndex >= (numberOfPages -1) %}
+            {% set mediaIndex = 0 %}
+        {% endif %}
+        href="news?General={{generalIndex}}&Science={{scienceIndex}}&Media={{((mediaIndex + 1) | int)}}"
+      {% endif %}
+      aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+        {% set rightEl = false %}
+        {% for i in range((index-1)*10,index*10) %}
+            {%if i < section.length%}
+                {% if rightEl %}
+                    {{rightMediaCard(section[i])}}
+                    {% set rightEl = false %}
+                {% else %}
+                    {{leftMediaCard(section[i])}}
+                    {% set rightEl = true %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+      </article>
+{% endmacro %}

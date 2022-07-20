@@ -127,6 +127,35 @@ app.get('/events', (req, res, next) => {
   });
 });
 
+app.get('/news', (req, res, next) => {
+  let routerNewsGeneral = 1;
+  let routerNewsScience = 1;
+  let routerNewsMedia = 1;
+  if (req.query.General) {
+    routerNewsGeneral = req.query.General;
+  }
+  if (req.query.Science) {
+    routerNewsScience = req.query.Science;
+  }
+  if (req.query.Media) {
+    routerNewsMedia = req.query.Media;
+  }
+
+  let data = {
+    routerNewsGeneral,
+    routerNewsScience,
+    routerNewsMedia,
+    activeRoute: routeDict['news']
+  };
+
+  res.render(__dirname + `/views/pages/news/news.njk`, data, (err, html) => {
+    if (err) return next(err);
+    res.send(html);
+  });
+});
+
+
+
 app.get('/:topLevelPage', (req, res, next) => {
   let data = {activeRoute: routeDict[req.params.topLevelPage]};
 

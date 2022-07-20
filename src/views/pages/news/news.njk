@@ -15,59 +15,19 @@
 
   {% from "./data.njk" import general, science, media %}
   {% from "components/news-card.njk" import leftMediaCard, rightMediaCard, leftNewsCard, rightNewsCard %}
+  {% from "components/news-section.njk" import newsSection, newsSectionMedia %}
 
   <article class="container-fluid px-5 pb-5 pt-1 my-5">
     <div class="row">
 
       <!-- News - General -->
-      <article class="col-11 col-md">
-        <section class="text-center col-header mb-1 mb-md-4">
-          <b class="col-header-text">General</b>
-        </section>
-        {% set rightEl = false %}
-        {% for newsEl in general %}
-          {% if rightEl %}
-            {{rightNewsCard(newsEl)}}
-            {% set rightEl = false %}
-          {% else %}
-            {{leftNewsCard(newsEl)}}
-            {% set rightEl = true %}
-          {% endif %}
-        {% endfor %}
-      </article>
+      {{newsSection(general,"General",routerNewsGeneral,routerNewsScience,routerNewsMedia)}}
 
       <!-- News - Science -->
-      <article class="col-11 col-md">
-        <section class="text-center col-header mb-1 mb-md-4 mt-4 mt-md-0">
-          <b class="col-header-text">Science</b>
-        </section>
-        {% set rightEl = false %}
-        {% for sciEl in science %}
-          {% if rightEl %}
-            {{rightNewsCard(sciEl)}}
-            {% set rightEl = false %}
-          {% else %}
-            {{leftNewsCard(sciEl)}}
-            {% set rightEl = true %}
-          {% endif %}
-        {% endfor %}
-      </article>
+      {{newsSection(science,"Science",routerNewsGeneral,routerNewsScience,routerNewsMedia)}}
 
-      <article class="col-11 col-md-3">
-        <section class="text-center col-header mb-1 mb-md-4 mt-4 mt-md-0">
-          <b class="col-header-text">Media</b>
-        </section>
-        {% set rightEl = false %}
-        {% for mediaEl in media %}
-          {% if rightEl %}
-            {{rightMediaCard(mediaEl)}}
-            {% set rightEl = false %}
-          {% else %}
-            {{leftMediaCard(mediaEl)}}
-            {% set rightEl = true %}
-          {% endif %}
-        {% endfor %}
-      </article>
+      <!-- News Media -->
+      {{newsSectionMedia(media,"Media",routerNewsGeneral,routerNewsScience,routerNewsMedia)}}
 
     </div>
   </article>
