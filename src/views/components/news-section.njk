@@ -15,7 +15,7 @@
 {% set generalIndexTmp = (generalIndex | int) %}
 {% set scienceIndexTmp = (scienceIndex | int) %}
 <nav aria-label="Page navigation example">
-  <ul class="pagination">
+  <ul class="pagination justify-content-center">
     <li class="page-item">
       <a class="page-link" 
       {% if sectionTag == "General"%}
@@ -97,7 +97,7 @@
 {% set numberOfPages = (((section.length / 10) + 2) | int) %}
 {% set mediaIndexTmp = (mediaIndex | int) %}
 <nav aria-label="Page navigation example">
-  <ul class="pagination">
+  <ul class="pagination justify-content-center">
     <li class="page-item">
       <a class="page-link" 
       {% if sectionTag == "Media"%}
