@@ -1,0 +1,17 @@
+.pagination>li.active>a {
+    background-color: rgba(176,18,65,0.8) !important;
+    border-color: rgba(176,18,65,0.8) !important
+  }
+
+  .pagination > li > a
+{
+    background-color: white;
+    color: rgba(176,18,65,0.8);
+}
+
+.pagination > li > a:hover
+{
+    color: rgba(176,18,65,0.8);
+    background-color: rgba(176, 18, 65, 0.215);
+    border-color: rgba(176,18,65,0.215);
+}
