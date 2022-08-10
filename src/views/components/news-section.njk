@@ -14,7 +14,19 @@
 {% set numberOfPages = (((section.length / 10) + 2) | int) %}
 {% set generalIndexTmp = (generalIndex | int) %}
 {% set scienceIndexTmp = (scienceIndex | int) %}
-<nav aria-label="Page navigation example">
+        {% set rightEl = false %}
+        {% for i in range((index-1)*10,index*10) %}
+            {%if i < section.length%}
+                {% if rightEl %}
+                    {{rightNewsCard(section[i])}}
+                    {% set rightEl = false %}
+                {% else %}
+                    {{leftNewsCard(section[i])}}
+                    {% set rightEl = true %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+        <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-center">
     <li class="page-item">
       <a class="page-link" 
@@ -70,18 +82,6 @@
     </li>
   </ul>
 </nav>
-        {% set rightEl = false %}
-        {% for i in range((index-1)*10,index*10) %}
-            {%if i < section.length%}
-                {% if rightEl %}
-                    {{rightNewsCard(section[i])}}
-                    {% set rightEl = false %}
-                {% else %}
-                    {{leftNewsCard(section[i])}}
-                    {% set rightEl = true %}
-                {% endif %}
-            {% endif %}
-        {% endfor %}
       </article>
 {% endmacro %}
 
@@ -96,7 +96,19 @@
         </section>
 {% set numberOfPages = (((section.length / 10) + 2) | int) %}
 {% set mediaIndexTmp = (mediaIndex | int) %}
-<nav aria-label="Page navigation example">
+        {% set rightEl = false %}
+        {% for i in range((index-1)*10,index*10) %}
+            {%if i < section.length%}
+                {% if rightEl %}
+                    {{rightMediaCard(section[i])}}
+                    {% set rightEl = false %}
+                {% else %}
+                    {{leftMediaCard(section[i])}}
+                    {% set rightEl = true %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+        <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-center">
     <li class="page-item">
       <a class="page-link" 
@@ -138,17 +150,5 @@
     </li>
   </ul>
 </nav>
-        {% set rightEl = false %}
-        {% for i in range((index-1)*10,index*10) %}
-            {%if i < section.length%}
-                {% if rightEl %}
-                    {{rightMediaCard(section[i])}}
-                    {% set rightEl = false %}
-                {% else %}
-                    {{leftMediaCard(section[i])}}
-                    {% set rightEl = true %}
-                {% endif %}
-            {% endif %}
-        {% endfor %}
       </article>
 {% endmacro %}
