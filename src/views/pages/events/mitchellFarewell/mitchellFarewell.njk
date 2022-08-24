@@ -1,0 +1,23 @@
+{% from "pages/events/template.njk" import eventPage %}
+
+{% set event = {
+    img: '/image/bioinfo/events/2022-Mitchell-Farewell/PXL_20220812_194602003.MP.jpg',
+    location: 'Utah State University, Logan, UT',
+    date: 'August 8, 2022',
+    media: [
+    '/image/bioinfo/events/2022-Mitchell-Farewell/PXL_20220812_194427489.MP.jpg',
+    '/image/bioinfo/events/2022-Mitchell-Farewell/PXL_20220812_194429210.MP.jpg',
+    '/image/bioinfo/events/2022-Mitchell-Farewell/PXL_20220812_194429997.MP.jpg',
+    '/image/bioinfo/events/2022-Mitchell-Farewell/PXL_20220812_194447281.MP.jpg',
+    '/image/bioinfo/events/2022-Mitchell-Farewell/PXL_20220812_194448129.MP.jpg',
+    '/image/bioinfo/events/2022-Mitchell-Farewell/PXL_20220812_194449364.jpg',
+    '/image/bioinfo/events/2022-Mitchell-Farewell/PXL_20220812_194523660.MP.jpg',
+    '/image/bioinfo/events/2022-Mitchell-Farewell/PXL_20220812_194537288.MP.jpg',
+    '/image/bioinfo/events/2022-Mitchell-Farewell/PXL_20220812_194602003.MP.jpg',
+    '/image/bioinfo/events/2022-Mitchell-Farewell/PXL_20220812_202147851.MP.jpg',
+    '/image/bioinfo/events/2022-Mitchell-Farewell/PXL_20220812_202247352.MP.jpg'
+    ]
+  }
+%}
+
+{{ eventPage("Mitchell Finishes His Internship", "mitchellFarewell", event) }}

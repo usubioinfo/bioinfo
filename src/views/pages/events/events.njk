@@ -30,6 +30,17 @@
         <h4 class="kbl-heading text-center">2022</h4>
         <div class="row justify-content-center">
             <div class="col-sm-6">
+            {% set mitchellFarewell = {
+                link: '/events/mitchellFarewell',
+                title: 'Mitchell Finishes His Internship',
+                location: 'Utah State University, Logan, UT',
+                date: 'Aug 8, 2022',
+                img: '/image/bioinfo/events/2022-Mitchell-Farewell/PXL_20220812_194602003.MP.jpg'
+              }
+            %}
+            {{ eventLink(mitchellFarewell) }}
+            </div>
+            <div class="col-sm-6">
             {% set ritcheyScience = {
                 link: '/events/ritcheyScience',
                 title: 'High school student from the lab won award(s)',
@@ -215,7 +226,7 @@
     </div>
   </article>
 
-  {% set latest = [koltonCapitolHill,pag2021,shelby,pag2020] %}
+  {% set latest = [mitchellFarewell,ritcheyScience,bigDataConf2022, koltonCapitolHill] %}
   {% include "universal/_footer.njk" %}
   {% from "universal/_footer-scripts.njk" import scripts %}
   {{ scripts() }}
