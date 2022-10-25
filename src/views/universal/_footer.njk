@@ -78,35 +78,26 @@
         </div>
       </section>
 
+
+{% macro footerEventsGenerator(events) %}
+{% for event in events%}
+  {{ footerEvent(event.title,event.date,event.link) }}
+{% endfor %}
+{% endmacro %}
+
+{% macro footerEvent(title,date,link)%}
+    <div class="my-3">
+      <a href={{link}} target="_blank" rel="noopen noreferrer" class="footer-link thicc">
+        {{title}}
+      </a>
+    <div class="kbl-text soft">{{date}}</div>
+  </div>
+{% endmacro %}
+
       <section class="col-10 col-sm-6 col-md-4 pt-3 footer-section">
         <h5 class="kbl-heading pb-3">Latest Events</h5>
-
-        <div class="my-3">
-          <a href="events/winter" target="_blank" rel="noopen noreferrer" class="footer-link thicc">
-            Utah State University Winter
-          </a>
-          <div class="kbl-text soft">December 1, 2019</div>
-        </div>
-
-        <div class="my-3">
-          <a href="events/cricket" target="_blank" rel="noopen noreferrer" class="footer-link thicc">
-            Cricket in Utah
-          </a>
-          <div class="kbl-text soft">July 13, 2019</div>
-        </div>
-
-        <div class="my-3">
-          <a href="events/psc" target="_blank" rel="noopen noreferrer" class="footer-link thicc">
-            PSC Showcase
-          </a>
-          <div class="kbl-text soft">March 23, 2019</div>
-        </div>
-
-        <div class="my-4">
-          <a href="events" target="_blank" rel="noopen noreferrer" class="footer-link thicc">
-            View All
-          </a>
-        </div>
+        {% from 'pages/events/data.njk' import latest%}
+        {{footerEventsGenerator(latest)}}
       </section>
     </div>
   </div>

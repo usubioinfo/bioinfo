@@ -1,3 +1,4 @@
+{% from "components/event-link.njk" import eventLink%}
 {% macro selector(btnString, routerEventsYearRange) %}
   {% if btnString === routerEventsYearRange %}
     <div class="col-auto">
@@ -12,8 +13,20 @@
 
 {% macro activeCheck(yearString, routerEventsYearRange) %}
   {% if yearString === routerEventsYearRange %}
-
   {% else %}
     d-none
   {% endif %}
+{% endmacro %}
+
+{% macro eventsGenerator(events,year,yearID,routerEventsYearRange) %}
+  <section class="{{ activeCheck(year, routerEventsYearRange) }}" id={{yearID}}>
+    <h4 class="kbl-heading text-center">{{year}}</h4>
+    <div class="row justify-content-center">
+          {% for event in events%}
+      <div class="col-sm-6">
+        {{ eventLink(event) }}
+      </div>
+          {% endfor %}
+    </div>
+  </section>
 {% endmacro %}
