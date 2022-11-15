@@ -80,7 +80,7 @@
       <section class="col-12 col-md-10 col-lg-4 mb-3 mb-lg-0 d-none d-lg-block">
         <div class="h-100 gray-bg py-3 px-4 flex-col">
           <h5 class="kbl-heading pb-2">Latest Events:</h5>
-          {% from "pages/events/events.njk" import latest %}
+          {% from "pages/events/data.njk" import latest %}
           {% for event in latest %}
             {% if (loop.index <= 4) %}
               <section class="home-news-item py-2">
