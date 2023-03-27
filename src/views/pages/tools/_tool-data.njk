@@ -152,6 +152,13 @@
   }
 %}
 
+{% set myDockDB = {
+    img: "/image/bioinfo/tools/myDockDB.png",
+    title: "myDockDB",
+    link: "http://bioinfo.usu.edu/myDockDB/"
+  }
+%}
+
 {% set HuCoVarIA= {
     img: "/image/bioinfo/tools/hucovaria.jpg",
     title: "HuCoVarIA",
@@ -176,7 +183,7 @@
 
 {% set hpi = [predhpi, apinet, deepHPI, huco, malivhu, HuCoVarIA] %}
 {% set clpt = [plantmSubp, atSubP, rslPredP, plPred] %}
-{% set dbs = [greeningDB, citSATdb, legumeSSRdb, ranchSAT, alfaNet, weconet, trustdb, tritikbdb] %}
+{% set dbs = [greeningDB, citSATdb, legumeSSRdb, ranchSAT, alfaNet, weconet, trustdb, tritikbdb,myDockDB] %}
 {% set bioenergy = [lacSubPred, ligPred] %}
 {% set metagenomics = [necMiner] %}
 {% set ngsPackages = [pySeqRNA] %}
