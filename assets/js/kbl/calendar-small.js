@@ -19,7 +19,7 @@ let firstOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1
 let appointments = [];
 
 function getAppointments(month) {
-  const apiUrlProd = 'http://bioinfocore.usu.edu/api';
+  const apiUrlProd = 'https://bioinfocore.usu.edu/api';
   const apiUrlLocal = 'http://localhost:3100';
   axios.get(`${apiUrlProd}/appointments/month/${month}`)
     .then((res) => {

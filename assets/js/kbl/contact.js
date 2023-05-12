@@ -15,7 +15,7 @@
       messageBody: messageBody
     }
 
-    axios.post('http://bioinfocore.usu.edu/api/email/send', body)
+    axios.post('https://bioinfocore.usu.edu/api/email/send', body)
       .then(res => {
         console.log(res);
         document.getElementById('formName').value = '';
