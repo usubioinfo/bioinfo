@@ -29,7 +29,7 @@ let nunEnv = nunjucks.configure(__dirname + '/views', {
 });
 
 
-nunEnv.addGlobal(`RaikouServer`, 'http://bioinfocore.usu.edu/raikou');
+nunEnv.addGlobal(`RaikouServer`, 'https://bioinfocore.usu.edu/raikou');
 
 
 nunEnv.addExtension('SetAsyncExtension', new SetAsyncExtension());
