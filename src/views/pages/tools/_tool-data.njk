@@ -192,13 +192,18 @@
     link: "https://bioinfo.usu.edu/RSLPred-2.0/"
   }
  %}
-
+  {% set deepNEC2= {
+    img: "/image/bioinfo/tools/deepnec.png",
+    title: "deepNEC-2.0",
+    link: "https://bioinfo.usu.edu/deepnec-2.0/"
+  }
+ %}
 
 {% set hpi = [predhpi, apinet, deepHPI, huco, malivhu, HuCoVarIA] %}
 {% set clpt = [AtSubP2, RSLPred2, plantmSubp, atSubP, rslPredP, plPred] %}
 {% set dbs = [greeningDB, citSATdb, legumeSSRdb, ranchSAT, alfaNet, weconet, trustdb, tritikbdb,myDockDB] %}
 {% set bioenergy = [lacSubPred, ligPred] %}
-{% set metagenomics = [necMiner] %}
+{% set metagenomics = [deepNEC2, necMiner ] %}
 {% set ngsPackages = [pySeqRNA] %}
 {% set descriptors = [ProFeatX] %}
 {% set disease = [rbPred] %}
