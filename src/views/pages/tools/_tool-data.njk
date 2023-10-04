@@ -198,10 +198,16 @@
     link: "https://bioinfo.usu.edu/deepnec-2.0/"
   }
  %}
+  {% set HPInet= {
+    img: "/image/bioinfo/tools/hpinet.png",
+    title: "HPInet",
+    link: "https://bioinfo.usu.edu/hpinet/"
+  }
+ %}
 
 {% set hpi = [predhpi, apinet, deepHPI, huco, malivhu, HuCoVarIA] %}
 {% set clpt = [AtSubP2, RSLpred2, plantmSubp, atSubP, rslPredP, plPred] %}
-{% set dbs = [greeningDB, citSATdb, legumeSSRdb, ranchSAT, alfaNet, weconet, trustdb, tritikbdb,myDockDB] %}
+{% set dbs = [HPInet, greeningDB, citSATdb, legumeSSRdb, ranchSAT, alfaNet, weconet, trustdb, tritikbdb,myDockDB] %}
 {% set bioenergy = [lacSubPred, ligPred] %}
 {% set metagenomics = [deepNEC2, necMiner ] %}
 {% set ngsPackages = [pySeqRNA] %}
