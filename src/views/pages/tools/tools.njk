@@ -28,6 +28,7 @@
   <a href="tools#db" class="btn btn-md btn-block btn-outline-info my-1">Databases</a>
 	<a href="tools#metagenomics" class="btn btn-md btn-block btn-outline-success my-1 ">Metagenomics</a>
   <a href="tools#ngsPack" class="btn btn-md btn-block btn-outline-warning my-1">NGS Packages</a>
+  <a href="tools#rgenes" class="btn btn-md btn-block btn-outline-warning my-1">Plant Resistance Genes</a>
   <a href="tools#descriptors" class="btn btn-md btn-block btn-outline-info my-1">Descriptors</a>
 	<a href="tools#bionrg" class="btn btn-md btn-block btn-outline-secondary my-1 ">Bioenergy</a>
 	<a href="tools#disease" class="btn btn-md btn-block btn-outline-dark my-1">Disease Forecasting</a>
@@ -37,7 +38,7 @@
 
 <article class="container">
     {% from "./_tool-section.njk" import toolSection %}
-    {% from "./_tool-data.njk" import hpi, clpt, metagenomics, dbs, bioenergy, ngsPackages, descriptors, disease %}
+    {% from "./_tool-data.njk" import hpi, clpt, metagenomics,rgenes, dbs, bioenergy, ngsPackages, descriptors, disease %}
 
     {{ toolSection("Host-Pathogen Interactions", hpi, "hpi") }}
     {{ toolSection("Subcellular Localization Prediction", clpt, "cellularloc") }}
