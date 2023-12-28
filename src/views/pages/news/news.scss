@@ -16,7 +16,11 @@ h5.header {
 }
 
 .news-item-container {
-  padding: 4px 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Adjust minmax values based on your design
+  grid-auto-rows: 1fr;
+  gap: 20px; // Adjust the gap as needed
+  align-items: stretch; // This will align the items along the top, giving them equal height
 }
 
 @mixin news-item {
