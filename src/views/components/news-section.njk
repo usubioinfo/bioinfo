@@ -1,4 +1,5 @@
 {% from "components/news-card.njk" import leftMediaCard, rightMediaCard, leftNewsCard, rightNewsCard %}
+{% set itemsPerPage = 5 %}
 
 {% macro  newsSection (section,sectionTag,generalIndex=1,scienceIndex=1,mediaIndex=1) %}
     {% if sectionTag == "General"%}
@@ -11,11 +12,11 @@
         <section class="text-center col-header mb-1 mb-md-4">
           <b class="col-header-text">{{sectionTag}}</b>
         </section>
-{% set numberOfPages = (((section.length / 10) + 2) | int) %}
+{% set numberOfPages = (((section.length / itemsPerPage) + 2) | int) %}
 {% set generalIndexTmp = (generalIndex | int) %}
 {% set scienceIndexTmp = (scienceIndex | int) %}
         {% set rightEl = false %}
-        {% for i in range((index-1)*10,index*10) %}
+        {% for i in range((index-1)*itemsPerPage,index*itemsPerPage) %}
             {%if i < section.length%}
                 {% if rightEl %}
                     {{rightNewsCard(section[i])}}
@@ -94,10 +95,10 @@
         <section class="text-center col-header mb-1 mb-md-4">
           <b class="col-header-text">{{sectionTag}}</b>
         </section>
-{% set numberOfPages = (((section.length / 10) + 2) | int) %}
+{% set numberOfPages = (((section.length / itemsPerPage) + 2) | int) %}
 {% set mediaIndexTmp = (mediaIndex | int) %}
         {% set rightEl = false %}
-        {% for i in range((index-1)*10,index*10) %}
+        {% for i in range((index-1)* itemsPerPage,index* itemsPerPage) %}
             {%if i < section.length%}
                 {% if rightEl %}
                     {{rightMediaCard(section[i])}}
