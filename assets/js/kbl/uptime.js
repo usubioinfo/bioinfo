@@ -1,5 +1,5 @@
 (() => {
-  axios.get('https://bioinfocore.usu.edu/api/uptime/uptimes').then((response) => {
+  axios.get('https://kaabil.net/api/uptime/uptimes').then((response) => {
     console.log(response.data);
 
     response.data.forEach((tool) => {
