@@ -217,8 +217,15 @@
  }
  %}
 
+  {% set LegumeLoc= {
+  img: "/image/bioinfo/tools/legumeloc.png",
+  title: "LegumeLoc",
+  link: "https://kaabil.net/legumeloc/"
+ }
+ %}
+
 {% set hpi = [predhpi, apinet, deepHPI, huco, malivhu, HuCoVarIA, HuPoxNET] %}
-{% set clpt = [AtSubP2, RSLpred2, plantmSubp, atSubP, rslPredP, plPred] %}
+{% set clpt = [AtSubP2, RSLpred2, LegumeLoc, plantmSubp, atSubP, rslPredP, plPred] %}
 {% set dbs = [HPInet, greeningDB, citSATdb, legumeSSRdb, ranchSAT, alfaNet, weconet, trustdb, tritikbdb,myDockDB] %}
 {% set bioenergy = [lacSubPred, ligPred] %}
 {% set metagenomics = [deepNEC2, necMiner ] %}
