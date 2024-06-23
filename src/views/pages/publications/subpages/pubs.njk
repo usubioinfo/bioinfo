@@ -1,5 +1,5 @@
 <div class="row justify-content-center">
-  {{ pubSelector("2023") }}
+  {{ pubSelector("2023-2024") }}
   {{ pubSelector("2020-2022") }}
   {{ pubSelector("2017-2019") }}
   {{ pubSelector("2014-2016") }}
@@ -8,7 +8,30 @@
   {{ pubSelector("2005-2007") }}
 </div>
 
-<article class="pub-group" id="pub-2023">
+<article class="pub-group" id="pub-2024">
+  <section class="py-4">
+    <div class="kbl-header-bar py-2 text-center mb-2">
+      <h4 class="kbl-heading my-auto">2024</h4>
+    </div>
+    <div class="pub-container">
+      {% for article in pub2024 %}
+        {{ publication(article) }}
+      {% endfor %}
+    </div>
+  </section>
+</article>
+
+<article class="pub-group d-none" id="pub-2023">
+  <section class="py-4">
+    <div class="kbl-header-bar py-2 text-center mb-2">
+      <h4 class="kbl-heading my-auto">2024</h4>
+    </div>
+    <div class="pub-container">
+      {% for article in pub2024 %}
+        {{ publication(article) }}
+      {% endfor %}
+    </div>
+  </section>
   <section class="py-4">
     <div class="kbl-header-bar py-2 text-center mb-2">
       <h4 class="kbl-heading my-auto">2023</h4>
@@ -20,6 +43,7 @@
     </div>
   </section>
 </article>
+
 
 <article class="pub-group d-none" id="pub-2020">
   <section class="py-4">
