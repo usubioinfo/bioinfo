@@ -10,7 +10,7 @@
                       <div clas="title-wrapper">
                         <h5>Dr. Rakesh Kaundal</h5>
                         <p class="my-1">
-                          Rakesh is an Assistant Professor of Bioinformatics in the Department of Plants, Soils, and Climate at Utah State University,
+                          Rakesh is an Associate Professor of Bioinformatics in the Department of Plants, Soils, and Climate at Utah State University,
                           and is the Director of Bioinformatics Facility at the Center for Integrated BioSystems, USU.
                         </p>
                         <h6>
@@ -81,24 +81,36 @@
                 </div>
             </div>
         </div>
+        <h4 class="kbl-heading my-auto text-center mb-4">Our Team</h4>
         {% from "components/person-card.njk" import personCard %}
         <div class="row justify-content-center">
+         
           <div class="col-12 col-md-4 col-sm-6 col-lg-3">
             {{ personCard("/image/raw/bioinfo/profile/2.jpg", "Rousselene B. Larson", "Bioinformatics Scientist") }}
           </div>
+         
           <div class="col-12 col-md-4 col-sm-6 col-lg-3">
+            {{ personCard("/image/raw/bioinfo/profile/bradyc.jpg", "Brady Christianson", "PhD Student | PSC") }}
+          </div>
+          <div class="col-12 col-md-4 col-sm-6 col-lg-3">
+            {{ personCard("/image/raw/bioinfo/profile/david.jpg?h=600&w=500", "David Guevara", "PhD Student | CS") }}
+          </div>
+
+       {#   <div class="col-12 col-md-4 col-sm-6 col-lg-3">
             {{ personCard("/image/raw/bioinfo/profile/colin.jpg", "Colin Bernhardt", "HPC Systems Administrator") }}
-          </div>
+          </div> #}
+          
           <div class="col-12 col-md-4 col-sm-6 col-lg-3">
-            {{ personCard("/image/raw/people/raghav/raghav.jpg", "Raghav Kataria", "PhD Student | PSC") }}
+            {{ personCard("/image/raw/bioinfo/profile/raghav2.jpg", "Raghav Kataria", "PhD Student | PSC") }}
           </div>
-          <div class="col-12 col-md-4 col-sm-6 col-lg-3">
+
+       {# <div class="col-12 col-md-4 col-sm-6 col-lg-3">
             {{ personCard("/image/raw/bioinfo/profile/1.jpg", "Naveen Duhan", "PhD Student | PSC") }}
-          </div>
+          </div> #}
         </div>
         <div class="row">
           <div class="col text-start-sm ps-sm-5">
-            <a href="/people/our-team" class="kbl-link dull"><b>View all</b></a>
+            <a href="/people/our-team" class="kbl-link dull "><b>View all</b></a>
           </div>
         </div>
     </div>

@@ -7,3 +7,5 @@ public/css
 env.njk
 dist
 kbl-css
+
+dockerscript.sh

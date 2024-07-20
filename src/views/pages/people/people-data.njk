@@ -37,6 +37,18 @@
   }
 %}
 
+{% set brady = {
+    name: "Brady Christianson",
+    subtitle: "PhD Student | PSC",
+    modifier: "Christianson",
+    type: "Graduate",
+    bio: "",
+    email: "brady.christianson@usu.edu",
+    img: "/image/raw/bioinfo/profile/bradyc.jpg",
+    social: []
+  }
+%}
+
 {% set kaige = {
     name: "Kaige Zhang",
     subtitle: "Ph.D. Research Assistant | CS",
@@ -69,7 +81,7 @@
     name: "Naveen Duhan",
     subtitle: "PhD Student | PSC",
     modifier: "Duhan",
-    type: "Graduate",
+    type: "Alumni",
     bio: "",
     email: "naveen.duhan@usu.edu",
     img: "/image/raw/bioinfo/profile/1.jpg",
@@ -113,7 +125,7 @@
     modifier: "Guevara",
     type: "Graduate",
     bio: "David is a CS PhD student from Colombia. He worked full-time as a full-stack software developer for 6 years while finishing his bachelor's degree in Software and Computer Engineering and got a MSc. degree in Computational Biology. His interests are software development, database administration, machine learning, and deep learning. He likes soccer, videogames, and playing music.",
-    email: "davguev@aggiemail.usu.edu",
+    email: "davguev@usu.edu",
     img: "/image/raw/bioinfo/profile/david.jpg?h=600&w=500",
     social: []
   }
@@ -125,13 +137,23 @@
     modifier: "Matthew",
     type: "Alumni",
     bio: "Matthew is the systems administrator of the high performance cluster for the bioinformatics group. A passionate Linux enthusiast, his work includes bioinformatics programming and teaching Linux to new users. Matthew is starting an MS in Computer Science this spring and hopes to add a Master's in statistics to his plan of study.",
-    email: "matthew.lister@aggiemail.usu.edu",
+    email: "matthew.lister@usu.edu",
     img: "/image/raw/bioinfo/profile/mat.jfif",
     social: []
   }
 %}
 
-
+{% set austin = {
+    name: "Austin Swainston",
+    subtitle: "HPC Administrator | Technology Systems",
+    modifier: "Austin",
+    type: "Alumni",
+    bio: "Matthew is the systems administrator of the high performance cluster for the bioinformatics group. A passionate Linux enthusiast, his work includes bioinformatics programming and teaching Linux to new users. Matthew is starting an MS in Computer Science this spring and hopes to add a Master's in statistics to his plan of study.",
+    email: "matthew.lister@usu.edu",
+    img: "/image/raw/bioinfo/profile/austins.jpg",
+    social: []
+  }
+%}
 
 {% set colin = {
     name: "Colin Bernhardt",
@@ -273,7 +295,7 @@
 
 {% set staff = [naveen, shelby, raghav, roussie] %}
 
-{% set bioinfoStaff = [roussie] %}
-{% set gradStudents = [naveen, raghav, david ] %}
-{% set undergradStudents = [ andrew] %}
-{% set alumni = [colin, simar,kolton, mitchell, shelby, caleb, cristian, kaige, matt, nikhil, raul, suyash, udarika] %}
+{% set bioinfoStaff = [roussie, matt, austin] %}
+{% set gradStudents = [raghav, david, brady] %}
+{% set undergradStudents = [andrew] %}
+{% set alumni = [naveen, colin, simar,kolton, mitchell, shelby, caleb, cristian, kaige, nikhil, raul, suyash, udarika] %}
