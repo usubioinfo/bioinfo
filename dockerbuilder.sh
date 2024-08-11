@@ -1,7 +1,7 @@
 #!/bin/bash
 # set the var to be the container
 CONTAINER=bioinfo
-FLAGS='-d -p 3000:3000  --restart unless-stopped'
+FLAGS='-d -p 3005:3000 -p 3010:3000  --restart unless-stopped'
 MYMAX=0
 # stop the containers
 for n in $(docker images $CONTAINER --format "{{.Tag}}")
