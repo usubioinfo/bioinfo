@@ -224,7 +224,14 @@
  }
  %}
 
-{% set hpi = [predhpi, apinet, deepHPI, huco, malivhu, HuCoVarIA, HuPoxNET] %}
+  {% set HPIpy= {
+  img: "/image/bioinfo/tools/hpipy.png",
+  title: "HPIpy",
+  link: "https://kaabil.net/hpipy/"
+ }
+ %}
+
+{% set hpi = [predhpi, apinet, deepHPI, huco, malivhu, HuCoVarIA, HuPoxNET, HPIpy] %}
 {% set clpt = [AtSubP2, RSLpred2, LegumeLoc, plantmSubp, atSubP, rslPredP, plPred] %}
 {% set dbs = [HPInet, greeningDB, citSATdb, legumeSSRdb, ranchSAT, alfaNet, weconet, trustdb, tritikbdb,myDockDB] %}
 {% set bioenergy = [lacSubPred, ligPred] %}
