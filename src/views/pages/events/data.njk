@@ -1,4 +1,12 @@
-{% set mitchellFarewell = {
+{% set dsaicUsu = {
+                link: '/events/dsaicUsu',
+                title: 'USU Data Science and AI Event',
+                location: 'Utah State University, Logan, UT',
+                date: 'January 14, 2025',
+                img: '/image/bioinfo/events/dsaic/thumb.PNG'
+              }
+            %}
+             {% set mitchellFarewell = {
                 link: '/events/mitchellFarewell',
                 title: 'Mitchell Millerberg Completes Summer Internship',
                 location: 'Utah State University, Logan, UT',
@@ -119,7 +127,8 @@
               }
             %}
 
-            {% set latest = [mitchellFarewell,ritcheyScience,bigDataConf2022] %}
+            {% set latest = [dsaicUsu] %}
+            {% set events2025 = [dsaicUsu] %}
             {% set events2022 = [mitchellFarewell,ritcheyScience,bigDataConf2022,koltonCapitolHill] %}
             {% set events2021 = [pag2021,shelby] %}
             {% set events2020 = [pag2020,cristian] %}

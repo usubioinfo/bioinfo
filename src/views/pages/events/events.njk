@@ -16,8 +16,10 @@
   <article>
     <div class="container">
       {% from './_functions.njk' import selector, activeCheck,eventsGenerator %}
-      {% from './data.njk' import events2022,events2021,events2020,events2019,events2018,events2013%}
+      {% from './data.njk' import events2025,events2022,events2021,events2020,events2019,events2018,events2013%}
+     
       <section class="row justify-content-center my-5">
+        {{ selector("2025", routerEventsYearRange) }}
         {{ selector("2022", routerEventsYearRange) }}
         {{ selector("2021", routerEventsYearRange) }}
         {{ selector("2020", routerEventsYearRange) }}
@@ -25,7 +27,8 @@
         {{ selector("2018", routerEventsYearRange) }}
         {{ selector("2013", routerEventsYearRange) }}
       </section>
-
+      
+      {{eventsGenerator(events2025,"2025","25",routerEventsYearRange)}}
       {{eventsGenerator(events2022,"2022","22",routerEventsYearRange)}}
       {{eventsGenerator(events2021,"2021","21",routerEventsYearRange)}}
       {{eventsGenerator(events2020,"2020","20",routerEventsYearRange)}}
@@ -35,7 +38,7 @@
     </div>
   </article>
 
-  {% set latest = [mitchellFarewell,ritcheyScience,bigDataConf2022, koltonCapitolHill] %}
+  {% set latest = [dsaicUsu] %}
   {% include "universal/_footer.njk" %}
   {% from "universal/_footer-scripts.njk" import scripts %}
   {{ scripts() }}

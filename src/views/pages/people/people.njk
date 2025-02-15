@@ -19,22 +19,6 @@
     {% from "components/person-card.njk" import personCardModal %}
     {% from "./people-data.njk" import bioinfoStaff, gradStudents, undergradStudents, alumni %}
 
-    <div class="row mt-5">
-      <div class="col-12">
-        <div class="kbl-header-bar text-center py-2">
-          <h4 class="kbl-heading my-auto">Bioinformatics Staff</h4>
-        </div>
-      </div>
-    </div>
-
-    <div class="row mt-3 justify-content-center">
-      {% for person in bioinfoStaff %}
-        <div class="col-xl-3 col-md-4 col-sm-6 col-11 text-center">
-          {{ personCardModal(person) }}
-        </div>
-      {% endfor %}
-    </div>
-
     <div class="row">
       <div class="col-12">
         <div class="kbl-header-bar text-center py-2">
@@ -61,6 +45,22 @@
 
     <div class="row mt-3 justify-content-center">
       {% for person in undergradStudents %}
+        <div class="col-xl-3 col-md-4 col-sm-6 col-11 text-center">
+          {{ personCardModal(person) }}
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="kbl-header-bar text-center py-2">
+          <h4 class="kbl-heading my-auto">Bioinformatics Staff</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3 justify-content-center">
+      {% for person in bioinfoStaff %}
         <div class="col-xl-3 col-md-4 col-sm-6 col-11 text-center">
           {{ personCardModal(person) }}
         </div>

@@ -1,0 +1,24 @@
+{% from "pages/events/template.njk" import eventPage %}
+
+{% set event = {
+    img: '/image/bioinfo/events/dsaic/thumb.PNG',
+    location: 'Utah State University, Logan, UT',
+    date: 'January 14, 2025',
+    media: [
+    '/image/bioinfo/events/dsaic/IMG_7356.PNG',  
+    '/image/bioinfo/events/dsaic/IMG_7359.PNG', 
+    '/image/bioinfo/events/dsaic/IMG_7362.PNG',  
+    '/image/bioinfo/events/dsaic/IMG_7364.PNG',  
+    '/image/bioinfo/events/dsaic/IMG_7366.PNG',  
+    '/image/bioinfo/events/dsaic/IMG_7355.PNG',     
+    '/image/bioinfo/events/dsaic/IMG_7358.PNG',  
+    '/image/bioinfo/events/dsaic/IMG_7360.PNG',  
+    '/image/bioinfo/events/dsaic/IMG_7363.PNG',  
+    '/image/bioinfo/events/dsaic/IMG_7365.PNG',  
+    '/image/bioinfo/events/dsaic/IMG_7367.PNG'
+
+    ]
+  }
+%}
+
+{{ eventPage("USU Data Science and AI Event", "dsaicUsu", event) }}
