@@ -39,7 +39,7 @@
 
 {% set brady = {
     name: "Brady Christianson",
-    subtitle: "PhD Student | PSC",
+    subtitle: "MS Student | PSC",
     modifier: "Christianson",
     type: "Graduate",
     bio: "",
@@ -159,6 +159,22 @@
   }
 %}
 
+{% set caleby = {
+    name: "Caleb A. Young",
+    subtitle: "HPC Administrator | Undergraduate Research Assistant",
+    modifier: "Caleby",
+    type: "Undergradute",
+    bio: "Caleb is a Linux Administrator for the Bioinformatics group. He is pursuing a bachelor's in computer science with a minor in geology at USU. In his spare time, he enjoys working on developing video games for retro consoles. He also enjoys skiing, playing board games, and photography.",
+    email: "caleb.young@usu.edu",
+    img: "/image/raw/bioinfo/profile/caleby.jpg?h=600&w=500",
+    social: [
+    {type: "linkedin", link: 'https://www.linkedin.com/in/caleb-young277'},
+    {type: 'github', link: 'https://github.com/c-plus-plus-young'}
+    ]
+  }
+%}
+
+
 {% set colin = {
     name: "Colin Bernhardt",
     subtitle: "HPC Administrator | BSc Computer Engineering",
@@ -201,6 +217,7 @@
   }
 %}
 
+{% if false %}
 {% set andrew = {
     name: "Andrew Jouffray",
     subtitle: "BSc Computer Science",
@@ -214,6 +231,7 @@
     ]
   }
 %}
+{% endif %}
 
 {% set mitchell = {
     name: "Mitchell Millerberg",
@@ -292,14 +310,15 @@
 	  {type: "google", link: "https://scholar.google.com/citations?user=_tz_cHsAAAAJ&hl=en"},
       {type: "orcid", link: "https://orcid.org/0000-0002-1355-3187"},
       {type: "researchgate", link: "https://www.researchgate.net/profile/Raghav_Kataria"},
-      {type: "linkedin", link: "https://www.linkedin.com/in/raghav-kataria-14458211b/"}
+      {type: "linkedin", link: "https://www.linkedin.com/in/raghav-kataria-14458211b/"},
+      {type: 'github', link: 'https://github.com/geek09rk'}
     ]
   }
 %}
 
 {% set staff = [naveen, shelby, raghav, roussie] %}
 
-{% set bioinfoStaff = [roussie, matt, austin] %}
-{% set gradStudents = [raghav, david, brady] %}
-{% set undergradStudents = [andrew] %}
+{% set bioinfoStaff = [roussie, matt, austin, caleby] %}
+{% set gradStudents = [roussie, raghav, david, brady] %}
+{% set undergradStudents = [] %}
 {% set alumni = [naveen, colin, simar,kolton, mitchell, shelby, caleb, cristian, kaige, nikhil, raul, suyash, udarika] %}

@@ -231,9 +231,16 @@
  }
  %}
 
+{% set APInet= {
+  img: "/image/bioinfo/tools/dgAPInet.png",
+  title: "APInet",
+  link: "https://kaabil.net/apinet/"
+ }
+ %}
+
 {% set hpi = [predhpi, apinet, deepHPI, huco, malivhu, HuCoVarIA, HuPoxNET, HPIpy] %}
 {% set clpt = [AtSubP2, RSLpred2, LegumeLoc, plantmSubp, atSubP, rslPredP, plPred] %}
-{% set dbs = [HPInet, greeningDB, citSATdb, legumeSSRdb, ranchSAT, alfaNet, weconet, trustdb, tritikbdb,myDockDB] %}
+{% set dbs = [HPInet, greeningDB, citSATdb, legumeSSRdb, ranchSAT, alfaNet, weconet, trustdb, tritikbdb, myDockDB, APInet] %}
 {% set bioenergy = [lacSubPred, ligPred] %}
 {% set metagenomics = [deepNEC2, necMiner ] %}
 {% set ngsPackages = [pySeqRNA] %}
