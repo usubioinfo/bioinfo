@@ -2,7 +2,7 @@
   <div class="kbl-person-card-container mx-auto mb-3">
     <div class="kbl-person-card">
       <figure>
-        <img class="w-100 mb-2" style="height: 250px;" src="{{  RaikouServer }}{{ img }}" alt="{{ person.name }}, {{ person.type }}.">
+        <img class="w-100 mb-2" style="height: 250px;" src="{{  RaikouServer }}{{ img }}" alt="{{ name }}, {{ subtitle }}.">
         <figcaption class="pb-2">
           <div clas="title-wrapper">
             <div class="card-title px-3 mb-0 justify-content-center">{{ name }}</div>
@@ -18,7 +18,7 @@
   <div class="kbl-person-card-container mb-3 mx-auto">
     <div class="kbl-person-card select text-center" data-bs-toggle="modal" data-bs-target="#{{ person.modifier }}Modal">
       <figure class="mb-0">
-        <img class="w-100 mb-2" style="height: 250px;" src="{{ RaikouServer }}{{ person.img }}" alt="{{ person.name }}, {{ person.type }}.">
+        <img class="w-100 mb-2" style="height: 250px;" src="{{ RaikouServer }}{{ person.img }}" alt="{{ person.img }}, {{ person.type }}.">
         <figcaption class="pb-2 text-start px-3">
           <div class="title-wrapper">
             <div class="card-title mb-0 text-center">{{ person.name }}</div>
