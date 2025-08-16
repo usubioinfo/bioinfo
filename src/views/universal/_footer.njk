@@ -1,117 +1,103 @@
-
-
-<footer class="w-100 py-5 mt-5">
-  <div class="container">
-    <div class="row">
-      <section class="col-10 col-sm-6 col-md-4 footer-section">
-        <div class="row">
-          <div class="col-10">
-            <a href="/">
-              <img class="img-fluid" src="{{ RaikouServer }}/image/bioinfo/bioinfo_logoaa.png" alt="Utah State Univesrsity Bioinformatics Logo: Deciphering -OMICS bigdata."/>
-            </a>
-          </div>
-        </div>
-        <h5 class="kbl-heading pt-3">Address</h5>
-        <div class="kbl-text">Utah State University</div>
-        <div class="kbl-text">4700 Old Main Hill</div>
-        <div class="kbl-text">Logan, UT 84322-4700</div>
-        <div class="kbl-text">United States of America</div>
-
-        <h5 class="kbl-heading pt-4">Contact Information</h5>
-        <div class="kbl-text">Phone: +1 (435) 797-4117</div>
-        <div class="kbl-text">Fax: +1 (435) 797-2766</div>
-        <div class="kbl-text">Email: rkaundal@usu.edu</div>
-      </section>
-
-      <section class="col-10 col-sm-6 col-md pt-3">
-        <h5 class="kbl-heading pb-3">Affiliations</h5>
-        <div class="my-2">
-          <a href="https://psc.usu.edu/" target="_blank" rel="noopen noreferrer" class="footer-link">
-            Plants, Soils & Climate
-          </a>
-        </div>
-        <div class="my-2">
-          <a href="https://biosystems.usu.edu/" target="_blank" rel="noopen noreferrer" class="footer-link">
-            CIB
-          </a>
-        </div>
-        <div class="my-2">
-          <a href="https://cs.usu.edu/" target="_blank" rel="noopen noreferrer" class="footer-link">
-            Computer Science
-          </a>
-        </div>
-        <div class="my-2">
-          <a href="http://caas.usu.edu/" target="_blank" rel="noopen noreferrer" class="footer-link">
-            CAAS
-          </a>
-        </div>
-
-        <h5 class="kbl-heading py-3">People</h5>
-        <div class="my-2">
-          <a href="people/rakesh" target="_blank" rel="noopen noreferrer" class="footer-link">
-            Dr. Kaundal
-          </a>
-        </div>
-        <div class="my-2">
-          <a href="people/our-team" target="_blank" rel="noopen noreferrer" class="footer-link">
-            Our Team
-          </a>
-        </div>
-        <div class="my-2">
-          <a href="people/alumni" target="_blank" rel="noopen noreferrer" class="footer-link">
-            Alumni
-          </a>
-        </div>
-      </section>
-
-      <section class="col-10 col-sm-6 col-md pt-3">
-        <h5 class="kbl-heading pb-3">Publications</h5>
-        <div class="my-2">
-          <a href="publications" target="_blank" rel="noopen noreferrer" class="footer-link">
-            Journal Articles
-          </a>
-        </div>
-        <div class="my-2">
-          <a href="publications/?content=conf" target="_blank" rel="noopen noreferrer" class="footer-link">
-            Conferences and Talks
-          </a>
-        </div>
-      </section>
-
-
 {% macro footerEventsGenerator(events) %}
-{% for event in events%}
-  {{ footerEvent(event.title,event.date,event.link) }}
-{% endfor %}
+  {% for event in events %}
+    {{ footerEvent(event.title, event.date, event.link) }}
+  {% endfor %}
 {% endmacro %}
 
-{% macro footerEvent(title,date,link)%}
-    <div class="my-3">
-      <a href={{link}} target="_blank" rel="noopen noreferrer" class="footer-link thicc">
-        {{title}}
-      </a>
-    <div class="kbl-text soft">{{date}}</div>
+{% macro footerEvent(title, date, link) %}
+  <div class="my-3">
+    <a href="{{ link }}" target="_blank" rel="noopener noreferrer" class="footer-link thicc">
+      {{ title }}
+    </a>
+    <div class="kbl-text soft">{{ date }}</div>
   </div>
 {% endmacro %}
 
-      <section class="col-10 col-sm-6 col-md-4 pt-3 footer-section">
-        <h5 class="kbl-heading pb-3">Latest Events</h5>
-        {% from 'pages/events/data.njk' import latest%}
-        {{footerEventsGenerator(latest)}}
+<footer class="w-100 py-5 mt-5 bg-light text-dark">
+  <div class="container">
+    
+    <!-- Flex container to align all sections to the left -->
+    <div class="d-flex flex-wrap justify-content-start gap-4">
+
+      <!-- Logo & Contact -->
+      <section class="footer-section" style="min-width: 220px; max-width: 250px;">
+        <a href="/">
+          <img
+            src="{{ RaikouServer }}/image/bioinfo/bioinfo_logoaa.png"
+            alt="Utah State University Bioinformatics Logo: Deciphering -OMICS bigdata."
+            class="img-fluid mb-3"
+          />
+        </a>
+
+        <h5 class="text-uppercase small">Address</h5>
+        <address class="small">
+          Utah State University<br />
+          4700 Old Main Hill<br />
+          Logan, UT 84322-4700<br />
+          USA
+        </address>
+
+        <h5 class="text-uppercase small mt-4">Contact</h5>
+        <ul class="list-unstyled small">
+          <li>Phone: +1 (435) 797-4117</li>
+          <li>Fax: +1 (435) 797-2766</li>
+          <li>Email: <a href="mailto:rkaundal@usu.edu" class="footer-link">rkaundal@usu.edu</a></li>
+        </ul>
       </section>
+
+      <!-- Affiliations -->
+      <section class="footer-section" style="min-width: 180px;">
+        <h5 class="text-uppercase small mb-3">Affiliations</h5>
+        <ul class="list-unstyled small">
+          <li><strong>College of Agriculture & Natural Resources</strong></li>
+          <li><a href="https://agnr.usu.edu/psc/" target="_blank" rel="noopener noreferrer" class="footer-link">Plants, Soils & Climate</a></li>
+          <li><a href="https://agnr.usu.edu/biosystems/" target="_blank" rel="noopener noreferrer" class="footer-link">CIB</a></li>
+          <li><a href="https://agnr.usu.edu/" target="_blank" rel="noopener noreferrer" class="footer-link">AGNR Homepage</a></li>
+          <li class="mt-2"><strong>College of Engineering</strong></li>
+          <li><a href="https://engineering.usu.edu/cs/" target="_blank" rel="noopener noreferrer" class="footer-link">Computer Science</a></li>
+        </ul>
+      </section>
+
+      <!-- People -->
+      <section class="footer-section" style="min-width: 180px;">
+        <h5 class="text-uppercase small mb-3">People</h5>
+        <ul class="list-unstyled small">
+          <li><a href="people/rakesh" target="_blank" rel="noopener noreferrer" class="footer-link">Dr. Kaundal</a></li>
+          <li><a href="people/our-team" target="_blank" rel="noopener noreferrer" class="footer-link">Our Team</a></li>
+          <li><a href="people/alumni" target="_blank" rel="noopener noreferrer" class="footer-link">Alumni</a></li>
+        </ul>
+      </section>
+
+      <!-- Publications -->
+      <section class="footer-section" style="min-width: 180px;">
+        <h5 class="text-uppercase small mb-3">Publications</h5>
+        <ul class="list-unstyled small">
+          <li><a href="publications" target="_blank" rel="noopener noreferrer" class="footer-link">Journal Articles</a></li>
+          <li><a href="publications/?content=conf" target="_blank" rel="noopener noreferrer" class="footer-link">Conferences & Talks</a></li>
+        </ul>
+      </section>
+
+      <!-- Latest Events -->
+      <section class="footer-section" style="min-width: 220px; max-width: 250px;">
+        <h5 class="text-uppercase small mb-3">Latest Events</h5>
+        {% from 'pages/events/data.njk' import latest %}
+        {{ footerEventsGenerator(latest) }}
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Bottom Footer -->
+  <div class="container py-3 mt-4 border-top">
+    <div class="row">
+      <div class="col-12 col-sm-6 text-center text-sm-start small">
+        © 2025 - <a href="/" class="footer-link">KAABiL Lab</a>
+      </div>
+      <div class="col-12 col-sm-6 text-center text-sm-end small">
+        🧬 Developed & managed by <a href="people/our-team" class="footer-link">Kaundal Research Group</a>
+      </div>
     </div>
   </div>
 </footer>
-
-<section class="container py-3 bottom-section">
-  <div class="row">
-    <div class="col-12 col-sm-6 col-md-6 footer-bottom-text text-center text-sm-left">
-      <span class="kbl-text">Copyright 2020 - </span><a href="/" class="kbl-link">KAABiL Lab</a>
-    </div>
-    <div class="col-12 col-sm-6 col-md-6 text-center text-sm-right footer-bottom-text">
-      <span class="kbl-text">Developed and managed by </span><a href="people/our-team" class="kbl-link">Kaundal Research Group</a>
-    </div>
-  </div>
-</section>
 
 {% include "universal/_mobile-navbar.njk" %}
