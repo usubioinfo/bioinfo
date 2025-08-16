@@ -2,7 +2,7 @@
   <article class="kbl-research-card-container mx-auto">
     <div class="kbl-research-card pb-3">
       <section class="img-wrapper mb-2">
-        <img src="{{ RaikouServer }}{{ researchItem.img }}">
+        <img src="{{ RaikouServer }}{{ researchItem.img }}" alt="{{ researchItem.alt_text }}">
       </section>
       <section class="px-3 flex-text-wrapper h-100">
         <div class="card-title mb-3">{{ researchItem.heading }}</div>
@@ -18,7 +18,7 @@
   <div class="kbl-research-card h-100">
     <figure class="h-100">
       <div class="img-wrapper mb-2">
-        <img class="w-100 mb-2" src="{{ researchItem.img }}">
+        <img class="w-100 mb-2" src="{{ researchItem.img }}" alt="research-carousel-card-test-2">
       </div>
       <article class="container-fluid px-3 d-flex flex-column">
         <div class="d-flex flex-column">
