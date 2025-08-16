@@ -76,22 +76,22 @@
 
 {% macro socialSet(social) %}
   {% if social.type === "twitter" %}
-    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="kbl-icon-{{ social.type }} correct-fa align-middle"><i class="fab fa-twitter-square"></i></a>
+    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="kbl-icon-{{ social.type }} correct-fa align-middle" aria-label="Twitter."><i class="fab fa-twitter-square"></i></a>
   {% elif social.type === "linkedin" %}
-    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="kbl-icon-{{ social.type }} correct-fa align-middle"><i class="fab fa-linkedin"></i></a>
+    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="kbl-icon-{{ social.type }} correct-fa align-middle" aria-label="Linkedin."><i class="fab fa-linkedin"></i></a>
   {% elif social.type === "facebook" %}
-    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="kbl-icon-{{ social.type }} correct-fa align-middle"><i class="fab fa-facebook-square"></i></a>
+    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="kbl-icon-{{ social.type }} correct-fa align-middle" aria-label="Facebook."><i class="fab fa-facebook-square"></i></a>
   {% elif social.type === "researchgate" %}
-    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="kbl-icon-{{ social.type }} correct-fa align-middle"><i class="ai ai-researchgate-square"></i></a>
+    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="kbl-icon-{{ social.type }} correct-fa align-middle" aria-label="ResearchGate."><i class="ai ai-researchgate-square"></i></a>
   {% elif social.type === "website" %}
-    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="kbl-icon-kbl correct-fa align-middle"><i class="fas fa-laptop"></i></a>
+    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="kbl-icon-kbl correct-fa align-middle" aria-label="Personal website."><i class="fas fa-laptop"></i></a>
   {% elif social.type === "soundcloud" %}
-    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="kbl-icon-{{ social.type }} correct-fa align-middle"><i class="fab fa-soundcloud"></i></a>
+    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="kbl-icon-{{ social.type }} correct-fa align-middle" aria-label="SoundCloud."><i class="fab fa-soundcloud"></i></a>
   {% elif social.type === 'github' %}
-    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="kbl-icon-{{ social.type }} correct-fa align-middle"><i class="fab fa-github"></i></a>
+    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="kbl-icon-{{ social.type }} correct-fa align-middle" aria-label="GitHub."><i class="fab fa-github"></i></a>
   {% elif social.type === 'orcid' %}
-    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="kbl-icon-{{ social.type }} correct-fa align-middle"><i class="ai ai-orcid-square"></i></a>
+    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="kbl-icon-{{ social.type }} correct-fa align-middle" aria-label="ORCiD."><i class="ai ai-orcid-square"></i></a>
   {% elif social.type === 'google' %}
-    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="kbl-icon-{{ social.type }} correct-fa align-middle"><i class="ai ai-google-scholar-square"></i></a>
+    <a href="{{ social.link }}" target="_blank" rel="noreferrer noopener" class="kbl-icon-{{ social.type }} correct-fa align-middle" aria-label="Google."><i class="ai ai-google-scholar-square"></i></a>
   {% endif %}
 {% endmacro %}
