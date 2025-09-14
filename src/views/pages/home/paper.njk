@@ -1,5 +1,5 @@
 {% from "components/home-paper.njk" import paperWrapper %}
-{% from "pages/publications/_data.njk" import pub2022 %}
+{% from "pages/publications/_data.njk" import pub2025 %}
 
 <div class="container py-4 px-5">
   <div class="row justify-content-center">
@@ -26,11 +26,11 @@
           <li>methylation patterns (Methyl-seq)</li>
           <li>GBS data, assembly of novel genomes, etc.</li>
         </ul>
-        <a href="/research/lab-research" class="kbl-link thicc">View all publications</a>
+        <a href="/publications" class="kbl-link thicc">View all publications</a>
       </div>
       <aside class="col-12 col-lg-7 px-5">
           <div class="paper_cut">
-            {% for paper in pub2022 %}
+            {% for paper in pub2025 %}
                 {% if (loop.index <= 3) %}
                     {{ paperWrapper(paper) }}
                 {% endif %}
