@@ -59,7 +59,7 @@
               <img class="w-100 mb-2 modal-img" style="height: 250px;" src="{{ RaikouServer }}{{ person.img }}" alt="{{ person.name }}, {{ person.type }}.">
             </div>
             <p class="col-8 text-start">
-              {{ person.bio }}
+              {{ person.bio | safe}}
             </p>
           </section>
 
