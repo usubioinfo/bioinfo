@@ -12,3 +12,11 @@ To start the project in dev mode, run `npm start`. This will start two processes
 
 If the website isn't working, then you might not have created the env.njk file. You'll need to create a file called `env.njk` in the 
 `src/views` folder, and then you'll want to copy `{% set baseUrl = "http://localhost:3000/" %}` into that file. You can create this file by copying and modifying env.default.njk
+
+## Modifying Website Media
+
+To allow for raw HTML on text fields (for line breaks and more), add "| safe" to the rendering field, ex:
+```twig
+{{ person.bio | safe }}
+```
+
