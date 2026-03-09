@@ -245,11 +245,18 @@
  }
  %}
 
+ {% set MINpred {
+  img: "/image/bioinfo/tools/minpred.png"
+  title: "MINpred"
+  link: "https://kaabil.net/minpred/"
+ }
+ %}
+
 {% set hpi = [stripenet, predhpi, apinet, deepHPI, huco, malivhu, HuCoVarIA, HuPoxNET, HPIpy] %}
 {% set clpt = [AtSubP2, RSLpred2, LegumeLoc, plantmSubp, atSubP, rslPredP, plPred] %}
 {% set dbs = [HPInet, greeningDB, citSATdb, legumeSSRdb, ranchSAT, alfaNet, weconet, trustdb, tritikbdb, myDockDB, APInet] %}
 {% set bioenergy = [lacSubPred, ligPred] %}
-{% set metagenomics = [deepNEC2, necMiner ] %}
+{% set metagenomics = [deepNEC2, necMiner, MINpred] %}
 {% set ngsPackages = [pySeqRNA] %}
 {% set rgenes = [PRGminer] %}
 {% set descriptors = [ProFeatX] %}
