@@ -1,0 +1,12 @@
+{% from "pages/events/template.njk" import eventPage %}
+
+{% set event = {
+    img: '/image/bioinfo/events/pscShowcase26/psc-2026.jpg',
+    location: '3000 Old Main Hill Logan, UT',
+    date: 'April 7, 2026',
+    media: [
+    ]
+  }
+%}
+
+{{ eventPage("PSC Showcase 2026", "psc2026", event) }}

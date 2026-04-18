@@ -1,0 +1,12 @@
+{% from "pages/events/template.njk" import eventPage %}
+
+{% set event = {
+    img: '/image/bioinfo/events/springSRS26/srs-2026.jpg',
+    location: '4815 Old Main Hill, Logan, UT ',
+    date: 'April 8, 2026',
+    media: [
+    ]
+  }
+%}
+
+{{ eventPage("Spring Student Research Symposium 2026", "springSRS26", event) }}
