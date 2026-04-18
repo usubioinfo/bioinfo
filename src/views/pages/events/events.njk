@@ -19,6 +19,7 @@
       {% from './data.njk' import events2025,events2022,events2021,events2020,events2019,events2018,events2013%}
      
       <section class="row justify-content-center my-5">
+        {{ selector("2026", routerEventsYearRange) }}
         {{ selector("2025", routerEventsYearRange) }}
         {{ selector("2022", routerEventsYearRange) }}
         {{ selector("2021", routerEventsYearRange) }}
@@ -28,6 +29,7 @@
         {{ selector("2013", routerEventsYearRange) }}
       </section>
       
+      {{eventsGenerator(events2026,"2026","26",routerEventsYearRange)}}
       {{eventsGenerator(events2025,"2025","25",routerEventsYearRange)}}
       {{eventsGenerator(events2022,"2022","22",routerEventsYearRange)}}
       {{eventsGenerator(events2021,"2021","21",routerEventsYearRange)}}
@@ -38,7 +40,7 @@
     </div>
   </article>
 
-  {% set latest = [dsaicUsu] %}
+  {% set latest = [pscShowcase26] %}
   {% include "universal/_footer.njk" %}
   {% from "universal/_footer-scripts.njk" import scripts %}
   {{ scripts() }}
