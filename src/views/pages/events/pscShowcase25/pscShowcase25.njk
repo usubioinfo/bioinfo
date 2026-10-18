@@ -1,0 +1,27 @@
+{% from "pages/events/template.njk" import eventPage %}
+
+{% set event = {
+    img: '/image/bioinfo/events/pscShowcase25/IMG_7503.jpg',
+    location: 'Eccles Conference Center, Logan, UT',
+    date: 'April 14, 2025',
+    media: [
+      '/image/bioinfo/events/pscShowcase25/IMG_7503.jpg',
+      '/image/bioinfo/events/pscShowcase25/IMG_7504.jpg',
+      '/image/bioinfo/events/pscShowcase25/IMG_7505.jpg',
+      '/image/bioinfo/events/pscShowcase25/IMG_7506.jpg',
+      '/image/bioinfo/events/pscShowcase25/IMG_7508.jpg',
+      '/image/bioinfo/events/pscShowcase25/IMG_7510.jpg',
+      '/image/bioinfo/events/pscShowcase25/IMG_7511.jpg',
+      '/image/bioinfo/events/pscShowcase25/IMG_7513.jpg',
+      '/image/bioinfo/events/pscShowcase25/IMG_7515.jpg',
+      '/image/bioinfo/events/pscShowcase25/IMG_7517.jpg',
+      '/image/bioinfo/events/pscShowcase25/IMG_7518.jpg',
+      '/image/bioinfo/events/pscShowcase25/IMG_7521.jpg',
+      '/image/bioinfo/events/pscShowcase25/IMG_7522.jpg',
+      '/image/bioinfo/events/pscShowcase25/IMG_7523.jpg',
+      '/image/bioinfo/events/pscShowcase25/IMG_7524.jpg'
+    ]
+  }
+%}
+
+{{ eventPage("Plants, Soils and Climate Department Showcase 2025", "pscShowcase25", event) }}
