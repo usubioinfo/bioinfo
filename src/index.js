@@ -25,11 +25,19 @@ const app = express();
 
 let nunEnv = nunjucks.configure(__dirname + '/views', {
   autoescape: true,
+  noCache: process.env.NODE_ENV !== 'production',
   express: app
 });
 
 
-nunEnv.addGlobal(`RaikouServer`, 'https://bioinfocore.usu.edu/raikou');
+const fs = require('fs');
+const localWebassets = path.resolve(__dirname, '../../webassets');
+const hasLocalWebassets = fs.existsSync(localWebassets);
+const raikouServer = (process.env.NODE_ENV === 'production' || !hasLocalWebassets)
+  ? 'https://bioinfocore.usu.edu/raikou'
+  : '';
+
+nunEnv.addGlobal(`RaikouServer`, raikouServer);
 
 
 nunEnv.addExtension('SetAsyncExtension', new SetAsyncExtension());
@@ -61,13 +69,14 @@ app.get(baseUrl, (req, res, next) => {
   });
 });
 
-app.get('/assets/header-img', (req, res, next) => {
+app.get(['/header-img', '/assets/header-img'], (req, res, next) => {
   const date = new Date();
-  if (date.getMonth() <= 1 || date.getMonth() >= 10) {
-    return res.sendFile(`${assetPath}/kbl-img/usuwinter.jpeg`);
+  const imgName = (date.getMonth() <= 1 || date.getMonth() >= 10) ? 'usuwinter.jpeg' : 'ususpring6.jpg';
+  const localImg = path.join(localWebassets, 'bioinfo/kbl-img', imgName);
+  if (fs.existsSync(localImg)) {
+    return res.sendFile(localImg);
   }
-
-  return res.sendFile(`${assetPath}/kbl-img/ususpring6.jpg`);
+  return res.redirect(`https://bioinfocore.usu.edu/raikou/header-img`);
 });
 
 // Default browser behaviour fix

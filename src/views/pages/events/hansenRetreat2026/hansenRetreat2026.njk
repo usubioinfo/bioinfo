@@ -1,0 +1,32 @@
+{% from "pages/events/template.njk" import eventPage %}
+
+{% set event = {
+    img: '/image/bioinfo/events/2026-10-24_Hansen_Life_Sciences_Retreat/01_david_guevara_apinet_cover.jpg',
+    location: "Larry W. and Lindi Miller Champions' Club, Maverik Stadium, Logan, UT",
+    date: 'October 24, 2026',
+    media: [
+      '/image/bioinfo/events/2026-10-24_Hansen_Life_Sciences_Retreat/01_david_guevara_apinet_cover.jpg',
+      '/image/bioinfo/events/2026-10-24_Hansen_Life_Sciences_Retreat/02_retreat_opening_stage.jpg',
+      '/image/bioinfo/events/2026-10-24_Hansen_Life_Sciences_Retreat/03_david_presenting_poster.jpg',
+      '/image/bioinfo/events/2026-10-24_Hansen_Life_Sciences_Retreat/04_david_pointing_poster_diagram.jpg',
+      '/image/bioinfo/events/2026-10-24_Hansen_Life_Sciences_Retreat/05_david_discussing_with_attendees.jpg',
+      '/image/bioinfo/events/2026-10-24_Hansen_Life_Sciences_Retreat/06_poster_session_screens.jpg',
+      '/image/bioinfo/events/2026-10-24_Hansen_Life_Sciences_Retreat/07_champions_club_hall_wide.jpeg',
+      '/image/bioinfo/events/2026-10-24_Hansen_Life_Sciences_Retreat/08_keynote_hall_view.jpg',
+      '/image/bioinfo/events/2026-10-24_Hansen_Life_Sciences_Retreat/09_david_poster_interaction.jpg',
+      '/image/bioinfo/events/2026-10-24_Hansen_Life_Sciences_Retreat/10_david_explaining_poster.jpg',
+      '/image/bioinfo/events/2026-10-24_Hansen_Life_Sciences_Retreat/11_poster_session_hall_view.jpg',
+      '/image/bioinfo/events/2026-10-24_Hansen_Life_Sciences_Retreat/12_attendees_collaborating.jpg',
+      '/image/bioinfo/events/2026-10-24_Hansen_Life_Sciences_Retreat/13_david_answering_questions.jpg',
+      '/image/bioinfo/events/2026-10-24_Hansen_Life_Sciences_Retreat/14_poster_hallway_interaction.jpg',
+      '/image/bioinfo/events/2026-10-24_Hansen_Life_Sciences_Retreat/15_table_presentation_discussion.jpg',
+      '/image/bioinfo/events/2026-10-24_Hansen_Life_Sciences_Retreat/16_poster_discussion_wide.jpg',
+      '/image/bioinfo/events/2026-10-24_Hansen_Life_Sciences_Retreat/17_attendees_at_posters.jpg',
+      '/image/bioinfo/events/2026-10-24_Hansen_Life_Sciences_Retreat/18_session_discussion.jpg',
+      '/image/bioinfo/events/2026-10-24_Hansen_Life_Sciences_Retreat/19_event_table_setup.jpg',
+      '/image/bioinfo/events/2026-10-24_Hansen_Life_Sciences_Retreat/20_retreat_table_decor.jpg'
+    ]
+  }
+%}
+
+{{ eventPage("Hansen Life Sciences Retreat 2026", "hansenRetreat2026", event) }}

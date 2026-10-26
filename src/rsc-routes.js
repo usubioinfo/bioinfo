@@ -22,5 +22,24 @@ module.exports = (app) => {
 
   app.use(baseUrl + 'pages/', express.static(__dirname + '/../pages'));
 
-  // app.use(baseUrl + 'public/css', express.static(path.join(__dirname, '/../public/css')));
+  const localWebassets = path.resolve(__dirname, '../../webassets');
+  const fs = require('fs');
+  if (fs.existsSync(localWebassets)) {
+    app.use('/image', (req, res, next) => {
+      const reqPath = req.path;
+      // 1. Direct file match in webassets
+      let directFile = path.join(localWebassets, reqPath);
+      if (fs.existsSync(directFile) && fs.statSync(directFile).isFile()) {
+        return res.sendFile(directFile);
+      }
+      // 2. Strip /raw/ or /aspect/ prefix if present
+      let stripped = reqPath.replace(/^\/(raw|aspect)\/?/, '/');
+      let strippedFile = path.join(localWebassets, stripped);
+      if (fs.existsSync(strippedFile) && fs.statSync(strippedFile).isFile()) {
+        return res.sendFile(strippedFile);
+      }
+      // 3. Fallback: redirect to remote RaikouServer
+      return res.redirect(`https://bioinfocore.usu.edu/raikou/image${req.url}`);
+    });
+  }
 }

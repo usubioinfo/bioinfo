@@ -1,0 +1,23 @@
+{% from "pages/events/template.njk" import eventPage %}
+
+{% set event = {
+    img: '/image/bioinfo/events/2021_International_Faculty_of_the_Year_Award/01_award_presentation_cover.jpg',
+    location: 'Utah State University, Logan, UT',
+    date: 'November 8, 2021',
+    media: [
+      '/image/bioinfo/events/2021_International_Faculty_of_the_Year_Award/01_award_presentation_cover.jpg',
+      '/image/bioinfo/events/2021_International_Faculty_of_the_Year_Award/02_keynote_lessons_learned.jpg',
+      '/image/bioinfo/events/2021_International_Faculty_of_the_Year_Award/03_award_presentation_stage.jpg',
+      '/image/bioinfo/events/2021_International_Faculty_of_the_Year_Award/04_lab_members_stage.jpg',
+      '/image/bioinfo/events/2021_International_Faculty_of_the_Year_Award/05_celebration_stage.jpg',
+      '/image/bioinfo/events/2021_International_Faculty_of_the_Year_Award/06_community_group.jpg',
+      '/image/bioinfo/events/2021_International_Faculty_of_the_Year_Award/07_community_group_wide.jpg',
+      '/image/bioinfo/events/2021_International_Faculty_of_the_Year_Award/08_auditorium_audience_wide.jpg',
+      '/image/bioinfo/events/2021_International_Faculty_of_the_Year_Award/09_attendees_group.jpg',
+      '/image/bioinfo/events/2021_International_Faculty_of_the_Year_Award/10_students_group.jpg',
+      '/image/bioinfo/events/2021_International_Faculty_of_the_Year_Award/11_award_presentation_alt.jpg'
+    ]
+  }
+%}
+
+{{ eventPage("2021 International Faculty Recognition Award – International Heroes Night", "facultyAward2021", event) }}
